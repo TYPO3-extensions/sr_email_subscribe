@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Email Address Subscription',
-	'description' => 'A newsletter email subscription variant of Kasper Skårhøj\'s Direct Mail Subscription extension.',
+	'description' => 'A newsletter email subscription variant of the Frontend User Registration extension.',
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '1.1.2',
@@ -29,15 +29,16 @@ $EM_CONF[$_EXTKEY] = array(
 	'lockType' => '',
 	'author' => 'Stanislas Rolland / Franz Holzinger',
 	'author_email' => 'kontakt@fholzinger.com',
-	'author_company' => 'Fructifor Inc.',
+	'author_company' => 'jambage.com',
 	'CGLcompliance' => '',
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
 			'cms' => '',
-			'tt_address' => '',
+			'fh_library' => '0.0.17-',
+			'tt_address' => '2.1.0-',
 			'static_info_tables' => '2.0.0-',
-			'sr_feuser_register' => '2.5.0-2.5.5',
+			'sr_feuser_register' => '2.5.6-',
 			'php' => '4.1.0-0.0.0',
 			'typo3' => '4.0-0.0.0',
 		),

@@ -10,7 +10,6 @@
     <data type="array">
         <languageKey index="default" type="array">
             <label index="tt_content.email_subscribe">Subscription with email address</label>
-            <label index="tt_content.email_subscribe_casual">Subscription with email address (casual) - DEPRECATED</label>
             <label index="tt_content.pi_flexform.display_mode">Display mode</label>
             <label index="tt_content.pi_flexform.display_mode.1">Not set</label>
             <label index="tt_content.pi_flexform.display_mode.3">Create</label>
@@ -36,7 +35,7 @@
             <label index="tt_address.date_of_birth">Fødselsdato:</label>
         </languageKey>
         <languageKey index="de" type="array">
-            <label index="tt_content.email_subscribe">E-Mail Newletter Registrierung (förmlich)</label>
+            <label index="tt_content.email_subscribe">E-Mail Newsletter Registrierung</label>
             <label index="tt_address.static_info_country">Land:</label>
             <label index="tt_address.zone">Bundesland / Staat / Provinz:</label>
             <label index="tt_address.language">Sprache:</label>
@@ -100,7 +99,6 @@
         </languageKey>
 	<languageKey index="si" type="array">
             <label index="tt_content.email_subscribe">Prijava z e-pošto.</label>
-            <label index="tt_content.email_subscribe_casual">Prijava z e-pošto.</label>
             <label index="tt_content.pi_flexform.display_mode">Prikaz</label>
             <label index="tt_content.pi_flexform.display_mode.1">Ni določen</label>
             <label index="tt_content.pi_flexform.display_mode.3">Ustvari</label>
@@ -200,7 +198,6 @@
     <orig_hash type="array">
         <languageKey index="default" type="array">
             <label index="tt_content.email_subscribe" type="integer">98258121</label>
-            <label index="tt_content.email_subscribe_casual" type="integer">141358561</label>
             <label index="tt_content.pi_flexform.display_mode" type="integer">194991965</label>
             <label index="tt_content.pi_flexform.display_mode.1" type="integer">163210921</label>
             <label index="tt_content.pi_flexform.display_mode.3" type="integer">109504151</label>
@@ -290,7 +287,6 @@
         </languageKey>
 	<languageKey index="si" type="array">
             <label index="tt_content.email_subscribe" type="integer">98258121</label>
-            <label index="tt_content.email_subscribe_casual" type="integer">141358561</label>
             <label index="tt_content.pi_flexform.display_mode" type="integer">194991965</label>
             <label index="tt_content.pi_flexform.display_mode.1" type="integer">163210921</label>
             <label index="tt_content.pi_flexform.display_mode.3" type="integer">109504151</label>
@@ -410,7 +406,6 @@
         </languageKey>
 		<languageKey index="si" type="array">
 			<label index="tt_content.email_subscribe">Subscription with email address</label>
-			<label index="tt_content.email_subscribe_casual">Subscription with email address (casual) - DEPRECATED</label>
 			<label index="tt_content.pi_flexform.display_mode">Display mode</label>
 			<label index="tt_content.pi_flexform.display_mode.1">Not set</label>
 			<label index="tt_content.pi_flexform.display_mode.3">Create</label>

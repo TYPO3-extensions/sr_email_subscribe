@@ -33,10 +33,4 @@ plugin.tx_sremailsubscribe_pi1.CSS_editor.ch {
 	TEXTAREA.attribs = TEXT,background-color,width
 }
 
-plugin.tx_sremailsubscribe_pi2.CSS_editor < plugin.tx_sremailsubscribe_pi1.CSS_editor
-plugin.tx_sremailsubscribe_pi2.CSS_editor = Plugin: "tx_sremailsubscribe_pi2"
-plugin.tx_sremailsubscribe_pi2.CSS_editor.selector = .tx-sremailsubscribe-pi2
-plugin.tx_sremailsubscribe_pi2.CSS_editor.exampleWrap = <HR><strong>Plugin: "tx_sremailsubscribe_pi2"</strong><HR><DIV class="tx-sremailsubscribe-pi2"> | </DIV>
-
 tt_content.CSS_editor.ch.tx_sremailsubscribe_pi1 = < plugin.tx_sremailsubscribe_pi1.CSS_editor
-tt_content.CSS_editor.ch.tx_sremailsubscribe_pi2 = < plugin.tx_sremailsubscribe_pi2.CSS_editor
