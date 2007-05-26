@@ -2,8 +2,8 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 1999-2003 Kasper Skaarhoj (kasper@typo3.com)
-*  (c) 2004-2006 Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
+*  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
+*  (c) 2004-2007 Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
 *  All rights reserved
 *
 *  This script is part of the Typo3 project. The Typo3 project is
@@ -28,16 +28,45 @@
  *
  * Front End creating/editing/deleting records authenticated by email address, also called subscriptions.
  *
- * @author Kasper Skaarhoj <kasper@typo3.com>
- * @author Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
+ * $Id$
+ *
+ * @author	Kasper Skårhøj <kasperYYYY@typo3.com>
+ * @author	Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
+ * @author	Franz Holzinger <kontakt@fholzinger.com>
  */
 
 require_once(t3lib_extMgm::extPath('sr_feuser_register').'pi1/class.tx_srfeuserregister_pi1.php');
 
 class tx_sremailsubscribe_pi1 extends tx_srfeuserregister_pi1 {
 
-	var $buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
-	var $otherLabelsList = 'yes,no,click_here_to_register,tooltip_click_here_to_register,v_already_subscribed,click_here_to_edit,tooltip_click_here_to_edit,
+		// Plugin initialization
+	var $prefixId = 'tx_sremailsubscribe_pi1';  // Same as class name
+	var $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php'; // Path to this script relative to the extension dir.
+	var $extKey = 'sr_email_subscribe';  // The extension key.
+	var $adminFieldList = 'name,hidden';
+
+	/**
+	* Initialization
+	*
+	* @return void
+	*/
+	function init(&$conf, $theTable, &$adminFieldList) {
+		global $TYPO3_CONF_VARS;
+
+		$adminFieldList = 'name,hidden';
+
+		if (t3lib_extMgm::isLoaded(FH_LIBRARY_EXTkey)) {
+				// FE BE library for flexform functions
+			require_once(PATH_BE_fh_library.'lib/class.tx_fhlibrary_language.php');
+			tx_fhlibrary_language::pi_loadLL($this,'EXT:'.SR_FEUSER_REGISTER_EXTkey.'/pi1/locallang.xml',FALSE);
+		}
+
+		parent::init($conf, 'tt_address', $adminFieldList);
+
+		$buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
+		$this->marker->setButtonLabelsList($buttonLabelsList);
+
+		$otherLabelsList = 'yes,no,click_here_to_register,tooltip_click_here_to_register,v_already_subscribed,click_here_to_edit,tooltip_click_here_to_edit,
 		v_wish_to_update_or_delete,v_enter_subscribed_email,click_here_to_delete,tooltip_click_here_to_delete,
 		copy_paste_link,enter_account_info,enter_invitation_account_info,required_info_notice,excuse_us,excuse_us_invitation,
 		registration_problem,registration_sorry,registration_clicked_twice,registration_help,kind_regards,
@@ -53,75 +82,9 @@ class tx_sremailsubscribe_pi1 extends tx_srfeuserregister_pi1 {
 		v_registration_deleted_message1,v_registration_deleted_message2,v_registration_updated_subject,v_registration_updated_message1,v_registration_deleted,
 		v_sending_infomail,v_sending_infomail_message1,v_sending_infomail_message2,v_infomail_subject,v_infomail_reason,v_infomail_message1,v_infomail_message2,
 		v_infomail_norecord_subject,v_infomail_norecord_message1,v_infomail_norecord_message2';
-	var $infomailPrefix = 'INFOMAIL_';
-	
-		// Plugin initialization
-	var $prefixId = 'tx_sremailsubscribe_pi1';  // Same as class name
-	var $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php'; // Path to this script relative to the extension dir.
-	var $extKey = 'sr_email_subscribe';  // The extension key.
-	var $theTable = 'tt_address';
-	var $adminFieldList = 'name,hidden';
-	
-	/**
-	 * Adds language-dependent label markers
-	 *
-	 * @param array  $markerArray: the input marker array
-	 * @param array  $dataArray: the record array
-	 * @return array  the output marker array
-	 */
-	function addLabelMarkers($markerArray, $dataArray) {
-		
-			// Data field labels
-		$infoFields = t3lib_div::trimExplode(',', $this->fieldList, 1);
-		while (list(, $fName) = each($infoFields)) {
-			$markerArray['###LABEL_'.$this->cObj->caseshift($fName,'upper').'###'] = $this->pi_getLL($fName) ? $this->pi_getLL($fName) : $this->getLLFromString($this->TCA['columns'][$fName]['label']);
-			$markerArray['###TOOLTIP_'.$this->cObj->caseshift($fName,'upper').'###'] = $this->pi_getLL('tooltip_' . $fName);
-			$markerArray['###TOOLTIP_INVITATION_'.$this->cObj->caseshift($fName,'upper').'###'] = $this->pi_getLL('tooltip_invitation_' . $fName);
-				// <Ries van Twisk added support for multiple checkboxes>
-			if (is_array($dataArray[$fName])) {
-				$colContent = '';
-				$markerArray['###FIELD_'.$fName.'_CHECKED###'] = '';
-				$markerArray['###LABEL_'.$fName.'_CHECKED###'] = '';
-				$this->dataArr['###POSTVARS_'.$fName.'###'] = ''; 
-				foreach ($dataArray[$fName] AS $key => $value) {
-					$colConfig = $this->TCA['columns'][$fName]['config'];
-					$markerArray['###FIELD_'.$fName.'_CHECKED###'] .= '- '.$this->getLLFromString($colConfig['items'][$value][0]).'<br />';
-					$markerArray['###LABEL_'.$fName.'_CHECKED###'] .= '- '.$this->getLLFromString($colConfig['items'][$value][0]).'<br />';
-					$markerArray['###POSTVARS_'.$fName.'###'] .= chr(10).'	<input type="hidden" name="FE[tt_address]['.$fName.']['.$key.']" value ="'.$value.'" />';
-				}
-			// </Ries van Twisk added support for multiple checkboxes>
-			} else {
-				$markerArray['###FIELD_'.$fName.'_CHECKED###'] = ($dataArray[$fName])?'checked':'';
-				$markerArray['###LABEL_'.$fName.'_CHECKED###'] = ($dataArray[$fName])?$this->pi_getLL('yes'):$this->pi_getLL('no');
-			}
-			if (in_array(trim($fName), $this->requiredArr) ) {
-				$markerArray['###REQUIRED_'.$this->cObj->caseshift($fName,'upper').'###'] = '<span>*</span>';
-				$markerArray['###MISSING_'.$this->cObj->caseshift($fName,'upper').'###'] = $this->pi_getLL('missing_'.$fName);
-				$markerArray['###MISSING_INVITATION_'.$this->cObj->caseshift($fName,'upper').'###'] = $this->pi_getLL('missing_invitation_'.$fName);
-			} else {
-				$markerArray['###REQUIRED_'.$this->cObj->caseshift($fName,'upper').'###'] = '';
-			}
-		}
-		
-			// Button labels
-		$buttonLabels = t3lib_div::trimExplode(',', $this->buttonLabelsList);
-		while (list(, $labelName) = each($buttonLabels) ) {
-			$markerArray['###LABEL_BUTTON_'.$this->cObj->caseshift($labelName,'upper').'###'] = $this->pi_getLL('button_'.$labelName);
-		}
-		
-			// Extra labels
-		if (isset($this->conf['extraLabels']) && $this->conf['extraLabels'] != '') {
-				$otherLabelsList .= ',' . $this->conf['extraLabels'];
-		}
-		
-			// Labels possibly with variables
-		$otherLabels = t3lib_div::trimExplode(',', $this->otherLabelsList);
-		while (list(, $labelName) = each($otherLabels) ) {
-			$markerArray['###LABEL_'.$this->cObj->caseshift($labelName,'upper').'###'] = sprintf($this->pi_getLL($labelName), $this->thePidTitle, $dataArray['name'], $dataArray['email'], $dataArray['first_name']); 
-		}
-		
-		return $markerArray;
+		$this->marker->setOtherLabelsList($otherLabelsList);
 	}
+
 }
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1.php']) {

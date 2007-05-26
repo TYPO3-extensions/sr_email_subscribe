@@ -1,3 +1,6 @@
 
   # cat=basic/enable; type=boolean; label=Use Flexforms: Enable the use of Flexforms in the backend. Extension fh_library version 0.0.4+ must be installed. Default is 1.
 useFlexforms = 1
+  # cat=basic/enable; type=string; label=Image upload folder. This is the place where the images lie.
+imageFolder = uploads/tx_sremailsubscribe
+

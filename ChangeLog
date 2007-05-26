@@ -1,3 +1,8 @@
+2007-05-26  Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 5641: This version works again with sr_feuser_register 2.5.7+. The method addLabelMarkers has been deleted.
+	* The deprecated pi2 has been deleted now. Some English texts have been deleted. They will be taken from sr_feuser_register directly. The correct paramater for email is %4 instead of %3.
+	* This works with tt_address 2.1.0+. Therefore some tt_address fields do not need to be added in this extension any more.
+
 2007-01-17  Franz Holzinger  <franz@fholzinger.com>
 	* freecap captcha support by Ralph Brugger <Ralph.Brugger@linkpool.de>
 
