@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Email Address Subscription</description>
+        <type>database</type>
+        <csh_table></csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="tt_content.email_subscribe">Subscription with email address</label>
+            <label index="tt_content.email_subscribe_casual">Subscription with email address (casual) - DEPRECATED</label>
+            <label index="tt_content.pi_flexform.display_mode">Display mode</label>
+            <label index="tt_content.pi_flexform.display_mode.1">Not set</label>
+            <label index="tt_content.pi_flexform.display_mode.3">Create</label>
+            <label index="tt_content.pi_flexform.display_mode.5">Invite</label>
+            <label index="tt_content.pi_flexform.display_mode.7">Edit</label>
+            <label index="tt_address.static_info_country">Country:</label>
+            <label index="tt_address.zone">State/province:</label>
+            <label index="tt_address.language">Language:</label>
+            <label index="tt_address.first_name">First Name:</label>
+            <label index="tt_address.last_name">Last Name:</label>
+            <label index="tt_address.module_sys_dmail_html">Receive emails in HTML format?</label>
+            <label index="tt_address.date_of_birth">Date of birth:</label>
+            <label index="tt_address.comments">Comments:</label>
+        </languageKey>
+        <languageKey index="dk" type="array">
+            <label index="tt_content.email_subscribe">Tilmelding med emailadresse</label>
+            <label index="tt_address.static_info_country">Land:</label>
+            <label index="tt_address.zone">Stat/Provins/Amt:</label>
+            <label index="tt_address.language">Sprog:</label>
+            <label index="tt_address.first_name">Fornavn:</label>
+            <label index="tt_address.last_name">Efternavn:</label>
+            <label index="tt_address.module_sys_dmail_html">Modtag emails i HTML format?</label>
+            <label index="tt_address.date_of_birth">Fødselsdato:</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="tt_content.email_subscribe">E-Mail Newletter Registrierung (förmlich)</label>
+            <label index="tt_address.static_info_country">Land:</label>
+            <label index="tt_address.zone">Bundesland / Staat / Provinz:</label>
+            <label index="tt_address.language">Sprache:</label>
+            <label index="tt_address.first_name">Vorname:</label>
+            <label index="tt_address.last_name">Nachname:</label>
+            <label index="tt_address.module_sys_dmail_html">E-Mails im HTML-Format erhalten?</label>
+            <label index="tt_address.date_of_birth">Geburtsdatum:</label>
+        </languageKey>
+        <languageKey index="no" type="array">
+            <label index="tt_content.email_subscribe">Innmelding med e-postadresse</label>
+            <label index="tt_address.static_info_country">Land:</label>
+            <label index="tt_address.zone">Fylke:</label>
+            <label index="tt_address.language">Språk:</label>
+            <label index="tt_address.first_name">Fornavn:</label>
+            <label index="tt_address.last_name">Etternavn:</label>
+            <label index="tt_address.module_sys_dmail_html">Motta epost i HTML format?</label>
+            <label index="tt_address.date_of_birth">Fødselsdato</label>
+        </languageKey>
+        <languageKey index="it" type="array">
+            <label index="tt_address.static_info_country">Stato:</label>
+            <label index="tt_address.zone">Provincia:</label>
+            <label index="tt_address.language">Lingua:</label>
+            <label index="tt_address.first_name">Nome:</label>
+            <label index="tt_address.last_name">Cognome:</label>
+            <label index="tt_address.module_sys_dmail_html">Vuoi ricevere le email in formato HTML?</label>
+        </languageKey>
+        <languageKey index="fr" type="array">
+            <label index="tt_content.email_subscribe">Abonnement avec adresse de courrier électronique</label>
+            <label index="tt_address.static_info_country">Pays:</label>
+            <label index="tt_address.zone">État/province:</label>
+            <label index="tt_address.language">Langue:</label>
+            <label index="tt_address.first_name">Prénom:</label>
+            <label index="tt_address.last_name">Nom:</label>
+            <label index="tt_address.module_sys_dmail_html">Recevoir les messages en format HTML?</label>
+            <label index="tt_address.date_of_birth">Date de naissance:</label>
+            <label index="tt_address.comments">Commentaires:</label>
+        </languageKey>
+        <languageKey index="es" type="array">
+            <label index="tt_content.email_subscribe">Suscripción con dirección de correo electrónico</label>
+            <label index="tt_address.static_info_country">País:</label>
+            <label index="tt_address.zone">Estado/provincia:</label>
+            <label index="tt_address.language">Idioma:</label>
+            <label index="tt_address.first_name">Nombre:</label>
+            <label index="tt_address.last_name">Apellido:</label>
+            <label index="tt_address.module_sys_dmail_html">Recibir correos en formato HTML?</label>
+            <label index="tt_address.date_of_birth">Fecha de nacimiento:</label>
+        </languageKey>
+        <languageKey index="nl" type="array">
+            <label index="tt_content.email_subscribe">Abonnement met emailadres</label>
+            <label index="tt_address.static_info_country">Land:</label>
+            <label index="tt_address.zone">Provincie:</label>
+            <label index="tt_address.language">Taal:</label>
+            <label index="tt_address.first_name">Voornaam:</label>
+            <label index="tt_address.last_name">Achternaam:</label>
+            <label index="tt_address.module_sys_dmail_html">Emails in HTML formaat ontvangen?</label>
+            <label index="tt_address.date_of_birth">Geboortedatum:</label>
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+	<languageKey index="si" type="array">
+            <label index="tt_content.email_subscribe">Prijava z e-pošto.</label>
+            <label index="tt_content.email_subscribe_casual">Prijava z e-pošto.</label>
+            <label index="tt_content.pi_flexform.display_mode">Prikaz</label>
+            <label index="tt_content.pi_flexform.display_mode.1">Ni določen</label>
+            <label index="tt_content.pi_flexform.display_mode.3">Ustvari</label>
+            <label index="tt_content.pi_flexform.display_mode.5">Povabi</label>
+            <label index="tt_content.pi_flexform.display_mode.7">Posodobi</label>
+            <label index="tt_address.static_info_country">Država:</label>
+            <label index="tt_address.zone">Država / provinca:</label>
+            <label index="tt_address.language">Jezik:</label>
+            <label index="tt_address.first_name">Ime:</label>
+            <label index="tt_address.last_name">Priimek:</label>
+            <label index="tt_address.module_sys_dmail_html">Prejemanje sporočil v HTML formatu?</label>
+            <label index="tt_address.date_of_birth">Datum rojstva:</label>
+            <label index="tt_address.comments">Komentar:</label>
+	</languageKey>
+        <languageKey index="fi" type="array">
+            <label index="tt_content.email_subscribe">Uutislehdentilaus sähköpostiosoitteeseen:</label>
+            <label index="tt_address.static_info_country">Maa:</label>
+            <label index="tt_address.zone">Osavaltio/provinssi:</label>
+            <label index="tt_address.language">Kieli:</label>
+            <label index="tt_address.first_name">Etunimi:</label>
+            <label index="tt_address.last_name">Sukunimi:</label>
+            <label index="tt_address.module_sys_dmail_html">Haluatko vastaanottaa sähköpostit HTML-muodossa ?</label>
+            <label index="tt_address.date_of_birth">Syntymäaika:</label>
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+            <label index="tt_address.static_info_country">Land:</label>
+            <label index="tt_address.zone">Stat/provins:</label>
+            <label index="tt_address.language">Språk:</label>
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+            <label index="tt_address.static_info_country">Država:</label>
+            <label index="tt_address.zone">Regija/županija:</label>
+            <label index="tt_address.language">Jezik:</label>
+            <label index="tt_address.first_name">Ime:</label>
+            <label index="tt_address.last_name">Prezime:</label>
+            <label index="tt_address.module_sys_dmail_html">Primanje emaila u HTML formatu?</label>
+        </languageKey>
+        <languageKey index="hu" type="array">
+            <label index="tt_address.static_info_country">Ország:</label>
+            <label index="tt_address.zone">Állam/tartomány:</label>
+            <label index="tt_address.language">Nyelv:</label>
+            <label index="tt_address.first_name">Keresztnév:</label>
+            <label index="tt_address.last_name">Vezetéknév:</label>
+            <label index="tt_address.module_sys_dmail_html">HTML formátumú email fogadása?</label>
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+        <languageKey index="ca" type="array">
+        </languageKey>
+        <languageKey index="ba" type="array">
+        </languageKey>
+        <languageKey index="kr" type="array">
+        </languageKey>
+    </data>
+    <orig_hash type="array">
+        <languageKey index="default" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_content.email_subscribe_casual" type="integer">141358561</label>
+            <label index="tt_content.pi_flexform.display_mode" type="integer">194991965</label>
+            <label index="tt_content.pi_flexform.display_mode.1" type="integer">163210921</label>
+            <label index="tt_content.pi_flexform.display_mode.3" type="integer">109504151</label>
+            <label index="tt_content.pi_flexform.display_mode.5" type="integer">208273649</label>
+            <label index="tt_content.pi_flexform.display_mode.7" type="integer">131916066</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+            <label index="tt_address.comments" type="integer">202678474</label>
+        </languageKey>
+        <languageKey index="dk" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+        </languageKey>
+        <languageKey index="no" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+        </languageKey>
+        <languageKey index="it" type="array">
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+        </languageKey>
+        <languageKey index="fr" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+            <label index="tt_address.comments" type="integer">202678474</label>
+        </languageKey>
+        <languageKey index="es" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+        </languageKey>
+        <languageKey index="nl" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+	<languageKey index="si" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_content.email_subscribe_casual" type="integer">141358561</label>
+            <label index="tt_content.pi_flexform.display_mode" type="integer">194991965</label>
+            <label index="tt_content.pi_flexform.display_mode.1" type="integer">163210921</label>
+            <label index="tt_content.pi_flexform.display_mode.3" type="integer">109504151</label>
+            <label index="tt_content.pi_flexform.display_mode.5" type="integer">208273649</label>
+            <label index="tt_content.pi_flexform.display_mode.7" type="integer">131916066</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+            <label index="tt_address.comments" type="integer">202678474</label>
+	</languageKey>
+        <languageKey index="fi" type="array">
+            <label index="tt_content.email_subscribe" type="integer">98258121</label>
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+            <label index="tt_address.date_of_birth" type="integer">2570779</label>
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+        </languageKey>
+        <languageKey index="hu" type="array">
+            <label index="tt_address.static_info_country" type="integer">258260574</label>
+            <label index="tt_address.zone" type="integer">267945122</label>
+            <label index="tt_address.language" type="integer">8937228</label>
+            <label index="tt_address.first_name" type="integer">157468741</label>
+            <label index="tt_address.last_name" type="integer">175554559</label>
+            <label index="tt_address.module_sys_dmail_html" type="integer">145486207</label>
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+        <languageKey index="ca" type="array">
+        </languageKey>
+        <languageKey index="ba" type="array">
+        </languageKey>
+        <languageKey index="kr" type="array">
+        </languageKey>
+    </orig_hash>
+    <orig_text type="array">
+        <languageKey index="default" type="array">
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+		<languageKey index="si" type="array">
+			<label index="tt_content.email_subscribe">Subscription with email address</label>
+			<label index="tt_content.email_subscribe_casual">Subscription with email address (casual) - DEPRECATED</label>
+			<label index="tt_content.pi_flexform.display_mode">Display mode</label>
+			<label index="tt_content.pi_flexform.display_mode.1">Not set</label>
+			<label index="tt_content.pi_flexform.display_mode.3">Create</label>
+			<label index="tt_content.pi_flexform.display_mode.5">Invite</label>
+			<label index="tt_content.pi_flexform.display_mode.7">Edit</label>
+			<label index="tt_address.static_info_country">Country:</label>
+			<label index="tt_address.zone">State/province:</label>
+			<label index="tt_address.language">Language:</label>
+			<label index="tt_address.first_name">First Name:</label>
+			<label index="tt_address.last_name">Last Name:</label>
+			<label index="tt_address.module_sys_dmail_html">Receive emails in HTML format?</label>
+			<label index="tt_address.date_of_birth">Date of birth:</label>
+			<label index="tt_address.comments">Comments:</label>
+		</languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+        <languageKey index="ca" type="array">
+        </languageKey>
+        <languageKey index="ba" type="array">
+        </languageKey>
+        <languageKey index="kr" type="array">
+        </languageKey>
+    </orig_text>
+</T3locallang>

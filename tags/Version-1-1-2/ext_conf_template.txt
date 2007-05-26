@@ -1,0 +1,3 @@
+
+  # cat=basic/enable; type=boolean; label=Use Flexforms: Enable the use of Flexforms in the backend. Extension fh_library version 0.0.4+ must be installed. Default is 1.
+useFlexforms = 1
