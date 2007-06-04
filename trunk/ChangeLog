@@ -1,3 +1,6 @@
+2007-06-04 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 3736: Change the CSS template to:   <form id="###FORM_NAME###" ...
+
 2007-05-26  Franz Holzinger  <franz@fholzinger.com>
 	* fix bug 5641: This version works again with sr_feuser_register 2.5.7+. The method addLabelMarkers has been deleted.
 	* The deprecated pi2 has been deleted now. Some English texts have been deleted. They will be taken from sr_feuser_register directly. The correct paramater for email is %4 instead of %3.
