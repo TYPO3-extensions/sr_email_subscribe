@@ -26,7 +26,11 @@ if (t3lib_extMgm::isLoaded(FH_LIBRARY_EXTkey)) {
 
 t3lib_div::loadTCA('tt_address');
 
-$TCA['tt_address']['columns']['image']['config']['uploadfolder'] = $TYPO3_CONF_VARS['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'];
+if (
+	$TYPO3_CONF_VARS['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useImageFolder'] &&
+	$TYPO3_CONF_VARS['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'] != '')	{
+	$TCA['tt_address']['columns']['image']['config']['uploadfolder'] = $TYPO3_CONF_VARS['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'];
+}
 
 t3lib_extMgm::addTCAcolumns('tt_address', Array(
 	'static_info_country' => Array (

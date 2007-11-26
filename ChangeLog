@@ -1,3 +1,7 @@
+2007-11-26 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug in CSS template
+	* do not use the cofigured image upload path by default
+
 2007-06-04 Franz Holzinger  <franz@fholzinger.com>
 	* fix bug 3736: Change the CSS template to:   <form id="###FORM_NAME###" ...
 
