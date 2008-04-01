@@ -1,0 +1,137 @@
+plugin.tx_sremailsubscribe {
+
+    # cat=plugin.tx_sremailsubscribe/file; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template file 
+  file.templateFile = EXT:sr_email_subscribe/pi1/tx_sremailsubscribe_pi1_css_tmpl.html
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Force file deletion: On record deletion, related images and files will be deleted even if the record is only marked 'deleted'
+  forceFileDelete = 1
+
+  # cat=plugin.tx_sremailsubscribe/file; type=file[gif]; label= Icon used for deletion of uploaded files.
+  file.icon_delete = EXT:sr_email_subscribe/pi1/icon_delete.gif
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Administration email: Enter the administration email address here. This email address will be the sender email and also receive administration notifications.
+  email = MyTypo3Site@mydomain.org
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Site name: Enter the name of the subscription site here. If set, this will be used as the email address name in the mails sent as well as signature on the mails.
+  siteName = My Typo3 Site
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Subscription form fields: List of fields to be included on the email address subscription form.
+  formFields = email,first_name,last_name,date_of_birth,address,city,zone,static_info_country,zip,mobile,phone,language,title,company,www,module_sys_dmail_html,module_sys_dmail_category,image,comments,hidden
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Required fields: List of fields that must be fillied in on the email address subscription form.
+  requiredFields = email,first_name,last_name,date_of_birth
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Authentication code fields: List of fields that are used in the calculation of authentication codes. Direct Mail uses only uid.
+  authcodeFields = uid
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Authentication code length: Length of the authentication codes. Direct Mail uses 8.
+  codeLength = 8
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Name of the HTML form: The name is referenced on the country onChange attribute.
+  formName = tt_address_form
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Name of the table: The name is used for the records in the frontend.
+  tableName = tt_address
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Country onchange attribute: Javascript to execute when the selected country is changed in the country selector box.
+  onChangeCountryAttribute = javascript:window.document.forms['tt_address_form'].submit();
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Email addresses PID. If the records edited/created are located in another page than the 'current', the PID of that page should be specified here.
+  pid =
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= PID title override: If set, this will be used as the name of the System Folder containing the email addresses records when this name is used in online or email messages.
+  pidTitleOverride =
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Subscription page PID: PID of the page on which the plugin is inserted with the intent of serving as the email address subscription page.
+  registerPID =
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Subscription editing page PID: PID of the page on which the plugin is inserted with the intent of serving as the subscription editing page.
+  editPID =
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Infomail page PID: PID of the page on which the plugin is inserted with the intent of serving as the infomail dialog page.
+  infomailPID =
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Confirmation page PID: PID of the page on which the plugin is inserted with the intent of serving as the subscription confirmation page (or setfixed page!).
+  confirmPID =
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Confirmation of invitation page PID: PID of the page on which the plugin is inserted with the intent of serving as the subscription confirmation page (or setfixed page!) when replying to an invitation.
+  confirmInvitationPID =
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Confirmation page Type: Type (or pageNum) of the confirmation page.
+  confirmType = 0
+
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Default CODE: Default CODE, when not specified on the inserted plugin record. May be CREATE or EDIT or empty.
+  defaultCODE = 
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable preview on subscription: If set, the subscription dialogue will include a preview of the subscription data before it is saved.
+  enablePreviewRegister = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable preview on subscription update: If set, the subscription update dialogue will include a preview of the subscription data before it is saved.
+  enablePreviewEdit = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email confirmation request: If set, an email will be sent to the prospective subscriber requesting a confirmation of subscription.
+  enableEmailConfirmation = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on approval: If set, an email will be sent to the subscriber when he(she) confirms his(her) subscription.
+  enableEmailOnApprove = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on subscription: If set, an email will be sent to the subscriber confirming his(her) subscription. This is ignored if email confirmation request is enabled.
+  enableEmailOnRegister = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on profile update: If set, an email will be sent to the subscriber to confirm the update of his(her) subscription data.
+  enableEmailOnUpdate = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on refusal or termination of subscription: If set, an email will be sent to the subscriber when he refuses to confirm his(her) subscription or when he(she) terminates his(her) subscription in reponse to an infomail.
+  enableEmailOnDelete = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable admin notification on confirmation request: If set, an email will be sent to the site administration when a request for confirmation of subscription is sent to a subscriber.
+  enableAdminNotifyConfirmation = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable admin notification on approval: If set, an email will be sent to the site administration when a subscriber confirms his(her) subscription.
+  enableAdminNotifyOnApprove = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable admin notification on subscription: If set, an email will be sent to the site administration when a visitor subscribes. This is ignored if email confirmation request is enabled.
+  enableAdminNotifyOnRegister = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable admin notification on update: If set, an email will be sent to the site administration when a subscriber updates his(her) subscription data.
+  enableAdminNotifyOnUpdate = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable admin notification on refusal or termination of subscription: If set, an email will be sent to the site administration when a subscriber refuses to confirm or terminates his(her) subscription.
+  enableAdminNotifyOnDelete = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable HTML emails: If set, emails sent to the subscriber will be sent in HTML format.
+  enableHTMLMail = 1
+
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable HTML email attachment: If set, the specified attachment file will be attached to the confirmation HTML email.
+  enableEmailAttachment = 0
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Maximun name length: The maximum number of characters that the name of the subscriber may contain.
+  nameAtMost = 80
+  
+      # cat=plugin.tx_sremailsubscribe//; type=string; label= PID list for Direct Mail categories: The Direct mail categories used by the plugin will be restricted to those found in these PID's.
+  module_sys_dmail_category_PIDLIST =
+  
+      # cat=plugin.tx_sremailsubscribe//; type=options[,formal,informal]; label= Salutation mode to use: Possible value are 'formal' or 'informal'.
+  salutation =
+  
+      # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label=Use short URL's: If set, the use of short URL's in email messages sent to users is enabled.
+  useShortUrls = 0
+
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label=Short URL cache lifespan: Number of days that short URL's will be kept in the DB. After this delay, the short URL's will be removed. Confirmation URL's included in email messages older than this number of days will not work.
+  shortUrlLife = 30
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Date Format (y-m-d)
+  dateFormat = Y-m-d
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Split char for Date Format (-)
+  dateSplit = -
+}
+
+plugin.tx_sremailsubscribe_pi1 {
+
+    # cat=plugin.tx_sremailsubscribe_pi1/file; type=file[pdf,doc,sxw,txt]; label= Attachment file: File to be attached to the confirmation email.
+  file.attachmentFile = EXT:sr_email_subscribe/pi1/tx_sremailsubscribe_pi1_sample.txt
+
+    # cat=plugin.tx_sremailsubscribe_pi1/file; type=file[css]; label= HTML emails stylesheet: If HTML emails are enabled, this file contains the CSS style sheet to be incorporated in these mails.
+  HTMLMailCSS = EXT:sr_email_subscribe/pi1/tx_sremailsubcribe_htmlmail_xhtml.css
+}
