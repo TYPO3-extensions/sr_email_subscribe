@@ -1,21 +1,23 @@
 plugin.tx_sremailsubscribe_pi1 {
-	
+
+	table.name = {$plugin.tx_sremailsubscribe.tableName}
+
 	templateStyle = old-style
 	templateFile = {$plugin.tx_sremailsubscribe.file.templateFile}
-	
+
 	fe_userOwnSelf = 1
 	fe_userEditSelf = 1
 	delete = 1
-	
+
 	wrap1.wrap = {$plugin.tx_sremailsubscribe.wrap1}
 	wrap2.wrap = {$plugin.tx_sremailsubscribe.wrap2}
 	wrap3.wrap = {$plugin.tx_sremailsubscribe.wrap3}
 	color1.wrap = {$plugin.tx_sremailsubscribe.color1}
 	color2.wrap = {$plugin.tx_sremailsubscribe.color2}
 	color3.wrap = {$plugin.tx_sremailsubscribe.color3}
-	
+
 	icon_delete = {$plugin.tx_sremailsubscribe.file.icon_delete}
-	
+
 	pid = {$plugin.tx_sremailsubscribe.pid}
 	pidTitleOverride = {$plugin.tx_sremailsubscribe.pidTitleOverride}
 	registerPID = {$plugin.tx_sremailsubscribe.registerPID}
@@ -26,9 +28,11 @@ plugin.tx_sremailsubscribe_pi1 {
 	confirmType = {$plugin.tx_sremailsubscribe.confirmType}
 	module_sys_dmail_category_PIDLIST = {$plugin.tx_sremailsubscribe.module_sys_dmail_category_PIDLIST}
 	defaultCODE = {$plugin.tx_sremailsubscribe.defaultCODE}
-	
+
 	useShortUrls = {$plugin.tx_sremailsubscribe.useShortUrls}
 	shortUrlLife = {$plugin.tx_sremailsubscribe.shortUrlLife}
+	dateFormat = {$plugin.tx_sremailsubscribe.dateFormat}
+	dateSplit = {$plugin.tx_sremailsubscribe.dateSplit}
 
 	formName = {$plugin.tx_sremailsubscribe.formName}
 	onChangeCountryAttribute = {$plugin.tx_sremailsubscribe.onChangeCountryAttribute}
@@ -61,6 +65,7 @@ plugin.tx_sremailsubscribe_pi1 {
 			company = atMost[50]
 			city = atMost[40]
 			zip = atMost[20]
+			mobile = atMost[25]
 			phone = atMost[25]
 			fax = atMost[25]
 			image = upload
@@ -72,7 +77,7 @@ plugin.tx_sremailsubscribe_pi1 {
 		}
 	}
 
-	setfixed = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+	setfixed = 1
 	setfixed.APPROVE {
 		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields},pid
 		hidden = 0
@@ -84,8 +89,9 @@ plugin.tx_sremailsubscribe_pi1 {
 		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
 	}
 
-	authcodeFields = {$plugin.tx_sremailsubscribe.authcodeFields}
-	authcodeFields.codeLength = {$plugin.tx_sremailsubscribe.codeLength}
+	enableAutoLoginOnConfirmation = {$plugin.tx_sremailsubscribe.enableAutoLoginOnConfirmation}
+	enableAutoLoginOnCreate = {$plugin.tx_sremailsubscribe.enableAutoLoginOnCreate}
+	autoLoginRedirect_url = {$plugin.tx_sremailsubscribe.autoLoginRedirect_url}
 
 	invite < .create
 

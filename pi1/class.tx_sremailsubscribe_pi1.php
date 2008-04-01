@@ -3,7 +3,7 @@
 *  Copyright notice
 *
 *  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
-*  (c) 2004-2007 Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
+*  (c) 2004-2008 Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
 *  All rights reserved
 *
 *  This script is part of the Typo3 project. The Typo3 project is
@@ -42,7 +42,7 @@ class tx_sremailsubscribe_pi1 extends tx_srfeuserregister_pi1 {
 		// Plugin initialization
 	var $prefixId = 'tx_sremailsubscribe_pi1';  // Same as class name
 	var $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php'; // Path to this script relative to the extension dir.
-	var $extKey = 'sr_email_subscribe';  // The extension key.
+	var $extKey = SR_EMAIL_SUBSCRIBE_EXTkey;  // The extension key.
 	var $adminFieldList = 'name,hidden';
 
 	/**
@@ -51,17 +51,18 @@ class tx_sremailsubscribe_pi1 extends tx_srfeuserregister_pi1 {
 	* @return void
 	*/
 	function init(&$conf, $theTable, &$adminFieldList) {
-		global $TYPO3_CONF_VARS;
-
 		$adminFieldList = 'name,hidden';
 
-		if (t3lib_extMgm::isLoaded(FH_LIBRARY_EXTkey)) {
+		if (t3lib_extMgm::isLoaded(DIV2007_EXTkey)) {
+				// Static Methods for Extensions for fetching the texts of sr_feuser_register
+			require_once(PATH_BE_div2007.'class.tx_div2007_alpha.php');
+			tx_div2007_alpha::loadLL_fh001($this,'EXT:'.SR_FEUSER_REGISTER_EXTkey.'/pi1/locallang.xml',FALSE);
+		} else if (t3lib_extMgm::isLoaded(FH_LIBRARY_EXTkey)) {
 				// FE BE library for flexform functions
 			require_once(PATH_BE_fh_library.'lib/class.tx_fhlibrary_language.php');
 			tx_fhlibrary_language::pi_loadLL($this,'EXT:'.SR_FEUSER_REGISTER_EXTkey.'/pi1/locallang.xml',FALSE);
 		}
-
-		parent::init($conf, 'tt_address', $adminFieldList);
+		$rc = parent::init($conf, 'tt_address', $adminFieldList);
 
 		$buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
 		$this->marker->setButtonLabelsList($buttonLabelsList);
@@ -83,12 +84,13 @@ class tx_sremailsubscribe_pi1 extends tx_srfeuserregister_pi1 {
 		v_sending_infomail,v_sending_infomail_message1,v_sending_infomail_message2,v_infomail_subject,v_infomail_reason,v_infomail_message1,v_infomail_message2,
 		v_infomail_norecord_subject,v_infomail_norecord_message1,v_infomail_norecord_message2';
 		$this->marker->setOtherLabelsList($otherLabelsList);
-	}
 
+		return $rc;
+	}
 }
 
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1.php']) {
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1.php']);
+if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1.php']) {
+	include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1.php']);
 }
 
 ?>
