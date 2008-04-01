@@ -1,5 +1,7 @@
 plugin.tx_sremailsubscribe_pi1 {
 
+	table.name = {$plugin.tx_sremailsubscribe.tableName}
+
 	templateStyle = css-styled
 	templateFile = {$plugin.tx_sremailsubscribe.file.templateFile}
 
@@ -22,6 +24,8 @@ plugin.tx_sremailsubscribe_pi1 {
 
 	useShortUrls = {$plugin.tx_sremailsubscribe.useShortUrls}
 	shortUrlLife = {$plugin.tx_sremailsubscribe.shortUrlLife}
+	dateFormat = {$plugin.tx_sremailsubscribe.dateFormat}
+	dateSplit = {$plugin.tx_sremailsubscribe.dateSplit}
 
 	formName = {$plugin.tx_sremailsubscribe.formName}
 	onChangeCountryAttribute = {$plugin.tx_sremailsubscribe.onChangeCountryAttribute}
@@ -56,6 +60,7 @@ plugin.tx_sremailsubscribe_pi1 {
 			company = atMost[50]
 			city = atMost[40]
 			zip = atMost[20]
+			mobile = atMost[25]
 			phone = atMost[25]
 			fax = atMost[25]
 			image = upload
@@ -67,7 +72,7 @@ plugin.tx_sremailsubscribe_pi1 {
 		}
 	}
 
-	setfixed = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+	setfixed = 1
 	setfixed.APPROVE {
 		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields},pid
 		hidden = 0
@@ -78,6 +83,10 @@ plugin.tx_sremailsubscribe_pi1 {
 	setfixed.EDIT {
 		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
 	}
+
+	enableAutoLoginOnConfirmation = {$plugin.tx_sremailsubscribe.enableAutoLoginOnConfirmation}
+	enableAutoLoginOnCreate = {$plugin.tx_sremailsubscribe.enableAutoLoginOnCreate}
+	autoLoginRedirect_url = {$plugin.tx_sremailsubscribe.autoLoginRedirect_url}
 
 	authcodeFields = {$plugin.tx_sremailsubscribe.authcodeFields}
 	authcodeFields.codeLength = {$plugin.tx_sremailsubscribe.codeLength}

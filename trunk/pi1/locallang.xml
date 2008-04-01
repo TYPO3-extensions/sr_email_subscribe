@@ -27,6 +27,15 @@
 			<label index="missing_invitation_zip_informal">Please enter a zip!</label>
 			<label index="static_info_country_informal">Country:</label>
 			<label index="missing_invitation_static_info_country_informal">Please select a country!</label>
+			<label index="mobile">Mobile:</label>
+			<label index="mobile_informal">Mobile:</label>
+			<label index="tooltip_mobile">Enter your mobile number.</label>
+			<label index="tooltip_mobile_informal">Enter your mobile number.</label>
+			<label index="tooltip_invitation_mobile">Enter the mobile number of the invited person.</label>
+			<label index="missing_mobile">Please enter your mobile number!</label>
+			<label index="missing_mobile_informal">Please enter your mobile number!</label>
+			<label index="missing_invitation_mobile">Please enter a mobile number!</label>
+			<label index="missing_invitation_mobile_informal">Please enter a mobile number!</label>
 			<label index="phone">Telephone:</label>
 			<label index="phone_informal">Telephone:</label>
 			<label index="tooltip_phone">Enter your phone number.</label>
@@ -41,6 +50,8 @@
 			<label index="missing_email_informal">A valid email is required.</label>
 			<label index="evalErrors_uniqueLocal_email_informal">This email already existed.</label>
 			<label index="module_sys_dmail_html_informal">Receive HTML emails?</label>
+			<label index="yes">Yes</label>
+			<label index="no">No</label>
 			<label index="language_informal">Language:</label>
 			<label index="missing_invitation_language_informal">Please select a preferred language!</label>
 			<label index="missing_invitation_title_informal">Please enter a title!</label>
@@ -59,6 +70,7 @@
 			<label index="evalErrors_max_size_image_informal">The file size should not exceed %s KB.</label>
 			<label index="button_register">Subscribe</label>
 			<label index="button_register_informal">Subscribe</label>
+			<label index="button_confirm_register">Subscribe now!</label>
 			<label index="button_confirm_register_informal">Subscribe now!</label>
 			<label index="button_send_invitation">Send invitation</label>
 			<label index="button_send_invitation_informal">Send invitation</label>
@@ -100,8 +112,8 @@
 			<label index="v_really_wish_to_delete_informal">Do you really wish to terminate your subscription?</label>
 			<label index="v_verify_before_create">Please verify that all the information is correct before your subscription is created:</label>
 			<label index="v_verify_before_create_informal">Please verify that all the information is correct before your subscription is created:</label>
-			<label index="v_verify_invitation_before_create">Please verify that all the data of &lt;b&gt;%3$s&lt;/b&gt; is correct before the subscription is created:</label>
-			<label index="v_verify_invitation_before_create_informal">Please verify that all the data of &lt;b&gt;%3$s&lt;/b&gt; is correct before the subscription is created:</label>
+			<label index="v_verify_invitation_before_create">Please verify that all the data of &lt;b&gt;%4$s&lt;/b&gt; is correct before the subscription is created:</label>
+			<label index="v_verify_invitation_before_create_informal">Please verify that all the data of &lt;b&gt;%4$s&lt;/b&gt; is correct before the subscription is created:</label>
 			<label index="v_edit_your_account">Edit the information of your subscription:</label>
 			<label index="v_edit_your_account_informal">Edit the information of your subscription:</label>
 			<label index="v_verify_before_update">Please verify that all the information is correct before your subscription is updated:</label>
@@ -158,8 +170,8 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_confirmed_informal">%2$s confirmed his(her) subscription to %1$s.</label>
 			<label index="v_registration_cancelled_message1">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</label>
 			<label index="v_registration_cancelled_message1_informal">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</label>
-			<label index="v_registration_cancelled_message2">Your subscription and address &lt;b&gt;%3$s&lt;/b&gt; have been deleted from our list.</label>
-			<label index="v_registration_cancelled_message2_informal">Your subscription and address &lt;b&gt;%3$s&lt;/b&gt; have been deleted from our list.</label>
+			<label index="v_registration_cancelled_message2">Your subscription and address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
+			<label index="v_registration_cancelled_message2_informal">Your subscription and address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
 			<label index="v_registration_cancelled">%2$s cancelled his(her) subscription to %1$s.</label>
 			<label index="v_registration_cancelled_informal">%2$s cancelled his(her) subscription to %1$s.</label>
 			<label index="v_sending_infomail">We are sending you an email message at your email address &lt;b&gt;%4$s&lt;/b&gt;.</label>
@@ -186,8 +198,8 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_deleted_subject_informal">Thank you for having subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_deleted_message1">You will no longer receive messages from us.</label>
 			<label index="v_registration_deleted_message1_informal">You will no longer receive messages from us.</label>
-			<label index="v_registration_deleted_message2">Your subscription and your address &lt;b&gt;%3$s&lt;/b&gt; have been deleted from our list.</label>
-			<label index="v_registration_deleted_message2_informal">Your subscription and your address &lt;b&gt;%3$s&lt;/b&gt; have been deleted from our list.</label>
+			<label index="v_registration_deleted_message2">Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
+			<label index="v_registration_deleted_message2_informal">Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
 			<label index="v_registration_deleted">%2$s terminated his(her) subscription to %1$s.</label>
 			<label index="v_registration_deleted_informal">%2$s terminated his(her) subscription to %1$s.</label>
 		</languageKey>
@@ -347,13 +359,13 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_notification">Bemærkning:</label>
 			<label index="v_registration_created_subject">Tak for din tilmelding til &lt;b&gt;%1$s&lt;/b&gt;,</label>
 			<label index="v_registration_created_message1">Din tilmelding er gennemført.</label>
-			<label index="v_registration_created_message2">Din emailadresse &lt;b&gt;%3$s&lt;/b&gt; er tilføjet til vores liste.</label>
+			<label index="v_registration_created_message2">Din emailadresse &lt;b&gt;%4$s&lt;/b&gt; er tilføjet til vores liste.</label>
 			<label index="v_registration_created">%2$s er tilmeldt til %1$s</label>
 			<label index="v_registration_updated_subject">Din tilmelding til &lt;b&gt;%1$s&lt;/b&gt; er blevet opdateret.</label>
 			<label index="v_registration_updated_message1">Tak fordi du holder din profil opdateret.</label>
 			<label index="v_registration_updated">%2$s har opdateret sin tilmelding til %1$s.</label>
 			<label index="v_invitation_confirm">Invitaionen er sendt.</label>
-			<label index="v_invitation_account_was_created">Tilmeldingen er gennemført. Der er sendt en mail til &lt;b&gt;%2$s&lt;/b&gt;, på mailadressen &lt;b&gt;%3$s&lt;/b&gt; med en invitation til at bekræfte tilmeldingen til &lt;b&gt;%1$s&lt;/b&gt;</label>
+			<label index="v_invitation_account_was_created">Tilmeldingen er gennemført. Der er sendt en mail til &lt;b&gt;%2$s&lt;/b&gt;, på mailadressen &lt;b&gt;%4$s&lt;/b&gt; med en invitation til at bekræfte tilmeldingen til &lt;b&gt;%1$s&lt;/b&gt;</label>
 			<label index="v_invitation_instructions1">Du vil først modtage vores nyhedsbrev &lt;b&gt;%1$s&lt;/b&gt;, når du har bekræftet din tilmelding. Følg venligst instruktionerne i bekræftelsesmailen for at færdiggøre registeringsproceduren.</label>
 			<label index="v_please_confirm">Bekræft venligst din registrering.</label>
 			<label index="v_your_account_was_created">Din tilmelding er gennemført. Vi har sendt en mail til din mailadresse &lt;b&gt;%4$s&lt;/b&gt; så du kan bekræfte tilmeldingen til &lt;b&gt;%1$s&lt;/b&gt;</label>
@@ -368,13 +380,13 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_invited">Der er sendt en invitaion til %2$s om at tilmelde sig til %2$s.</label>
 			<label index="v_registration_confirmed_subject">Tak for din tilmelding til &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_confirmed_message1">Din tilmelding er bekræftet.</label>
-			<label index="v_registration_confirmed_message2">Din emailadresse &lt;b&gt;%3$s&lt;/b&gt; er tilføjet til vores liste.</label>
+			<label index="v_registration_confirmed_message2">Din emailadresse &lt;b&gt;%4$s&lt;/b&gt; er tilføjet til vores liste.</label>
 			<label index="v_registration_confirmed">%3$s har bekræftet sin tilmelding til %1$s.</label>
 			<label index="v_registration_cancelled_subject">Tak for besøget</label>
 			<label index="v_registration_cancelled_message1">Din tilmelding til &lt;b&gt;%1$s&lt;/b&gt; er annulleret.</label>
-			<label index="v_registration_cancelled_message2">Din tilmelding og adresse &lt;b&gt;%3$s&lt;/b&gt; er slettet fra vores lister</label>
+			<label index="v_registration_cancelled_message2">Din tilmelding og adresse &lt;b&gt;%4$s&lt;/b&gt; er slettet fra vores lister</label>
 			<label index="v_registration_cancelled">%2$s annullerede sin tilmelding til %1$s.</label>
-			<label index="v_sending_infomail">Vi sender dig en email til din emailadresse &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail">Vi sender dig en email til din emailadresse &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message1">Emailen vil indeholde 2 links som du kan bruge til at rette eller stoppe din tilmelding til &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message2">Følg venligst emailens instruktioner for at rette eller stoppe din tilmelding.</label>
 			<label index="v_infomail_subject">Vedr. din tilmelding til &lt;b&gt;%1$s&lt;/b&gt;</label>
@@ -385,7 +397,7 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_infomail_norecord_message2">Hvis du støder på problemer med din tilmelding, så kontakt os venligst på denne emailadresse, og vi vil prøve at hjælpe dig.</label>
 			<label index="v_registration_deleted_subject">Tak for din tilmelding til &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_deleted_message1">Du vil ikke længere modtage meddelelser fra os.</label>
-			<label index="v_registration_deleted_message2">Din tilmelding og din adresse &lt;b&gt;%3$s&lt;/b&gt; er slettet fra vores liste</label>
+			<label index="v_registration_deleted_message2">Din tilmelding og din adresse &lt;b&gt;%4$s&lt;/b&gt; er slettet fra vores liste</label>
 			<label index="v_registration_deleted">%2$s stoppede sin tilmelding til %1$s.</label>
 			<label index="evalErrors_uniqueGlobal">Værdien findes allerede. Indtast venligst en ny værdi.</label>
 			<label index="evalErrors_uniqueLocal">Værdien findes allerede. Indtast venligst en ny værdi.</label>
@@ -448,8 +460,8 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_really_wish_to_delete_informal">Möchtest Du Dein Abonnement wirklich beenden?</label>
 			<label index="v_verify_before_create">Bitte überprüfen Sie die Korrektheit der Daten:</label>
 			<label index="v_verify_before_create_informal">Bitte überprüfe Deine Daten:</label>
-			<label index="v_verify_invitation_before_create">Bitte überprüfen Sie die Korrektheit der Daten von &lt;b&gt;%3$s&lt;/b&gt;:</label>
-			<label index="v_verify_invitation_before_create_informal">Bitte überprüfe die Korrektheit der Daten von &lt;b&gt;%3$s&lt;/b&gt;:</label>
+			<label index="v_verify_invitation_before_create">Bitte überprüfen Sie die Korrektheit der Daten von &lt;b&gt;%4$s&lt;/b&gt;:</label>
+			<label index="v_verify_invitation_before_create_informal">Bitte überprüfe die Korrektheit der Daten von &lt;b&gt;%4$s&lt;/b&gt;:</label>
 			<label index="v_edit_your_account">Bitte bearbeiten Sie die Daten Ihres Abonnements:</label>
 			<label index="v_edit_your_account_informal">Bitte bearbeite die Daten Deines Abonnements:</label>
 			<label index="v_verify_before_update">Bitte überprüfen Sie die Korrektheit der Daten:</label>
@@ -460,8 +472,8 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_created_message1">Ihr Abonnement wurde aufgenommen.</label>
 			<label index="v_registration_created_message1_informal">Dein Abonnement wurde aufgenommen.</label>
 			<label index="v_registration_updated_subject">Ihr Abonnement &lt;b&gt;%1$s&lt;/b&gt; wurde aktualisiert.</label>
-			<label index="v_invitation_account_was_created">Das Abonnement wurde vorgemerkt. Eine E-Mail mit einem Link zur Bestätigung Ihrer Registrierung für &lt;b&gt;%1$s&lt;/b&gt; wurde an &lt;b&gt;%2$s&lt;/b&gt; (&lt;b&gt;%3$s&lt;/b&gt;) gesendet.</label>
-			<label index="v_invitation_account_was_created_informal">Das Abonnement wurde vorgemerkt. Eine E-Mail mit einem Link zur Bestätigung Deiner Registrierung für &lt;b&gt;%1$s&lt;/b&gt; wurde an &lt;b&gt;%2$s&lt;/b&gt; (&lt;b&gt;%3$s&lt;/b&gt;) gesendet.</label>
+			<label index="v_invitation_account_was_created">Das Abonnement wurde vorgemerkt. Eine E-Mail mit einem Link zur Bestätigung Ihrer Registrierung für &lt;b&gt;%1$s&lt;/b&gt; wurde an &lt;b&gt;%2$s&lt;/b&gt; (&lt;b&gt;%4$s&lt;/b&gt;) gesendet.</label>
+			<label index="v_invitation_account_was_created_informal">Das Abonnement wurde vorgemerkt. Eine E-Mail mit einem Link zur Bestätigung Deiner Registrierung für &lt;b&gt;%1$s&lt;/b&gt; wurde an &lt;b&gt;%2$s&lt;/b&gt; (&lt;b&gt;%4$s&lt;/b&gt;) gesendet.</label>
 			<label index="v_invitation_instructions1">Sie werden unseren Newsletter &lt;b&gt;%1$s&lt;/b&gt; erst nach der Bestätigung Ihrer Registrierung erhalten. Bitte folgen Sie den Anweisungen in der E-Mail, um die Registrierung abzuschießen.</label>
 			<label index="v_invitation_instructions1_informal">Du wirst unseren Newsletter &lt;b&gt;%1$s&lt;/b&gt; erst nach der Bestätigung Deiner Registrierung erhalten. Bitte folge den Anweisungen in der E-Mail, um die Registrierung abzuschießen.</label>
 			<label index="v_your_account_was_created">Ihr Abonnement wurde aufgenommen. Wir werden Ihnen eine Nachricht an Ihre E-Mail-Adresse &lt;b&gt;%4$s&lt;/b&gt; senden, so dass Sie das Abonnement für &lt;b&gt;%1$s&lt;/b&gt; bestätigen können.</label>
@@ -498,14 +510,14 @@ Wenn Du unserer Einladung zum Kennenlernen des Newsletters &lt;b&gt;%1$s&lt;/b&g
 			<label index="v_registration_confirmed_subject_informal">Vielen Dank für Dein Abonnement von &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_confirmed_message1">Ihre Registrierung wurde bestätigt.</label>
 			<label index="v_registration_confirmed_message1_informal">Deine Registrierung wurde bestätigt.</label>
-			<label index="v_registration_confirmed">Die Registrierung von %3$s für den Newsletter %1$s wurde bestätigt.</label>
+			<label index="v_registration_confirmed">Die Registrierung von %4$s für den Newsletter %1$s wurde bestätigt.</label>
 			<label index="v_registration_cancelled_message1">Ihr Abonnement von &lt;b&gt;%1$s&lt;/b&gt; wurde beendet.</label>
 			<label index="v_registration_cancelled_message1_informal">Dein Abonnement von &lt;b&gt;%1$s&lt;/b&gt; wurde beendet.</label>
 			<label index="v_registration_cancelled_message2">Ihre Registrierung und Ihre E-Mail-Adresse &lt;b&gt;%4$s&lt;/b&gt; wurde aus unserer Liste entfernt.</label>
-			<label index="v_registration_cancelled_message2_informal">Deine Registrierung und Deine E-Mail-Adresse &lt;b&gt;%3$s&lt;/b&gt; wurde aus unserer Liste entfernt.</label>
+			<label index="v_registration_cancelled_message2_informal">Deine Registrierung und Deine E-Mail-Adresse &lt;b&gt;%4$s&lt;/b&gt; wurde aus unserer Liste entfernt.</label>
 			<label index="v_registration_cancelled">%2$s hat das Abonnement von %1$s beendet.</label>
-			<label index="v_sending_infomail">Wir senden Ihnen eine E-Mail an die Adresse: &lt;b&gt;%3$s&lt;/b&gt;.</label>
-			<label index="v_sending_infomail_informal">Wir senden Dir eine E-Mail an die Adresse: &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail">Wir senden Ihnen eine E-Mail an die Adresse: &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_informal">Wir senden Dir eine E-Mail an die Adresse: &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message1">Die Nachricht enthält zwei Links, mit denen Sie Ihr Abonnement von &lt;b&gt;%1$s&lt;/b&gt; ändern oder kündigen können.</label>
 			<label index="v_sending_infomail_message1_informal">Die Nachricht enthält zwei Links, mit denen Du Dein Abonnement von &lt;b&gt;%1$s&lt;/b&gt; ändern oder kündigen kannst.</label>
 			<label index="v_sending_infomail_message2">Bitte folgen Sie den Anweisungen in dieser E-Mail, um Ihre Abonnement zu ändern oder zu kündigen.</label>
@@ -1087,8 +1099,8 @@ Wenn Du unserer Einladung zum Kennenlernen des Newsletters &lt;b&gt;%1$s&lt;/b&g
 			<label index="v_really_wish_to_delete_informal">Souhaites-tu vraiment mettre fin à ton abonnement?</label>
 			<label index="v_verify_before_create">Veuillez vérifier que les informations sont correctes avant que votre abonnement ne soit créé:</label>
 			<label index="v_verify_before_create_informal">Vérifie que les renseignements sont exacts avant que ton abonnement ne soit créé:</label>
-			<label index="v_verify_invitation_before_create">Veuillez vérifier que les informations de &lt;b&gt;%3$s&lt;/b&gt; sont correctes avant que l'abonnement ne soit créé:</label>
-			<label index="v_verify_invitation_before_create_informal">Vérifie que les renseignements de &lt;b&gt;%3$s&lt;/b&gt; sont correctes avant que l'abonnement ne soit créé:</label>
+			<label index="v_verify_invitation_before_create">Veuillez vérifier que les informations de &lt;b&gt;%4$s&lt;/b&gt; sont correctes avant que l'abonnement ne soit créé:</label>
+			<label index="v_verify_invitation_before_create_informal">Vérifie que les renseignements de &lt;b&gt;%4$s&lt;/b&gt; sont correctes avant que l'abonnement ne soit créé:</label>
 			<label index="v_edit_your_account">Veuillez mettre à jour les informations de votre abonnement:</label>
 			<label index="v_edit_your_account_informal">Mets à jour les renseignements de ton abonnement:</label>
 			<label index="v_verify_before_update">Veuillez vérifier que les informations sont correctes avant que votre abonnement ne soit mis à jour:</label>
@@ -1100,8 +1112,8 @@ Wenn Du unserer Einladung zum Kennenlernen des Newsletters &lt;b&gt;%1$s&lt;/b&g
 			<label index="v_registration_created_subject_informal">Merci de t'être abonné à &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_created_message1">Votre abonnement a été ouvert.</label>
 			<label index="v_registration_created_message1_informal">Ton abonnement a été ouvert.</label>
-			<label index="v_registration_created_message2">Votre adresse de courrier électronique &lt;b&gt;%3$s&lt;/b&gt; a été ajoutée à nos listes.</label>
-			<label index="v_registration_created_message2_informal">Ton adresse de courrier électronique &lt;b&gt;%3$s&lt;/b&gt; a été ajoutée à nos listes.</label>
+			<label index="v_registration_created_message2">Votre adresse de courrier électronique &lt;b&gt;%4$s&lt;/b&gt; a été ajoutée à nos listes.</label>
+			<label index="v_registration_created_message2_informal">Ton adresse de courrier électronique &lt;b&gt;%4$s&lt;/b&gt; a été ajoutée à nos listes.</label>
 			<label index="v_registration_created">%2$s s'est abonné à %1$s.</label>
 			<label index="v_registration_updated_subject">Votre abonnement à &lt;b&gt;%1$s&lt;/b&gt; a été mis à jour.</label>
 			<label index="v_registration_updated_subject_informal">Ton abonnement à &lt;b&gt;%1$s&lt;/b&gt; a été mis à jour.</label>
@@ -1109,7 +1121,7 @@ Wenn Du unserer Einladung zum Kennenlernen des Newsletters &lt;b&gt;%1$s&lt;/b&g
 			<label index="v_registration_updated_message1_informal">Merci de tenir à jour les données de ton abonnement à &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_updated">%2$s a mis à jour son abonnement à %1$s.</label>
 			<label index="v_invitation_confirm">L'invitation a été envoyée.</label>
-			<label index="v_invitation_account_was_created">L'abonnement a été créé. Une invitation à confirmer son abonnement à &lt;b&gt;%1$s&lt;/b&gt; a été envoyée à &lt;b&gt;%2$s&lt;/b&gt; à l'adresse de courrier électronique &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_invitation_account_was_created">L'abonnement a été créé. Une invitation à confirmer son abonnement à &lt;b&gt;%1$s&lt;/b&gt; a été envoyée à &lt;b&gt;%2$s&lt;/b&gt; à l'adresse de courrier électronique &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_invitation_instructions1">Pour confirmer son abonnement à &lt;b&gt;%1$s&lt;/b&gt;, la personne invitée devra suivre les indications fournies dans le message d'invitation afin de compléter le processus d'abonnement.</label>
 			<label index="v_please_confirm">Veuillez confirmer votre abonnement.</label>
 			<label index="v_please_confirm_informal">Confirme ton abonnement.</label>
@@ -1148,18 +1160,18 @@ Si tu désires accepter notre invitation et confirmer ton abonnement à &lt;b&gt
 			<label index="v_registration_confirmed_subject_informal">Merci de t'abonner à &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_confirmed_message1">Votre abonnement a été confirmé.</label>
 			<label index="v_registration_confirmed_message1_informal">Ton abonnement a été confirmé.</label>
-			<label index="v_registration_confirmed_message2">Votre adresse de courrier électronique &lt;b&gt;%3$s&lt;/b&gt; a été ajoutée à nos listes.</label>
-			<label index="v_registration_confirmed_message2_informal">Ton adresse de courrier électronique &lt;b&gt;%3$s&lt;/b&gt; a été ajoutée à nos listes.</label>
-			<label index="v_registration_confirmed">%3$s a confirmé son abonnement à %1$s.</label>
+			<label index="v_registration_confirmed_message2">Votre adresse de courrier électronique &lt;b&gt;%4$s&lt;/b&gt; a été ajoutée à nos listes.</label>
+			<label index="v_registration_confirmed_message2_informal">Ton adresse de courrier électronique &lt;b&gt;%4$s&lt;/b&gt; a été ajoutée à nos listes.</label>
+			<label index="v_registration_confirmed">%4$s a confirmé son abonnement à %1$s.</label>
 			<label index="v_registration_cancelled_subject">Merci de votre visite</label>
 			<label index="v_registration_cancelled_subject_informal">Merci de ta visite</label>
 			<label index="v_registration_cancelled_message1">Votre abonnement à &lt;b&gt;%1$s&lt;/b&gt; a été annulé.</label>
 			<label index="v_registration_cancelled_message1_informal">Ton abonnement à &lt;b&gt;%1$s&lt;/b&gt; a été annulé.</label>
-			<label index="v_registration_cancelled_message2">Votre abonnement et votre adresse &lt;b&gt;%3$s&lt;/b&gt; ont été retirés de nos listes.</label>
-			<label index="v_registration_cancelled_message2_informal">Ton abonnement et ton adresse &lt;b&gt;%3$s&lt;/b&gt; ont été retirés de nos listes.</label>
+			<label index="v_registration_cancelled_message2">Votre abonnement et votre adresse &lt;b&gt;%4$s&lt;/b&gt; ont été retirés de nos listes.</label>
+			<label index="v_registration_cancelled_message2_informal">Ton abonnement et ton adresse &lt;b&gt;%4$s&lt;/b&gt; ont été retirés de nos listes.</label>
 			<label index="v_registration_cancelled">%2$s a annulé son abonnement à %1$s.</label>
-			<label index="v_sending_infomail">Nous vous envoyons un message à votre adresse de courrier électronique &lt;b&gt;%3$s&lt;/b&gt;.</label>
-			<label index="v_sending_infomail_informal">Nous t'envoyons un message à ton adresse de courrier électronique &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail">Nous vous envoyons un message à votre adresse de courrier électronique &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_informal">Nous t'envoyons un message à ton adresse de courrier électronique &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message1">Le message contiendra deux liens qui vous permettront soit de mettre à jour, soit de discontinuer votre abonnement à &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message1_informal">Le message contiendra deux liens qui te permettront soit de mettre à jour, soit de discontinuer ton abonnement à &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message2">Veuillez suivre les indications fournies dans ce message pour mettre à jour votre abonnement ou pour y mettre fin.</label>
@@ -1181,8 +1193,8 @@ Si tu désires accepter notre invitation et confirmer ton abonnement à &lt;b&gt
 			<label index="v_registration_deleted_subject">Merci d'avoir été abonné à &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_deleted_message1">Vous ne recevrez plus de messages de notre part.</label>
 			<label index="v_registration_deleted_message1_informal">Tu ne recevras plus de messages de notre part.</label>
-			<label index="v_registration_deleted_message2">Votre abonnement et votre adresse &lt;b&gt;%3$s&lt;/b&gt; ont été retirés de nos listes.</label>
-			<label index="v_registration_deleted_message2_informal">Ton abonnement et ton adresse &lt;b&gt;%3$s&lt;/b&gt; ont été retirés de nos listes.</label>
+			<label index="v_registration_deleted_message2">Votre abonnement et votre adresse &lt;b&gt;%4$s&lt;/b&gt; ont été retirés de nos listes.</label>
+			<label index="v_registration_deleted_message2_informal">Ton abonnement et ton adresse &lt;b&gt;%4$s&lt;/b&gt; ont été retirés de nos listes.</label>
 			<label index="v_registration_deleted">%2$s a mis fin à son abonnement à %1$s.</label>
 			<label index="evalErrors_uniqueGlobal">Cette valeur existe déjà. Veuiller écrire une nouvelle valeur.</label>
 			<label index="evalErrors_uniqueGlobal_informal">Cette valeur existe déjà. S'il-te-plaît, écris une nouvelle valeur.</label>
@@ -1388,8 +1400,8 @@ Si tu désires accepter notre invitation et confirmer ton abonnement à &lt;b&gt
 			<label index="v_really_wish_to_delete_informal">¿Verdaderamente deseas borrar tu suscripción?</label>
 			<label index="v_verify_before_create">Por favor, verífique sus datos antés de crear su suscripción:</label>
 			<label index="v_verify_before_create_informal">Por favor, verífica tus datos antés de crear tu suscripción:</label>
-			<label index="v_verify_invitation_before_create">Por favor, verífique los datos de &lt;b&gt;%3$s&lt;/b&gt; antés de crear la suscripción:</label>
-			<label index="v_verify_invitation_before_create_informal">Por favor, verífica los datos de &lt;b&gt;%3$s&lt;/b&gt; antés de crear la suscripción:</label>
+			<label index="v_verify_invitation_before_create">Por favor, verífique los datos de &lt;b&gt;%4$s&lt;/b&gt; antés de crear la suscripción:</label>
+			<label index="v_verify_invitation_before_create_informal">Por favor, verífica los datos de &lt;b&gt;%4$s&lt;/b&gt; antés de crear la suscripción:</label>
 			<label index="v_edit_your_account">Por favor actualize los datos de su suscripción:</label>
 			<label index="v_edit_your_account_informal">Por favor, actualiza los datos de tu suscripción:</label>
 			<label index="v_verify_before_update">Por favor, verífique sus datos antés de actualizar su suscripción:</label>
@@ -1402,8 +1414,8 @@ Si tu désires accepter notre invitation et confirmer ton abonnement à &lt;b&gt
 			<label index="v_registration_created_subject_informal">¡Gracias por suscribirte a &lt;b&gt;%1$s&lt;/b&gt;!</label>
 			<label index="v_registration_created_message1">Su suscripción fue creada.</label>
 			<label index="v_registration_created_message1_informal">Tu suscripción fue creada.</label>
-			<label index="v_registration_created_message2">Su dirección de correo electrónico &lt;b&gt;%3$s&lt;/b&gt; ha sido agregada a nuestras listas.</label>
-			<label index="v_registration_created_message2_informal">Tu dirección de correo electrónico &lt;b&gt;%3$s&lt;/b&gt; ha sido agregada a nuestras listas.</label>
+			<label index="v_registration_created_message2">Su dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt; ha sido agregada a nuestras listas.</label>
+			<label index="v_registration_created_message2_informal">Tu dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt; ha sido agregada a nuestras listas.</label>
 			<label index="v_registration_created">%2$s se suscribió a %1$s.</label>
 			<label index="v_registration_updated_subject">Su suscripción a &lt;b&gt;%1$s&lt;/b&gt; fue actualizada.</label>
 			<label index="v_registration_updated_subject_informal">Tu suscripción a &lt;b&gt;%1$s&lt;/b&gt; fue actualizada.</label>
@@ -1411,7 +1423,7 @@ Si tu désires accepter notre invitation et confirmer ton abonnement à &lt;b&gt
 			<label index="v_registration_updated_message1_informal">Gracias por tener actualizados los datos de tu suscripción a &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_updated">%2$s actualizó su suscripción a %1$s.</label>
 			<label index="v_invitation_confirm">La invitación fue enviada.</label>
-			<label index="v_invitation_account_was_created">La suscripción fue creada.  Una invitación a confirmar su suscripción a &lt;b&gt;%1$s&lt;/b&gt; fue enviada a &lt;b&gt;%2$s&lt;/b&gt; a su dirección de correo electrónico &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_invitation_account_was_created">La suscripción fue creada.  Una invitación a confirmar su suscripción a &lt;b&gt;%1$s&lt;/b&gt; fue enviada a &lt;b&gt;%2$s&lt;/b&gt; a su dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_invitation_instructions1">Para confirmar su suscripción a &lt;b&gt;%1$s&lt;/b&gt; la persona invitada tendrá que seguir las instrucciones que le señala el mensaje de invitación para completar el proceso de suscripción.</label>
 			<label index="v_please_confirm">Favor de confirmar su suscripción.</label>
 			<label index="v_please_confirm_informal">Por favor, confirma tu suscripción.</label>
@@ -1449,18 +1461,18 @@ Si deseas aceptar nuestra invitación y confirmar tu suscripción a &lt;b&gt;%1$
 			<label index="v_registration_confirmed_subject_informal">¡Gracias por suscribirte a &lt;b&gt;%1$s&lt;/b&gt;!</label>
 			<label index="v_registration_confirmed_message1">Su suscripción fue confirmada.</label>
 			<label index="v_registration_confirmed_message1_informal">Tu suscripción fue confirmada.</label>
-			<label index="v_registration_confirmed_message2">Su dirección de correo electrónico &lt;b&gt;%3$s&lt;/b&gt; ha sido agregada a nuestras listas.</label>
-			<label index="v_registration_confirmed_message2_informal">Tu dirección de correo electrónico &lt;b&gt;%3$s&lt;/b&gt; ha sido agregada a nuestras listas.</label>
-			<label index="v_registration_confirmed">%3$s confirmó su suscripción a %1$s.</label>
+			<label index="v_registration_confirmed_message2">Su dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt; ha sido agregada a nuestras listas.</label>
+			<label index="v_registration_confirmed_message2_informal">Tu dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt; ha sido agregada a nuestras listas.</label>
+			<label index="v_registration_confirmed">%4$s confirmó su suscripción a %1$s.</label>
 			<label index="v_registration_cancelled_subject">Gracias por su visita</label>
 			<label index="v_registration_cancelled_subject_informal">Gracias por tu visita</label>
 			<label index="v_registration_cancelled_message1">Su suscripción a &lt;b&gt;%1$s&lt;/b&gt; fue discontinuada.</label>
 			<label index="v_registration_cancelled_message1_informal">Tu suscripción a &lt;b&gt;%1$s&lt;/b&gt; fue discontinuada.</label>
-			<label index="v_registration_cancelled_message2">Su suscripción y su dirección &lt;b&gt;%3$s&lt;/b&gt; fueron borradas de nuestras listas.</label>
-			<label index="v_registration_cancelled_message2_informal">Tu suscripción y tu dirección &lt;b&gt;%3$s&lt;/b&gt; fueron borradas de nuestras listas. A partir de este momento no recibirás más mensajes nuestros.</label>
+			<label index="v_registration_cancelled_message2">Su suscripción y su dirección &lt;b&gt;%4$s&lt;/b&gt; fueron borradas de nuestras listas.</label>
+			<label index="v_registration_cancelled_message2_informal">Tu suscripción y tu dirección &lt;b&gt;%4$s&lt;/b&gt; fueron borradas de nuestras listas. A partir de este momento no recibirás más mensajes nuestros.</label>
 			<label index="v_registration_cancelled">%2$s anuló su suscripción a %1$s.</label>
-			<label index="v_sending_infomail">Le enviamos un mensaje a su dirección de correo electrónico &lt;b&gt;%3$s&lt;/b&gt;.</label>
-			<label index="v_sending_infomail_informal">Te enviamos un mensaje a tu dirección de correo electrónico &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail">Le enviamos un mensaje a su dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_informal">Te enviamos un mensaje a tu dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message1">En este mensaje se encontrarán dos vínculos para que pueda actualizar los datos de su suscripción a &lt;b&gt;%1$s&lt;/b&gt;, o para discontinuarla.</label>
 			<label index="v_sending_infomail_message1_informal">En este mensaje se encontrarán dos vínculos para que puedas actualizar los datos de tu suscripción a &lt;b&gt;%1$s&lt;/b&gt;, o para discontinuarla.</label>
 			<label index="v_sending_infomail_message2">Siga las instrucciones que le señala este mensaje para actualizar sus datos o para discontinuar su suscripción.</label>
@@ -1483,8 +1495,8 @@ Si deseas aceptar nuestra invitación y confirmar tu suscripción a &lt;b&gt;%1$
 			<label index="v_registration_deleted_subject_informal">Gracias por haberte suscrito a &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_deleted_message1">A partir de este momento no recibirá más mensajes nuestros.</label>
 			<label index="v_registration_deleted_message1_informal">A partir de este momento no recibirás más mensajes nuestros.</label>
-			<label index="v_registration_deleted_message2">Su suscripción y su dirección &lt;b&gt;%3$s&lt;/b&gt; fueron borradas de nuestras listas.</label>
-			<label index="v_registration_deleted_message2_informal">Tu suscripción y tu dirección &lt;b&gt;%3$s&lt;/b&gt; fueron borradas de nuestras listas.</label>
+			<label index="v_registration_deleted_message2">Su suscripción y su dirección &lt;b&gt;%4$s&lt;/b&gt; fueron borradas de nuestras listas.</label>
+			<label index="v_registration_deleted_message2_informal">Tu suscripción y tu dirección &lt;b&gt;%4$s&lt;/b&gt; fueron borradas de nuestras listas.</label>
 			<label index="v_registration_deleted">%2$s discontinuó su suscripción a %1$s.</label>
 			<label index="evalErrors_uniqueGlobal">Esta valor ya existe. Por favor elija otra.</label>
 			<label index="evalErrors_uniqueGlobal_informal">Esta valor ya existe. Por favor elije otra.</label>
@@ -1632,13 +1644,13 @@ Si deseas aceptar nuestra invitación y confirmar tu suscripción a &lt;b&gt;%1$
 			<label index="v_notification_informal">Bericht:</label>
 			<label index="v_registration_created_subject_informal">Bedankt voor je inschrijving bij de &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_created_message1_informal">Je inschrijving is klaar.</label>
-			<label index="v_registration_created_message2_informal">Je email adres &lt;b&gt;%3$s&lt;/b&gt; is toegevoegd.</label>
+			<label index="v_registration_created_message2_informal">Je email adres &lt;b&gt;%4$s&lt;/b&gt; is toegevoegd.</label>
 			<label index="v_registration_created_informal">%2$s inschrijving bij de %1$s.</label>
 			<label index="v_registration_updated_subject_informal">Je inschrijving bij &lt;b&gt;%1$s&lt;/b&gt; is gewijzigd.</label>
 			<label index="v_registration_updated_message1_informal">Bedankt voor het bijwerken van je profiel.</label>
 			<label index="v_registration_updated_informal">%2$s bewerkte haar/zijn inschrijving bij %1$s.</label>
 			<label index="v_invitation_confirm_informal">De uitnodiging is verzonden.</label>
-			<label index="v_invitation_account_was_created_informal">De inschrijving is klaar. Er is een uitnodiging gestuurd naar &lt;b&gt;%2$s&lt;/b&gt; = &lt;b&gt;%3$s&lt;/b&gt;  om haar/zijn inschrijving te bevestigen. </label>
+			<label index="v_invitation_account_was_created_informal">De inschrijving is klaar. Er is een uitnodiging gestuurd naar &lt;b&gt;%2$s&lt;/b&gt; = &lt;b&gt;%4$s&lt;/b&gt;  om haar/zijn inschrijving te bevestigen. </label>
 			<label index="v_invitation_instructions1_informal">Je ontvangt de nieuwbrieven nadat de inschrijving is bevestigd. Volg de aanwijzing in de bevestigings-email om de registratie af te ronden.</label>
 			<label index="v_please_confirm_informal">Bevestig a.u.b. je inschrijving.</label>
 			<label index="v_your_account_was_created_informal">We sturen een email naar &lt;b&gt;%4$s&lt;/b&gt; zodat je de inschrijving bij &lt;b&gt;%1$s&lt;/b&gt; kunt bevestigen.</label>
@@ -1655,13 +1667,13 @@ Via dit bericht kun je de inschrijving bij de &lt;b&gt;%1$s&lt;/b&gt; bevestigen
 			<label index="v_registration_invited_informal">Een uitnodiging voor de %1$s is gestuurd aan %2$s.</label>
 			<label index="v_registration_confirmed_subject_informal">Bedankt voor de inschrijving bij de &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_confirmed_message1_informal">De inschrijving is klaar.</label>
-			<label index="v_registration_confirmed_message2_informal">Je email adres &lt;b&gt;%3$s&lt;/b&gt; is toegevoegd.</label>
+			<label index="v_registration_confirmed_message2_informal">Je email adres &lt;b&gt;%4$s&lt;/b&gt; is toegevoegd.</label>
 			<label index="v_registration_confirmed_informal">%2$s bevestigde his(her) inschrijving bij %1$s.</label>
 			<label index="v_registration_cancelled_subject_informal">Bedankt voor je bezoek</label>
 			<label index="v_registration_cancelled_message1_informal">Je inschrijving bij &lt;b&gt;%1$s&lt;/b&gt; is gestopt.</label>
-			<label index="v_registration_cancelled_message2_informal">Je inschrijving is gestopt en &lt;b&gt;%3$s&lt;/b&gt; is verwijderd uit onze lijst.</label>
+			<label index="v_registration_cancelled_message2_informal">Je inschrijving is gestopt en &lt;b&gt;%4$s&lt;/b&gt; is verwijderd uit onze lijst.</label>
 			<label index="v_registration_cancelled_informal">%2$s beëindigde his(her) inschrijving bij de %1$s.</label>
-			<label index="v_sending_infomail_informal">We sturen een bericht naar &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_informal">We sturen een bericht naar &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message1_informal">Daarin staan twee links voor het beëindigen of wijzigen van de inschrijving.</label>
 			<label index="v_sending_infomail_message2_informal">Volg de aanwijzingen op. </label>
 			<label index="v_infomail_subject_informal">De inschrijving voor de &lt;b&gt;%1$s&lt;/b&gt;</label>
@@ -1672,7 +1684,7 @@ Via dit bericht kun je de inschrijving bij de &lt;b&gt;%1$s&lt;/b&gt; bevestigen
 			<label index="v_infomail_norecord_message2_informal">Problemen met de inschrijving ? Neem contact op via dit e-adres :</label>
 			<label index="v_registration_deleted_subject_informal">Bedankt voor de inschrijving bij de &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_deleted_message1_informal">Je ontvang geen berichten meer van ons.</label>
-			<label index="v_registration_deleted_message2_informal">Je inschrijving en &lt;b&gt;%3$s&lt;/b&gt; zijn uit onze lijst verwijderd.</label>
+			<label index="v_registration_deleted_message2_informal">Je inschrijving en &lt;b&gt;%4$s&lt;/b&gt; zijn uit onze lijst verwijderd.</label>
 			<label index="v_registration_deleted_informal">%2$s beëindigde his(her) inschrijving bij %1$s.</label>
 			<label index="evalErrors_uniqueGlobal">De waarde bestaat al. Vul aub een nieuwe waarde in.</label>
 			<label index="evalErrors_uniqueLocal">De waarde bestaat al. Vul aub een nieuwe waarde in.</label>
@@ -1945,8 +1957,8 @@ Via dit bericht kun je de inschrijving bij de &lt;b&gt;%1$s&lt;/b&gt; bevestigen
 			<label index="v_really_wish_to_delete_informal">Ali se res želiš odjaviti?</label>
 			<label index="v_verify_before_create">Prosimo, da pred vpisom preverite podatke:</label>
 			<label index="v_verify_before_create_informal">Prosimo, da pred vpisom preveriš podatke:</label>
-			<label index="v_verify_invitation_before_create">Prosimo, da pred vpisom preverite podatke od &lt;b&gt;%3$s&lt;/b&gt;:</label>
-			<label index="v_verify_invitation_before_create_informal">Prosimo, da pred vpisom preveriš podatke od &lt;b&gt;%3$s&lt;/b&gt;:</label>
+			<label index="v_verify_invitation_before_create">Prosimo, da pred vpisom preverite podatke od &lt;b&gt;%4$s&lt;/b&gt;:</label>
+			<label index="v_verify_invitation_before_create_informal">Prosimo, da pred vpisom preveriš podatke od &lt;b&gt;%4$s&lt;/b&gt;:</label>
 			<label index="v_edit_your_account">Posodobite vaše podatke:</label>
 			<label index="v_edit_your_account_informal">Posodobi tvoje podatke:</label>
 			<label index="v_verify_before_update">Prosimo, da preverite podatke:</label>
@@ -1961,8 +1973,8 @@ Via dit bericht kun je de inschrijving bij de &lt;b&gt;%1$s&lt;/b&gt; bevestigen
 			<label index="v_registration_created_subject_informal">Zahvaljujemo se za prijavo na &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_created_message1">Vaš račun je bil ustvarjen.</label>
 			<label index="v_registration_created_message1_informal">Račun je bil ustvarjen.</label>
-			<label index="v_registration_created_message2">E-pošta &lt;b&gt;%3$s&lt;/b&gt; je bila dodana v listo prejemnikov.</label>
-			<label index="v_registration_created_message2_informal">E-pošta &lt;b&gt;%3$s&lt;/b&gt; je bila dodana v listo prejemnikov.</label>
+			<label index="v_registration_created_message2">E-pošta &lt;b&gt;%4$s&lt;/b&gt; je bila dodana v listo prejemnikov.</label>
+			<label index="v_registration_created_message2_informal">E-pošta &lt;b&gt;%4$s&lt;/b&gt; je bila dodana v listo prejemnikov.</label>
 			<label index="v_registration_created">%2$s se je prijavil na %1$s.</label>
 			<label index="v_registration_created_informal">%2$s se je prijavil na %1$s.</label>
 			<label index="v_registration_updated_subject">Vaš račun na &lt;b&gt;%1$s&lt;/b&gt; je bil posodobljen.</label>
@@ -1973,8 +1985,8 @@ Via dit bericht kun je de inschrijving bij de &lt;b&gt;%1$s&lt;/b&gt; bevestigen
 			<label index="v_registration_updated_informal">%2$s je posodobil(a) svoj račun na %1$s.</label>
 			<label index="v_invitation_confirm">Povabilo je poslano!</label>
 			<label index="v_invitation_confirm_informal">Povabilo je poslano!</label>
-			<label index="v_invitation_account_was_created">Račun je ustvarjen. Povabilo za potrditev vpisa na &lt;b&gt;%1$s&lt;/b&gt; je poslano osebi &lt;b&gt;%2$s&lt;/b&gt; na e-naslov &lt;b&gt;%3$s&lt;/b&gt;.</label>
-			<label index="v_invitation_account_was_created_informal">Račun je ustvarjen. Povabilo za potrditev vpisa na &lt;b&gt;%1$s&lt;/b&gt; je poslano osebi &lt;b&gt;%2$s&lt;/b&gt; na e-naslov &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_invitation_account_was_created">Račun je ustvarjen. Povabilo za potrditev vpisa na &lt;b&gt;%1$s&lt;/b&gt; je poslano osebi &lt;b&gt;%2$s&lt;/b&gt; na e-naslov &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_invitation_account_was_created_informal">Račun je ustvarjen. Povabilo za potrditev vpisa na &lt;b&gt;%1$s&lt;/b&gt; je poslano osebi &lt;b&gt;%2$s&lt;/b&gt; na e-naslov &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_invitation_instructions1">E-novice boste začeli prejemati po uspešni potrditvi prijave. Prosimo, da sledite navodilom, ki ste jih prejeli na vaš e-naslov.</label>
 			<label index="v_invitation_instructions1_informal">E-novice boš začel prejemati po uspešni potrditvi prijave. Prosimo, da slediš navodilom, ki si jih prejel na e-naslov.</label>
 			<label index="v_please_confirm">Prosimo, potrdite prijavo.</label>
@@ -2009,20 +2021,20 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="v_registration_confirmed_subject_informal">Zahvaljujemo se za prijavo na &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_confirmed_message1">Vaša prijava je uspešno potrjena.</label>
 			<label index="v_registration_confirmed_message1_informal">Prijava je uspešno potrjena.</label>
-			<label index="v_registration_confirmed_message2">E-naslov &lt;b&gt;%3$s&lt;/b&gt; je uspešno dodan na listo prejemnikov.</label>
-			<label index="v_registration_confirmed_message2_informal">E-naslov &lt;b&gt;%3$s&lt;/b&gt; je uspešno dodan na listo prejemnikov.</label>
+			<label index="v_registration_confirmed_message2">E-naslov &lt;b&gt;%4$s&lt;/b&gt; je uspešno dodan na listo prejemnikov.</label>
+			<label index="v_registration_confirmed_message2_informal">E-naslov &lt;b&gt;%4$s&lt;/b&gt; je uspešno dodan na listo prejemnikov.</label>
 			<label index="v_registration_confirmed">%3$s je potrdil(a) prijavo na %1$s.</label>
 			<label index="v_registration_confirmed_informal">%2$s je potrdil(a) prijavo na %1$s.</label>
 			<label index="v_registration_cancelled_subject">Zahvaljujemo se za obisk</label>
 			<label index="v_registration_cancelled_subject_informal">Zahvaljujemo se za obisk</label>
 			<label index="v_registration_cancelled_message1">Vaša prijava na &lt;b&gt;%1$s&lt;/b&gt; je preklicana.</label>
 			<label index="v_registration_cancelled_message1_informal">Prijava na &lt;b&gt;%1$s&lt;/b&gt; je preklicana.</label>
-			<label index="v_registration_cancelled_message2">Vaša prijava in e-naslov &lt;b&gt;%3$s&lt;/b&gt; sta izbrisana iz liste prejemnikov.</label>
-			<label index="v_registration_cancelled_message2_informal">Prijava in e-naslov &lt;b&gt;%3$s&lt;/b&gt; sta izbrisana iz liste prejemnikov.</label>
+			<label index="v_registration_cancelled_message2">Vaša prijava in e-naslov &lt;b&gt;%4$s&lt;/b&gt; sta izbrisana iz liste prejemnikov.</label>
+			<label index="v_registration_cancelled_message2_informal">Prijava in e-naslov &lt;b&gt;%4$s&lt;/b&gt; sta izbrisana iz liste prejemnikov.</label>
 			<label index="v_registration_cancelled">%2$s je preklical(a) račun na %1$s.</label>
 			<label index="v_registration_cancelled_informal">%2$s je preklical(a) račun na %1$s.</label>
-			<label index="v_sending_infomail">E-pošto smo vam poslali na e-naslov &lt;b&gt;%3$s&lt;/b&gt;.</label>
-			<label index="v_sending_infomail_informal">Sporočilo smo poslali na e-naslov &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail">E-pošto smo vam poslali na e-naslov &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_informal">Sporočilo smo poslali na e-naslov &lt;b&gt;%4$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message1">Sporočilo vsebuje dve povezavi s katerima lahko potrdite ali prekličete prijavo na &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message1_informal">Sporočilo vsebuje dve povezavi s katerima lahko potrdiš ali prekličeš prijavo na &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_sending_infomail_message2">Prosimo, da za potrditev ali preklic prijave sledite navodilom v poslanem sporočilu.</label>
@@ -2045,8 +2057,8 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="v_registration_deleted_subject_informal">Zahvaljujemo se za prijavo na listo prejemnikov &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_deleted_message1">Sporočil ne bomo več pošiljali.</label>
 			<label index="v_registration_deleted_message1_informal">Sporočil ne bomo več pošiljali.</label>
-			<label index="v_registration_deleted_message2">Odjava je bila uspešna in vaš e-naslov &lt;b&gt;%3$s&lt;/b&gt; je uspešno izbrisan iz liste prejemnikov.</label>
-			<label index="v_registration_deleted_message2_informal">Odjava je bila uspešna in e-naslov &lt;b&gt;%3$s&lt;/b&gt; je uspešno izbrisan iz liste prejemnikov.</label>
+			<label index="v_registration_deleted_message2">Odjava je bila uspešna in vaš e-naslov &lt;b&gt;%4$s&lt;/b&gt; je uspešno izbrisan iz liste prejemnikov.</label>
+			<label index="v_registration_deleted_message2_informal">Odjava je bila uspešna in e-naslov &lt;b&gt;%4$s&lt;/b&gt; je uspešno izbrisan iz liste prejemnikov.</label>
 			<label index="v_registration_deleted">%2$s se je odjavil iz liste prejemnikov %1$s.</label>
 			<label index="v_registration_deleted_informal">%2$s se je odjavil iz liste prejemnikov %1$s.</label>
 			<label index="evalErrors_uniqueGlobal">Vrednost že obstaja. Prosimo vpišite drugo vrednost.</label>
@@ -2067,6 +2079,187 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="evalErrors_date_informal">Prosimo vpiši veljaven datum v obliki llll-mm-dd!</label>
 		</languageKey>
 		<languageKey index="fi" type="array">
+			<label index="missing_invitation_name_informal">Ole hyvä ja anna nimesi</label>
+			<label index="first_name_informal">Etunimi:</label>
+			<label index="missing_invitation_first_name_informal">Ole hyvä ja anna etunimesi!</label>
+			<label index="last_name_informal">Sukunimi:</label>
+			<label index="missing_invitation_last_name_informal">Ole hyvä ja anna sukunimesi!</label>
+			<label index="date_of_birth_informal">Syntymäaika (vvvv-kk-pp)</label>
+			<label index="missing_invitation_date_of_birth_informal">Ole hyvä ja anna syntymäaikasi!</label>
+			<label index="address_informal">Osoite:</label>
+			<label index="missing_invitation_address_informal">Ole hyvä ja anna osoitteesi!</label>
+			<label index="city_informal">Kaupunki/postitoimipaikka:</label>
+			<label index="missing_invitation_city_informal">Ole hyvä ja anna kaupungin nimi!</label>
+			<label index="zone_informal">Osavaltio/provinssi:</label>
+			<label index="tooltip_zone">Valitse maasi tästä listasta.</label>
+			<label index="missing_invitation_zone_informal">Ole hyvä ja valitse osavaltio/provinssi!</label>
+			<label index="zip_informal">Postinumero:</label>
+			<label index="missing_invitation_zip_informal">Ole hyvä ja anna postinumero!</label>
+			<label index="static_info_country_informal">Maa:</label>
+			<label index="missing_invitation_static_info_country_informal">Ole hyvä ja anna maa!</label>
+			<label index="mobile">GSM:</label>
+			<label index="mobile_informal">GSM:</label>
+			<label index="tooltip_mobile">Anna kännykkänumerosi.</label>
+			<label index="tooltip_mobile_informal">Anna kännykkänumerosi.</label>
+			<label index="tooltip_invitation_mobile">Anna kutsumasi henkilön kännykkänumero.</label>
+			<label index="missing_mobile">Ole hyvä ja anna kännykkänumerosi!</label>
+			<label index="missing_mobile_informal">Ole hyvä ja anna kännykkänumerosi!</label>
+			<label index="missing_invitation_mobile">Ole hyvä ja anna kännykkänumero!</label>
+			<label index="missing_invitation_mobile_informal">Ole hyvä ja anna kännykkänumero!</label>
+			<label index="phone">Puhelin:</label>
+			<label index="phone_informal">Puhelin:</label>
+			<label index="tooltip_phone">Anna puhelinnumerosi.</label>
+			<label index="tooltip_phone_informal">Anna puhelinnumerosi.</label>
+			<label index="tooltip_invitation_phone">Anna kutsutun henkilön puhelinnumero.</label>
+			<label index="missing_phone">Ole hyvä ja anna puhelinnumerosi!</label>
+			<label index="missing_phone_informal">Ole hyvä ja anna puhelinnumerosi!</label>
+			<label index="missing_invitation_phone">Ole hyvä ja anna puhelinnumero!</label>
+			<label index="missing_invitation_phone_informal">Ole hyvä ja anna puhelinnumero!</label>
+			<label index="missing_invitation_fax_informal">Ole hyvä ja anna faksinumero!</label>
+			<label index="email_informal">S-posti:</label>
+			<label index="missing_email_informal">Oikea sähköpostiosoite on pakollinen.</label>
+			<label index="evalErrors_uniqueLocal_email_informal">Tämä sähköpostiosoite on jo olemassa.</label>
+			<label index="module_sys_dmail_html_informal">Haluatko vastaanottaa sähköpostit HTML-muodossa?</label>
+			<label index="yes">Kyllä</label>
+			<label index="no">Ei</label>
+			<label index="language_informal">Kieli:</label>
+			<label index="missing_invitation_language_informal">Ole hyvä ja valitse ensisijainen kieli!</label>
+			<label index="missing_invitation_title_informal">Ole hyvä ja anna arvo/ammatti!</label>
+			<label index="missing_invitation_company_informal">Ole hyvä ja anna yritys!</label>
+			<label index="www_informal">Kotisivu:</label>
+			<label index="missing_invitation_www_informal">Ole hyvä ja anna kotisivujen osoite!</label>
+			<label index="evalErrors_wwwURL_www_informal">Testauksemme perusteella, kotisivun iosoite jonka annoit ei ole oikein. Ehkä teit kirjoitusvirheen ?</label>
+			<label index="missing_invitation_image_informal">Ole hyvä ja anna valokuva!</label>
+			<label index="comments">Lisäkommentteja?</label>
+			<label index="comments_informal">Lisäkommentteja?</label>
+			<label index="tooltip_comments">Anna kommenttisi.</label>
+			<label index="tooltip_comments_informal">Anna kommenttisi.</label>
+			<label index="missing_comments">Ole hyvä ja anna kommenttisi.</label>
+			<label index="missing_comments_informal">Ole hyvä ja anna kommenttisi.</label>
+			<label index="evalErrors_allowed_image_informal">Tiedostopääte %s ei ole sallittu.</label>
+			<label index="evalErrors_max_size_image_informal">Tiedoston koko ei saa ylittää %s KB.</label>
+			<label index="button_register">Tilaa</label>
+			<label index="button_register_informal">Tilaa</label>
+			<label index="button_confirm_register">Tilaa nyt!</label>
+			<label index="button_confirm_register_informal">Tilaa nyt!</label>
+			<label index="button_send_invitation">Lähetä kutsu</label>
+			<label index="button_send_invitation_informal">Lähetä kutsu</label>
+			<label index="button_send_invitation_now">Lähetä kutsu nyt!</label>
+			<label index="button_send_invitation_now_informal">Lähetä kutsu nyt!</label>
+			<label index="button_send_link">Lähetä viesti nyt!</label>
+			<label index="button_send_link_informal">Lähetä viesti nyt!</label>
+			<label index="button_back_to_form">Takaisin lomakkeelle</label>
+			<label index="button_back_to_form_informal">Takaisin lomakkeelle</label>
+			<label index="button_update">Päivitä profiilisi</label>
+			<label index="button_update_informal">Päivitä profiilisi</label>
+			<label index="button_confirm_update">Päivitä profiilisi nyt!</label>
+			<label index="button_confirm_update_informal">Päivitä profiilisi nyt!</label>
+			<label index="button_enter">Tallenna</label>
+			<label index="button_enter_informal">Tallenna</label>
+			<label index="button_confirm_delete">Kyllä, peruuta tilaus</label>
+			<label index="button_confirm_delete_informal">Kyllä, peruuta tilaus</label>
+			<label index="button_cancel_delete">Ei, peruuta</label>
+			<label index="button_cancel_delete_informal">Ei, peruuta</label>
+			<label index="v_already_subscribed">Oletko jo uutislehden &quot;&lt;b&gt;%1$s&lt;/b&gt;&quot; tilaaja vai haluatko päivittää tietojasi tai peruuttaa tilauksesi?</label>
+			<label index="click_here_to_edit">Näpsäytä tästä!</label>
+			<label index="click_here_to_edit_informal">Näpsäytä tästä!</label>
+			<label index="tooltip_click_here_to_edit">Avaa ikkuna, joka sallii sinun muokata tai poistaa tilauksesi.</label>
+			<label index="v_wish_to_update_or_delete">Haluatko päivittää tietojasi tai peruuttaa tilauksesi ?</label>
+			<label index="v_wish_to_update_or_delete_informal">Haluatko päivittää tietojasi tai peruuttaa tilauksesi ?</label>
+			<label index="v_enter_subscribed_email">Anna alkuperäinen sähköpostiosoite, jolla teit tilauksesi, ja lähetämme Sinulle sähköpostilla linkit, joilla voit päivittää tietojasi tai peruuttaa tilauksesi:</label>
+			<label index="v_enter_subscribed_email_informal">nna alkuperäinen sähköpostiosoite, jolla teit tilauksesi, ja lähetämme Sinulle sähköpostilla linkit, joilla voit päivittää tietojasi tai peruuttaa tilauksesi:</label>
+			<label index="click_here_to_delete">Tästä peruutat tilauksesi!</label>
+			<label index="click_here_to_delete_informal">Tästä peruutat tilauksesi!</label>
+			<label index="tooltip_click_here_to_delete">Avaa ikkuna, joka sallii sinun poistaa tilauksesi.</label>
+			<label index="enter_account_info">Ole hyvä ja annat tiedot tilaustasi varten:</label>
+			<label index="enter_account_info_informal">Ole hyvä ja annat tiedot tilaustasi varten:</label>
+			<label index="enter_invitation_account_info">Ole hyvä ja annat tiedot kutsuttavan henkilön tilausta varten:</label>
+			<label index="enter_invitation_account_info_informal">Ole hyvä ja annat tiedot kutsuttavan henkilön tilausta varten:</label>
+			<label index="required_info_notice_informal">Huomautus: tähdellä (*)  merkityt kentät ovat pakollisia!</label>
+			<label index="excuse_us_invitation">Olemme pahoillamme, jos sinulle aiheutuu jotain haittaa.</label>
+			<label index="registration_clicked_twice">Ehkä näpsäytit linkkiä kahdesti?</label>
+			<label index="v_really_wish_to_delete">Haluatko todella peruuttaa tilauksesi?</label>
+			<label index="v_really_wish_to_delete_informal">Haluatko todella peruuttaa tilauksesi?</label>
+			<label index="v_verify_before_create">Tarkista että kaikki tiedot ovat oikein, ennen kuin tilauksesi luodaan:</label>
+			<label index="v_verify_before_create_informal">Tarkista että kaikki tiedot ovat oikein, ennen kuin tilauksesi luodaan:</label>
+			<label index="v_verify_invitation_before_create">Tarkista että kaikki &lt;b&gt;%3$s&lt;/b&gt; tiedot ovat oikein , ennenkuin tilauksesi luodaan:</label>
+			<label index="v_verify_invitation_before_create_informal">Tarkista että kaikki &lt;b&gt;%3$s&lt;/b&gt; tiedot ovat oikein , ennenkuin tilauksesi luodaan:</label>
+			<label index="v_edit_your_account">Anna tiedot tilaustasi varten:</label>
+			<label index="v_edit_your_account_informal">Muokkaa tilauksesi tietoja:</label>
+			<label index="v_verify_before_update">Tarkista että kaikki tiedot ovat oikein , ennenkuin tilauksesi tiedot päivitetään:</label>
+			<label index="v_verify_before_update_informal">Tarkista että kaikki tiedot ovat oikein , ennenkuin tilauksesi tiedot päivitetään:</label>
+			<label index="hello">Hei,</label>
+			<label index="hello_informal">Hei,</label>
+			<label index="v_registration_created_subject">Kiitos tilauksestasi &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_created_subject_informal">Kiitos tilauksestasi &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_created_message1">Tilauksesi on luotu.</label>
+			<label index="v_registration_created_message1_informal">Tilauksesi on luotu.</label>
+			<label index="v_registration_created_informal">%2$ on tilannut uutislehden %1$s.</label>
+			<label index="v_registration_updated_subject">Tilauksesi uutislehti &lt;b&gt;%1$s&lt;/b&gt; on päivitetty.</label>
+			<label index="v_invitation_account_was_created">Tilaus luotiin. Kutsu tilauksen vahvistamiseen uutislehteemme &lt;b&gt;%1$s&lt;/b&gt; lähetettiin &lt;b&gt;%2$s&lt;/b&gt;lle sähköpostiosoitteeseen &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_invitation_account_was_created_informal">Tilaus luotiin. Kutsu tilauksen vahvistamiseen uutislehteemme &lt;b&gt;%1$s&lt;/b&gt; lähetettiin &lt;b&gt;%2$s&lt;/b&gt;lle sähköpostiosoitteeseen &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_invitation_instructions1">Tilauksesi uutislehteemme &lt;b&gt;%1$s&lt;/b&gt; alkaa vasta kun olet vahvistanut tilauksesi. Seuraa ohjeita vahvistusviestissä suorittaksesi tämän toimenpiteen.</label>
+			<label index="v_invitation_instructions1_informal">Tilauksesi uutislehteemme &lt;b&gt;%1$s&lt;/b&gt; alkaa vasta kun olet vahvistanut tilauksesi. Seuraa ohjeita vahvistusviestissä suorittaksesi tämän toimenpiteen.</label>
+			<label index="v_your_account_was_created">Tilauksesi luotiin. Lähetämme Sinulle viestin sähköpostiosoiteeseesi &lt;b&gt;%4$s&lt;/b&gt;, jotta voit vahvistaa tilauksesi.</label>
+			<label index="v_your_account_was_created_informal">Tilauksesi luotiin. Lähetämme Sinulle viestin sähköpostiosoiteeseesi &lt;b&gt;%4$s&lt;/b&gt;, jotta voit vahvistaa tilauksesi.</label>
+			<label index="v_follow_instructions1">Vahvistaakseen uutislehden &lt;b&gt;%1$s&lt;/b&gt; tilauksen, on kutsuttujen henkilöiden seurattava ohjeita kutsuviestissä.</label>
+			<label index="v_follow_instructions1_informal">Vahvistaakseen uutislehden &lt;b&gt;%1$s&lt;/b&gt; tilauksen, on kutsuttujen henkilöiden seurattava ohjeita kutsuviestissä.</label>
+			<label index="v_registration_initiated_subject">Ole ystävällinen ja vahvista tilauksesi uutislehtimme &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_initiated_subject_informal">Ole ystävällinen ja vahvista tilauksesi uutislehtimme &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_initiated_message1">Lähetämme tämän viestin Sinulle, jotta voit vahvistaa tilauksesi uutisleemme &lt;b&gt;%1$s&lt;/b&gt;. Tilaiksesi on voimassa vasta kun olet vahvistanut tilauksesi. Tilauksesi vahvistamiseksi, seuraa tätä linkkiä :</label>
+			<label index="v_registration_initiated_message1_informal">Lähetämme tämän viestin Sinulle, jotta voit vahvistaa tilauksesi uutisleemme &lt;b&gt;%1$s&lt;/b&gt;. Tilaiksesi on voimassa vasta kun olet vahvistanut tilauksesi. Tilauksesi vahvistamiseksi, seuraa tätä linkkiä:</label>
+			<label index="v_registration_initiated_message2">Saat tämän viestin koska haluamme varmistua sähköpostiosoitteesi oikeellisuudesta tai ettei kukaan muu ole tilannut tällä osoitteella. Jos jostain syystä saat tämän viestin ilman että olet tehnyt tilausta, ole ystävällinen ja seuraa tätä linkkiä:</label>
+			<label index="v_registration_initiated_message2_informal">Lähetämme tämän viestin Sinulle, jotta voit vahvistaa tilauksesi uutisleemme &lt;b&gt;%1$s&lt;/b&gt;. Tilaiksesi on voimassa vasta kun olet vahvistanut tilauksesi. Tilauksesi vahvistamiseksi, seuraa tätä linkkiä:</label>
+			<label index="v_registration_initiated">%2$s alusti tilauksensa uutislehteen %1$s.</label>
+			<label index="v_registration_initiated_informal">%2$s alusti tilauksensa uutislehteen %1$s.</label>
+			<label index="v_registration_invited_subject">Kutsu tilaamaan uutislehti &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_invited_subject_informal">Kutsu tilaamaan uutislehti &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_invited_message1">Ajattelimme Sinun olevan kiinnostunut tilaamaan uutislehtemme &lt;b&gt;%1$s&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;  Olemme luoneet Sinulle tilauksen.&lt;br /&gt;&lt;br /&gt;  Lähetämme Sinulle tämän kutsun, jotta voit vahvistaa haluatko tilata uutislehden b&gt;%1$s&lt;/b&gt;. Saat uutislehtemme &lt;b&gt;%1$s&lt;/b&gt;  vasta kun olet vahvistanut tilauksesi. Voit myös muokata tilaustietojasi.&lt;br /&gt;&lt;br /&gt;  Jos haluat hyväksyä tarjouksemme ja vahvistaa tilauksesi uutislehteen &lt;b&gt;%1$s&lt;/b&gt;, ole ystävällinen ja seuraa tätä linkki:</label>
+			<label index="v_registration_invited_message1_informal">Ajattelimme Sinun olevan kiinnostunut tilaamaan uutislehtemme &lt;b&gt;%1$s&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;  Olemme luoneet Sinulle tilauksen.&lt;br /&gt;&lt;br /&gt;  Lähetämme Sinulle tämän kutsun, jotta voit vahvistaa haluatko tilata uutislehden b&gt;%1$s&lt;/b&gt;. Saat uutislehtemme &lt;b&gt;%1$s&lt;/b&gt;  vasta kun olet vahvistanut tilauksesi. Voit myös muokata tilaustietojasi.&lt;br /&gt;&lt;br /&gt;  Jos haluat hyväksyä tarjouksemme ja vahvistaa tilauksesi uutislehteen &lt;b&gt;%1$s&lt;/b&gt;, ole ystävällinen ja seuraa tätä linkki:</label>
+			<label index="v_registration_invited_message2">Et saa tätä viestiä toista kertaa. Jos haluat torjua kutsumme tai et halua tilata uutislehteämme &lt;b&gt;%1$s&lt;/b&gt;, ole ystävällinen ja seuraa tätä linkkiä tai vain unohda tämä viestimme:</label>
+			<label index="v_registration_invited_message2_informal">Et saa tätä viestiä toista kertaa. Jos haluat torjua kutsumme tai et halua tilata uutislehteämme &lt;b&gt;%1$s&lt;/b&gt;, ole ystävällinen ja seuraa tätä linkkiä tai vain unohda tämä viestimme:</label>
+			<label index="v_registration_invited">Kutsu tilaamaan uutislehti &lt;b&gt;%1$s&lt;/b&gt; lähetettiin  %2$slle.</label>
+			<label index="v_registration_invited_informal">Kutsu tilaamaan uutislehti &lt;b&gt;%1$s&lt;/b&gt; lähetettiin  %2$slle.</label>
+			<label index="v_registration_confirmed_subject">Kiitos &lt;b&gt;%1$s&lt;/b&gt; tilauksesta.</label>
+			<label index="v_registration_confirmed_subject_informal">Kiitos &lt;b&gt;%1$s&lt;/b&gt; tilauksesta.</label>
+			<label index="v_registration_confirmed_message1">Tilauksesi on vahvistettu.</label>
+			<label index="v_registration_confirmed_message1_informal">Tilauksesi on vahvistettu.</label>
+			<label index="v_registration_confirmed">%3$s vahvisti tilauksensa uutislehteen %1$s.</label>
+			<label index="v_registration_confirmed_informal">Tilauksesi on vahvistettu.</label>
+			<label index="v_registration_cancelled_message1">Tilauksesi uutislehteen &lt;b&gt;%1$s&lt;/b&gt; on peruttu.</label>
+			<label index="v_registration_cancelled_message1_informal">Tilauksesi uutislehteen &lt;b&gt;%1$s&lt;/b&gt; on peruttu.</label>
+			<label index="v_registration_cancelled_message2">Tilauksesi ja osoitetietosi &lt;b&gt;%3$s&lt;/b&gt; on poistettu listaltamme.</label>
+			<label index="v_registration_cancelled_message2_informal">Tilauksesi ja osoitetietosi &lt;b&gt;%3$s&lt;/b&gt; on poistettu listaltamme.</label>
+			<label index="v_registration_cancelled">%2$s perui tilauksensa uutislehteen %1$s.</label>
+			<label index="v_registration_cancelled_informal">%2$s perui tilauksensa uutislehteen %1$s.</label>
+			<label index="v_sending_infomail">Lähetämme Sinulle viestin sähköpostiosoitteeseesi &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_informal">Lähetämme Sinulle viestin sähköpostiosoitteeseesi &lt;b&gt;%3$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_message1">Sähköpostiviestissä on kaksi linkkiä joilla voit muokata tai peruuttaa tilauksesi. uutislehteemme &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_message1_informal">Sähköpostiviestissä on kaksi linkkiä joilla voit muokata tai peruuttaa tilauksesi. uutislehteemme &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_message2">Seuraa ohjeita tässä sähköpostiviestissä muokataksesi tai peruuttaaksesi tilaustasi.</label>
+			<label index="v_sending_infomail_message2_informal">Seuraa ohjeita tässä sähköpostiviestissä muokataksesi tai peruuttaaksesi tilaustasi.</label>
+			<label index="v_infomail_subject">Tietoja &lt;b&gt;%1$s&lt;/b&gt; tilauksestasi</label>
+			<label index="v_infomail_subject_informal">Tietoja &lt;b&gt;%1$s&lt;/b&gt; tilauksestasi</label>
+			<label index="v_infomail_reason">Saat tämän sanoman siksi, että olet pyytänyt oikeutta muuttaa lopettaa uutislehden &lt;b&gt;%1$s&lt;/b&gt; tilauksen.</label>
+			<label index="v_infomail_reason_informal">Saat tämän sanoman siksi, että olet pyytänyt oikeutta muuttaa lopettaa uutislehden &lt;b&gt;%1$s&lt;/b&gt; tilauksen.</label>
+			<label index="v_infomail_message1">Jos haluat muokata tilaustietojasi, seuraa tätä linkkiä:</label>
+			<label index="v_infomail_message1_informal">Jos haluat muokata tilaustietojasi, seuraa tätä linkkiä:</label>
+			<label index="v_infomail_message2">Jos haluat peruuttaa tilauksesi, seuraa tätä linkkiä :</label>
+			<label index="v_infomail_message2_informal">Jos haluat peruuttaa tilauksesi, seuraa tätä linkkiä :</label>
+			<label index="v_infomail_norecord_subject">Sähköpostiosoitteellasi ei ole tilausta uutislehteen &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_infomail_norecord_subject_informal">Sähköpostiosoitteellasi ei ole tilausta uutislehteen &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_infomail_norecord_message1">Näyttää ettei sähköpostiosoitteellasi ole tilausta uutislehteen &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_infomail_norecord_message1_informal">Näyttää ettei sähköpostiosoitteellasi ole tilausta uutislehteen &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_infomail_norecord_message2">Jos Sinulla on toistuvia onhelmia tilauksesi kanssa, ole ystävällinen ja ota yhteyttä seuraavaan sähköpostiosoitteeseen. Autamme ongelmissa mielellämme :</label>
+			<label index="v_infomail_norecord_message2_informal">Jos Sinulla on toistuvia onhelmia tilauksesi kanssa, ole ystävällinen ja ota yhteyttä seuraavaan sähköpostiosoitteeseen. Autamme ongelmissa mielellämme :</label>
+			<label index="v_registration_deleted_subject">Kiitos &lt;b&gt;%1$s&lt;/b&gt; tilauksestasi.</label>
+			<label index="v_registration_deleted_subject_informal">Kiitos &lt;b&gt;%1$s&lt;/b&gt; tilauksestasi.</label>
+			<label index="v_registration_deleted_message1">Et saa enää meiltä viestejä.</label>
+			<label index="v_registration_deleted_message1_informal">Et saa enää meiltä viestejä.</label>
+			<label index="v_registration_deleted_message2">Tilauksesi ja osoitetietosi &lt;b&gt;%3$s&lt;/b&gt; on poistettu listaltamme.</label>
+			<label index="v_registration_deleted_message2_informal">Tilauksesi ja osoitetietosi &lt;b&gt;%3$s&lt;/b&gt; on poistettu listaltamme.</label>
+			<label index="v_registration_deleted">%2$s peruutti tilauksensa uutislehteen %1$s.</label>
+			<label index="v_registration_deleted_informal">%2$s peruutti tilauksensa uutislehteen %1$s.</label>
 			<label index="name">Nimi:</label>
 			<label index="missing_name">Ole hyvä ja anna nimesi!</label>
 			<label index="missing_invitation_name">Ole hyvä ja anna nimi!</label>
@@ -2096,23 +2289,15 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="static_info_country">Maa:</label>
 			<label index="missing_static_info_country">Ole hyvä ja valitse maa!</label>
 			<label index="missing_invitation_static_info_country">Ole hyvä ja valitse maa!</label>
-			<label index="phone">Puhelin:</label>
-			<label index="missing_phone">Ole hyvä ja anna puhelinnumerosi!</label>
-			<label index="missing_invitation_phone">Ole hyvä ja anna puhelinnumero!</label>
 			<label index="fax">Fax:</label>
 			<label index="missing_fax">Ole hyvä ja anna sähköpostiosoitteesi!</label>
 			<label index="missing_invitation_fax">Ole hyvä ja anna sähköpostiosoite!</label>
 			<label index="email">Sähköpostiosoite:</label>
 			<label index="missing_email">Sähköpostiosoitteen tulee olla oikea (myös pakollinen).</label>
-			<label index="missing_email_informal">Oikea sähköpostiosoite on pakollinen.</label>
 			<label index="evalErrors_email_email">Tarkistuksiemme mukaan sähköpostiosoitteesi ei ole oikein. Onko siinä kenties kirjoitusvirhe?</label>
 			<label index="evalErrors_email_email_informal">Testauksemme perusteella, sähköpostiosoite jonka annoit ei ole oikein. Ehkä teit kirjoitusvirheen ?</label>
 			<label index="evalErrors_uniqueLocal_email">Tämä sähköpostiosoite on jo olemassa. Oletko kenties unohtanut salasanasi?</label>
-			<label index="evalErrors_uniqueLocal_email_informal">Tämä sähköpostiosoite on jo olemassa-</label>
 			<label index="module_sys_dmail_html">Haluatko vastaanottaa sähköpostit HTML-muodossa ?</label>
-			<label index="module_sys_dmail_html_informal">Haluatko vastaanottaa HTML muotoisia viestejä ?</label>
-			<label index="yes">Kyllä</label>
-			<label index="no">Ei</label>
 			<label index="module_sys_dmail_category">Kiinnostavat aiheet:</label>
 			<label index="language">Kieli:</label>
 			<label index="missing_language">Ole hyvä ja anna haluamasi kieli:</label>
@@ -2121,19 +2306,15 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="missing_title">Ole hyvä ja anna arvosi!</label>
 			<label index="missing_title_informal">Ole hyvä ja anna arvosi/ammattisi !</label>
 			<label index="missing_invitation_title">Ole hyvä ja anna arvo!</label>
-			<label index="missing_invitation_title_informal">Ole hyvä ja anna arvo/ammatti !</label>
 			<label index="company">Yritys:</label>
 			<label index="missing_company">Ole hyvä ja anna yrityksesi nimi!</label>
 			<label index="missing_company_informal">Ole hyvä ja anna yritys!</label>
 			<label index="missing_invitation_company">Ole hyvä ja anna yrityksen nimi!</label>
-			<label index="missing_invitation_company_informal">Ole hyvä ja anna yritys!</label>
 			<label index="www">Kotisivu:</label>
 			<label index="missing_www">Ole hyvä ja anna kotisivusi osoite!</label>
 			<label index="missing_www_informal">Ole hyvä ja anna kotisivujen osoite !</label>
 			<label index="missing_invitation_www">Ole hyvä ja anna kotisivun osoite!</label>
-			<label index="missing_invitation_www_informal">Ole hyvä ja anna kotisivujen osoite !</label>
 			<label index="evalErrors_wwwURL_www">Tarkistustemme mukaan, ei antamasi kotisivun osoite ole oikein.  Ole ystävällinen ja tarkista.</label>
-			<label index="evalErrors_wwwURL_www_informal">Testauksemme perusteella, kotisivun iosoite jonka annoit ei ole oikein. Ehkä teit kirjoitusvirheen ?</label>
 			<label index="image">Valokuvat:</label>
 			<label index="missing_image">Ole hyvä ja anna valokuva !</label>
 			<label index="missing_image_informal">Ole hyvä ja anna valokuvasi!</label>
@@ -2142,87 +2323,26 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="evalErrors_max_size_image">Tiedostokoko ei saa ylittää %s kilotavua.</label>
 			<label index="icon_delete">Poista !</label>
 			<label index="file_view">Näytä</label>
-			<label index="button_register">Tilaa</label>
-			<label index="button_confirm_register">Tilaa nyt !</label>
-			<label index="button_send_invitation">Lähetä kutsu</label>
-			<label index="button_send_invitation_now">Lähetä kutsu nyt !</label>
-			<label index="button_send_link">Lähetä viesti nyt !</label>
-			<label index="button_back_to_form">Takaisin lomakkeelle:</label>
-			<label index="button_update">Päivitä profiilisi</label>
-			<label index="button_confirm_update">Päivitä profiilisi nyt!</label>
-			<label index="button_enter">Tallenna</label>
-			<label index="button_confirm_delete">Kyllä, peruuta tilaus</label>
-			<label index="button_cancel_delete">Ei, peruuta</label>
 			<label index="click_here_to_register">Ensi vierailu ? Tee tilaus tästä.</label>
-			<label index="v_already_subscribed">Olet jo tilaajana uutislehteen &lt;b&gt;%1$s&lt;/b&gt; ja haluatko päivittää tietojasi tai peruuttaa tilauksesi ?</label>
 			<label index="v_already_subscribed_informal">Olet jo tilaajana uutislehteen &lt;b&gt;%1$s&lt;/b&gt; ja haluatko päivittää tietojasi tai peruuttaa tilauksesi ?</label>
-			<label index="click_here_to_edit">Näpsäytä tsätä!</label>
-			<label index="v_wish_to_update_or_delete">Haluatko päivittää tietojasi tai peruuttaa tilauksesi ?</label>
-			<label index="v_enter_subscribed_email">Anna alkuperäinen sähköpostiosoite, jolla teit tilauksesi, ja lähetämme Sinulle sähköpostilla linkit, joilla voit päivittää tietojasi tai peruuttaa tilauksesi:</label>
-			<label index="v_enter_subscribed_email_informal">nna alkuperäinen sähköpostiosoite, jolla teit tilauksesi, ja lähetämme Sinulle sähköpostilla linkit, joilla voit päivittää tietojasi tai peruuttaa tilauksesi:</label>
-			<label index="click_here_to_delete">Tästä peruutat tilauksesi!</label>
-			<label index="enter_account_info">Ole hyvä ja annat tiedot tilaustasi varten:</label>
-			<label index="enter_invitation_account_info">Ole hyvä ja annat tiedot kutsuttavan henkilön tilausta varten:</label>
 			<label index="required_info_notice">Huomautus: Tiedot, jotka on merkitty *-merkillä, ovat pakollisia!</label>
 			<label index="copy_paste_link">(Näpsäytä linkissä tai &quot;leikkaa-liimaa&quot; linkki selaimeesi.)</label>
 			<label index="excuse_us">Pahoittlemme häiriötä, jonka olemme mahdollisesti aiheuttaneet.</label>
 			<label index="registration_problem">Nyt meillä on mahdollisesti ongelma.</label>
 			<label index="registration_sorry">Pahoittelemme ettemme voineet suorittaa tätä prosessia loppuun.</label>
-			<label index="registration_clicked_twice">Ehkä näpsäytit linkkiä kahdesti?</label>
 			<label index="registration_help">Jos ongelma jatkuu, ole ystävällinen ja ota yhteyttä seuraavaan sähköpostiosoiteeseen, niin autamme Sinua:</label>
 			<label index="registration_help_informal">Jos ongelma jatkuu, ole ystävällinen ja ota yhteyttä seuraavaan sähköpostiosoiteeseen, niin autamme Sinua:</label>
 			<label index="kind_regards">Parhain terveisin,</label>
-			<label index="v_really_wish_to_delete">Haluatko todella peruuttaa tilauksesi ?</label>
-			<label index="v_verify_before_create">Tarkista että kaikki tiedot ovat oikein , ennenkuin tilauksesi luodaan:</label>
-			<label index="v_verify_invitation_before_create">Tarkista että kaikki &lt;b&gt;%3$s&lt;/b&gt; tiedot ovat oikein , ennenkuin tilauksesi luodaan:</label>
-			<label index="v_edit_your_account">Anna tiedot tilaustasi varten:</label>
-			<label index="v_edit_your_account_informal">Muokkaa tilauksesi tietoja:</label>
-			<label index="v_verify_before_update">Tarkista että kaikki tiedot ovat oikein , ennenkuin tilauksesi tiedot päivitetään:</label>
 			<label index="v_dear">Hyvä %3$s,</label>
-			<label index="hello">Hei,</label>
 			<label index="v_notification">Huomautus:</label>
-			<label index="v_registration_created_subject">Kiitos tilauksestasi &lt;b&gt;%1$s&lt;/b&gt;.</label>
-			<label index="v_registration_created_message1">Tilauksesi on luotu.</label>
 			<label index="v_registration_created_message2">Sähköpostiosoitteesi &lt;b&gt;%3$s&lt;/b&gt; on lisätty listallemme.</label>
 			<label index="v_registration_created">%2$s teki tilauksen uutislehti %1$s.</label>
-			<label index="v_registration_updated_subject">Tilauksesi uutislehti &lt;b&gt;%1$s&lt;/b&gt; on päivitetty.</label>
 			<label index="v_registration_updated_message1">Kiitos että pidät tietosi ajan tasalla.</label>
 			<label index="v_registration_updated">%2$s päivitti tilauksensa tiedot uutislehti %1$s.</label>
 			<label index="v_invitation_confirm">Kutsu lähetettiin.</label>
-			<label index="v_invitation_account_was_created">Tilaus luotiin. Kutsu tilauksen vahvistamiseen uutislehteemme &lt;b&gt;%1$s&lt;/b&gt; lähetettiin &lt;b&gt;%2$s&lt;/b&gt;lle sähköpostiosoitteeseen &lt;b&gt;%3$s&lt;/b&gt;.</label>
-			<label index="v_invitation_instructions1">Tilauksesi uutislehteemme &lt;b&gt;%1$s&lt;/b&gt; alkaa vasta kun olet vahvistanut tilauksesi. Seuraa ohjeita vahvistusviestissä suorittaksesi tämän toimenpiteen.</label>
 			<label index="v_please_confirm">Ole hyvä ja vahvista rekisteröintisi.</label>
-			<label index="v_your_account_was_created">Tilauksesi luotiin. Lähetämme Sinulle viestin sähköpostiosoiteeseesi &lt;b&gt;%4$s&lt;/b&gt;, jotta voit vahvistaa tilauksesi.</label>
-			<label index="v_follow_instructions1">Vahvistaakseen uutislehden &lt;b&gt;%1$s&lt;/b&gt; tilauksen, on kutsuttujen henkilöiden seurattava ohjeita kutsuviestissä.</label>
-			<label index="v_registration_initiated_subject">Ole ystävällinen ja vahvista tilauksesi uutislehtimme &lt;b&gt;%1$s&lt;/b&gt;.</label>
-			<label index="v_registration_initiated_message1">Lähetämme tämän viestin Sinulle, jotta voit vahvistaa tilauksesi uutisleemme &lt;b&gt;%1$s&lt;/b&gt;. Tilaiksesi on voimassa vasta kun olet vahvistanut tilauksesi. Tilauksesi vahvistamiseksi, seuraa tätä linkkiä :</label>
-			<label index="v_registration_initiated_message2">Saat tämän viestin koska haluamme varmistua sähköpostiosoitteesi oikeellisuudesta tai ettei kukaan muu ole tilannut tällä osoitteella. Jos jostain syystä saat tämän viestin ilman että olet tehnyt tilausta, ole ystävällinen ja seuraa tätä linkkiä:</label>
-			<label index="v_registration_initiated">%2$s alusti tilauksensa uutislehteen %1$s.</label>
-			<label index="v_registration_invited_subject">Kutsu tilaamaan uutislehti &lt;b&gt;%1$s&lt;/b&gt;.</label>
-			<label index="v_registration_invited_message1">Ajattelimme Sinun olevan kiinnostunut tilaamaan uutislehtemme &lt;b&gt;%1$s&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;  Olemme luoneet Sinulle tilauksen.&lt;br /&gt;&lt;br /&gt;  Lähetämme Sinulle tämän kutsun, jotta voit vahvistaa haluatko tilata uutislehden b&gt;%1$s&lt;/b&gt;. Saat uutislehtemme &lt;b&gt;%1$s&lt;/b&gt;  vasta kun olet vahvistanut tilauksesi. Voit myös muokata tilaustietojasi.&lt;br /&gt;&lt;br /&gt;  Jos haluat hyväksyä tarjouksemme ja vahvistaa tilauksesi uutislehteen &lt;b&gt;%1$s&lt;/b&gt;, ole ystävällinen ja seuraa tätä linkki:</label>
-			<label index="v_registration_invited_message2">Et saa tätä viestiä toista kertaa. Jos haluat torjua kutsumme tai et halua tilata uutislehteämme &lt;b&gt;%1$s&lt;/b&gt;, ole ystävällinen ja seuraa tätä linkkiä tai vain unohda tämä viestimme:</label>
-			<label index="v_registration_invited">Kutsu tilaamaan uutislehti &lt;b&gt;%1$s&lt;/b&gt; lähetettiin  %2$slle.</label>
-			<label index="v_registration_confirmed_subject">Kiitos uutislehti  &lt;b&gt;%1$s&lt;/b&gt; tilauksesta..</label>
-			<label index="v_registration_confirmed_message1">Tilauksesi on vahvistettu.</label>
 			<label index="v_registration_confirmed_message2">Sähköpostiosoitteesi &lt;b&gt;%3$s&lt;/b&gt; on lisätty listallemme.</label>
-			<label index="v_registration_confirmed">%3$s vahvisti tilauksensa uutislehteen %1$s.</label>
 			<label index="v_registration_cancelled_subject">Kiitos vierailustasi.</label>
-			<label index="v_registration_cancelled_message1">Tilauksesi uutislehteen &lt;b&gt;%1$s&lt;/b&gt; on peruttu.</label>
-			<label index="v_registration_cancelled_message2">Tilauksesi ja osoitetietosi &lt;b&gt;%3$s&lt;/b&gt; on poistettu listaltamme.</label>
-			<label index="v_registration_cancelled">%2$s perui tilauksensa uutislehteen %1$s.</label>
-			<label index="v_sending_infomail">Lähetämme Sinulle viestin sähköpostiosoitteeseesi &lt;b&gt;%3$s&lt;/b&gt;.</label>
-			<label index="v_sending_infomail_message1">Sähköpostiviestissä on kaksi linkkiä joilla voit muokata tai peruuttaa tilauksesi. uutislehteemme &lt;b&gt;%1$s&lt;/b&gt;.</label>
-			<label index="v_sending_infomail_message2">Seuraa ohjeita tässä sähköpostiviestissä muokataksesi tai peruuttaaksesi tilaustasi.</label>
-			<label index="v_infomail_subject">Tietoja tilauksestasi uutislehteen &lt;b&gt;%1$s&lt;/b&gt;</label>
-			<label index="v_infomail_message1">Jos haluat muokata tilaustietojasi, seuraa tätä linkkiä:</label>
-			<label index="v_infomail_message2">Jos haluat peruuttaa tilauksesi, seuraa tätä linkkiä :</label>
-			<label index="v_infomail_norecord_subject">Sähköpostiosoitteellasi ei ole tilausta uutislehteen &lt;b&gt;%1$s&lt;/b&gt;.</label>
-			<label index="v_infomail_norecord_message1">Näyttää ettei sähköpostiosoitteellasi ole tilausta uutislehteen &lt;b&gt;%1$s&lt;/b&gt;.</label>
-			<label index="v_infomail_norecord_message2">Jos Sinulla on toistuvia onhelmia tilauksesi kanssa, ole ystävällinen ja ota yhteyttä seuraavaan sähköpostiosoitteeseen. Autamme ongelmissa mielellämme :</label>
-			<label index="v_registration_deleted_subject">Kiitos &lt;b&gt;%1$s&lt;/b&gt; tilauksestasi.</label>
-			<label index="v_registration_deleted_message1">Et saa enää meiltä viestejä.</label>
-			<label index="v_registration_deleted_message2">Tilauksesi ja osoitetietosi &lt;b&gt;%3$s&lt;/b&gt; on poistettu listaltamme.</label>
-			<label index="v_registration_deleted">%2$s peruutti tilauksensa uutislehteen %1$s.</label>
 			<label index="evalErrors_uniqueGlobal">Tieto on jo olemassa. Ole hyvä ja anna uusi.</label>
 			<label index="evalErrors_uniqueLocal">Tieto on jo olemassa. Ole hyvä ja anna uusi.</label>
 			<label index="evalErrors_twice">Anna sama tieto kahdesti.</label>
@@ -4356,7 +4476,7 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="kind_regards" type="integer">98899985</label>
 			<label index="v_really_wish_to_delete" type="integer">182744159</label>
 			<label index="v_verify_before_create" type="integer">166902034</label>
-			<label index="v_verify_invitation_before_create" type="integer">187559497</label>
+			<label index="v_verify_invitation_before_create" type="integer">189942687</label>
 			<label index="v_edit_your_account" type="integer">210285645</label>
 			<label index="v_edit_your_account_informal" type="integer">210285645</label>
 			<label index="v_verify_before_update" type="integer">118771511</label>
@@ -4371,10 +4491,10 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="v_registration_updated_message1" type="integer">205645671</label>
 			<label index="v_registration_updated" type="integer">249165019</label>
 			<label index="v_invitation_confirm" type="integer">175587728</label>
-			<label index="v_invitation_account_was_created" type="integer">94190848</label>
+			<label index="v_invitation_account_was_created" type="integer">142947248</label>
 			<label index="v_invitation_instructions1" type="integer">215945727</label>
 			<label index="v_please_confirm" type="integer">149321470</label>
-			<label index="v_your_account_was_created" type="integer">25799784</label>
+			<label index="v_your_account_was_created" type="integer">200242438</label>
 			<label index="v_follow_instructions1" type="integer">13446413</label>
 			<label index="v_registration_initiated_subject" type="integer">240682842</label>
 			<label index="v_registration_initiated_message1" type="integer">73449351</label>
@@ -4387,12 +4507,12 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="v_registration_confirmed_subject" type="integer">113465311</label>
 			<label index="v_registration_confirmed_message1" type="integer">101976733</label>
 			<label index="v_registration_confirmed_message2" type="integer">266888099</label>
-			<label index="v_registration_confirmed" type="integer">117132578</label>
+			<label index="v_registration_confirmed" type="integer">78465870</label>
 			<label index="v_registration_cancelled_subject" type="integer">231769196</label>
 			<label index="v_registration_cancelled_message1" type="integer">97526227</label>
-			<label index="v_registration_cancelled_message2" type="integer">237445261</label>
+			<label index="v_registration_cancelled_message2" type="integer">154086248</label>
 			<label index="v_registration_cancelled" type="integer">198631037</label>
-			<label index="v_sending_infomail" type="integer">265706128</label>
+			<label index="v_sending_infomail" type="integer">62038627</label>
 			<label index="v_sending_infomail_message1" type="integer">138908048</label>
 			<label index="v_sending_infomail_message2" type="integer">104881786</label>
 			<label index="v_infomail_subject" type="integer">119018954</label>
@@ -4403,7 +4523,7 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="v_infomail_norecord_message2" type="integer">268392566</label>
 			<label index="v_registration_deleted_subject" type="integer">75754685</label>
 			<label index="v_registration_deleted_message1" type="integer">173153829</label>
-			<label index="v_registration_deleted_message2" type="integer">255669309</label>
+			<label index="v_registration_deleted_message2" type="integer">238989457</label>
 			<label index="v_registration_deleted" type="integer">7789245</label>
 			<label index="evalErrors_uniqueGlobal" type="integer">234315754</label>
 			<label index="evalErrors_uniqueLocal" type="integer">234315754</label>
@@ -4413,6 +4533,114 @@ To sporočilo ti pošiljamo zato, da se sam odločiš ali se želiš vpisati na 
 			<label index="evalErrors_atLeast" type="integer">100400175</label>
 			<label index="evalErrors_atMost" type="integer">35494949</label>
 			<label index="evalErrors_date" type="integer">89544415</label>
+			<label index="missing_invitation_name_informal" type="integer">237116924</label>
+			<label index="first_name_informal" type="integer">107522264</label>
+			<label index="missing_invitation_first_name_informal" type="integer">161073984</label>
+			<label index="last_name_informal" type="integer">199614645</label>
+			<label index="missing_invitation_last_name_informal" type="integer">221550578</label>
+			<label index="date_of_birth_informal" type="integer">99495875</label>
+			<label index="missing_invitation_date_of_birth_informal" type="integer">164305076</label>
+			<label index="address_informal" type="integer">46079327</label>
+			<label index="missing_invitation_address_informal" type="integer">79926535</label>
+			<label index="city_informal" type="integer">201307921</label>
+			<label index="missing_invitation_city_informal" type="integer">954485</label>
+			<label index="zone_informal" type="integer">267945122</label>
+			<label index="tooltip_zone" type="integer">232000989</label>
+			<label index="missing_invitation_zone_informal" type="integer">42481511</label>
+			<label index="zip_informal" type="integer">229014119</label>
+			<label index="missing_invitation_zip_informal" type="integer">50065777</label>
+			<label index="static_info_country_informal" type="integer">258260574</label>
+			<label index="missing_invitation_static_info_country_informal" type="integer">21663366</label>
+			<label index="phone_informal" type="integer">33624454</label>
+			<label index="tooltip_phone" type="integer">245627737</label>
+			<label index="tooltip_phone_informal" type="integer">245627737</label>
+			<label index="tooltip_invitation_phone" type="integer">44221306</label>
+			<label index="missing_phone_informal" type="integer">20131394</label>
+			<label index="missing_invitation_phone_informal" type="integer">176333917</label>
+			<label index="missing_invitation_fax_informal" type="integer">5760007</label>
+			<label index="email_informal" type="integer">111272549</label>
+			<label index="language_informal" type="integer">8937228</label>
+			<label index="missing_invitation_language_informal" type="integer">202609153</label>
+			<label index="www_informal" type="integer">78145407</label>
+			<label index="missing_invitation_image_informal" type="integer">37426884</label>
+			<label index="comments" type="integer">68027632</label>
+			<label index="comments_informal" type="integer">68027632</label>
+			<label index="tooltip_comments" type="integer">176843402</label>
+			<label index="tooltip_comments_informal" type="integer">176843402</label>
+			<label index="missing_comments" type="integer">173909092</label>
+			<label index="missing_comments_informal" type="integer">173909092</label>
+			<label index="evalErrors_allowed_image_informal" type="integer">79858507</label>
+			<label index="evalErrors_max_size_image_informal" type="integer">167713473</label>
+			<label index="button_register_informal" type="integer">187076981</label>
+			<label index="button_confirm_register_informal" type="integer">194170621</label>
+			<label index="button_send_invitation_informal" type="integer">98511564</label>
+			<label index="button_send_invitation_now_informal" type="integer">158556921</label>
+			<label index="button_send_link_informal" type="integer">245596398</label>
+			<label index="button_back_to_form_informal" type="integer">89148461</label>
+			<label index="button_update_informal" type="integer">88944263</label>
+			<label index="button_confirm_update_informal" type="integer">257788373</label>
+			<label index="button_enter_informal" type="integer">253252053</label>
+			<label index="button_confirm_delete_informal" type="integer">198485628</label>
+			<label index="button_cancel_delete_informal" type="integer">85643543</label>
+			<label index="click_here_to_edit_informal" type="integer">258166581</label>
+			<label index="tooltip_click_here_to_edit" type="integer">136928466</label>
+			<label index="v_wish_to_update_or_delete_informal" type="integer">34639852</label>
+			<label index="click_here_to_delete_informal" type="integer">16734144</label>
+			<label index="tooltip_click_here_to_delete" type="integer">36181824</label>
+			<label index="enter_account_info_informal" type="integer">216551741</label>
+			<label index="enter_invitation_account_info_informal" type="integer">188257577</label>
+			<label index="required_info_notice_informal" type="integer">12895534</label>
+			<label index="excuse_us_invitation" type="integer">36298739</label>
+			<label index="v_really_wish_to_delete_informal" type="integer">182744159</label>
+			<label index="v_verify_before_create_informal" type="integer">166902034</label>
+			<label index="v_verify_invitation_before_create_informal" type="integer">189942687</label>
+			<label index="v_verify_before_update_informal" type="integer">118771511</label>
+			<label index="hello_informal" type="integer">196309725</label>
+			<label index="v_registration_created_subject_informal" type="integer">113465311</label>
+			<label index="v_registration_created_message1_informal" type="integer">65166198</label>
+			<label index="v_registration_created_informal" type="integer">192755510</label>
+			<label index="v_invitation_account_was_created_informal" type="integer">142947248</label>
+			<label index="v_invitation_instructions1_informal" type="integer">215945727</label>
+			<label index="v_registration_initiated_subject_informal" type="integer">240682842</label>
+			<label index="v_registration_initiated_message1_informal" type="integer">73449351</label>
+			<label index="v_registration_initiated_message2_informal" type="integer">49089221</label>
+			<label index="v_registration_initiated_informal" type="integer">37348180</label>
+			<label index="v_registration_invited_subject_informal" type="integer">179407226</label>
+			<label index="v_registration_invited_message1_informal" type="integer">37307994</label>
+			<label index="v_registration_invited_message2_informal" type="integer">208673493</label>
+			<label index="v_registration_invited_informal" type="integer">114469634</label>
+			<label index="v_registration_confirmed_subject_informal" type="integer">113465311</label>
+			<label index="v_registration_confirmed_message1_informal" type="integer">101976733</label>
+			<label index="v_registration_confirmed_informal" type="integer">117132578</label>
+			<label index="v_registration_cancelled_message1_informal" type="integer">97526227</label>
+			<label index="v_registration_cancelled_message2_informal" type="integer">154086248</label>
+			<label index="v_registration_cancelled_informal" type="integer">198631037</label>
+			<label index="v_sending_infomail_informal" type="integer">62038627</label>
+			<label index="v_sending_infomail_message1_informal" type="integer">138908048</label>
+			<label index="v_sending_infomail_message2_informal" type="integer">104881786</label>
+			<label index="v_infomail_subject_informal" type="integer">119018954</label>
+			<label index="v_infomail_reason" type="integer">19961435</label>
+			<label index="v_infomail_reason_informal" type="integer">19961435</label>
+			<label index="v_infomail_message1_informal" type="integer">3891040</label>
+			<label index="v_infomail_message2_informal" type="integer">37129310</label>
+			<label index="v_infomail_norecord_subject_informal" type="integer">251307828</label>
+			<label index="v_infomail_norecord_message1_informal" type="integer">191028264</label>
+			<label index="v_infomail_norecord_message2_informal" type="integer">268392566</label>
+			<label index="v_registration_deleted_subject_informal" type="integer">75754685</label>
+			<label index="v_registration_deleted_message1_informal" type="integer">173153829</label>
+			<label index="v_registration_deleted_message2_informal" type="integer">238989457</label>
+			<label index="v_registration_deleted_informal" type="integer">7789245</label>
+			<label index="v_your_account_was_created_informal" type="integer">200242438</label>
+			<label index="v_follow_instructions1_informal" type="integer">13446413</label>
+			<label index="mobile" type="integer">268218508</label>
+			<label index="mobile_informal" type="integer">268218508</label>
+			<label index="tooltip_mobile" type="integer">38289812</label>
+			<label index="tooltip_mobile_informal" type="integer">38289812</label>
+			<label index="tooltip_invitation_mobile" type="integer">130513073</label>
+			<label index="missing_mobile" type="integer">147585075</label>
+			<label index="missing_mobile_informal" type="integer">147585075</label>
+			<label index="missing_invitation_mobile" type="integer">229917400</label>
+			<label index="missing_invitation_mobile_informal" type="integer">229917400</label>
 		</languageKey>
 		<languageKey index="tr" type="array">
 		</languageKey>

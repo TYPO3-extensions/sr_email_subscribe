@@ -1,3 +1,7 @@
+2008-04-01 Franz Holzinger  <franz@fholzinger.com>
+	* add dependancy from div2007 instead of fh_library
+	* add field mobile
+
 2007-11-26 Franz Holzinger  <franz@fholzinger.com>
 	* fix bug in CSS template
 	* do not use the cofigured image upload path by default

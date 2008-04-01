@@ -26,7 +26,7 @@
 <form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">
 <table border="0" cellspacing="0" cellpadding="1">
 	<tr>
-		<td><img src="clear.gif" height="1" width="160"></td>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
 		<td></td>
 	</tr>
 	<tr>
@@ -212,6 +212,20 @@
 		</td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_phone###-->
+	<!--###SUB_INCLUDED_FIELD_mobile###-->
+	<tr>
+		<td>
+			<p>###LABEL_MOBILE### ###REQUIRED_MOBILE###</p>
+		</td>
+		<td>
+			<p>###GW2B######EVAL_ERROR_FIELD_mobile######GW2E###</p>
+			<!--###SUB_REQUIRED_FIELD_mobile###-->
+			<p>###GW2B######MISSING_MOBILE######GW2E###</p>
+			<!--###SUB_REQUIRED_FIELD_mobile###-->
+			<p><input type="text" name="FE[tt_address][mobile]" size="25" /></p>
+		</td>
+	</tr>
+	<!--###SUB_INCLUDED_FIELD_mobile###-->
 	<!--###SUB_INCLUDED_FIELD_fax###-->
 	<tr>
 		<td>
@@ -249,7 +263,8 @@
 			<!--###SUB_REQUIRED_FIELD_module_sys_dmail_html###-->
 			<p>###GW2B######MISSING_MODULE_SYS_DMAIL_HTML######GW2E###</p>
 			<!--###SUB_REQUIRED_FIELD_module_sys_dmail_html###-->
-			<p><div class="tx-sremailsubscribe-pi1-checkbox"><input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1"></div></p>
+			<div class="tx-sremailsubscribe-pi1-checkbox"><input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1" /></div>
+			<br />
 		</td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
@@ -350,7 +365,7 @@
 <!-- ###TEMPLATE_CREATE_PREVIEW### begin -->
 <table border="0" cellspacing="0" cellpadding="1">
 	<tr>
-		<td><img src="clear.gif" height="1" width="160"></td>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
 		<td></td> 	</tr>
 	<tr>
 		<td colspan="2">
@@ -436,6 +451,12 @@
 		<td><p>###FIELD_phone###</p></td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_phone###-->
+	<!--###SUB_INCLUDED_FIELD_mobile###-->
+	<tr>
+		<td><p>###LABEL_MOBILE###</p></td>
+		<td><p>###FIELD_mobile###</p></td>
+	</tr>
+	<!--###SUB_INCLUDED_FIELD_mobile###-->
 	<!--###SUB_INCLUDED_FIELD_fax###-->
 	<tr>
 		<td><p>###LABEL_FAX###</p></td>
@@ -451,7 +472,7 @@
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
 	<tr>
 		<td><p>###LABEL_MODULE_SYS_DMAIL_HTML###</p></td>
-		<td><p>###LABEL_module_sys_dmail_html_CHECKED###</p></td>
+		<td><p>###LABEL_MODULE_SYS_DMAIL_HTML_CHECKED###</p></td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_category###-->
@@ -485,8 +506,8 @@
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_comments###-->
 	<tr>
-	<form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">
-		<td>
+	<td colspan="2">
+	<form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">		
 	<input type="hidden" name="FE[tt_address][name]" />
 	<input type="hidden" name="FE[tt_address][first_name]" />
 	<input type="hidden" name="FE[tt_address][last_name]" />
@@ -498,6 +519,7 @@
 	<input type="hidden" name="FE[tt_address][static_info_country]" />
 	<input type="hidden" name="FE[tt_address][zip]" />
 	<input type="hidden" name="FE[tt_address][phone]" />
+	<input type="hidden" name="FE[tt_address][mobile]" />
 	<input type="hidden" name="FE[tt_address][fax]" />
 	<input type="hidden" name="FE[tt_address][email]" />
 	<input type="hidden" name="FE[tt_address][module_sys_dmail_html]" />
@@ -509,13 +531,19 @@
 	<input type="hidden" name="FE[tt_address][image]" />
 	<input type="hidden" name="FE[tt_address][comments]" />
 	###HIDDENFIELDS###
-		</td>		<td>
-			<p>
-				<input type="submit" name="###PREFIXID###[submit]" value="###LABEL_BUTTON_CONFIRM_REGISTER###" class="tx-sremailsubscribe-pi1-submit" />
-				<input type="submit" name="###PREFIXID###[doNotSave]" value="###LABEL_BUTTON_BACK_TO_FORM###" class="tx-sremailsubscribe-pi1-submit" />
-			</p>
+	<table border="0" cellspacing="0" cellpadding="1">
+	<tr>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
+		<td>
+		<p class="submitButtons">
+			<input type="submit" name="###PREFIXID###[submit]" value="###LABEL_BUTTON_CONFIRM_REGISTER###" class="tx-sremailsubscribe-pi1-submit" />
+			<input type="submit" name="###PREFIXID###[doNotSave]" value="###LABEL_BUTTON_BACK_TO_FORM###" class="tx-sremailsubscribe-pi1-submit" />
+		</p>
 		</td>
+	</tr>
+	</table>
 	</form>
+	</td>
 	</tr>
 </table>
 <!-- ###TEMPLATE_CREATE_PREVIEW### end-->
@@ -587,7 +615,7 @@ The user is informed that a message has been sent to his email address and that 
 <form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">
 <table border="0" cellspacing="0" cellpadding="1">
 	<tr>
-		<td><img src="clear.gif" height="1" width="160"></td>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
 		<td></td>
 	</tr>
 	<tr>
@@ -810,7 +838,8 @@ The user is informed that a message has been sent to his email address and that 
 			<!--###SUB_REQUIRED_FIELD_module_sys_dmail_html###-->
 			<p>###GW2B######MISSING_MODULE_SYS_DMAIL_HTML######GW2E###</p>
 			<!--###SUB_REQUIRED_FIELD_module_sys_dmail_html###-->
-			<p><div class="tx-sremailsubscribe-pi1-checkbox"><input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value=1></div></p>
+			<div class="tx-sremailsubscribe-pi1-checkbox"><input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1" /></div>
+			<br />
 		</td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
@@ -894,7 +923,7 @@ The user is informed that a message has been sent to his email address and that 
 -->
 <table border="0" cellspacing="0" cellpadding="1">
 	<tr>
-		<td><img src="clear.gif" height="1" width="160"></td>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
 		<td></td>
 	</tr>
 	<tr>
@@ -995,7 +1024,7 @@ The user is informed that a message has been sent to his email address and that 
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
 	<tr>
 		<td><p>###LABEL_MODULE_SYS_DMAIL_HTML###</p></td>
-		<td><p>###LABEL_module_sys_dmail_html_CHECKED###</p></td>
+		<td><p>###LABEL_MODULE_SYS_DMAIL_HTML_CHECKED###</p></td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_category###-->
@@ -1023,8 +1052,8 @@ The user is informed that a message has been sent to his email address and that 
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_image###-->
 	<tr>
-	<form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">
-		<td>
+	<td colspan="2">
+	<form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">		
 	<input type="hidden" name="FE[tt_address][name]" />
 	<input type="hidden" name="FE[tt_address][first_name]" />
 	<input type="hidden" name="FE[tt_address][last_name]" />
@@ -1036,6 +1065,7 @@ The user is informed that a message has been sent to his email address and that 
 	<input type="hidden" name="FE[tt_address][static_info_country]" />
 	<input type="hidden" name="FE[tt_address][zip]" />
 	<input type="hidden" name="FE[tt_address][phone]" />
+	<input type="hidden" name="FE[tt_address][mobile]" />
 	<input type="hidden" name="FE[tt_address][fax]" />
 	<input type="hidden" name="FE[tt_address][email]" />
 	<input type="hidden" name="FE[tt_address][module_sys_dmail_html]" />
@@ -1046,14 +1076,15 @@ The user is informed that a message has been sent to his email address and that 
 	<input type="hidden" name="FE[tt_address][www]" />
 	<input type="hidden" name="FE[tt_address][image]" />
 	###HIDDENFIELDS###
+		<p class="submitButtons">
+			<input type="submit" name="###PREFIXID###[submit]" value="###LABEL_BUTTON_SEND_INVITATION_NOW###" class="tx-sremailsubscribe-pi1-submit" />
+			<input type="submit" name="###PREFIXID###[doNotSave]" value="###LABEL_BUTTON_BACK_TO_FORM###" class="tx-sremailsubscribe-pi1-submit" />
+		</p>
 		</td>
-		<td>
-			<p>
-				<input type="submit" name="###PREFIXID###[submit]" value="###LABEL_BUTTON_SEND_INVITATION_NOW###" class="tx-sremailsubscribe-pi1-submit" />
-				<input type="submit" name="###PREFIXID###[doNotSave]" value="###LABEL_BUTTON_BACK_TO_FORM###" class="tx-sremailsubscribe-pi1-submit" />
-			</p>
-		</td>
+	</tr>
+	</table>		
 	</form>
+	</td>
 	</tr>
 </table>
 <!-- ###TEMPLATE_INVITE_PREVIEW### end--
@@ -1092,7 +1123,7 @@ The user is informed that a message has been sent to the email address and that 
 <form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">
 <table border="0" cellspacing="0" cellpadding="1">
 	<tr>
-		<td><img src="clear.gif" height="1" width="160"></td>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
 		<td></td>
 	</tr>
 	<tr>
@@ -1102,7 +1133,7 @@ The user is informed that a message has been sent to the email address and that 
 		</td>
 	</tr>
 	<tr>
-		<td><img src="clear.gif" height="1" width="160"></td>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
 		<td></td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_name###-->
@@ -1323,7 +1354,8 @@ The user is informed that a message has been sent to the email address and that 
 			<!--###SUB_REQUIRED_FIELD_module_sys_dmail_html###-->
 			<p>###GW2B######MISSING_MODULE_SYS_DMAIL_HTML######GW2E###</p>
 			<!--###SUB_REQUIRED_FIELD_module_sys_dmail_html###-->
-			<p><div class="tx-sremailsubscribe-pi1-checkbox"><input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1"></div></p>
+			<div class="tx-sremailsubscribe-pi1-checkbox"><input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1" /></div>
+			<br />
 		</td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
@@ -1407,7 +1439,7 @@ The user is informed that a message has been sent to the email address and that 
 <!-- ###TEMPLATE_EDIT_PREVIEW### begin-->
 <table border="0" cellspacing="0" cellpadding="1">
 	<tr>
-		<td><img src="clear.gif" height="1" width="160"></td>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
 		<td></td>
 	</tr>
 	<tr>
@@ -1509,7 +1541,7 @@ The user is informed that a message has been sent to the email address and that 
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
 	<tr>
 		<td><p>###LABEL_MODULE_SYS_DMAIL_HTML###</p></td>
-		<td><p>###LABEL_module_sys_dmail_html_CHECKED###</p></td>
+		<td><p>###LABEL_MODULE_SYS_DMAIL_HTML_CHECKED###</p></td>
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_html###-->
 	<!--###SUB_INCLUDED_FIELD_module_sys_dmail_category###-->
@@ -1537,9 +1569,8 @@ The user is informed that a message has been sent to the email address and that 
 	</tr>
 	<!--###SUB_INCLUDED_FIELD_image###-->
 	<tr>
-	<form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">
-
-		<td>
+	<td colspan="2">
+	<form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">		
 	<input type="hidden" name="FE[tt_address][name]" />
 	<input type="hidden" name="FE[tt_address][first_name]" />
 	<input type="hidden" name="FE[tt_address][last_name]" />
@@ -1551,6 +1582,7 @@ The user is informed that a message has been sent to the email address and that 
 	<input type="hidden" name="FE[tt_address][static_info_country]" />
 	<input type="hidden" name="FE[tt_address][zip]" />
 	<input type="hidden" name="FE[tt_address][phone]" />
+	<input type="hidden" name="FE[tt_address][mobile]" />
 	<input type="hidden" name="FE[tt_address][fax]" />
 	<input type="hidden" name="FE[tt_address][email]" />
 	<input type="hidden" name="FE[tt_address][module_sys_dmail_html]" />
@@ -1561,14 +1593,19 @@ The user is informed that a message has been sent to the email address and that 
 	<input type="hidden" name="FE[tt_address][www]" />
 	<input type="hidden" name="FE[tt_address][image]" />
 	###HIDDENFIELDS###
-		</td>
+	<table border="0" cellspacing="0" cellpadding="1">
+	<tr>
+		<td><img src="clear.gif" height="1" width="160" alt="" /></td>
 		<td>
-			<p>
+			<p class="submitButtons">
 				<input type="submit" name="###PREFIXID###[submit]" value="###LABEL_BUTTON_CONFIRM_UPDATE###" class="tx-sremailsubscribe-pi1-submit" />
 				<input type="submit" name="###PREFIXID###[doNotSave]" value="###LABEL_BUTTON_BACK_TO_FORM###" class="tx-sremailsubscribe-pi1-submit" />
 			</p>
 		</td>
-		</form>
+	</tr>
+	</table>		
+	</form>
+	</td>
 	</tr>
 </table>
 <!-- ###TEMPLATE_EDIT_PREVIEW### end-->

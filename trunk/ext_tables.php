@@ -8,7 +8,7 @@ if (t3lib_extMgm::isLoaded(FH_LIBRARY_EXTkey)) {
 
 	t3lib_div::loadTCA('tt_content');
 
-	if ($TYPO3_CONF_VARS['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useFlexforms']==1) {
+	if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useFlexforms']==1) {
 		$TCA['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='layout,select_key';
 		$TCA['tt_content']['types']['list']['subtypes_addlist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='pi_flexform';
 		t3lib_extMgm::addPiFlexFormValue(SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1', 'FILE:EXT:'.SR_EMAIL_SUBSCRIBE_EXTkey.'/pi1/flexform_ds_pi1.xml');
@@ -27,9 +27,9 @@ if (t3lib_extMgm::isLoaded(FH_LIBRARY_EXTkey)) {
 t3lib_div::loadTCA('tt_address');
 
 if (
-	$TYPO3_CONF_VARS['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useImageFolder'] &&
-	$TYPO3_CONF_VARS['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'] != '')	{
-	$TCA['tt_address']['columns']['image']['config']['uploadfolder'] = $TYPO3_CONF_VARS['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'];
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useImageFolder'] &&
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'] != '')	{
+	$TCA['tt_address']['columns']['image']['config']['uploadfolder'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'];
 }
 
 t3lib_extMgm::addTCAcolumns('tt_address', Array(
