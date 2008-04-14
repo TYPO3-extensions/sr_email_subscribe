@@ -25,6 +25,10 @@ if (!defined ('FH_LIBRARY_EXTkey')) {
 	define('FH_LIBRARY_EXTkey','fh_library');
 }
 
+if (!defined ('DIV2007_EXTkey')) {
+	define('DIV2007_EXTkey','div2007');
+}
+
 $bPhp5 = version_compare(phpversion(), '5.0.0', '>=');
 
 t3lib_extMgm::addPItoST43(SR_EMAIL_SUBSCRIBE_EXTkey, 'pi1/class.tx_sremailsubscribe_pi1.php', '_pi1', 'list_type', 0);
