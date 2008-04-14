@@ -32,7 +32,7 @@
  *
  * @author	Kasper Skårhøj <kasperYYYY@typo3.com>
  * @author	Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
- * @author	Franz Holzinger <kontakt@fholzinger.com>
+ * @author	Franz Holzinger <contact@fholzinger.com>
  */
 
 require_once(t3lib_extMgm::extPath('sr_feuser_register').'pi1/class.tx_srfeuserregister_pi1.php');
@@ -61,8 +61,9 @@ class tx_sremailsubscribe_pi1 extends tx_srfeuserregister_pi1 {
 				// FE BE library for flexform functions
 			require_once(PATH_BE_fh_library.'lib/class.tx_fhlibrary_language.php');
 			tx_fhlibrary_language::pi_loadLL($this,'EXT:'.SR_FEUSER_REGISTER_EXTkey.'/pi1/locallang.xml',FALSE);
-		}
-		$rc = parent::init($conf, 'tt_address', $adminFieldList);
+		} // otherwise the labels from sr_feuser_register will not be included
+
+		$rc = parent::init($conf, $theTable, $adminFieldList);
 
 		$buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
 		$this->marker->setButtonLabelsList($buttonLabelsList);

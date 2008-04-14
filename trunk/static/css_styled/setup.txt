@@ -1,3 +1,9 @@
+##
+## @package TYPO3
+## @subpackage sr_email_subscribe
+## @version $Id$
+##
+
 plugin.tx_sremailsubscribe_pi1 {
 
 	table.name = {$plugin.tx_sremailsubscribe.tableName}

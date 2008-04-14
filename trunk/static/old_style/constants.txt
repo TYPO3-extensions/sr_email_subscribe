@@ -1,3 +1,5 @@
+## $Id$
+
 plugin.tx_sremailsubscribe {
 
     # cat=plugin.tx_sremailsubscribe/file; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template file 
