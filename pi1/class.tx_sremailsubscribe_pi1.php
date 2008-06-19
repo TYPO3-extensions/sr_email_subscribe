@@ -3,7 +3,7 @@
 *  Copyright notice
 *
 *  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
-*  (c) 2004-2008 Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
+*  (c) 2004-2008 Stanislas Rolland <stanislas.rolland(arobas)sjbr.ca>
 *  All rights reserved
 *
 *  This script is part of the Typo3 project. The Typo3 project is
@@ -31,7 +31,7 @@
  * $Id$
  *
  * @author	Kasper Skårhøj <kasperYYYY@typo3.com>
- * @author	Stanislas Rolland <stanislas.rolland(arobas)fructifor.ca>
+ * @author	Stanislas Rolland <stanislas.rolland(arobas)sjbr.ca>
  * @author	Franz Holzinger <contact@fholzinger.com>
  */
 
@@ -52,17 +52,6 @@ class tx_sremailsubscribe_pi1 extends tx_srfeuserregister_pi1 {
 	*/
 	function init(&$conf, $theTable, &$adminFieldList) {
 		$adminFieldList = 'name,hidden';
-
-		if (t3lib_extMgm::isLoaded(DIV2007_EXTkey)) {
-				// Static Methods for Extensions for fetching the texts of sr_feuser_register
-			require_once(PATH_BE_div2007.'class.tx_div2007_alpha.php');
-			tx_div2007_alpha::loadLL_fh001($this,'EXT:'.SR_FEUSER_REGISTER_EXTkey.'/pi1/locallang.xml',FALSE);
-		} else if (t3lib_extMgm::isLoaded(FH_LIBRARY_EXTkey)) {
-				// FE BE library for flexform functions
-			require_once(PATH_BE_fh_library.'lib/class.tx_fhlibrary_language.php');
-			tx_fhlibrary_language::pi_loadLL($this,'EXT:'.SR_FEUSER_REGISTER_EXTkey.'/pi1/locallang.xml',FALSE);
-		} // otherwise the labels from sr_feuser_register will not be included
-
 		$rc = parent::init($conf, $theTable, $adminFieldList);
 
 		$buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
@@ -74,7 +63,7 @@ class tx_sremailsubscribe_pi1 extends tx_srfeuserregister_pi1 {
 		registration_problem,registration_sorry,registration_clicked_twice,registration_help,kind_regards,
 		v_verify_before_create,v_verify_invitation_before_create,v_verify_before_update,v_really_wish_to_delete,v_edit_your_account,
 		v_dear,hello,v_notification,v_registration_created,v_registration_created_subject,v_registration_created_message1,v_registration_created_message2,
-		v_please_confirm,v_your_account_was_created,v_follow_instructions1,v_follow_instructions2,v_invitation_confirm,
+		v_please_confirm,v_your_account_was_created,v_your_account_was_created_nomail,v_follow_instructions1,v_follow_instructions2,v_invitation_confirm,
 		v_invitation_account_was_created,v_invitation_instructions1,
 		v_registration_initiated,v_registration_initiated_subject,v_registration_initiated_message1,v_registration_initiated_message2,
 		v_registration_invited,v_registration_invited_subject,v_registration_invited_message1,v_registration_invited_message2,
