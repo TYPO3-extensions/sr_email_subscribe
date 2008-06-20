@@ -1,5 +1,5 @@
-2008-06-19 Franz Holzinger  <franz@fholzinger.com>
-	* fix bug with not overridable _LOCAL_LANG setup
+2008-06-20 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 8548: not overridable _LOCAL_LANG setup
 
 2008-04-14 Franz Holzinger  <franz@fholzinger.com>
 	* fix bug with not shown plugins when no fh_library had been installed
