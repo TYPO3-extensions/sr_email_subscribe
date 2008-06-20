@@ -1,0 +1,5 @@
+Franz Holzinger <kontakt@fholzinger.com>: software development and bug fixes
+Ralph Brugger <Ralph.Brugger@linkpool.de>: Freecap Captcha support
+
+
+
