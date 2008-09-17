@@ -2,21 +2,19 @@
 
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
-if (t3lib_extMgm::isLoaded(DIV2007_EXTkey) || t3lib_extMgm::isLoaded(FH_LIBRARY_EXTkey)) { // only works if div2007 has been installed. fh_library is used for compatibility and easier upgrade only, but it is deprecated.
-	t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/css_styled/', 'Email Address Subscription CSS-styled');
-	t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/old_style/', 'Email Address Subscription Old Style');
-	
-	t3lib_div::loadTCA('tt_content');
+t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/css_styled/', 'Email Address Subscription CSS-styled');
+t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/old_style/', 'Email Address Subscription Old Style');
 
-	if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useFlexforms']=='1') {
-		$TCA['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='layout,select_key';
-		$TCA['tt_content']['types']['list']['subtypes_addlist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='pi_flexform';
-		t3lib_extMgm::addPiFlexFormValue(SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1', 'FILE:EXT:'.SR_EMAIL_SUBSCRIBE_EXTkey.'/pi1/flexform_ds_pi1.xml');
-	} else {
-		$TCA['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1'] = 'layout';
-	}
-	t3lib_extMgm::addPlugin(Array('LLL:EXT:'.SR_EMAIL_SUBSCRIBE_EXTkey.'/locallang_db.xml:tt_content.email_subscribe', SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1'),'list_type');
+t3lib_div::loadTCA('tt_content');
+
+if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useFlexforms']=='1') {
+	$TCA['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='layout,select_key';
+	$TCA['tt_content']['types']['list']['subtypes_addlist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='pi_flexform';
+	t3lib_extMgm::addPiFlexFormValue(SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1', 'FILE:EXT:'.SR_EMAIL_SUBSCRIBE_EXTkey.'/pi1/flexform_ds_pi1.xml');
+} else {
+	$TCA['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1'] = 'layout';
 }
+t3lib_extMgm::addPlugin(Array('LLL:EXT:'.SR_EMAIL_SUBSCRIBE_EXTkey.'/locallang_db.xml:tt_content.email_subscribe', SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1'),'list_type');
 
 /**
  * Setting up country, country subdivision, preferred language, first_name and last_name in tt_address table
