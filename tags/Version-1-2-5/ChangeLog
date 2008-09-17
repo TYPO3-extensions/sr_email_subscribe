@@ -1,0 +1,71 @@
+2008-09-17 Franz Holzinger  <franz@fholzinger.com>
+	* modifications for usage with sr_feuser_register 2.5.17
+
+2008-06-20 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 8548: not overridable _LOCAL_LANG setup
+
+2008-04-14 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug with not shown plugins when no fh_library had been installed
+
+2008-04-01 Franz Holzinger  <franz@fholzinger.com>
+	* add dependancy from div2007 instead of fh_library
+	* add field mobile
+	* remove translations from the xml files because they are already on the Translation Server
+	* new feature: allow also other tables than tt_address
+
+2007-11-26 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug in CSS template
+	* do not use the cofigured image upload path by default
+
+2007-06-04 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 3736: Change the CSS template to:   <form id="###FORM_NAME###" ...
+
+2007-05-26  Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 5641: This version works again with sr_feuser_register 2.5.7+. The method addLabelMarkers has been deleted.
+	* The deprecated pi2 has been deleted now. Some English texts have been deleted. They will be taken from sr_feuser_register directly. The correct paramater for email is %4 instead of %3.
+	* This works with tt_address 2.1.0+. Therefore some tt_address fields do not need to be added in this extension any more.
+
+2007-01-17  Franz Holzinger  <franz@fholzinger.com>
+	* freecap captcha support by Ralph Brugger <Ralph.Brugger@linkpool.de>
+
+2006-09-09  Michael Stucki  <michael@typo3.org>
+
+	* Initial SVN import
+
+2006-08-14 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 1.1.1
+	* Add Slovenian translation.
+
+2006-06-21 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 1.1.0
+	* Remove dependency on Static Info Library (sr_static_info).
+
+2006-06-07 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 1.0.0
+	* Remove TS constant dmailCategories.
+	* Added support for backend flexforms by Franz Holzinger.
+	* Restructure the extension with two Static Templates: Old Style and CSS-styled. One static template must be added to the TS template after extension installation.
+	* Convert all language files to xml format.
+
+2006-03-26 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 0.3.1
+	* Remove TS constants enableInfomail, enableAdminNotifyOnRefuse, enableEmailOnRefuse
+
+2006-03-08 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 0.3.0
+	* Add short URL's feature. Thanks to Steve Webster.
+	* Update requirements to TYPO3 4.0.
+	* Correct processing of module_sys_dmail fields when Direct Mail is not installed.
+	* Modify plugins initialization: remove constructors and initId method.
+
+2006-03-01 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Remove changes to the TCA for fields module_sys_dmail_category and module_sys_dmail_html
+	* Ignore fields module_sys_dmail_category and module_sys_dmail_html if direct_mail extension is not loaded.
+	* Enable support for select fields with MM relations, in particular module_sys_dmail_category.
+	* Add support for localization of MM relations when configured on the foreign table.
+	* Add constant and setup property module_sys_dmail_category_PIDLIST
+	* Modify the HTML template to make field module_sys_dmail_category TCA-driven and use dynamic categories introduced by extension Direct Mail (direct_mail) 2.0.
+	* Update to the requirements section of the manual
+	* Honor TCA default value for TCA-driven multiple checkboxes. Thanks to Simon Tuck.
+	* Remove support for TYPO3 3.5.0.
+	* Accept value '0' on required fields (see bugtracker issue #2027).
