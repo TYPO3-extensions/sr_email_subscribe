@@ -4,6 +4,7 @@
 ## @version $Id$
 ##
 
+plugin.tx_sremailsubscribe_pi1 = USER_INT
 plugin.tx_sremailsubscribe_pi1 {
 
 	table.name = {$plugin.tx_sremailsubscribe.tableName}

@@ -36,10 +36,10 @@ $EM_CONF[$_EXTKEY] = array(
 		'depends' => array(
 			'tt_address' => '2.1.0-',
 			'static_info_tables' => '2.0.5-',
-			'sr_feuser_register' => '2.5.14-',
+			'sr_feuser_register' => '2.5.17-',
 			'php' => '4.1.0-0.0.0',
 			'typo3' => '4.0-0.0.0',
-			'div2007' => '0.1.7-',
+			'div2007' => '0.1.14-',
 		),
 		'conflicts' => array(
 		),
