@@ -10,6 +10,9 @@
     <data type="array">
         <languageKey index="default" type="array">
             <label index="fe_user_register">Subscription by email address</label>
+	    <label index="m_default">default</label>
+	    <label index="m_ext">extended</label>
+	    <label index="m_company">company</label>
         </languageKey>
         <languageKey index="dk" type="array">
             <label index="fe_user_register">Tilmelding af emailadresse</label>
