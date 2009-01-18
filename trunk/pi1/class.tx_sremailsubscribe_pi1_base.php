@@ -32,7 +32,7 @@
  *
  * @author	Kasper Skårhøj <kasperYYYY@typo3.com>
  * @author	Stanislas Rolland <stanislas.rolland(arobas)sjbr.ca>
- * @author	Franz Holzinger <contact@fholzinger.com>
+ * @author	Franz Holzinger <franz@ttproducts.de>
  */
 
 require_once(PATH_tslib.'class.tslib_pibase.php');
@@ -78,7 +78,7 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 				$content,
 				$conf,
 				$this,
-				'tt_address',
+				$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'],
 				$adminFieldList,
 				$buttonLabelsList,
 				$otherLabelsList

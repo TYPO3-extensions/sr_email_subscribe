@@ -36,7 +36,7 @@ plugin.tx_sremailsubscribe {
   tableName = tt_address
 
     # cat=plugin.tx_sremailsubscribe//; type=string; label= Country onchange attribute: Javascript to execute when the selected country is changed in the country selector box.
-  onChangeCountryAttribute = javascript:window.document.forms['tt_address_form'].submit();
+  onChangeCountryAttribute = javascript:window.document.forms['tx-sremailsubscribe-pi1-tt_address_form'].submit();
 
     # cat=plugin.tx_sremailsubscribe//; type=int+; label= Email addresses PID. If the records edited/created are located in another page than the 'current', the PID of that page should be specified here.
   pid =
@@ -117,7 +117,7 @@ plugin.tx_sremailsubscribe {
   salutation =
   
       # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label=Use short URL's: If set, the use of short URL's in email messages sent to users is enabled.
-  useShortUrls = 0
+  useShortUrls = 1
 
     # cat=plugin.tx_sremailsubscribe//; type=int+; label=Short URL cache lifespan: Number of days that short URL's will be kept in the DB. After this delay, the short URL's will be removed. Confirmation URL's included in email messages older than this number of days will not work.
   shortUrlLife = 30
