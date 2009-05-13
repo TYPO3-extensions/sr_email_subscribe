@@ -1,0 +1,210 @@
+##
+## @package TYPO3
+## @subpackage sr_email_subscribe
+## @version $Id$
+##
+
+plugin.tx_sremailsubscribe_pi1 = USER_INT
+plugin.tx_sremailsubscribe_pi1 {
+
+	table.name = {$plugin.tx_sremailsubscribe.tableName}
+
+	templateStyle = css-styled
+	templateFile = {$plugin.tx_sremailsubscribe.file.templateFile}
+
+	fe_userOwnSelf = 1
+	fe_userEditSelf = 1
+	delete = 1
+
+	icon_delete = {$plugin.tx_sremailsubscribe.file.icon_delete}
+
+	pid = {$plugin.tx_sremailsubscribe.pid}
+	pidTitleOverride = {$plugin.tx_sremailsubscribe.pidTitleOverride}
+	registerPID = {$plugin.tx_sremailsubscribe.registerPID}
+	editPID = {$plugin.tx_sremailsubscribe.editPID}
+	infomailPID = {$plugin.tx_sremailsubscribe.infomailPID}
+	confirmPID = {$plugin.tx_sremailsubscribe.confirmPID}
+	confirmInvitationPID = {$plugin.tx_sremailsubscribe.confirmInvitationPID}
+	confirmType = {$plugin.tx_sremailsubscribe.confirmType}
+	module_sys_dmail_category_PIDLIST = {$plugin.tx_sremailsubscribe.module_sys_dmail_category_PIDLIST}
+	defaultCODE = {$plugin.tx_sremailsubscribe.defaultCODE}
+
+	useShortUrls = {$plugin.tx_sremailsubscribe.useShortUrls}
+	shortUrlLife = {$plugin.tx_sremailsubscribe.shortUrlLife}
+	dateFormat = {$plugin.tx_sremailsubscribe.dateFormat}
+	dateSplit = {$plugin.tx_sremailsubscribe.dateSplit}
+
+	formName = {$plugin.tx_sremailsubscribe.formName}
+	onChangeCountryAttribute = {$plugin.tx_sremailsubscribe.onChangeCountryAttribute}
+
+	salutation = {$plugin.tx_sremailsubscribe.salutation}
+
+	# you may modify here the conditions under which an attachment file will be added to the email
+	addAttachment =  {$plugin.tx_sremailsubscribe.enableEmailAttachment}
+	addAttachment.cmd = setfixed
+	addAttachment.sFK = APPROVE
+	addAttachment.file = {$plugin.tx_sremailsubscribe_pi1.file.attachmentFile}
+
+	displayRequired = TEXT
+	displayRequired {
+		value = *
+		wrap = <span>|</span>
+	}
+
+	create = 1
+	create {
+		preview = {$plugin.tx_sremailsubscribe.enablePreviewRegister}
+		fields = {$plugin.tx_sremailsubscribe.formFields}
+		required = {$plugin.tx_sremailsubscribe.requiredFields}
+		defaultValues {
+			module_sys_dmail_html = 1
+			hidden = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+		}
+		overrideValues {
+			hidden = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+		}
+		evalValues {
+			email = email,atMost[255],uniqueLocal
+			name = atMost[{$plugin.tx_sremailsubscribe.nameAtMost}]
+			first_name = atMost[50]
+			last_name = atMost[50]
+			date_of_birth = date
+			company = atMost[50]
+			city = atMost[40]
+			zip = atMost[20]
+			mobile = atMost[25]
+			phone = atMost[25]
+			fax = atMost[25]
+			image = upload
+			title =
+			address =
+			www = wwwURL
+			comments =
+			module_sys_dmail_category =
+		}
+	}
+
+	setfixed = 1
+	setfixed.APPROVE {
+		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields},pid
+		hidden = 0
+	}
+	setfixed.DELETE {
+		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
+	}
+	setfixed.EDIT {
+		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
+	}
+
+	enableAutoLoginOnConfirmation = {$plugin.tx_sremailsubscribe.enableAutoLoginOnConfirmation}
+	enableAutoLoginOnCreate = {$plugin.tx_sremailsubscribe.enableAutoLoginOnCreate}
+	autoLoginRedirect_url = {$plugin.tx_sremailsubscribe.autoLoginRedirect_url}
+
+	authcodeFields = {$plugin.tx_sremailsubscribe.authcodeFields}
+	authcodeFields.codeLength = {$plugin.tx_sremailsubscribe.codeLength}
+
+	invite < .create
+
+	edit < .create
+	edit {
+		preview = {$plugin.tx_sremailsubscribe.enablePreviewEdit}
+		defaultValues {
+			hidden = 0
+			module_sys_dmail_html >
+			module_sys_dmail_category >
+		}
+		overrideValues {
+			hidden = 0
+		}
+	}
+
+	infomail = 1
+
+	forceFileDelete = {$plugin.tx_sremailsubscribe.forceFileDelete}
+
+	parseValues {
+		email = lower,nospace,trim
+		name = trim
+		first_name = trim
+		last_name = trim
+		date_of_birth = date
+		title = trim
+		company = trim
+		city = trim
+		zip = trim
+		image = files
+		module_sys_dmail_html = setEmptyIfAbsent
+		module_sys_dmail_category = multiple
+		www = wwwURL
+	}
+
+	parseFromDBValues {
+		date_of_birth = adodb_date
+	}
+	parseToDBValues {
+		date_of_birth = adodb_date
+	}
+
+	email.from = {$plugin.tx_sremailsubscribe.email}
+	email.fromName = {$plugin.tx_sremailsubscribe.siteName}
+	email.admin = {$plugin.tx_sremailsubscribe.email}
+	email.field = email
+	email.HTMLMail =  {$plugin.tx_sremailsubscribe.enableHTMLMail}
+	email.HTMLMailCSS =  {$plugin.tx_sremailsubscribe_pi1.HTMLMailCSS}
+
+	email.CREATE_SAVED = {$plugin.tx_sremailsubscribe.enableEmailOnRegister}
+	email.EDIT_SAVED = {$plugin.tx_sremailsubscribe.enableEmailOnUpdate}
+	email.DELETE_SAVED =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
+	email.SETFIXED_APPROVE =  {$plugin.tx_sremailsubscribe.enableEmailOnApprove}
+	email.SETFIXED_DELETE =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
+	email.INFOMAIL =  {$plugin.tx_sremailsubscribe.enableInfomail}
+	email.INFOMAIL_NORECORD =  {$plugin.tx_sremailsubscribe.enableInfomail}
+
+	notify.CREATE_SAVED = {$plugin.tx_sremailsubscribe.enableAdminNotifyOnRegister}
+	notify.EDIT_SAVED = {$plugin.tx_sremailsubscribe.enableAdminNotifyOnUpdate}
+	notify.DELETE_SAVED =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnDelete}
+	notify.SETFIXED_CREATE = {$plugin.tx_sremailsubscribe.enableAdminNotifyConfirmation}
+	notify.SETFIXED_INVITE = {$plugin.tx_sremailsubscribe.enableAdminNotifyConfirmation}
+	notify.SETFIXED_APPROVE =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnApprove}
+	notify.SETFIXED_DELETE =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnDelete}
+
+  _CSS_DEFAULT_STYLE (
+	.tx-sremailsubscribe-pi1 p { margin-top: .5em; margin-bottom: 0; padding: 0 .3em; text-indent: 0; }
+	.tx-sremailsubscribe-pi1 p.tx-sremailsubscribe-pi1-click-to-edit { margin-left: 2em; margin-right: 2em;}
+	.tx-sremailsubscribe-pi1 h4 { margin-top: 0; padding-left: .3em; }
+	.tx-sremailsubscribe-pi1 legend { padding: 0 .5em; font-weight: bold; }
+	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-notice { font-style: italic; margin-bottom: 1em; }
+	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-trash { margin-bottom: 2em; }
+	.tx-sremailsubscribe-pi1 a { padding-left: 14px; background-image: url("../typo3conf/ext/sr_feuser_register/pi1/internal_link.gif"); background-repeat: no-repeat; background-position: 0% 60%; text-decoration:none; }
+	.tx-sremailsubscribe-pi1 label { margin: 0; padding: 0; }
+	.tx-sremailsubscribe-pi1 label span { color: #ff0000; }
+	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-error { color: #ff0000; }
+	.tx-sremailsubscribe-pi1 input { margin: 0; padding: 0 .5em 0 0; }
+	.tx-sremailsubscribe-pi1 input[type=password] { margin-right: 1em; }
+	* html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-password { margin-right: 1em; }
+	.tx-sremailsubscribe-pi1 input[type=radio], .tx-sremailsubscribe-pi1 input[type=checkbox] { background-color: transparent; }
+	* html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-radio, * html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-checkbox { background-color: transparent; }
+	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-delete-icon { margin-left: 1em; background-color: transparent; }
+	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-delete-icon:hover { cursor: pointer; }
+	.tx-sremailsubscribe-pi1 a.tx-sremailsubscribe-pi1-file-view { padding-left: 15px; background-image: url("../typo3conf/ext/sr_feuser_register/pi1/internal_link_new_window.gif"); background-color: transparent; background-repeat: no-repeat; font-size: .8em; margin-left: 1em; }
+	.tx-sremailsubscribe-pi1 ul { margin: 0; padding: 0; list-style-position: inside; }
+	.tx-sremailsubscribe-pi1 ul.tx-sremailsubscribe-multiple-checkboxes { list-style-type: none; }
+	.tx-sremailsubscribe-pi1 ul.tx-sremailsubscribe-multiple-checkboxes li { margin: 0 0 .3em 0; padding: 0; }
+	.tx-sremailsubscribe-pi1 ul.tx-sremailsubscribe-multiple-checkboxes li label { margin: 0; padding: 0 0 0 .5em; }
+	.tx-sremailsubscribe-pi1 ul.tx-sremailsubscribe-multiple-checked-values li { float: left; padding: 0 2em 0 0; margin: 0; }
+	.tx-sremailsubscribe-pi1 dl { margin: 0; padding: 1em 0 0 0; }
+	.tx-sremailsubscribe-pi1 dt, .tx-sremailsubscribe-pi1 dd { margin: 0; padding: 0 0 .5em 0; float: left; }
+	.tx-sremailsubscribe-pi1 dt { clear: both; width: 25%; text-align: right; padding-right: 1em; }
+	.tx-sremailsubscribe-pi1 dd { text-align: left; width: 50%; }
+	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-multiple-checkboxes dt { width: auto; padding-right: 0; }
+	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-multiple-checkboxes dd { width: auto; }
+	* html .tx-sremailsubscribe-pi1 dd { float: none; }
+	.tx-sremailsubscribe-pi1 dd p { margin-top: 0; margin-bottom: .5em; padding: 0; }
+	.tx-sremailsubscribe-pi1 dd label { padding: 0 1em 0 .5em; }
+  )
+
+  _DEFAULT_PI_VARS {
+  }
+
+}
+

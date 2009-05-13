@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Email Address Subscription</description>
+		<type></type>
+		<csh_table></csh_table>
+		<labelContext type="array">
+		</labelContext>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="missing_invitation_name_informal">Please enter a name!</label>
+			<label index="first_name_informal">First name</label>
+			<label index="missing_invitation_first_name_informal">Please enter a first name!</label>
+			<label index="last_name_informal">Last name</label>
+			<label index="missing_invitation_last_name_informal">Please enter a surname!</label>
+			<label index="date_of_birth_informal">Date of birth (dd-mm-yyyy)</label>
+			<label index="missing_invitation_date_of_birth_informal">Please enter a date of birth!</label>
+			<label index="address_informal">Address</label>
+			<label index="missing_invitation_address_informal">Please enter an address!</label>
+			<label index="city_informal">City</label>
+			<label index="missing_invitation_city_informal">Please enter the name of a city!</label>
+			<label index="zone_informal">State/province</label>
+			<label index="tooltip_zone">Select your County or Province in this list.</label>
+			<label index="missing_invitation_zone_informal">Please select a state or province!</label>
+			<label index="zip_informal">Postal code</label>
+			<label index="missing_invitation_zip_informal">Please enter a zip!</label>
+			<label index="static_info_country_informal">Country</label>
+			<label index="missing_invitation_static_info_country_informal">Please select a country!</label>
+			<label index="mobile">Mobile</label>
+			<label index="mobile_informal">Mobile</label>
+			<label index="tooltip_mobile">Enter your mobile number.</label>
+			<label index="tooltip_mobile_informal">Enter your mobile number.</label>
+			<label index="tooltip_invitation_mobile">Enter the mobile number of the invited person.</label>
+			<label index="missing_mobile">Please enter your mobile number!</label>
+			<label index="missing_mobile_informal">Please enter your mobile number!</label>
+			<label index="missing_invitation_mobile">Please enter a mobile number!</label>
+			<label index="missing_invitation_mobile_informal">Please enter a mobile number!</label>
+			<label index="phone">Telephone</label>
+			<label index="phone_informal">Telephone</label>
+			<label index="tooltip_phone">Enter your phone number.</label>
+			<label index="tooltip_phone_informal">Enter your phone number.</label>
+			<label index="tooltip_invitation_phone">Enter the phone number of the invited person.</label>
+			<label index="missing_phone">Please enter your phone number!</label>
+			<label index="missing_phone_informal">Please enter your phone number!</label>
+			<label index="missing_invitation_phone">Please enter a phone number!</label>
+			<label index="missing_invitation_phone_informal">Please enter a phone number!</label>
+			<label index="missing_invitation_fax_informal">Please enter a fax number!</label>
+			<label index="email_informal">Email</label>
+			<label index="missing_email_informal">A valid email is required.</label>
+			<label index="evalErrors_uniqueLocal_email_informal">This email already existed.</label>
+			<label index="module_sys_dmail_html_informal">Receive HTML emails?</label>
+			<label index="yes">Yes</label>
+			<label index="no">No</label>
+			<label index="language_informal">Language</label>
+			<label index="missing_invitation_language_informal">Please select a preferred language!</label>
+			<label index="missing_invitation_title_informal">Please enter a title!</label>
+			<label index="missing_invitation_company_informal">Please enter the name of a company!</label>
+			<label index="www_informal">Homepage</label>
+			<label index="missing_invitation_www_informal">Please enter a homepage address!</label>
+			<label index="evalErrors_wwwURL_www_informal">According to our verifications, the homepage address you entered is not valid. Perhaps it was not entered correctly?</label>
+			<label index="missing_invitation_image_informal">Please enter a photograph!</label>
+			<label index="comments">Any comments?</label>
+			<label index="comments_informal">Any comments?</label>
+			<label index="tooltip_comments">Enter your comments.</label>
+			<label index="tooltip_comments_informal">Enter your comments.</label>
+			<label index="missing_comments">Please enter your comments!</label>
+			<label index="missing_comments_informal">Please enter your comments!</label>
+			<label index="evalErrors_allowed_image_informal">The file extension %s is not allowed.</label>
+			<label index="evalErrors_max_size_image_informal">The file size should not exceed %s KB.</label>
+			<label index="button_register">Subscribe</label>
+			<label index="button_register_informal">Subscribe</label>
+			<label index="button_confirm_register">Subscribe now!</label>
+			<label index="button_confirm_register_informal">Subscribe now!</label>
+			<label index="button_send_invitation">Send invitation</label>
+			<label index="button_send_invitation_informal">Send invitation</label>
+			<label index="button_send_invitation_now">Send invitation now!</label>
+			<label index="button_send_invitation_now_informal">Send invitation now!</label>
+			<label index="button_send_link">Send message now!</label>
+			<label index="button_send_link_informal">Send message now!</label>
+			<label index="button_back_to_form">Back to form</label>
+			<label index="button_back_to_form_informal">Back to form</label>
+			<label index="button_update">Update profile</label>
+			<label index="button_update_informal">Update profile</label>
+			<label index="button_confirm_update">Update profile now!</label>
+			<label index="button_confirm_update_informal">Update profile now!</label>
+			<label index="button_enter">Enter</label>
+			<label index="button_enter_informal">Enter</label>
+			<label index="button_confirm_delete">Yes, terminate subscription</label>
+			<label index="button_confirm_delete_informal">Yes, terminate subscription</label>
+			<label index="button_cancel_delete">No, cancel</label>
+			<label index="button_cancel_delete_informal">No, cancel</label>
+			<label index="v_already_subscribed">You have already subscribed to &lt;b&gt;%1$s&lt;/b&gt; and wish to update or terminate your subscription?</label>
+			<label index="click_here_to_edit">Click here!</label>
+			<label index="click_here_to_edit_informal">Click here!</label>
+			<label index="tooltip_click_here_to_edit">Opens a dialog that will allow you edit or delete your subscription.</label>
+			<label index="v_wish_to_update_or_delete">Do you wish to update or terminate your subscription?</label>
+			<label index="v_wish_to_update_or_delete_informal">Do you wish to update or terminate your subscription?</label>
+			<label index="v_enter_subscribed_email">Enter the email address by which you originally subscribed and we will send to your mailbox links to the update and termination pages of your subscription</label>
+			<label index="v_enter_subscribed_email_informal">Enter the email address by which you originally subscribed and we will send to your mailbox links to the update and termination pages of your subscription</label>
+			<label index="click_here_to_delete">Click here to terminate your subscription!</label>
+			<label index="click_here_to_delete_informal">Click here to terminate your subscription!</label>
+			<label index="tooltip_click_here_to_delete">Opens a dialog that will allow you delete your subscription.</label>
+			<label index="enter_account_info">Please fill in the information of your subscription.</label>
+			<label index="enter_account_info_informal">Please fill in the information of your subscription.</label>
+			<label index="enter_invitation_account_info">Please fill in the information of the subscription of the invited person.</label>
+			<label index="enter_invitation_account_info_informal">Please fill in the information of the subscription of the invited person.</label>
+			<label index="required_info_notice_informal">Notice: Fields with * must be filled in!</label>
+			<label index="excuse_us_invitation">Please excuse us. We apologize for any inconvenience we may have caused you.</label>
+			<label index="registration_clicked_twice">Perhaps you clicked twice on the link?</label>
+			<label index="v_really_wish_to_delete">Do you really wish to terminate your subscription?</label>
+			<label index="v_really_wish_to_delete_informal">Do you really wish to terminate your subscription?</label>
+			<label index="v_verify_before_create">Please verify that all the information is correct before your subscription is created.</label>
+			<label index="v_verify_before_create_informal">Please verify that all the information is correct before your subscription is created.</label>
+			<label index="v_verify_invitation_before_create">Please verify that all the data of &lt;b&gt;%4$s&lt;/b&gt; is correct before the subscription is created.</label>
+			<label index="v_verify_invitation_before_create_informal">Please verify that all the data of &lt;b&gt;%4$s&lt;/b&gt; is correct before the subscription is created.</label>
+			<label index="v_edit_your_account">Edit the information of your subscription.</label>
+			<label index="v_edit_your_account_informal">Edit the information of your subscription.</label>
+			<label index="v_verify_before_update">Please verify that all the information is correct before your subscription is updated.</label>
+			<label index="v_verify_before_update_informal">Please verify that all the information is correct before your subscription is updated.</label>
+			<label index="hello">Hi,</label>
+			<label index="hello_informal">Hi,</label>
+			<label index="v_registration_created_subject">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_created_subject_informal">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_created_message1">Your subscription has been created.</label>
+			<label index="v_registration_created_message1_informal">Your subscription has been created.</label>
+			<label index="v_registration_created_informal">%2$s subscribed to %1$s.</label>
+			<label index="v_registration_updated_subject">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been updated.</label>
+			<label index="v_invitation_account_was_created">The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%2$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_invitation_account_was_created_informal">The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%2$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_invitation_instructions1">You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. Please follow the instructions given in the confirmation message in order to complete the registration procedure.</label>
+			<label index="v_invitation_instructions1_informal">You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. Please follow the instructions given in the confirmation message in order to complete the registration procedure.</label>
+			<label index="v_your_account_was_created">Your subscription was created. We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_your_account_was_created_informal">Your subscription was created. We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_follow_instructions1">In order to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt;, the invited person will have to follow the instructions given in the invitation message.</label>
+			<label index="v_follow_instructions1_informal">In order to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt;, the invited person will have to follow the instructions given in the invitation message.</label>
+			<label index="v_registration_initiated_subject">Please confirm your susbcription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_initiated_subject_informal">Please confirm your susbcription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_initiated_message1">We are sending you this message to confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. To confirm your subscription, please follow this link.</label>
+			<label index="v_registration_initiated_message1_informal">We are sending you this message to confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. To confirm your subscription, please follow this link.</label>
+			<label index="v_registration_initiated_message2">You are receiving this message because we wish to ensure that the email address is correct and also that no one may subscribe with an address other than his(her) own. If for some reason you have received this message without having subcribed, please follow this link.</label>
+			<label index="v_registration_initiated_message2_informal">You are receiving this message because we wish to ensure that the email address is correct and also that no one may subscribe with an address other than his(her) own. If for some reason you have received this message without having subcribed, please follow this link.</label>
+			<label index="v_registration_initiated">%2$s initiated his(her) subscription to %1$s.</label>
+			<label index="v_registration_initiated_informal">%2$s initiated his(her) subscription to %1$s.</label>
+			<label index="v_registration_invited_subject">Invitation to subscribe to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_invited_subject_informal">Invitation to subscribe to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_invited_message1">We thought you might be intered in subscribing to &lt;b&gt;%1$s&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+
+We have created a subscription account for you.&lt;br /&gt;&lt;br /&gt;
+
+We are sending you this message so that you may confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after confirming your subscription. You will also be able to change your subscription profile.&lt;br /&gt;&lt;br /&gt;
+
+If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link.</label>
+			<label index="v_registration_invited_message1_informal">We thought you might be intered in subscribing to &lt;b&gt;%1$s&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+
+We have created a subscription account for you.&lt;br /&gt;&lt;br /&gt;
+
+We are sending you this message so that you may confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after confirming your subscription. You will also be able to change your subscription profile.&lt;br /&gt;&lt;br /&gt;
+
+If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link.</label>
+			<label index="v_registration_invited_message2">You will not receive this message twice. If you wish to decline our invitation and do not wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link or just ignore this message.</label>
+			<label index="v_registration_invited_message2_informal">You will not receive this message twice. If you wish to decline our invitation and do not wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link or just ignore this message.</label>
+			<label index="v_registration_invited">An invitation to subscribe to %1$s was sent to %2$s.</label>
+			<label index="v_registration_invited_informal">An invitation to subscribe to %1$s was sent to %2$s.</label>
+			<label index="v_registration_confirmed_subject">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_confirmed_subject_informal">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_confirmed_message1">Your subscription has been confirmed.</label>
+			<label index="v_registration_confirmed_message1_informal">Your subscription has been confirmed.</label>
+			<label index="v_registration_confirmed">%3$s confirmed his(her) subscription to %1$s.</label>
+			<label index="v_registration_confirmed_informal">%2$s confirmed his(her) subscription to %1$s.</label>
+			<label index="v_registration_cancelled_message1">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</label>
+			<label index="v_registration_cancelled_message1_informal">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</label>
+			<label index="v_registration_cancelled_message2">Your subscription and address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
+			<label index="v_registration_cancelled_message2_informal">Your subscription and address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
+			<label index="v_registration_cancelled">%2$s cancelled his(her) subscription to %1$s.</label>
+			<label index="v_registration_cancelled_informal">%2$s cancelled his(her) subscription to %1$s.</label>
+			<label index="v_sending_infomail">We are sending you an email message at your email address &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_informal">We are sending you an email message at your email address &lt;b&gt;%4$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_message1">The email message will contain two links that will allow you to either edit or terminate your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_message1_informal">The email message will contain two links that will allow you to either edit or terminate your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_sending_infomail_message2">Please follow the instructions given in this email message to edit or to terminate your subscription.</label>
+			<label index="v_sending_infomail_message2_informal">Please follow the instructions given in this email message to edit or to terminate your subscription.</label>
+			<label index="v_infomail_subject">About your subscription to &lt;b&gt;%1$s&lt;/b&gt;</label>
+			<label index="v_infomail_subject_informal">About your subscription to &lt;b&gt;%1$s&lt;/b&gt;</label>
+			<label index="v_infomail_reason">You are receiving this message because you asked to edit or terminate your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_infomail_reason_informal">You are receiving this message because you asked to edit or terminate your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_infomail_message1">If you wish to edit your subscription, please follow this link.</label>
+			<label index="v_infomail_message1_informal">If you wish to edit your subscription, please follow this link.</label>
+			<label index="v_infomail_message2">If you wish to terminate your subscription, please follow this link.</label>
+			<label index="v_infomail_message2_informal">If you wish to terminate your subscription, please follow this link.</label>
+			<label index="v_infomail_norecord_subject">Your email is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;</label>
+			<label index="v_infomail_norecord_subject_informal">Your email is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;</label>
+			<label index="v_infomail_norecord_message1">It seems that your email address is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_infomail_norecord_message1_informal">It seems that your email address is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_infomail_norecord_message2">If you are encountering problems with your subscription, please contact us at the following email address and we will be pleased to help you.</label>
+			<label index="v_infomail_norecord_message2_informal">If you are encountering problems with your subscription, please contact us at the following email address and we will be pleased to help you.</label>
+			<label index="v_registration_deleted_subject">Thank you for having subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_deleted_subject_informal">Thank you for having subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_deleted_message1">You will no longer receive messages from us.</label>
+			<label index="v_registration_deleted_message1_informal">You will no longer receive messages from us.</label>
+			<label index="v_registration_deleted_message2">Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
+			<label index="v_registration_deleted_message2_informal">Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
+			<label index="v_registration_deleted">%2$s terminated his(her) subscription to %1$s.</label>
+			<label index="v_registration_deleted">%2$s terminated his(her) subscription to %1$s.</label>
+			<label index="unsupported">unsupported</label>
+		</languageKey>
+	</data>
+</T3locallang>
