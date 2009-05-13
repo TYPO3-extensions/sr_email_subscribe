@@ -28,7 +28,7 @@
  *
  * Front End creating/editing/deleting records authenticated by email address, also called subscriptions.
  *
- * $Id: class.tx_sremailsubscribe_pi1.php 9356 2008-06-19 18:10:15Z franzholz $
+ * $Id$
  *
  * @author	Kasper Skårhøj <kasperYYYY@typo3.com>
  * @author	Stanislas Rolland <stanislas.rolland(arobas)sjbr.ca>
