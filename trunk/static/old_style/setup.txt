@@ -50,6 +50,12 @@ plugin.tx_sremailsubscribe_pi1 {
 	addAttachment.sFK = APPROVE
 	addAttachment.file = {$plugin.tx_sremailsubscribe_pi1.file.attachmentFile}
 
+	displayRequired = TEXT
+	displayRequired {
+		value = *
+		wrap = <span>|</span>
+	}
+
 	create = 1
 	create {
 		preview = {$plugin.tx_sremailsubscribe.enablePreviewRegister}
@@ -64,7 +70,6 @@ plugin.tx_sremailsubscribe_pi1 {
 		}
 		evalValues {
 			email = email,atMost[255],uniqueLocal
-			##email = email,atMost[255]
 			name = atMost[{$plugin.tx_sremailsubscribe.nameAtMost}]
 			first_name = atMost[50]
 			last_name = atMost[50]
@@ -76,11 +81,11 @@ plugin.tx_sremailsubscribe_pi1 {
 			phone = atMost[25]
 			fax = atMost[25]
 			image = upload
-			title = 
-			address = 
+			title =
+			address =
 			www = wwwURL
-			comments = 
-			module_sys_dmail_category = 
+			comments =
+			module_sys_dmail_category =
 		}
 	}
 
