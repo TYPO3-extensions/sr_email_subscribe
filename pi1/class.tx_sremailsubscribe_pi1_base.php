@@ -44,7 +44,6 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 	var $prefixId = 'tx_sremailsubscribe_pi1';  // Same as class name
 	var $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php'; // Path to this script relative to the extension dir.
 	var $extKey = SR_EMAIL_SUBSCRIBE_EXTkey;  // The extension key.
-	var $adminFieldList = 'name,hidden';
 
 	function main($content, &$conf) {
 		global $TSFE;

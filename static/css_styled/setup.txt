@@ -45,6 +45,12 @@ plugin.tx_sremailsubscribe_pi1 {
 	addAttachment.sFK = APPROVE
 	addAttachment.file = {$plugin.tx_sremailsubscribe_pi1.file.attachmentFile}
 
+	displayRequired = TEXT
+	displayRequired {
+		value = *
+		wrap = <span>|</span>
+	}
+
 	create = 1
 	create {
 		preview = {$plugin.tx_sremailsubscribe.enablePreviewRegister}
@@ -59,7 +65,6 @@ plugin.tx_sremailsubscribe_pi1 {
 		}
 		evalValues {
 			email = email,atMost[255],uniqueLocal
-			##email = email,atMost[255]
 			name = atMost[{$plugin.tx_sremailsubscribe.nameAtMost}]
 			first_name = atMost[50]
 			last_name = atMost[50]
@@ -178,7 +183,7 @@ plugin.tx_sremailsubscribe_pi1 {
 	.tx-sremailsubscribe-pi1 input[type=password] { margin-right: 1em; }
 	* html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-password { margin-right: 1em; }
 	.tx-sremailsubscribe-pi1 input[type=radio], .tx-sremailsubscribe-pi1 input[type=checkbox] { background-color: transparent; }
-	* html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-radio, * html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-checkbox { background-color: transparent; }		
+	* html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-radio, * html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-checkbox { background-color: transparent; }
 	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-delete-icon { margin-left: 1em; background-color: transparent; }
 	.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-delete-icon:hover { cursor: pointer; }
 	.tx-sremailsubscribe-pi1 a.tx-sremailsubscribe-pi1-file-view { padding-left: 15px; background-image: url("../typo3conf/ext/sr_feuser_register/pi1/internal_link_new_window.gif"); background-color: transparent; background-repeat: no-repeat; font-size: .8em; margin-left: 1em; }
