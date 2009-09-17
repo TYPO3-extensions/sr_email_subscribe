@@ -1,3 +1,6 @@
+2009-09-17 Franz Holzinger  <franz@fholzinger.com>
+	* modifications for usage with sr_feuser_register 2.5.23
+
 2009-05-13 Franz Holzinger  <franz@ttproducts.de>
 	* modifications for usage with sr_feuser_register 2.5.22 which contains a bugfix for the translations
 

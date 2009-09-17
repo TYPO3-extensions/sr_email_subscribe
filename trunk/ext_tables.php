@@ -34,9 +34,10 @@ if ($addressTable == 'tt_address')	{
 		$TCA['tt_address']['columns']['image']['config']['uploadfolder'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'];
 	}
 
+
 	t3lib_extMgm::addTCAcolumns('tt_address', Array(
 		'static_info_country' => Array (
-			'exclude' => 0,	
+			'exclude' => 0,
 			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.static_info_country',
 			'config' => Array (
 				'type' => 'input',
@@ -47,7 +48,7 @@ if ($addressTable == 'tt_address')	{
 			)
 		),
 		'zone' => Array (
-			'exclude' => 0,	
+			'exclude' => 0,
 			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.zone',
 			'config' => Array (
 				'type' => 'input',
@@ -58,7 +59,7 @@ if ($addressTable == 'tt_address')	{
 			)
 		),
 		'language' => Array (
-			'exclude' => 0,	
+			'exclude' => 0,
 			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.language',
 			'config' => Array (
 				'type' => 'input',
@@ -69,7 +70,7 @@ if ($addressTable == 'tt_address')	{
 			)
 		),
 		'date_of_birth' => Array (
-			'exclude' => 0,		
+			'exclude' => 0,
 			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.date_of_birth',
 			'config' => Array (
 				'type' => 'input',
