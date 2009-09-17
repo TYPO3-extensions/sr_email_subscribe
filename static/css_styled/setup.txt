@@ -31,6 +31,7 @@ plugin.tx_sremailsubscribe_pi1 {
 
 	useShortUrls = {$plugin.tx_sremailsubscribe.useShortUrls}
 	shortUrlLife = {$plugin.tx_sremailsubscribe.shortUrlLife}
+	useLocalization = {$plugin.tx_sremailsubscribe.useLocalization}
 	dateFormat = {$plugin.tx_sremailsubscribe.dateFormat}
 	dateSplit = {$plugin.tx_sremailsubscribe.dateSplit}
 
@@ -155,10 +156,11 @@ plugin.tx_sremailsubscribe_pi1 {
 	email.CREATE_SAVED = {$plugin.tx_sremailsubscribe.enableEmailOnRegister}
 	email.EDIT_SAVED = {$plugin.tx_sremailsubscribe.enableEmailOnUpdate}
 	email.DELETE_SAVED =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
-	email.SETFIXED_APPROVE =  {$plugin.tx_sremailsubscribe.enableEmailOnApprove}
-	email.SETFIXED_DELETE =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
 	email.INFOMAIL =  {$plugin.tx_sremailsubscribe.enableInfomail}
 	email.INFOMAIL_NORECORD =  {$plugin.tx_sremailsubscribe.enableInfomail}
+	email.SETFIXED_APPROVE =  {$plugin.tx_sremailsubscribe.enableEmailOnApprove}
+	email.SETFIXED_DELETE =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
+	email.SETFIXED_REFUSE = {$plugin.tx_sremailsubscribe.enableEmailOnAdminRefuse}
 
 	notify.CREATE_SAVED = {$plugin.tx_sremailsubscribe.enableAdminNotifyOnRegister}
 	notify.EDIT_SAVED = {$plugin.tx_sremailsubscribe.enableAdminNotifyOnUpdate}

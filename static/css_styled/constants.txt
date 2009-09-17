@@ -2,7 +2,7 @@
 
 plugin.tx_sremailsubscribe {
 
-    # cat=plugin.tx_sremailsubscribe/file; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template file 
+    # cat=plugin.tx_sremailsubscribe/file; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template file
   file.templateFile = EXT:sr_email_subscribe/pi1/tx_sremailsubscribe_pi1_css_tmpl.html
 
     # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Force file deletion: On record deletion, related images and files will be deleted even if the record is only marked 'deleted'
@@ -63,7 +63,7 @@ plugin.tx_sremailsubscribe {
   confirmType = 0
 
     # cat=plugin.tx_sremailsubscribe//; type=string; label= Default CODE: Default CODE, when not specified on the inserted plugin record. May be CREATE or EDIT or empty.
-  defaultCODE = 
+  defaultCODE =
 
     # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable preview on subscription: If set, the subscription dialogue will include a preview of the subscription data before it is saved.
   enablePreviewRegister = 1
@@ -76,6 +76,9 @@ plugin.tx_sremailsubscribe {
 
     # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on approval: If set, an email will be sent to the subscriber when he(she) confirms his(her) subscription.
   enableEmailOnApprove = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable email on denial: If set, an email will be sent to the prospective front end user when the site administrator refuses to confirm his(her) registration.
+  enableEmailOnAdminRefuse = 1
 
     # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on subscription: If set, an email will be sent to the subscriber confirming his(her) subscription. This is ignored if email confirmation request is enabled.
   enableEmailOnRegister = 1
@@ -109,18 +112,21 @@ plugin.tx_sremailsubscribe {
 
     # cat=plugin.tx_sremailsubscribe//; type=int+; label= Maximun name length: The maximum number of characters that the name of the subscriber may contain.
   nameAtMost = 80
-  
+
       # cat=plugin.tx_sremailsubscribe//; type=string; label= PID list for Direct Mail categories: The Direct mail categories used by the plugin will be restricted to those found in these PID's.
   module_sys_dmail_category_PIDLIST =
-  
+
       # cat=plugin.tx_sremailsubscribe//; type=options[,formal,informal]; label= Salutation mode to use: Possible value are 'formal' or 'informal'.
   salutation =
-  
+
       # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label=Use short URL's: If set, the use of short URL's in email messages sent to users is enabled.
   useShortUrls = 1
 
     # cat=plugin.tx_sremailsubscribe//; type=int+; label=Short URL cache lifespan: Number of days that short URL's will be kept in the DB. After this delay, the short URL's will be removed. Confirmation URL's included in email messages older than this number of days will not work.
   shortUrlLife = 30
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable localization: If set, only localized records are shown.
+  useLocalization = 0
 
     # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Date Format (d-m-y)
   dateFormat = d-m-Y
