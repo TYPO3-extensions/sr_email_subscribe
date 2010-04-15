@@ -1,3 +1,8 @@
+2010-04-15 Franz Holzinger  <franz@ttproducts.de>
+	* fix bug in constants.txt
+	* require the latest most secure sr_feuser_register 2.5.25
+	* correct texts for deletion messages
+
 2009-09-17 Franz Holzinger  <franz@fholzinger.com>
 	* modifications for usage with sr_feuser_register 2.5.23
 
