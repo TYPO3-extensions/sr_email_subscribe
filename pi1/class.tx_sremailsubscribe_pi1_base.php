@@ -3,7 +3,7 @@
 *  Copyright notice
 *
 *  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
-*  (c) 2004-2008 Stanislas Rolland <stanislas.rolland(arobas)sjbr.ca>
+*  (c) 2004-2009 Stanislas Rolland <stanislas.rolland(arobas)sjbr.ca>
 *  All rights reserved
 *
 *  This script is part of the Typo3 project. The Typo3 project is
@@ -44,6 +44,7 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 	var $prefixId = 'tx_sremailsubscribe_pi1';  // Same as class name
 	var $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php'; // Path to this script relative to the extension dir.
 	var $extKey = SR_EMAIL_SUBSCRIBE_EXTkey;  // The extension key.
+
 
 	function main($content, &$conf) {
 		global $TSFE;

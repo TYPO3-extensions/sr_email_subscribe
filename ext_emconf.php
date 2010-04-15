@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Email Address Subscription',
-	'description' => 'An email newsletter and address subscription variant of the Frontend User Registration.',
+	'description' => 'An email newsletter and address subscription variant of the Front End User Registration.',
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '1.2.9',
@@ -35,10 +35,10 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'static_info_tables' => '2.0.5-',
-			'sr_feuser_register' => '2.5.23-',
+			'sr_feuser_register' => '2.5.25-',
 			'php' => '4.1.0-0.0.0',
 			'typo3' => '4.0-0.0.0',
-			'div2007' => '0.2.2-',
+			'div2007' => '0.2.6-',
 		),
 		'conflicts' => array(
 		),

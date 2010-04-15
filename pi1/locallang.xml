@@ -194,8 +194,8 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_infomail_norecord_message1_informal">It seems that your email address is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_infomail_norecord_message2">If you are encountering problems with your subscription, please contact us at the following email address and we will be pleased to help you.</label>
 			<label index="v_infomail_norecord_message2_informal">If you are encountering problems with your subscription, please contact us at the following email address and we will be pleased to help you.</label>
-			<label index="v_registration_deleted_subject">Thank you for having subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</label>
-			<label index="v_registration_deleted_subject_informal">Thank you for having subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</label>
+			<label index="v_registration_deleted_subject">Your user account at &lt;b&gt;%1$s&lt;/b&gt; has been deleted.</label>
+			<label index="v_registration_deleted_subject_informal">Your user account at &lt;b&gt;%1$s&lt;/b&gt; has been deleted.</label>
 			<label index="v_registration_deleted_message1">You will no longer receive messages from us.</label>
 			<label index="v_registration_deleted_message1_informal">You will no longer receive messages from us.</label>
 			<label index="v_registration_deleted_message2">Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>

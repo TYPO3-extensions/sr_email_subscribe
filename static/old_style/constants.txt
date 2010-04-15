@@ -140,13 +140,13 @@ plugin.tx_sremailsubscribe {
     # cat=plugin.tx_sremailsubscribe//; type=int+; label=Short URL cache lifespan: Number of days that short URL's will be kept in the DB. After this delay, the short URL's will be removed. Confirmation URL's included in email messages older than this number of days will not work.
   shortUrlLife = 30
 
-    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable localization: If set, only localized records are shown.
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable localization: If set, only localized records are shown.
   useLocalization = 0
 
-    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Date Format (d-m-y)
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Date Format (d-m-y)
   dateFormat = d-m-Y
 
-    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Split char for Date Format (-)
+    # cat=plugin.tx_sremailsubscribe//; type=string; label= Split char for Date Format (-)
   dateSplit = -
 }
 
