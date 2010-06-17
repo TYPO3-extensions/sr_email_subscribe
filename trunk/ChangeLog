@@ -1,3 +1,6 @@
+2010-06-17 Franz Holzinger  <franz@ttproducts.de>
+	* fix bug 12323: PHP 5.3 checks the TYPO3 api parameter $conf and no reference is allowed
+
 2010-04-15 Franz Holzinger  <franz@ttproducts.de>
 	* fix bug in constants.txt
 	* require the latest most secure sr_feuser_register 2.5.25

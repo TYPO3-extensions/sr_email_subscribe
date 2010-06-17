@@ -92,14 +92,14 @@ plugin.tx_sremailsubscribe_pi1 {
 
 	setfixed = 1
 	setfixed.APPROVE {
-		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields},pid
+		_FIELDLIST = uid,pid
 		hidden = 0
 	}
 	setfixed.DELETE {
-		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
+		_FIELDLIST = uid
 	}
 	setfixed.EDIT {
-		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
+		_FIELDLIST = uid
 	}
 
 	enableAutoLoginOnConfirmation = {$plugin.tx_sremailsubscribe.enableAutoLoginOnConfirmation}
