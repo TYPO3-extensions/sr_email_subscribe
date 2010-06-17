@@ -23,9 +23,6 @@ plugin.tx_sremailsubscribe {
     # cat=plugin.tx_sremailsubscribe//; type=string; label= Required fields: List of fields that must be fillied in on the email address subscription form.
   requiredFields = email,first_name,last_name,date_of_birth
 
-    # cat=plugin.tx_sremailsubscribe//; type=string; label= Authentication code fields: List of fields that are used in the calculation of authentication codes. Direct Mail uses only uid.
-  authcodeFields = uid
-
     # cat=plugin.tx_sremailsubscribe//; type=int+; label= Authentication code length: Length of the authentication codes. Direct Mail uses 8.
   codeLength = 8
 

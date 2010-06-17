@@ -42,7 +42,7 @@ require_once(PATH_BE_sremailsubscribe.'pi1/class.tx_sremailsubscribe_pi1_base.ph
 class tx_sremailsubscribe_pi1 {
 	var $cObj;
 
-	function main($content, &$conf) {
+	function main ($content, $conf) {
 		$pibaseObj = &t3lib_div::getUserObj('&tx_sremailsubscribe_pi1_base');
 		$pibaseObj->cObj = &$this->cObj;
 		$content = &$pibaseObj->main($content, $conf);
