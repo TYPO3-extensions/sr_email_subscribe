@@ -134,6 +134,10 @@
 			<label index="v_your_account_was_created_informal">Your subscription was created. We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_follow_instructions1">In order to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt;, the invited person will have to follow the instructions given in the invitation message.</label>
 			<label index="v_follow_instructions1_informal">In order to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt;, the invited person will have to follow the instructions given in the invitation message.</label>
+			<label index="v_follow_instructions_review1">In order to confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, you will have to follow the instructions given in the invitation message.</label>
+			<label index="v_follow_instructions_review1_informal">In order to confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, you will have to follow the instructions given in the invitation message.</label>
+			<label index="v_follow_instructions_review2">Please be aware that after you confirm your subscription, it will need to be reviewed by the administrator before you gain access to the section &lt;b&gt;%1$s&lt;/b&gt; of our website.</label>
+			<label index="v_follow_instructions_review2_informal">Please be aware that after you confirm your subscription, it will need to be reviewed by the administrator before you gain access to the section &lt;b&gt;%1$s&lt;/b&gt; of our website.</label>
 			<label index="v_registration_initiated_subject">Please confirm your susbcription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_initiated_subject_informal">Please confirm your susbcription to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_initiated_message1">We are sending you this message to confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. To confirm your subscription, please follow this link.</label>
@@ -162,6 +166,8 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_invited_message2_informal">You will not receive this message twice. If you wish to decline our invitation and do not wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link or just ignore this message.</label>
 			<label index="v_registration_invited">An invitation to subscribe to %1$s was sent to %2$s.</label>
 			<label index="v_registration_invited_informal">An invitation to subscribe to %1$s was sent to %2$s.</label>
+			<label index="v_registration_infomail_message1">Your account data is subscribed by the email &lt;b&gt;%4$s&lt;/b&gt; .&lt;br /&gt;&lt;br /&gt;</label>
+			<label index="v_registration_infomail_message1_informal">Your account data is subscribed by the email &lt;b&gt;%4$s&lt;/b&gt; .&lt;br /&gt;&lt;br /&gt;</label>
 			<label index="v_registration_confirmed_subject">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_confirmed_subject_informal">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_confirmed_message1">Your subscription has been confirmed.</label>
