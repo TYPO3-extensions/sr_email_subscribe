@@ -492,6 +492,35 @@ The user is informed that a message has been sent to his email address and that 
 <!-- ###TEMPLATE_SETFIXED_CREATE### end-->
 
 
+<p style="margin-top: 20px"><em>This is shown when the user is created, the option setfixed is configured and administrative review is required.
+The user is informed that a message has been sent to his email address and that he needs to confirm his registration.</em></p>
+<!-- ###TEMPLATE_SETFIXED_CREATE_REVIEW### begin -->
+<h4>###LABEL_V_DEAR###</h4>
+<p>###LABEL_V_PLEASE_CONFIRM###</p>
+<p>###LABEL_V_YOUR_ACCOUNT_WAS_CREATED###</p>
+<p>###LABEL_V_FOLLOW_INSTRUCTIONS_REVIEW1###</p>
+<p>###LABEL_V_FOLLOW_INSTRUCTIONS_REVIEW2###</p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<!-- ###TEMPLATE_SETFIXED_CREATE_REVIEW### end-->
+
+
+<p style="margin-top: 20px"><em>This is the template used for the administrator notification email upon a new user registration.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_REVIEW_ADMIN### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_INITIATED###
+###LABEL_V_NOTIFICATION###:
+
+###LABEL_V_REGISTRATION_INITIATED###
+
+###LABEL_NAME### ###FIELD_name###
+###LABEL_EMAIL### ###FIELD_email###
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_REVIEW_ADMIN### end-->
+
+
 
 <h2>'INVITE' TEMPLATES:</h2>
 
@@ -944,7 +973,7 @@ The user is informed that a message has been sent to the email address and that 
 
 <p style="margin-top: 20px"><em>Form for editing of a subscription record:</em></p>
 <!-- ###TEMPLATE_EDIT### begin -->
-<form id="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data" ###FORM_ONSUBMIT###>
+<form id="###FORM_NAME###" method="post" action="###EDIT_URL###" enctype="multipart/form-data" ###FORM_ONSUBMIT###>
 <fieldset>
 <legend>###LABEL_V_DEAR###<br />###LABEL_V_EDIT_YOUR_ACCOUNT###</legend>
 	<p class="tx-sremailsubscribe-pi1-notice">###LABEL_REQUIRED_INFO_NOTICE###</p>
@@ -1737,6 +1766,35 @@ The user is informed that a message has been sent to the email address and that 
 ###SITE_NAME###
 <!-- ###SUB_RECORD### -->
 <!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_ADMIN### end-->
+
+
+<p style="margin-top: 20px"><em>This template is used to notify a person by email that he has created his account, he needs to confirm and administrative review is required.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_REVIEW### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_INITIATED_SUBJECT###
+
+###LABEL_V_DEAR###
+
+###LABEL_V_REGISTRATION_INITIATED_REVIEW1###
+<###SETFIXED_APPROVE_URL###>
+###LABEL_COPY_PASTE_LINK###
+
+###LABEL_V_REGISTRATION_INITIATED_REVIEW2###
+
+###LABEL_V_REGISTRATION_INITIATED_MESSAGE2###
+<###SETFIXED_DELETE_URL###>
+###LABEL_COPY_PASTE_LINK###
+###LABEL_V_REGISTRATION_INFOMAIL_MESSAGE1###
+###LABEL_EXCUSE_US###
+
+###LABEL_V_REGISTRATION_INITIATED_MESSAGE3### ###SITE_EMAIL###
+
+###LABEL_KIND_REGARDS_INI###
+###SITE_NAME###
+<###SITE_URL###>
+###SITE_EMAIL###
+
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_REVIEW### end-->
 
 
 
