@@ -1,0 +1,199 @@
+##
+## @package TYPO3
+## @subpackage sr_email_subscribe
+## @version $Id$
+##
+
+plugin.tx_sremailsubscribe_pi1 = USER_INT
+plugin.tx_sremailsubscribe_pi1 {
+
+	table.name = {$plugin.tx_sremailsubscribe.tableName}
+
+	templateStyle = old-style
+	templateFile = {$plugin.tx_sremailsubscribe.file.templateFile}
+
+	fe_userOwnSelf = 1
+	fe_userEditSelf = 1
+	delete = 1
+
+	wrap1.wrap = {$plugin.tx_sremailsubscribe.wrap1}
+	wrap2.wrap = {$plugin.tx_sremailsubscribe.wrap2}
+	wrap3.wrap = {$plugin.tx_sremailsubscribe.wrap3}
+	color1.wrap = {$plugin.tx_sremailsubscribe.color1}
+	color2.wrap = {$plugin.tx_sremailsubscribe.color2}
+	color3.wrap = {$plugin.tx_sremailsubscribe.color3}
+
+	icon_delete = {$plugin.tx_sremailsubscribe.file.icon_delete}
+
+	pid = {$plugin.tx_sremailsubscribe.pid}
+	pidTitleOverride = {$plugin.tx_sremailsubscribe.pidTitleOverride}
+	registerPID = {$plugin.tx_sremailsubscribe.registerPID}
+	editPID = {$plugin.tx_sremailsubscribe.editPID}
+	infomailPID = {$plugin.tx_sremailsubscribe.infomailPID}
+	confirmPID = {$plugin.tx_sremailsubscribe.confirmPID}
+	confirmInvitationPID = {$plugin.tx_sremailsubscribe.confirmInvitationPID}
+	confirmType = {$plugin.tx_sremailsubscribe.confirmType}
+	module_sys_dmail_category_PIDLIST = {$plugin.tx_sremailsubscribe.module_sys_dmail_category_PIDLIST}
+	defaultCODE = {$plugin.tx_sremailsubscribe.defaultCODE}
+
+	useShortUrls = {$plugin.tx_sremailsubscribe.useShortUrls}
+	shortUrlLife = {$plugin.tx_sremailsubscribe.shortUrlLife}
+	useLocalization = {$plugin.tx_sremailsubscribe.useLocalization}
+	dateFormat = {$plugin.tx_sremailsubscribe.dateFormat}
+	dateSplit = {$plugin.tx_sremailsubscribe.dateSplit}
+
+	formName = {$plugin.tx_sremailsubscribe.formName}
+	onChangeCountryAttribute = {$plugin.tx_sremailsubscribe.onChangeCountryAttribute}
+
+	# you may modify here the conditions under which an attachment file will be added to the email
+	addAttachment =  {$plugin.tx_sremailsubscribe.enableEmailAttachment}
+	addAttachment.cmd = setfixed
+	addAttachment.sFK = APPROVE
+	addAttachment.file = {$plugin.tx_sremailsubscribe_pi1.file.attachmentFile}
+
+	displayRequired = TEXT
+	displayRequired {
+		value = *
+		wrap = <span>|</span>
+	}
+
+	create = 1
+	create {
+		preview = {$plugin.tx_sremailsubscribe.enablePreviewRegister}
+		fields = {$plugin.tx_sremailsubscribe.formFields}
+		required = {$plugin.tx_sremailsubscribe.requiredFields}
+		defaultValues {
+			module_sys_dmail_html = 1
+			hidden = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+		}
+		overrideValues {
+			hidden = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+		}
+		evalValues {
+			email = email,atMost[255],uniqueLocal
+			name = atMost[{$plugin.tx_sremailsubscribe.nameAtMost}]
+			first_name = atMost[50]
+			last_name = atMost[50]
+			date_of_birth = date
+			company = atMost[50]
+			city = atMost[40]
+			zip = atMost[20]
+			mobile = atMost[25]
+			phone = atMost[25]
+			fax = atMost[25]
+			image = upload
+			title =
+			address =
+			www = wwwURL
+			comments =
+			module_sys_dmail_category =
+		}
+	}
+
+	setfixed = 1
+	setfixed.APPROVE {
+		_FIELDLIST = uid,pid
+		hidden = 0
+	}
+	setfixed.DELETE {
+		_FIELDLIST = uid
+	}
+	setfixed.EDIT {
+		_FIELDLIST = uid
+	}
+
+	enableEmailConfirmation = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+	enableAutoLoginOnConfirmation = {$plugin.tx_sremailsubscribe.enableAutoLoginOnConfirmation}
+	enableAutoLoginOnCreate = {$plugin.tx_sremailsubscribe.enableAutoLoginOnCreate}
+	enableAdminReview = {$plugin.tx_sremailsubscribe.enableAdminReview}
+	autoLoginRedirect_url = {$plugin.tx_sremailsubscribe.autoLoginRedirect_url}
+
+	invite < .create
+
+	edit < .create
+	edit {
+		preview = {$plugin.tx_sremailsubscribe.enablePreviewEdit}
+		defaultValues {
+			hidden = 0
+			module_sys_dmail_html >
+			module_sys_dmail_category >
+		}
+		overrideValues {
+			hidden = 0
+		}
+	}
+
+	infomail = 1
+
+	forceFileDelete = {$plugin.tx_sremailsubscribe.forceFileDelete}
+
+	parseValues {
+		email = lower,nospace,trim
+		name = trim
+		first_name = trim
+		last_name = trim
+		date_of_birth = date
+		title = trim
+		company = trim
+		city = trim
+		zip = trim
+		image = files
+		module_sys_dmail_html = setEmptyIfAbsent
+		module_sys_dmail_category = multiple
+		www = wwwURL
+	}
+
+	parseFromDBValues {
+		date_of_birth = adodb_date
+	}
+	parseToDBValues {
+		date_of_birth = adodb_date
+	}
+
+	email.from = {$plugin.tx_sremailsubscribe.email}
+	email.fromName = {$plugin.tx_sremailsubscribe.siteName}
+	email.admin = {$plugin.tx_sremailsubscribe.email}
+	email.field = email
+	email.HTMLMail =  {$plugin.tx_sremailsubscribe.enableHTMLMail}
+	email.HTMLMailCSS =  {$plugin.tx_sremailsubscribe_pi1.HTMLMailCSS}
+
+	email.CREATE_SAVED = {$plugin.tx_sremailsubscribe.enableEmailOnRegister}
+	email.EDIT_SAVED = {$plugin.tx_sremailsubscribe.enableEmailOnUpdate}
+	email.DELETE_SAVED =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
+	email.INFOMAIL =  {$plugin.tx_sremailsubscribe.enableInfomail}
+	email.INFOMAIL_NORECORD =  {$plugin.tx_sremailsubscribe.enableInfomail}
+	email.SETFIXED_APPROVE =  {$plugin.tx_sremailsubscribe.enableEmailOnApprove}
+	email.SETFIXED_DELETE =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
+	email.SETFIXED_REFUSE = {$plugin.tx_sremailsubscribe.enableEmailOnAdminRefuse}
+
+	notify.CREATE_SAVED = {$plugin.tx_sremailsubscribe.enableAdminNotifyOnRegister}
+	notify.EDIT_SAVED = {$plugin.tx_sremailsubscribe.enableAdminNotifyOnUpdate}
+	notify.DELETE_SAVED =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnDelete}
+	notify.SETFIXED_CREATE = {$plugin.tx_sremailsubscribe.enableAdminNotifyConfirmation}
+	notify.SETFIXED_INVITE = {$plugin.tx_sremailsubscribe.enableAdminNotifyConfirmation}
+	notify.SETFIXED_APPROVE =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnApprove}
+	notify.SETFIXED_DELETE =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnDelete}
+
+  _CSS_DEFAULT_STYLE (
+   .tx-sremailsubscribe-pi1 P { font-family:Verdana, sans-serif; font-size:12px; line-height:125%; color:#35006d; margin-top:8px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; padding-right:3px; padding-left:3px; text-indent:0px; }
+   .tx-sremailsubscribe-pi1 A:link { background-color:transparent; color:navy; text-decoration:none; font-weight:bold;}
+   .tx-sremailsubscribe-pi1 A:visited { background-color:transparent; color:navy; font-weight:bold; text-decoration:none; }
+   .tx-sremailsubscribe-pi1 A:hover { background-color:transparent; color:#333333; text-decoration:none; }
+   .tx-sremailsubscribe-pi1 A:active { background-color:transparent; color:navy; font-weight:bold; text-decoration:none; }
+   .tx-sremailsubscribe-pi1 TD { vertical-align:top;  font-family:Verdana, sans-serif; font-size:12px; line-height:125%; color:#35006d; margin-top:8px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; padding-right:3px; padding-left:3px; text-indent:0px;}
+   .tx-sremailsubscribe-pi1 INPUT { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+   .tx-sremailsubscribe-pi1 INPUT.tx-sremailsubscribe-pi1-submit { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+   .tx-sremailsubscribe-pi1 INPUT.tx-sremailsubscribe-pi1-uploader { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+   .tx-sremailsubscribe-pi1 INPUT.tx-sremailsubscribe-pi1-icon { font-size:10px; font-family:Verdana; background-color:transparent;}
+   .tx-sremailsubscribe-pi1 SELECT { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+   .tx-sremailsubscribe-pi1 TEXTAREA { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+   .tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-radio INPUT  { font-size:10px; font-family:Verdana; background-color:transparent; color:#35006d; font-weight:bold; vertical-align:middle; }
+   .tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-checkbox INPUT  { font-size:10px; font-family:Verdana; background-color:transparent; color:#35006d; font-weight:bold; vertical-align:middle; }
+  )
+
+ _DEFAULT_PI_VARS {
+ }
+
+}
+
+

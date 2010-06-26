@@ -1,0 +1,11 @@
+
+  # cat=basic/enable; type=boolean; label=Use Flexforms: Enable the use of Flexforms in the backend. Extension div2007 version 0.1.2+ must be installed. Default is 1.
+useFlexforms = 1
+  # cat=basic/enable; type=string; label=Image upload folder: This is the place where the images lie.
+imageFolder = uploads/tx_sremailsubscribe
+  # cat=basic/enable; type=boolean; label=Use image folder: Enable the usage of imageFolder for the upload of images.
+useImageFolder = 0
+  # cat=basic/enable; type=string; label=Address table: Name of the address table to be used in the backend. The usage of the 'tx_party_addresses' table is recommended for the future.
+addressTable = tt_address
+  # cat=basic/enable; type=boolean; label=Use patch 1822: Install this patch from bugs.typo3.org or install the extension patch1822 to have an advanced page module
+usePatch1822 =
