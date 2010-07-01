@@ -1,3 +1,6 @@
+2010-07-01 Franz Holzinger  <franz@ttproducts.de>
+	* add all the new tt_address fields also for the FE: use the hook extendingTCA of sr_feuser_register and tt_products
+
 2010-04-15 Franz Holzinger  <franz@ttproducts.de>
 	* fix bug in constants.txt
 	* require the latest most secure sr_feuser_register 2.5.25

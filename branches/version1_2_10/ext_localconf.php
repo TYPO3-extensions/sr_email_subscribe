@@ -88,6 +88,12 @@ if (!$addressTable)	{
 }
 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'] = $addressTable;
+if (TYPO3_MODE=='FE') {
+	if (t3lib_extMgm::isLoaded('tt_products')) {
+		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['tt_products']['extendingTCA'][] = SR_EMAIL_SUBSCRIBE_EXTkey;
+	}
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_feuser_register']['extendingTCA'][] = SR_EMAIL_SUBSCRIBE_EXTkey;
+}
 
 if ($_EXTCONF['usePatch1822'] && ($addressTable == 'tt_address') &&
 !defined($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables'][$addressTable]['MENU'])) {
