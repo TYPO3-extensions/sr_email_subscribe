@@ -1,3 +1,6 @@
+2011-02-19 Franz Holzinger  <franz@ttproducts.de>
+	* reduce todo list in manual
+
 2011-01-03 Franz Holzinger  <franz@ttproducts.de>
 	* add all the new tt_address fields also for the FE: use the hook extendingTCA of sr_feuser_register and tt_products
 	* enable the enhanced page module if TYPO3 4.x is installed
