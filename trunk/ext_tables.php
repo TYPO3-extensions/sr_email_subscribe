@@ -3,7 +3,6 @@
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
 t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/css_styled/', 'Email Address Subscription CSS-styled');
-t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/old_style/', 'Email Address Subscription Old Style');
 
 t3lib_div::loadTCA('tt_content');
 

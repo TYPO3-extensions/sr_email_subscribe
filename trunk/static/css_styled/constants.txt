@@ -74,7 +74,7 @@ plugin.tx_sremailsubscribe {
     # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on approval: If set, an email will be sent to the subscriber when he(she) confirms his(her) subscription.
   enableEmailOnApprove = 1
 
-    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable email on denial: If set, an email will be sent to the prospective front end user when the site administrator refuses to confirm his(her) registration.
+    # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on denial: If set, an email will be sent to the prospective front end user when the site administrator refuses to confirm his(her) registration.
   enableEmailOnAdminRefuse = 1
 
     # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable email on subscription: If set, an email will be sent to the subscriber confirming his(her) subscription. This is ignored if email confirmation request is enabled.
