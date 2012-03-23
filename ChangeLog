@@ -1,3 +1,6 @@
+2012-03-23 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #35192: Remove Old-style template
+
 2012-01-16 Franz Holzinger  <franz@ttproducts.de>
 	* fix bug #6187: remove duplicate class attributes
 
