@@ -108,8 +108,7 @@ if (TYPO3_MODE=='BE')	{
 	}
 
 	if (
-		($typoVersion >= 4004000 || t3lib_extMgm::isLoaded('patch1822'))
-		&& !defined($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['fe_users']['MENU'])
+		!defined($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['fe_users']['MENU'])
 		&& ($addressTable == 'tt_address')
 	) {
 		$tableArray = array($addressTable);
