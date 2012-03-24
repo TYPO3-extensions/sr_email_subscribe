@@ -1,3 +1,6 @@
+2012-03-24 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #35211: Make extension conflict with extension patch1822
+
 2012-03-23 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #35192: Remove Old-style template
 	* Fix bug #35199: Undefined properties in static template setup
