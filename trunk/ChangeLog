@@ -2,6 +2,7 @@
 	* Add feature #35995: Add support for middle name
 	* Follow-up to feature #28370: replyTo feature for mails sent to user
 	* Update manual: Remove references to simulateStaticDocuments
+	* Update manual: Remove references to using frames
 
 2012-04-12 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #35933: Issue error message if installation requirements are not satisfied
