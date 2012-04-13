@@ -209,6 +209,8 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_deleted">%2$s terminated his(her) subscription to %1$s.</label>
 			<label index="v_registration_deleted">%2$s terminated his(her) subscription to %1$s.</label>
 			<label index="unsupported">unsupported</label>
+			<label index="internal_required_extension_missing">Required extension "%1$s" is not available and must be installed</label>
+			<label index="internal_check_requirements_frontend">&lt;p&gt;&lt;big&gt;&lt;b&gt;Email Address Subscription (sr_email_subscribe): %1$s.&lt;/b&gt;&lt;/big&gt;&lt;/p&gt;</label>
 		</languageKey>
 	</data>
 </T3locallang>

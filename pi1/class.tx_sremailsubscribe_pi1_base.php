@@ -3,7 +3,7 @@
 *  Copyright notice
 *
 *  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
-*  (c) 2004-2009 Stanislas Rolland <stanislas.rolland(arobas)sjbr.ca>
+*  (c) 2004-2012 Stanislas Rolland <typo3(arobas)sjbr.ca>
 *  All rights reserved
 *
 *  This script is part of the Typo3 project. The Typo3 project is
@@ -52,43 +52,64 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 		$this->conf = &$conf;
 		$this->pi_setPiVarDefaults();
 
-		$adminFieldList = 'name,hidden';
-		$buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
-		$otherLabelsList = 'yes,no,click_here_to_register,tooltip_click_here_to_register,v_already_subscribed,click_here_to_edit,tooltip_click_here_to_edit,
-		v_wish_to_update_or_delete,v_enter_subscribed_email,click_here_to_delete,tooltip_click_here_to_delete,
-		copy_paste_link,enter_account_info,enter_invitation_account_info,required_info_notice,excuse_us,excuse_us_invitation,
-		registration_problem,registration_sorry,registration_clicked_twice,registration_help,kind_regards,
-		v_verify_before_create,v_verify_invitation_before_create,v_verify_before_update,v_really_wish_to_delete,v_edit_your_account,
-		v_dear,hello,v_notification,v_registration_created,v_registration_created_subject,v_registration_created_message1,v_registration_created_message2,
-		v_please_confirm,v_your_account_was_created,v_your_account_was_created_nomail,v_follow_instructions1,v_follow_instructions2,v_invitation_confirm,
-		v_invitation_account_was_created,v_invitation_instructions1,
-		v_registration_initiated,v_registration_initiated_subject,v_registration_initiated_message1,v_registration_initiated_message2,
-		v_registration_invited,v_registration_invited_subject,v_registration_invited_message1,v_registration_invited_message2,
-		v_registration_confirmed,v_registration_confirmed_subject,v_registration_confirmed_message1,v_registration_confirmed_message2,
-		v_registration_cancelled,v_registration_cancelled_subject,v_registration_cancelled_message1,v_registration_cancelled_message2,
-		v_registration_updated,v_registration_updated_subject,v_registration_updated_message1,v_registration_deleted,v_registration_deleted_subject,
-		v_registration_deleted_message1,v_registration_deleted_message2,v_registration_updated_subject,v_registration_updated_message1,v_registration_deleted,
-		v_sending_infomail,v_sending_infomail_message1,v_sending_infomail_message2,v_infomail_subject,v_infomail_reason,v_infomail_message1,v_infomail_message2,
-		v_infomail_norecord_subject,v_infomail_norecord_message1,v_infomail_norecord_message2';
+		$content = $this->checkRequirements();
 
-		$mainObj = &t3lib_div::getUserObj('&tx_srfeuserregister_control_main');
-		$mainObj->cObj = &$this->cObj;
-		$content =
-			&$mainObj->main(
-				$content,
-				$conf,
-				$this,
-				$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'],
-				$adminFieldList,
-				$buttonLabelsList,
-				$otherLabelsList
-			);
+		if (!$content) {
+			$adminFieldList = 'name,hidden';
+			$buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
+			$otherLabelsList = 'yes,no,click_here_to_register,tooltip_click_here_to_register,v_already_subscribed,click_here_to_edit,tooltip_click_here_to_edit,
+			v_wish_to_update_or_delete,v_enter_subscribed_email,click_here_to_delete,tooltip_click_here_to_delete,
+			copy_paste_link,enter_account_info,enter_invitation_account_info,required_info_notice,excuse_us,excuse_us_invitation,
+			registration_problem,registration_sorry,registration_clicked_twice,registration_help,kind_regards,
+			v_verify_before_create,v_verify_invitation_before_create,v_verify_before_update,v_really_wish_to_delete,v_edit_your_account,
+			v_dear,hello,v_notification,v_registration_created,v_registration_created_subject,v_registration_created_message1,v_registration_created_message2,
+			v_please_confirm,v_your_account_was_created,v_your_account_was_created_nomail,v_follow_instructions1,v_follow_instructions2,v_invitation_confirm,
+			v_invitation_account_was_created,v_invitation_instructions1,
+			v_registration_initiated,v_registration_initiated_subject,v_registration_initiated_message1,v_registration_initiated_message2,
+			v_registration_invited,v_registration_invited_subject,v_registration_invited_message1,v_registration_invited_message2,
+			v_registration_confirmed,v_registration_confirmed_subject,v_registration_confirmed_message1,v_registration_confirmed_message2,
+			v_registration_cancelled,v_registration_cancelled_subject,v_registration_cancelled_message1,v_registration_cancelled_message2,
+			v_registration_updated,v_registration_updated_subject,v_registration_updated_message1,v_registration_deleted,v_registration_deleted_subject,
+			v_registration_deleted_message1,v_registration_deleted_message2,v_registration_updated_subject,v_registration_updated_message1,v_registration_deleted,
+			v_sending_infomail,v_sending_infomail_message1,v_sending_infomail_message2,v_infomail_subject,v_infomail_reason,v_infomail_message1,v_infomail_message2,
+			v_infomail_norecord_subject,v_infomail_norecord_message1,v_infomail_norecord_message2';
+	
+			$mainObj = &t3lib_div::getUserObj('&tx_srfeuserregister_control_main');
+			$mainObj->cObj = &$this->cObj;
+			$content =
+				&$mainObj->main(
+					$content,
+					$conf,
+					$this,
+					$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'],
+					$adminFieldList,
+					$buttonLabelsList,
+					$otherLabelsList
+				);
+		}
+		return $content;
+	}
+
+	/* Checks requirements for this plugin
+	 *
+	 * @return string Error message, if error found, empty string otherwise
+	 */
+	protected function checkRequirements() {
+		$content = '';
+		if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends'])) {
+			$requiredExtensions = array_diff(array_keys($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends']), array('php', 'typo3'));
+			foreach ($requiredExtensions as $requiredExtension) {
+				if (!t3lib_extMgm::isLoaded($requiredExtension)) {
+					$message = sprintf($GLOBALS['TSFE']->sL('LLL:EXT:' . $this->extKey . '/pi1/locallang.xml:internal_required_extension_missing'), $requiredExtension);
+					t3lib_div::sysLog($message, $this->extKey, t3lib_div::SYSLOG_SEVERITY_ERROR);
+					$content .= sprintf($GLOBALS['TSFE']->sL('LLL:EXT:' . $this->extKey . '/pi1/locallang.xml:internal_check_requirements_frontend'), $message);
+				}
+			}
+		}
 		return $content;
 	}
 }
-
 if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1_base.php']) {
 	include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1_base.php']);
 }
-
 ?>

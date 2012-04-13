@@ -1,3 +1,6 @@
+2012-04-12 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #35933: Issue error message if installation requirements are not satisfied
+
 2012-03-24 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #35211: Make extension conflict with extension patch1822
 

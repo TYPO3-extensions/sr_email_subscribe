@@ -5,34 +5,28 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/css_styled/', 'Email Address Subscription CSS-styled');
 
 t3lib_div::loadTCA('tt_content');
+$TCA['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='layout,select_key';
+$TCA['tt_content']['types']['list']['subtypes_addlist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='pi_flexform';
+t3lib_extMgm::addPiFlexFormValue(SR_EMAIL_SUBSCRIBE_EXTkey . '_pi1', 'FILE:EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/pi1/flexform_ds_pi1.xml');
 
-if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useFlexforms']=='1') {
-	$TCA['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='layout,select_key';
-	$TCA['tt_content']['types']['list']['subtypes_addlist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='pi_flexform';
-	t3lib_extMgm::addPiFlexFormValue(SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1', 'FILE:EXT:'.SR_EMAIL_SUBSCRIBE_EXTkey.'/pi1/flexform_ds_pi1.xml');
-} else {
-	$TCA['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1'] = 'layout';
-}
-t3lib_extMgm::addPlugin(Array('LLL:EXT:'.SR_EMAIL_SUBSCRIBE_EXTkey.'/locallang_db.xml:tt_content.email_subscribe', SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1'),'list_type');
+t3lib_extMgm::addPlugin(Array('LLL:EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/locallang_db.xml:tt_content.email_subscribe', SR_EMAIL_SUBSCRIBE_EXTkey . '_pi1'),'list_type');
 
 $addressTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'];
-
-if ($addressTable == 'tt_address')	{
+if ($addressTable == 'tt_address') {
 
 	/**
 	* Setting up country, country subdivision, preferred language, first_name and last_name in tt_address table
 	* Adjusting some maximum lengths to the values as corresponding fields in fe_users as set by extension sr_feuser_register
 	*/
 
-
 	t3lib_div::loadTCA('tt_address');
 
 	if (
 		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useImageFolder'] &&
-		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'] != '')	{
+		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'] != ''
+	) {
 		$TCA['tt_address']['columns']['image']['config']['uploadfolder'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imageFolder'];
 	}
-
 
 	t3lib_extMgm::addTCAcolumns('tt_address', Array(
 		'static_info_country' => Array (
@@ -73,11 +67,11 @@ if ($addressTable == 'tt_address')	{
 			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.date_of_birth',
 			'config' => Array (
 				'type' => 'input',
-				"size" => "10",
-				"max" => "20",
-				"eval" => "date",
-				"checkbox" => "0",
-				"default" => ''
+				'size' => '10',
+				'max' => '20',
+				'eval' => 'date',
+				'checkbox' => '0',
+				'default' => ''
 			)
 		),
 		'comments' => Array (
