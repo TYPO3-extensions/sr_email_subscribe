@@ -31,13 +31,9 @@
  * $Id$
  *
  * @author	Kasper Skårhøj <kasperYYYY@typo3.com>
- * @author	Stanislas Rolland <stanislas.rolland(arobas)sjbr.ca>
+ * @author	Stanislas Rolland <typo3(arobas)sjbr.ca>
  * @author	Franz Holzinger <franz@ttproducts.de>
  */
-
-require_once(PATH_tslib.'class.tslib_pibase.php');
-require_once(PATH_BE_srfeuserregister.'control/class.tx_srfeuserregister_control_main.php');
-
 class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 
 		// Plugin initialization
