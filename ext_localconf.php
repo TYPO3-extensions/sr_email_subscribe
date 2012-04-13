@@ -89,13 +89,13 @@ if (TYPO3_MODE == 'BE')	{
 	) {
 		$tableArray = array($addressTable);
 		foreach ($tableArray as $theTable)	{
-			$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['LLFile'][$theTable] = 'EXT:'.SR_EMAIL_SUBSCRIBE_EXTkey.'/locallang.xml';
+			$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['LLFile'][$theTable] = 'EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/locallang.xml';
 		}
 
 		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables'][$addressTable] = array (
 			'default' => array(
 				'MENU' => 'm_default',
-				'fList' =>  'name,title,address,zip,city,country,gender,image,uid',
+				'fList' =>  'first_name,middle_name,last_name,title,address,zip,city,country,gender,image,uid',
 				'icon' => TRUE
 			),
 			'ext' => array (

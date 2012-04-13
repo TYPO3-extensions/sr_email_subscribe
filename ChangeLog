@@ -1,3 +1,6 @@
+2012-04-13 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #35995: Add support for middle name
+
 2012-04-12 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #35933: Issue error message if installation requirements are not satisfied
 	* Add autoloader registration

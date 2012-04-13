@@ -68,6 +68,7 @@ plugin.tx_sremailsubscribe_pi1 {
 			email = email,atMost[255],uniqueLocal
 			name = atMost[{$plugin.tx_sremailsubscribe.nameAtMost}]
 			first_name = atMost[50]
+			middle_name = atMost[50]
 			last_name = atMost[50]
 			date_of_birth = date
 			company = atMost[50]
@@ -81,6 +82,7 @@ plugin.tx_sremailsubscribe_pi1 {
 			address =
 			www = wwwURL
 			comments =
+			module_sys_dmail_html =
 			module_sys_dmail_category =
 		}
 	}
@@ -125,9 +127,10 @@ plugin.tx_sremailsubscribe_pi1 {
 	forceFileDelete = {$plugin.tx_sremailsubscribe.forceFileDelete}
 
 	parseValues {
-		email = lower,nospace,trim
+		email = trim
 		name = trim
 		first_name = trim
+		middle_name = trim
 		last_name = trim
 		date_of_birth = date
 		title = trim
@@ -135,16 +138,18 @@ plugin.tx_sremailsubscribe_pi1 {
 		city = trim
 		zip = trim
 		image = files
+			## setEmptyIfAbsent is required for any checkbox
 		module_sys_dmail_html = setEmptyIfAbsent
 		module_sys_dmail_category = multiple
 		www = wwwURL
 	}
 
 	parseFromDBValues {
-		date_of_birth = adodb_date
+		date_of_birth = date
 	}
 	parseToDBValues {
-		date_of_birth = adodb_date
+		date_of_birth = date
+		image = deleteUnreferencedFiles
 	}
 
 	email.from = {$plugin.tx_sremailsubscribe.email}
