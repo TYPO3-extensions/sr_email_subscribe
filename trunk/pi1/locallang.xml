@@ -12,6 +12,8 @@
 			<label index="missing_invitation_name_informal">Please enter a name!</label>
 			<label index="first_name_informal">First name</label>
 			<label index="missing_invitation_first_name_informal">Please enter a first name!</label>
+			<label index="middle_name_informal">Middle name</label>
+			<label index="missing_invitation_middle_name_informal">Please enter a middle name!</label>
 			<label index="last_name_informal">Last name</label>
 			<label index="missing_invitation_last_name_informal">Please enter a surname!</label>
 			<label index="date_of_birth_informal">Date of birth (dd-mm-yyyy)</label>
