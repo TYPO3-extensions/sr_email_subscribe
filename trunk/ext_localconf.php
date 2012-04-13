@@ -1,8 +1,6 @@
 <?php
 if (!defined('TYPO3_MODE')) die('Access denied.');
 
-$typoVersion = t3lib_div::int_from_ver($GLOBALS['TYPO_VERSION']);
-
 if (!defined ('SR_EMAIL_SUBSCRIBE_EXTkey')) {
 	define('SR_EMAIL_SUBSCRIBE_EXTkey', $_EXTKEY);
 }
@@ -44,51 +42,31 @@ if (!defined ('PARTY_EXTkey')) {
 }
 
 
-$bPhp5 = version_compare(phpversion(), '5.0.0', '>=');
+$bPhp5 = version_compare(phpversion(), '5.2.0', '>=');
 
 t3lib_extMgm::addPItoST43(SR_EMAIL_SUBSCRIBE_EXTkey, 'pi1/class.tx_sremailsubscribe_pi1.php', '_pi1', 'list_type', 0);
 
 $_EXTCONF = unserialize($_EXTCONF);    // unserializing the configuration so we can use it here:
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['imagefolder'] = $_EXTCONF['imageFolder'] ? $_EXTCONF['imageFolder'] : 'uploads/tx_sremailsubscribe';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useImageFolder'] = !empty($_EXTCONF['useImageFolder']) ? $_EXTCONF['useImageFolder'] : '0';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'] = $_EXTCONF['addressTable'];
 
-
-if (isset($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]) && is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]))	{
-	$tmpArray = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey];
-} else {
-	unset($tmpArray);
-}
-
-if (isset($_EXTCONF) && is_array($_EXTCONF)) {
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey] = $_EXTCONF;
-	if (isset($tmpArray) && is_array($tmpArray)) {
-		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey] = array_merge($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey], $tmpArray);
-	}
-} else {
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey] = array();
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useFlexforms'] = '1';
-}
-
-
-if (t3lib_extMgm::isLoaded(DIV2007_EXTkey))	{
-	if (!defined ('PATH_BE_div2007')) {
-		define('PATH_BE_div2007', t3lib_extMgm::extPath(DIV2007_EXTkey));
-	}
-}
+	// Save extension version and constraints
+require_once(t3lib_extMgm::extPath($_EXTKEY) . 'ext_emconf.php');
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['version'] = $EM_CONF[SR_EMAIL_SUBSCRIBE_EXTkey]['version'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['constraints'] = $EM_CONF[SR_EMAIL_SUBSCRIBE_EXTkey]['constraints'];
 
 if (t3lib_extMgm::isLoaded(DIV2007_EXTkey)) {
 	if (!defined ('PATH_BE_div2007')) {
 		define('PATH_BE_div2007', t3lib_extMgm::extPath(DIV2007_EXTkey));
 	}
-} else {
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useFlexforms'] = 0;
 }
 
-
 $addressTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'];
-
-if (!$addressTable)	{
-	if (t3lib_extMgm::isLoaded(PARTY_EXTkey))	{
+if (!$addressTable) {
+	if (t3lib_extMgm::isLoaded(PARTY_EXTkey)) {
 		$addressTable = 'tx_wecpeople_addresses';
-	} else if (t3lib_extMgm::isLoaded(PARTNER_EXTkey))	{
+	} else if (t3lib_extMgm::isLoaded(PARTNER_EXTkey)) {
 		$addressTable = 'tx_partner_main';
 	} else if (t3lib_extMgm::isLoaded(TT_ADDRESS_EXTkey)) {
 		$addressTable = 'tt_address';
@@ -96,13 +74,11 @@ if (!$addressTable)	{
 		$addressTable = 'fe_users';
 	}
 }
-
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'] = $addressTable;
 
+if (TYPO3_MODE == 'BE')	{
 
-if (TYPO3_MODE=='BE')	{
-
-	if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useFlexforms'] && defined('PATH_BE_div2007'))	{
+	if (defined('PATH_BE_div2007')) {
 		// replace the output of the former CODE field with the flexform
 		$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['list_type_Info'][SR_EMAIL_SUBSCRIBE_EXTkey . '_pi1'][] = 'EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/hooks/class.tx_sremailsubscribe_hooks_cms.php:&tx_sremailsubscribe_hooks_cms->pmDrawItem';
 	}
@@ -136,13 +112,10 @@ if (TYPO3_MODE=='BE')	{
 	}
 }
 
-
 if (TYPO3_MODE == 'FE') {
 	if (t3lib_extMgm::isLoaded('tt_products')) {
 		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['tt_products']['extendingTCA'][] = SR_EMAIL_SUBSCRIBE_EXTkey;
 	}
 	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_feuser_register']['extendingTCA'][] = SR_EMAIL_SUBSCRIBE_EXTkey;
 }
-
-
 ?>
