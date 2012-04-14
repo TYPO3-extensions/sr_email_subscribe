@@ -1,6 +1,7 @@
 2012-04-14 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #36055: Add captcha markers to default template
 	* Update extensions dependencies, require TYPO3 4.4
+	* Update manual
 
 2012-04-13 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #35995: Add support for middle name
