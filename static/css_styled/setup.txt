@@ -84,6 +84,7 @@ plugin.tx_sremailsubscribe_pi1 {
 			comments =
 			module_sys_dmail_html =
 			module_sys_dmail_category =
+			captcha_response =
 		}
 	}
 
