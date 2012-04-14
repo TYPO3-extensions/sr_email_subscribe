@@ -50,10 +50,10 @@ plugin.tx_sremailsubscribe {
     # cat=plugin.tx_sremailsubscribe//; type=int+; label= Infomail page PID: PID of the page on which the plugin is inserted with the intent of serving as the infomail dialog page.
   infomailPID =
 
-    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Confirmation page PID: PID of the page on which the plugin is inserted with the intent of serving as the subscription confirmation page (or setfixed page!).
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Confirmation page PID: PID of the page on which the plugin is inserted with the intent of serving as the subscription confirmation page.
   confirmPID =
 
-    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Confirmation of invitation page PID: PID of the page on which the plugin is inserted with the intent of serving as the subscription confirmation page (or setfixed page!) when replying to an invitation.
+    # cat=plugin.tx_sremailsubscribe//; type=int+; label= Confirmation of invitation page PID: PID of the page on which the plugin is inserted with the intent of serving as the subscription confirmation page when replying to an invitation.
   confirmInvitationPID =
 
     # cat=plugin.tx_sremailsubscribe//; type=int+; label= Confirmation page Type: Type (or pageNum) of the confirmation page.
