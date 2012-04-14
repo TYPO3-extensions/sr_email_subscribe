@@ -35,15 +35,15 @@
  * @author	Franz Holzinger <franz@ttproducts.de>
  */
 class tx_sremailsubscribe_pi1_base extends tslib_pibase {
+		// Class name
+	public $prefixId = 'tx_sremailsubscribe_pi1';
+		// Path to this script relative to the extension dir.
+	public $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php';
+		// The extension key.
+	public $extKey = SR_EMAIL_SUBSCRIBE_EXTkey;
 
-		// Plugin initialization
-	var $prefixId = 'tx_sremailsubscribe_pi1';  // Same as class name
-	var $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php'; // Path to this script relative to the extension dir.
-	var $extKey = SR_EMAIL_SUBSCRIBE_EXTkey;  // The extension key.
 
-
-	function main($content, &$conf) {
-		global $TSFE;
+	public function main ($content, &$conf) {
 
 		$this->conf = &$conf;
 		$this->pi_setPiVarDefaults();
@@ -52,6 +52,14 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 
 		if (!$content) {
 			$adminFieldList = 'name,hidden';
+				// Honour Address List (tt_address) configuration settings
+			if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'] == 'tt_address') {
+				$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['tt_address']);
+				if ($extConf['disableCombinedNameField'] == '1') {
+						// Remove name from adminFieldList
+					$adminFieldList = 'hidden';
+				}
+			}
 			$buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
 			$otherLabelsList = 'yes,no,click_here_to_register,tooltip_click_here_to_register,v_already_subscribed,click_here_to_edit,tooltip_click_here_to_edit,
 			v_wish_to_update_or_delete,v_enter_subscribed_email,click_here_to_delete,tooltip_click_here_to_delete,

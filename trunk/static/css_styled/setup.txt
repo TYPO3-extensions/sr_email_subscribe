@@ -100,10 +100,7 @@ plugin.tx_sremailsubscribe_pi1 {
 	}
 
 	enableEmailConfirmation = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
-	enableAutoLoginOnConfirmation = {$plugin.tx_sremailsubscribe.enableAutoLoginOnConfirmation}
-	enableAutoLoginOnCreate = {$plugin.tx_sremailsubscribe.enableAutoLoginOnCreate}
-	enableAdminReview = {$plugin.tx_sremailsubscribe.enableAdminReview}
-	autoLoginRedirect_url = {$plugin.tx_sremailsubscribe.autoLoginRedirect_url}
+	enableAdminReview = 0
 
 	authcodeFields.codeLength = {$plugin.tx_sremailsubscribe.codeLength}
 

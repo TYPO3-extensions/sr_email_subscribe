@@ -4,6 +4,9 @@
 	* Update manual: Remove references to simulateStaticDocuments
 	* Update manual: Remove references to using frames
 	* Update manual: Restore section on using frames
+	* Add feature #36006: Honour tt_address extension configuration settings
+	* Fix bug #9225 (old bug tracker): Combined name field disabled: Markers are displayed in FE
+	* Fix bug #6469 (old bug tracker): with tt_address 2.0 and disabled "name" field errors occur
 
 2012-04-12 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #35933: Issue error message if installation requirements are not satisfied
