@@ -1,5 +1,5 @@
 
-  # cat=basic/enable; type=string; label=Image upload folder: This is the place where the images lie.
+  # cat=basic/enable; type=string; label=Image upload folder: This is the place where the images are stored.
 imageFolder = uploads/tx_sremailsubscribe
   # cat=basic/enable; type=boolean; label=Use image folder: Enable the usage of imageFolder for the upload of images.
 useImageFolder = 0
