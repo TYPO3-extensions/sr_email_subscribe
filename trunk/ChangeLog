@@ -1,3 +1,6 @@
+2012-04-15 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #36124: Add captcha markers to infomail template subpart
+
 2012-04-14 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #36055: Add captcha markers to default template
 	* Update extensions dependencies, require TYPO3 4.4
