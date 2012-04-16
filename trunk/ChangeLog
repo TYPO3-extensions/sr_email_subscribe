@@ -3,6 +3,9 @@
 	* Fix bug #36127: email.INFOMAIL_NORECORD = 0 is not honoured
 	* Fix bug #4635 (old bug tracker): cmd=infomail sends also mail if user is not in db
 	* Suggest sr_freecap
+	* Fix bug #36132: infomail edit link leads to wrong page
+	* Fix bug #15701 (old bug tracker): sr_email_subscribe: Links in infomail are not correct
+	* Fix bug #8860 (old bug tracker): Edit profile Link is not working in sr_feuser_register 2.5.15
 
 2012-04-14 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #36055: Add captcha markers to default template
