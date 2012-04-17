@@ -1,4 +1,7 @@
 2012-04-15 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #36191: Move captcha markers setting and captcha evaluation to hooks
+
+2012-04-15 Stanislas Rolland <typo3@sjbr.ca>
 	* Add feature #36124: Add captcha markers to infomail template subpart
 	* Fix bug #36127: email.INFOMAIL_NORECORD = 0 is not honoured
 	* Fix bug #4635 (old bug tracker): cmd=infomail sends also mail if user is not in db
