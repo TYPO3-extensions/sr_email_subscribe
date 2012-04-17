@@ -61,6 +61,12 @@ if (t3lib_extMgm::isLoaded(DIV2007_EXTkey)) {
 		define('PATH_BE_div2007', t3lib_extMgm::extPath(DIV2007_EXTkey));
 	}
 }
+	// Captcha hooks
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['tx_sremailsubscribe_pi1']['registrationProcess'][] = 'EXT:' . SR_FEUSER_REGISTER_EXTkey . '/hooks/captcha/class.tx_srfeuserregister_captcha.php:&tx_srfeuserregister_captcha';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['tx_sremailsubscribe_pi1']['model'][] = 'EXT:' . SR_FEUSER_REGISTER_EXTkey . '/hooks/captcha/class.tx_srfeuserregister_captcha.php:&tx_srfeuserregister_captcha';
+	// Freecap hooks
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['tx_sremailsubscribe_pi1']['registrationProcess'][] = 'EXT:' . SR_FEUSER_REGISTER_EXTkey . '/hooks/freecap/class.tx_srfeuserregister_freecap.php:&tx_srfeuserregister_freecap';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['tx_sremailsubscribe_pi1']['model'][] = 'EXT:' . SR_FEUSER_REGISTER_EXTkey . '/hooks/freecap/class.tx_srfeuserregister_freecap.php:&tx_srfeuserregister_freecap';
 
 $addressTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'];
 if (!$addressTable) {
