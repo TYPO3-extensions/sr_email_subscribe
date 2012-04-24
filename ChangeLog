@@ -1,5 +1,6 @@
 2012-04-24 Stanislas Rolland <typo3@sjbr.ca>
 	* Fix missing closing label tag in template_infomail
+	* Cleanup in tx_sremailsubscribe_pi1_css_tmpl.html
 
 2012-04-23 Stanislas Rolland <typo3@sjbr.ca>
 	* Update manual
