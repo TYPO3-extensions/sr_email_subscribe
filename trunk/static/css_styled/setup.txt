@@ -84,7 +84,7 @@ plugin.tx_sremailsubscribe_pi1 {
 			comments =
 			module_sys_dmail_html =
 			module_sys_dmail_category =
-			captcha_response =
+			captcha_response = freecap
 		}
 	}
 
@@ -121,6 +121,13 @@ plugin.tx_sremailsubscribe_pi1 {
 	}
 
 	infomail = 1
+	infomail {
+		fields = email
+		evalValues {
+			email = email,atMost[255],required
+			captcha_response = freecap
+		}
+	}
 
 	forceFileDelete = {$plugin.tx_sremailsubscribe.forceFileDelete}
 

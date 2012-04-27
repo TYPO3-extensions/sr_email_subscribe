@@ -2,6 +2,7 @@
 	* Require div2007 0.10.1
 	* Add feature #36677: Use first, middle and last names in notification mails
 	* Cleanup in class.tx_sremailsubscribe_pi1_base.php
+	* Follow-up to feature #36123: Allow evaluation of email and captcha on the infomail form
 
 2012-04-26 Stanislas Rolland <typo3@sjbr.ca>
 	* Fix bug #36640: authcodeFields TS constant is not defined
