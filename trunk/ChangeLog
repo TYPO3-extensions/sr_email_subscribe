@@ -1,3 +1,6 @@
+2012-04-27 Stanislas Rolland  <typo3(arobas)sjbr.ca>
+	* Require div2007 0.10.1
+
 2012-04-26 Stanislas Rolland <typo3@sjbr.ca>
 	* Fix bug #36640: authcodeFields TS constant is not defined
 
