@@ -1,5 +1,6 @@
 2012-04-27 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Require div2007 0.10.1
+	* Add feature #36677: Use first, middle and last names in notification mails
 
 2012-04-26 Stanislas Rolland <typo3@sjbr.ca>
 	* Fix bug #36640: authcodeFields TS constant is not defined
