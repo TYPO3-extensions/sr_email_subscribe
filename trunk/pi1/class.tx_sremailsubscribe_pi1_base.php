@@ -43,7 +43,7 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 	public $extKey = SR_EMAIL_SUBSCRIBE_EXTkey;
 
 
-	public function main ($content, &$conf) {
+	public function main ($content, $conf) {
 
 		$this->conf = &$conf;
 		$this->pi_setPiVarDefaults();
