@@ -94,10 +94,10 @@ plugin.tx_sremailsubscribe_pi1 {
 		hidden = 0
 	}
 	setfixed.DELETE {
-		_FIELDLIST = uid
+		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
 	}
 	setfixed.EDIT {
-		_FIELDLIST = uid
+		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
 	}
 
 	enableEmailConfirmation = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
