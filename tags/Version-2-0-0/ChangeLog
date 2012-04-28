@@ -1,0 +1,174 @@
+2012-04-28 Stanislas Rolland  <typo3(arobas)sjbr.ca>
+	* Remove middle_name from default setup
+	* Add label evalErrors_uniqueLocal_email
+	* Version 2.0.0
+
+2012-04-27 Stanislas Rolland  <typo3(arobas)sjbr.ca>
+	* Require div2007 0.10.1
+	* Add feature #36677: Use first, middle and last names in notification mails
+	* Cleanup in class.tx_sremailsubscribe_pi1_base.php
+	* Follow-up to feature #36123: Allow evaluation of email and captcha on the infomail form
+
+2012-04-26 Stanislas Rolland <typo3@sjbr.ca>
+	* Fix bug #36640: authcodeFields TS constant is not defined
+
+2012-04-24 Stanislas Rolland <typo3@sjbr.ca>
+	* Fix missing closing label tag in template_infomail
+	* Cleanup in tx_sremailsubscribe_pi1_css_tmpl.html
+
+2012-04-23 Stanislas Rolland <typo3@sjbr.ca>
+	* Update manual
+
+2012-04-21 Stanislas Rolland <typo3@sjbr.ca>
+	* Require div2007 0.10.0
+
+2012-04-19 Stanislas Rolland <typo3@sjbr.ca>
+	* Require div2007 0.9.0
+	* Recommend setting ['MAIL']['substituteOldMailAPI'] to '1' in the Install tool
+
+2012-04-15 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #36191: Move captcha markers setting and captcha evaluation to hooks
+
+2012-04-15 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #36124: Add captcha markers to infomail template subpart
+	* Fix bug #36127: email.INFOMAIL_NORECORD = 0 is not honoured
+	* Fix bug #4635 (old bug tracker): cmd=infomail sends also mail if user is not in db
+	* Suggest sr_freecap
+	* Fix bug #36132: infomail edit link leads to wrong page
+	* Fix bug #15701 (old bug tracker): sr_email_subscribe: Links in infomail are not correct
+	* Fix bug #8860 (old bug tracker): Edit profile Link is not working in sr_feuser_register 2.5.15
+
+2012-04-14 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #36055: Add captcha markers to default template
+	* Update extensions dependencies, require TYPO3 4.4
+	* Update manual
+
+2012-04-13 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #35995: Add support for middle name
+	* Follow-up to feature #28370: replyTo feature for mails sent to user
+	* Update manual: Remove references to simulateStaticDocuments
+	* Update manual: Remove references to using frames
+	* Update manual: Restore section on using frames
+	* Add feature #36006: Honour tt_address extension configuration settings
+	* Fix bug #9225 (old bug tracker): Combined name field disabled: Markers are displayed in FE
+	* Fix bug #6469 (old bug tracker): with tt_address 2.0 and disabled "name" field errors occur
+	* Update and cleanup manual
+
+2012-04-12 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #35933: Issue error message if installation requirements are not satisfied
+	* Add autoloader registration
+
+2012-03-24 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #35211: Make extension conflict with extension patch1822
+
+2012-03-23 Stanislas Rolland <typo3@sjbr.ca>
+	* Add feature #35192: Remove Old-style template
+	* Fix bug #35199: Undefined properties in static template setup
+
+2012-01-16 Franz Holzinger  <franz@ttproducts.de>
+	* fix bug #6187: remove duplicate class attributes
+
+2011-02-21 Franz Holzinger  <franz@ttproducts.de>
+	* reduce the manual to the differences from sr_feuser_register
+
+2011-02-19 Franz Holzinger  <franz@ttproducts.de>
+	* reduce todo list in manual
+
+2011-01-03 Franz Holzinger  <franz@ttproducts.de>
+	* add all the new tt_address fields also for the FE: use the hook extendingTCA of sr_feuser_register and tt_products
+	* enable the enhanced page module if TYPO3 4.x is installed
+	* enable flexforms if no $_EXTKEY variables are available
+
+2010-06-26 Franz Holzinger  <franz@ttproducts.de>
+	* fix bug 12323: PHP 5.3 checks the TYPO3 api parameter $conf and no reference is allowed
+	* changes needed for sr_feuser_register 2.6.0
+
+2010-04-15 Franz Holzinger  <franz@ttproducts.de>
+	* fix bug in constants.txt
+	* require the latest most secure sr_feuser_register 2.5.25
+	* correct texts for deletion messages
+
+2009-09-17 Franz Holzinger  <franz@fholzinger.com>
+	* modifications for usage with sr_feuser_register 2.5.23
+
+2009-05-13 Franz Holzinger  <franz@ttproducts.de>
+	* modifications for usage with sr_feuser_register 2.5.22 which contains a bugfix for the translations
+
+2009-01-18 Franz Holzinger  <franz@ttproducts.de>
+	* modifications for usage with sr_feuser_register 2.5.20
+	* support for patch 1822
+
+2008-09-24 Franz Holzinger  <franz@fholzinger.com>
+	* modifications for usage with sr_feuser_register 2.5.19
+
+2008-09-17 Franz Holzinger  <franz@fholzinger.com>
+	* modifications for usage with sr_feuser_register 2.5.17
+
+2008-06-20 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 8548: not overridable _LOCAL_LANG setup
+
+2008-04-14 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug with not shown plugins when no fh_library had been installed
+
+2008-04-01 Franz Holzinger  <franz@fholzinger.com>
+	* add dependancy from div2007 instead of fh_library
+	* add field mobile
+	* remove translations from the xml files because they are already on the Translation Server
+	* new feature: allow also other tables than tt_address
+
+2007-11-26 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug in CSS template
+	* do not use the cofigured image upload path by default
+
+2007-06-04 Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 3736: Change the CSS template to:   <form id="###FORM_NAME###" ...
+
+2007-05-26  Franz Holzinger  <franz@fholzinger.com>
+	* fix bug 5641: This version works again with sr_feuser_register 2.5.7+. The method addLabelMarkers has been deleted.
+	* The deprecated pi2 has been deleted now. Some English texts have been deleted. They will be taken from sr_feuser_register directly. The correct paramater for email is %4 instead of %3.
+	* This works with tt_address 2.1.0+. Therefore some tt_address fields do not need to be added in this extension any more.
+
+2007-01-17  Franz Holzinger  <franz@fholzinger.com>
+	* freecap captcha support by Ralph Brugger <Ralph.Brugger@linkpool.de>
+
+2006-09-09  Michael Stucki  <michael@typo3.org>
+
+	* Initial SVN import
+
+2006-08-14 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 1.1.1
+	* Add Slovenian translation.
+
+2006-06-21 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 1.1.0
+	* Remove dependency on Static Info Library (sr_static_info).
+
+2006-06-07 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 1.0.0
+	* Remove TS constant dmailCategories.
+	* Added support for backend flexforms by Franz Holzinger.
+	* Restructure the extension with two Static Templates: Old Style and CSS-styled. One static template must be added to the TS template after extension installation.
+	* Convert all language files to xml format.
+
+2006-03-26 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 0.3.1
+	* Remove TS constants enableInfomail, enableAdminNotifyOnRefuse, enableEmailOnRefuse
+
+2006-03-08 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Version 0.3.0
+	* Add short URL's feature. Thanks to Steve Webster.
+	* Update requirements to TYPO3 4.0.
+	* Correct processing of module_sys_dmail fields when Direct Mail is not installed.
+	* Modify plugins initialization: remove constructors and initId method.
+
+2006-03-01 Stanislas Rolland  <stanislas.rolland(arobas)fructifor.ca>
+	* Remove changes to the TCA for fields module_sys_dmail_category and module_sys_dmail_html
+	* Ignore fields module_sys_dmail_category and module_sys_dmail_html if direct_mail extension is not loaded.
+	* Enable support for select fields with MM relations, in particular module_sys_dmail_category.
+	* Add support for localization of MM relations when configured on the foreign table.
+	* Add constant and setup property module_sys_dmail_category_PIDLIST
+	* Modify the HTML template to make field module_sys_dmail_category TCA-driven and use dynamic categories introduced by extension Direct Mail (direct_mail) 2.0.
+	* Update to the requirements section of the manual
+	* Honor TCA default value for TCA-driven multiple checkboxes. Thanks to Simon Tuck.
+	* Remove support for TYPO3 3.5.0.
+	* Accept value '0' on required fields (see bugtracker issue #2027).
