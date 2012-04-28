@@ -18,7 +18,7 @@ plugin.tx_sremailsubscribe {
   siteName = My TYPO3 Site
 
     # cat=plugin.tx_sremailsubscribe//; type=string; label= Subscription form fields: List of fields to be included on the email address subscription form.
-  formFields = email,first_name,middle_name,last_name,date_of_birth,address,city,zone,static_info_country,zip,mobile,phone,language,title,company,www,module_sys_dmail_html,module_sys_dmail_category,image,comments,hidden
+  formFields = email,first_name,last_name,date_of_birth,address,city,zone,static_info_country,zip,mobile,phone,language,title,company,www,module_sys_dmail_html,module_sys_dmail_category,image,comments,hidden
 
     # cat=plugin.tx_sremailsubscribe//; type=string; label= Required fields: List of fields that must be fillied in on the email address subscription form.
   requiredFields = email,first_name,last_name
