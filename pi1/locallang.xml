@@ -49,7 +49,9 @@
 			<label index="missing_invitation_phone_informal">Please enter a phone number!</label>
 			<label index="missing_invitation_fax_informal">Please enter a fax number!</label>
 			<label index="email_informal">Email</label>
+			<label index="missing_email">A valid email is required.</label>
 			<label index="missing_email_informal">A valid email is required.</label>
+			<label index="evalErrors_uniqueLocal_email">This email already existed.</label>
 			<label index="evalErrors_uniqueLocal_email_informal">This email already existed.</label>
 			<label index="module_sys_dmail_html_informal">Receive HTML emails?</label>
 			<label index="yes">Yes</label>
