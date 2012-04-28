@@ -1,6 +1,7 @@
 2012-04-28 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Remove middle_name from default setup
 	* Add label evalErrors_uniqueLocal_email
+	* Version 2.0.0
 
 2012-04-27 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Require div2007 0.10.1
