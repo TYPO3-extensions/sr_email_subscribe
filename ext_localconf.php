@@ -124,4 +124,5 @@ if (TYPO3_MODE == 'FE') {
 	}
 	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_feuser_register']['extendingTCA'][] = SR_EMAIL_SUBSCRIBE_EXTkey;
 }
+
 ?>

@@ -38,10 +38,10 @@
 class tx_sremailsubscribe_pi1 {
 	var $cObj;
 
-	function main ($content, $conf) {
-		$pibaseObj = &t3lib_div::getUserObj('&tx_sremailsubscribe_pi1_base');
-		$pibaseObj->cObj = &$this->cObj;
-		$content = &$pibaseObj->main($content, $conf);
+	public function main ($content, $conf) {
+		$pibaseObj = t3lib_div::getUserObj('&tx_sremailsubscribe_pi1_base');
+		$pibaseObj->cObj = $this->cObj;
+		$content = $pibaseObj->main($content, $conf);
 		return $content;
 	}
 }
@@ -49,4 +49,5 @@ class tx_sremailsubscribe_pi1 {
 if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1.php']) {
 	include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1.php']);
 }
+
 ?>
