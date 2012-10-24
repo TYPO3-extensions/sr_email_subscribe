@@ -45,7 +45,7 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 
 	public function main ($content, $conf) {
 
-		$this->conf = &$conf;
+		$this->conf = $conf;
 		$this->pi_setPiVarDefaults();
 
 		$content = $this->checkRequirements();
@@ -77,11 +77,11 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 			v_registration_deleted_message1,v_registration_deleted_message2,v_registration_updated_subject,v_registration_updated_message1,v_registration_deleted,
 			v_sending_infomail,v_sending_infomail_message1,v_sending_infomail_message2,v_infomail_subject,v_infomail_reason,v_infomail_message1,v_infomail_message2,
 			v_infomail_norecord_subject,v_infomail_norecord_message1,v_infomail_norecord_message2';
-	
-			$mainObj = &t3lib_div::getUserObj('&tx_srfeuserregister_control_main');
-			$mainObj->cObj = &$this->cObj;
+
+			$mainObj = t3lib_div::getUserObj('&tx_srfeuserregister_control_main');
+			$mainObj->cObj = $this->cObj;
 			$content =
-				&$mainObj->main(
+				$mainObj->main(
 					$content,
 					$conf,
 					$this,
@@ -113,7 +113,9 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 		return $content;
 	}
 }
+
 if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1_base.php']) {
 	include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1_base.php']);
 }
+
 ?>

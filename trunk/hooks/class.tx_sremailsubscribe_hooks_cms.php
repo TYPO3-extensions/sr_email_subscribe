@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2007-2008 Franz Holzinger <kontakt@fholzinger.com>
+*  (c) 2012 Franz Holzinger (franz@ttproducts.de)
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -31,8 +31,8 @@
  *
  * $Id$
  *
- * @author	Franz Holzinger <kontakt@fholzinger.com>
- * @maintainer	Franz Holzinger <kontakt@fholzinger.com> 
+ * @author	Franz Holzinger <franz@ttproducts.de>
+ * @maintainer	Franz Holzinger <franz@ttproducts.de>
  * @package TYPO3
  * @subpackage sr_email_subsribe
  *
@@ -40,26 +40,9 @@
  */
 
 
-class tx_sremailsubscribe_hooks_cms {
+class tx_sremailsubscribe_hooks_cms extends tx_div2007_hooks_cms {
+	public $extKey = SR_EMAIL_SUBSCRIBE_EXTkey;
 
-	/**
-	 * Draw the item in the page module
-	 *
-	 * @param	array		parameters
-	 * @param	object		the parent object
-	 * @return	  string
-	 */
-
-	function pmDrawItem(&$params, &$pObj)	{
-		$bPhp5 = version_compare(phpversion(), '5.0.0', '>=');
-		if ($bPhp5 && defined ('PATH_BE_div2007') && $pObj->pageRecord['doktype'] == 1 && $params['row']['pi_flexform'])	{
-			include_once (PATH_BE_div2007.'class.tx_div2007_ff.php');
-
-			tx_div2007_ff::load($params['row']['pi_flexform'],SR_EMAIL_SUBSCRIBE_EXTkey);
-			$codes = 'CODE: '.tx_div2007_ff::get(SR_EMAIL_SUBSCRIBE_EXTkey, 'display_mode');
-		}
-		return $codes;
-	}
 }
 
 
