@@ -25,9 +25,6 @@ if (!defined ('FH_LIBRARY_EXTkey')) {
 	define('FH_LIBRARY_EXTkey','fh_library');
 }
 
-if (!defined ('DIV2007_EXTkey')) {
-	define('DIV2007_EXTkey','div2007');
-}
 
 if (!defined ('TT_ADDRESS_EXTkey')) {
 	define('TT_ADDRESS_EXTkey','tt_address');
@@ -42,8 +39,6 @@ if (!defined ('PARTY_EXTkey')) {
 }
 
 
-$bPhp5 = version_compare(phpversion(), '5.2.0', '>=');
-
 t3lib_extMgm::addPItoST43(SR_EMAIL_SUBSCRIBE_EXTkey, 'pi1/class.tx_sremailsubscribe_pi1.php', '_pi1', 'list_type', 0);
 
 $_EXTCONF = unserialize($_EXTCONF);    // unserializing the configuration so we can use it here:
@@ -56,11 +51,6 @@ require_once(t3lib_extMgm::extPath($_EXTKEY) . 'ext_emconf.php');
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['version'] = $EM_CONF[SR_EMAIL_SUBSCRIBE_EXTkey]['version'];
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['constraints'] = $EM_CONF[SR_EMAIL_SUBSCRIBE_EXTkey]['constraints'];
 
-if (t3lib_extMgm::isLoaded(DIV2007_EXTkey)) {
-	if (!defined ('PATH_BE_div2007')) {
-		define('PATH_BE_div2007', t3lib_extMgm::extPath(DIV2007_EXTkey));
-	}
-}
 	// Captcha hooks
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['tx_sremailsubscribe_pi1']['registrationProcess'][] = 'EXT:' . SR_FEUSER_REGISTER_EXTkey . '/hooks/captcha/class.tx_srfeuserregister_captcha.php:&tx_srfeuserregister_captcha';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['tx_sremailsubscribe_pi1']['model'][] = 'EXT:' . SR_FEUSER_REGISTER_EXTkey . '/hooks/captcha/class.tx_srfeuserregister_captcha.php:&tx_srfeuserregister_captcha';
@@ -83,11 +73,6 @@ if (!$addressTable) {
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'] = $addressTable;
 
 if (TYPO3_MODE == 'BE')	{
-
-	if (defined('PATH_BE_div2007')) {
-		// replace the output of the former CODE field with the flexform
-		$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['list_type_Info'][SR_EMAIL_SUBSCRIBE_EXTkey . '_pi1'][] = 'EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/hooks/class.tx_sremailsubscribe_hooks_cms.php:&tx_sremailsubscribe_hooks_cms->pmDrawItem';
-	}
 
 	if (
 		!defined($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['fe_users']['MENU'])

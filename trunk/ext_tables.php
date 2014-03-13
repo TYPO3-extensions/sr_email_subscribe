@@ -2,9 +2,13 @@
 
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
+$typo3Version = t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version);
+
 t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/css_styled/', 'Email Address Subscription CSS-styled');
 
-t3lib_div::loadTCA('tt_content');
+if ($typo3Version < 6001000) {
+	t3lib_div::loadTCA('tt_content');
+}
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='layout,select_key';
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='pi_flexform';
 t3lib_extMgm::addPiFlexFormValue(SR_EMAIL_SUBSCRIBE_EXTkey . '_pi1', 'FILE:EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/pi1/flexform_ds_pi1.xml');
@@ -18,7 +22,9 @@ if ($addressTable == 'tt_address') {
 	* Setting up country, country subdivision, preferred language in tt_address table
 	* Adjusting some maximum lengths to the values as corresponding fields in fe_users as set by extension sr_feuser_register
 	*/
-	t3lib_div::loadTCA('tt_address');
+	if ($typo3Version < 6001000) {
+		t3lib_div::loadTCA('tt_address');
+	}
 
 	if (
 		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['useImageFolder'] &&
