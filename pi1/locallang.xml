@@ -176,7 +176,7 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_confirmed_subject_informal">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_confirmed_message1">Your subscription has been confirmed.</label>
 			<label index="v_registration_confirmed_message1_informal">Your subscription has been confirmed.</label>
-			<label index="v_registration_confirmed">%3$s confirmed his(her) subscription to %1$s.</label>
+			<label index="v_registration_confirmed">%2$s confirmed his(her) subscription to %1$s.</label>
 			<label index="v_registration_confirmed_informal">%2$s confirmed his(her) subscription to %1$s.</label>
 			<label index="v_registration_cancelled_message1">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</label>
 			<label index="v_registration_cancelled_message1_informal">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</label>
@@ -211,7 +211,7 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_deleted_message2">Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
 			<label index="v_registration_deleted_message2_informal">Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
 			<label index="v_registration_deleted">%2$s terminated his(her) subscription to %1$s.</label>
-			<label index="v_registration_deleted">%2$s terminated his(her) subscription to %1$s.</label>
+			<label index="v_registration_deleted_informal">%2$s terminated his(her) subscription to %1$s.</label>
 			<label index="unsupported">unsupported</label>
 			<label index="internal_required_extension_missing">Required extension "%1$s" is not available and must be installed</label>
 			<label index="internal_check_requirements_frontend">&lt;p&gt;&lt;big&gt;&lt;b&gt;Email Address Subscription (sr_email_subscribe): %1$s.&lt;/b&gt;&lt;/big&gt;&lt;/p&gt;</label>
