@@ -3,6 +3,7 @@
 	* Update manual
 	* Remove dependency on div2007
 	* Add missing labels in locallang.php
+	* Update version to 2.1.0
 
 2012-10-24 Franz Holzinger  <franz@ttproducts.de>
 	* reduce the CMS hook to be based on div2007

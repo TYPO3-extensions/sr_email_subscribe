@@ -1,21 +1,21 @@
 <?php
 
-########################################################################
-# Extension Manager/Repository config file for ext "sr_email_subscribe".
-#
-# Auto generated 28-04-2012 11:27
-#
-# Manual updates:
-# Only the data in the array - everything else is removed by next
-# writing. "version" and "dependencies" must not be touched!
-########################################################################
+/***************************************************************
+ * Extension Manager/Repository config file for ext "sr_email_subscribe".
+ *
+ * Auto generated 14-03-2014 00:20
+ *
+ * Manual updates:
+ * Only the data in the array - everything else is removed by next
+ * writing. "version" and "dependencies" must not be touched!
+ ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = array (
 	'title' => 'Email Address Subscription',
 	'description' => 'An email newsletter and address subscription variant of the Front End User Registration.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '2.0.0',
+	'version' => '2.1.0',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
@@ -31,20 +31,24 @@ $EM_CONF[$_EXTKEY] = array(
 	'author_company' => 'SJBR',
 	'CGLcompliance' => '',
 	'CGLcompliance_note' => '',
-	'constraints' => array(
-		'depends' => array(
+	'constraints' => 
+	array (
+		'depends' => 
+		array (
 			'php' => '5.3.0-0.0.0',
 			'typo3' => '4.5.0-6.2.99',
 			'sr_feuser_register' => '3.1.0-',
 			'tt_address' => '2.2.0-',
-			'static_info_tables' => '2.3.0-'
+			'static_info_tables' => '2.3.0-',
 		),
-		'conflicts' => array(
+		'conflicts' => 
+		array (
 			'germandates' => '0.0.0-1.0.1',
 			'rlmp_language_detection' => '0.0.0-1.2.99',
 			'patch1822' => '',
 		),
-		'suggests' => array(
+		'suggests' => 
+		array (
 			'sr_freecap' => '1.5.3-',
 		),
 	),
