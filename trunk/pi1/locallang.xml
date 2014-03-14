@@ -124,6 +124,13 @@
 			<label index="v_verify_before_update_informal">Please verify that all the information is correct before your subscription is updated.</label>
 			<label index="hello">Hi,</label>
 			<label index="hello_informal">Hi,</label>
+			<label index="v_dear">Dear %3$s,</label>
+			<label index="v_dear_informal">Hi %3$s,</label>
+			<label index="v_dear_male">Dear Mr. %3$s,</label>
+			<label index="v_dear_female">Dear Mrs. %3$s,</label>
+			<label index="v_infomail_dear">Dear madam/sir,</label>
+			<label index="v_infomail_dear_informal">Dear madam/sir,</label>
+			<label index="v_notification">Notification</label>
 			<label index="v_registration_created_subject">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_created_subject_informal">Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</label>
 			<label index="v_registration_created_message1">Your subscription has been created.</label>
@@ -178,6 +185,8 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<label index="v_registration_confirmed_message1_informal">Your subscription has been confirmed.</label>
 			<label index="v_registration_confirmed">%2$s confirmed his(her) subscription to %1$s.</label>
 			<label index="v_registration_confirmed_informal">%2$s confirmed his(her) subscription to %1$s.</label>
+			<label index="v_registration_cancelled_subject">Your subscription has been cancelled.</label>
+			<label index="v_registration_cancelled_subject_informal">Your subscription has been cancelled.</label>
 			<label index="v_registration_cancelled_message1">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</label>
 			<label index="v_registration_cancelled_message1_informal">Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</label>
 			<label index="v_registration_cancelled_message2">Your subscription and address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</label>
