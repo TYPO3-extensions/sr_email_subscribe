@@ -1,5 +1,5 @@
 <?php
-if (!defined('TYPO3_MODE')) die('Access denied.');
+defined('TYPO3_MODE') or die();
 
 if (!defined ('SR_EMAIL_SUBSCRIBE_EXTkey')) {
 	define('SR_EMAIL_SUBSCRIBE_EXTkey', $_EXTKEY);
@@ -21,22 +21,6 @@ if (!defined ('SR_FEUSER_REGISTER_EXTkey')) {
 	define('SR_FEUSER_REGISTER_EXTkey','sr_feuser_register');
 }
 
-if (!defined ('FH_LIBRARY_EXTkey')) {
-	define('FH_LIBRARY_EXTkey','fh_library');
-}
-
-
-if (!defined ('TT_ADDRESS_EXTkey')) {
-	define('TT_ADDRESS_EXTkey','tt_address');
-}
-
-if (!defined ('PARTNER_EXTkey')) {
-	define('PARTNER_EXTkey','partner');
-}
-
-if (!defined ('PARTY_EXTkey')) {
-	define('PARTY_EXTkey','tx_party');
-}
 
 
 t3lib_extMgm::addPItoST43(SR_EMAIL_SUBSCRIBE_EXTkey, 'pi1/class.tx_sremailsubscribe_pi1.php', '_pi1', 'list_type', 0);
@@ -60,19 +44,11 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['tx_sremailsub
 
 $addressTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'];
 if (!$addressTable) {
-	if (t3lib_extMgm::isLoaded(PARTY_EXTkey)) {
-		$addressTable = 'tx_wecpeople_addresses';
-	} else if (t3lib_extMgm::isLoaded(PARTNER_EXTkey)) {
-		$addressTable = 'tx_partner_main';
-	} else if (t3lib_extMgm::isLoaded(TT_ADDRESS_EXTkey)) {
-		$addressTable = 'tt_address';
-	} else {
-		$addressTable = 'fe_users';
-	}
+	$addressTable = 'tt_address';
 }
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'] = $addressTable;
 
-if (TYPO3_MODE == 'BE')	{
+if (TYPO3_MODE === 'BE') {
 
 	if (
 		!defined($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['fe_users']['MENU'])
@@ -102,12 +78,3 @@ if (TYPO3_MODE == 'BE')	{
 		);
 	}
 }
-
-if (TYPO3_MODE == 'FE') {
-	if (t3lib_extMgm::isLoaded('tt_products')) {
-		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['tt_products']['extendingTCA'][] = SR_EMAIL_SUBSCRIBE_EXTkey;
-	}
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_feuser_register']['extendingTCA'][] = SR_EMAIL_SUBSCRIBE_EXTkey;
-}
-
-?>
