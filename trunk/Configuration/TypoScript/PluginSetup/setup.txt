@@ -1,9 +1,3 @@
-##
-## @package TYPO3
-## @subpackage sr_email_subscribe
-## @version $Id$
-##
-
 plugin.tx_sremailsubscribe_pi1 = USER_INT
 plugin.tx_sremailsubscribe_pi1 {
 
