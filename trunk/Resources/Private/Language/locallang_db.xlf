@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-10-15T03:39:47Z" product-name="sr_email_subscribe">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.email_subscribe" xml:space="preserve">
+				<source>Subscription with email address</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.display_mode" xml:space="preserve">
+				<source>Display mode</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.display_mode.1" xml:space="preserve">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.display_mode.3" xml:space="preserve">
+				<source>Create</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.display_mode.5" xml:space="preserve">
+				<source>Invite</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.display_mode.7" xml:space="preserve">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="tt_address.static_info_country" xml:space="preserve">
+				<source>Country code:</source>
+			</trans-unit>
+			<trans-unit id="tt_address.zone" xml:space="preserve">
+				<source>State/province:</source>
+			</trans-unit>
+			<trans-unit id="tt_address.language" xml:space="preserve">
+				<source>Language:</source>
+			</trans-unit>
+			<trans-unit id="tt_address.first_name" xml:space="preserve">
+				<source>First Name:</source>
+			</trans-unit>
+			<trans-unit id="tt_address.last_name" xml:space="preserve">
+				<source>Last Name:</source>
+			</trans-unit>
+			<trans-unit id="tt_address.module_sys_dmail_html" xml:space="preserve">
+				<source>Receive emails in HTML format?</source>
+			</trans-unit>
+			<trans-unit id="tt_address.date_of_birth" xml:space="preserve">
+				<source>Date of birth:</source>
+			</trans-unit>
+			<trans-unit id="tt_address.comments" xml:space="preserve">
+				<source>Comments:</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

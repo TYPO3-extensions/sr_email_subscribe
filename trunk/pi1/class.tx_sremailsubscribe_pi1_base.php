@@ -3,7 +3,7 @@
 *  Copyright notice
 *
 *  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
-*  (c) 2004-2012 Stanislas Rolland <typo3(arobas)sjbr.ca>
+*  (c) 2004-2015 Stanislas Rolland <typo3(arobas)sjbr.ca>
 *  All rights reserved
 *
 *  This script is part of the Typo3 project. The Typo3 project is
@@ -104,9 +104,9 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 			$requiredExtensions = array_diff(array_keys($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends']), array('php', 'typo3'));
 			foreach ($requiredExtensions as $requiredExtension) {
 				if (!t3lib_extMgm::isLoaded($requiredExtension)) {
-					$message = sprintf($GLOBALS['TSFE']->sL('LLL:EXT:' . $this->extKey . '/pi1/locallang.xml:internal_required_extension_missing'), $requiredExtension);
+					$message = sprintf($GLOBALS['TSFE']->sL('LLL:EXT:' . $this->extKey . '/Resources/Private/Language/locallang.xlf:internal_required_extension_missing'), $requiredExtension);
 					t3lib_div::sysLog($message, $this->extKey, t3lib_div::SYSLOG_SEVERITY_ERROR);
-					$content .= sprintf($GLOBALS['TSFE']->sL('LLL:EXT:' . $this->extKey . '/pi1/locallang.xml:internal_check_requirements_frontend'), $message);
+					$content .= sprintf($GLOBALS['TSFE']->sL('LLL:EXT:' . $this->extKey . '/Resources/Private/Language/locallang.xlf:internal_check_requirements_frontend'), $message);
 				}
 			}
 		}
