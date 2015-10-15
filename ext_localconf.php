@@ -80,7 +80,7 @@ if (TYPO3_MODE == 'BE')	{
 	) {
 		$tableArray = array($addressTable);
 		foreach ($tableArray as $theTable)	{
-			$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['LLFile'][$theTable] = 'EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/locallang.xml';
+			$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['LLFile'][$theTable] = 'EXT:sr_email_subscribe/Resources/Private/Language/locallang.xlf';
 		}
 
 		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables'][$addressTable] = array (

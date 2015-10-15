@@ -2,7 +2,8 @@
 
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
-$typo3Version = t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version);
+
+$typo3Version = \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version);
 
 t3lib_extMgm::addStaticFile(SR_EMAIL_SUBSCRIBE_EXTkey, 'static/css_styled/', 'Email Address Subscription CSS-styled');
 
@@ -13,7 +14,7 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][SR_EMAIL_
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][SR_EMAIL_SUBSCRIBE_EXTkey.'_pi1']='pi_flexform';
 t3lib_extMgm::addPiFlexFormValue(SR_EMAIL_SUBSCRIBE_EXTkey . '_pi1', 'FILE:EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/pi1/flexform_ds_pi1.xml');
 
-t3lib_extMgm::addPlugin(Array('LLL:EXT:' . SR_EMAIL_SUBSCRIBE_EXTkey . '/locallang_db.xml:tt_content.email_subscribe', SR_EMAIL_SUBSCRIBE_EXTkey . '_pi1'),'list_type');
+t3lib_extMgm::addPlugin(Array('LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_content.email_subscribe', SR_EMAIL_SUBSCRIBE_EXTkey . '_pi1'),'list_type');
 
 $addressTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'];
 if ($addressTable == 'tt_address') {
@@ -36,7 +37,7 @@ if ($addressTable == 'tt_address') {
 	t3lib_extMgm::addTCAcolumns('tt_address', Array(
 		'static_info_country' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.static_info_country',
+			'label' => 'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.static_info_country',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '5',
@@ -47,7 +48,7 @@ if ($addressTable == 'tt_address') {
 		),
 		'zone' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.zone',
+			'label' => 'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.zone',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '20',
@@ -58,7 +59,7 @@ if ($addressTable == 'tt_address') {
 		),
 		'language' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.language',
+			'label' => 'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.language',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '4',
@@ -69,7 +70,7 @@ if ($addressTable == 'tt_address') {
 		),
 		'date_of_birth' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.date_of_birth',
+			'label' => 'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.date_of_birth',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -81,7 +82,7 @@ if ($addressTable == 'tt_address') {
 		),
 		'comments' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:sr_email_subscribe/locallang_db.xml:tt_address.comments',
+			'label' => 'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.comments',
 			'config' => Array (
 				'type' => 'text',
 				'rows' => '5',
@@ -108,7 +109,7 @@ if ($addressTable == 'tt_address') {
 	if (!t3lib_extMgm::isLoaded('direct_mail')) {
 		$tempCols = Array(
 			'module_sys_dmail_html' => Array(
-				'label'=>'LLL:EXT:'.$_EXTKEY.'/locallang_db.xml:tt_address.module_sys_dmail_html',
+				'label'=>'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.module_sys_dmail_html',
 				'exclude' => '1',
 				'config'=>Array(
 					'type'=>'check'

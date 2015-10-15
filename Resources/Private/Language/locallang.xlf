@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-10-15T03:39:38Z" product-name="sr_email_subscribe">
+		<header/>
+		<body>
+			<trans-unit id="fe_user_register" xml:space="preserve">
+				<source>Subscription by email address</source>
+			</trans-unit>
+			<trans-unit id="m_default" xml:space="preserve">
+				<source>default</source>
+			</trans-unit>
+			<trans-unit id="m_ext" xml:space="preserve">
+				<source>extended</source>
+			</trans-unit>
+			<trans-unit id="m_company" xml:space="preserve">
+				<source>company</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_name_informal" xml:space="preserve">
+				<source>Please enter a name!</source>
+			</trans-unit>
+			<trans-unit id="first_name_informal" xml:space="preserve">
+				<source>First name</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_first_name_informal" xml:space="preserve">
+				<source>Please enter a first name!</source>
+			</trans-unit>
+			<trans-unit id="middle_name_informal" xml:space="preserve">
+				<source>Middle name</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_middle_name_informal" xml:space="preserve">
+				<source>Please enter a middle name!</source>
+			</trans-unit>
+			<trans-unit id="last_name_informal" xml:space="preserve">
+				<source>Last name</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_last_name_informal" xml:space="preserve">
+				<source>Please enter a surname!</source>
+			</trans-unit>
+			<trans-unit id="date_of_birth_informal" xml:space="preserve">
+				<source>Date of birth (dd-mm-yyyy)</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_date_of_birth_informal" xml:space="preserve">
+				<source>Please enter a date of birth!</source>
+			</trans-unit>
+			<trans-unit id="address_informal" xml:space="preserve">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_address_informal" xml:space="preserve">
+				<source>Please enter an address!</source>
+			</trans-unit>
+			<trans-unit id="city_informal" xml:space="preserve">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_city_informal" xml:space="preserve">
+				<source>Please enter the name of a city!</source>
+			</trans-unit>
+			<trans-unit id="zone_informal" xml:space="preserve">
+				<source>State/province</source>
+			</trans-unit>
+			<trans-unit id="tooltip_zone" xml:space="preserve">
+				<source>Select your County or Province in this list.</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_zone_informal" xml:space="preserve">
+				<source>Please select a state or province!</source>
+			</trans-unit>
+			<trans-unit id="zip_informal" xml:space="preserve">
+				<source>Postal code</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_zip_informal" xml:space="preserve">
+				<source>Please enter a zip!</source>
+			</trans-unit>
+			<trans-unit id="static_info_country_informal" xml:space="preserve">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_static_info_country_informal" xml:space="preserve">
+				<source>Please select a country!</source>
+			</trans-unit>
+			<trans-unit id="mobile" xml:space="preserve">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="mobile_informal" xml:space="preserve">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="tooltip_mobile" xml:space="preserve">
+				<source>Enter your mobile number.</source>
+			</trans-unit>
+			<trans-unit id="tooltip_mobile_informal" xml:space="preserve">
+				<source>Enter your mobile number.</source>
+			</trans-unit>
+			<trans-unit id="tooltip_invitation_mobile" xml:space="preserve">
+				<source>Enter the mobile number of the invited person.</source>
+			</trans-unit>
+			<trans-unit id="missing_mobile" xml:space="preserve">
+				<source>Please enter your mobile number!</source>
+			</trans-unit>
+			<trans-unit id="missing_mobile_informal" xml:space="preserve">
+				<source>Please enter your mobile number!</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_mobile" xml:space="preserve">
+				<source>Please enter a mobile number!</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_mobile_informal" xml:space="preserve">
+				<source>Please enter a mobile number!</source>
+			</trans-unit>
+			<trans-unit id="phone" xml:space="preserve">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="phone_informal" xml:space="preserve">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="tooltip_phone" xml:space="preserve">
+				<source>Enter your phone number.</source>
+			</trans-unit>
+			<trans-unit id="tooltip_phone_informal" xml:space="preserve">
+				<source>Enter your phone number.</source>
+			</trans-unit>
+			<trans-unit id="tooltip_invitation_phone" xml:space="preserve">
+				<source>Enter the phone number of the invited person.</source>
+			</trans-unit>
+			<trans-unit id="missing_phone" xml:space="preserve">
+				<source>Please enter your phone number!</source>
+			</trans-unit>
+			<trans-unit id="missing_phone_informal" xml:space="preserve">
+				<source>Please enter your phone number!</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_phone" xml:space="preserve">
+				<source>Please enter a phone number!</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_phone_informal" xml:space="preserve">
+				<source>Please enter a phone number!</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_fax_informal" xml:space="preserve">
+				<source>Please enter a fax number!</source>
+			</trans-unit>
+			<trans-unit id="email_informal" xml:space="preserve">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="missing_email" xml:space="preserve">
+				<source>A valid email is required.</source>
+			</trans-unit>
+			<trans-unit id="missing_email_informal" xml:space="preserve">
+				<source>A valid email is required.</source>
+			</trans-unit>
+			<trans-unit id="evalErrors_uniqueLocal_email" xml:space="preserve">
+				<source>This email already existed.</source>
+			</trans-unit>
+			<trans-unit id="evalErrors_uniqueLocal_email_informal" xml:space="preserve">
+				<source>This email already existed.</source>
+			</trans-unit>
+			<trans-unit id="module_sys_dmail_html_informal" xml:space="preserve">
+				<source>Receive HTML emails?</source>
+			</trans-unit>
+			<trans-unit id="yes" xml:space="preserve">
+				<source>Yes</source>
+			</trans-unit>
+			<trans-unit id="no" xml:space="preserve">
+				<source>No</source>
+			</trans-unit>
+			<trans-unit id="language_informal" xml:space="preserve">
+				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_language_informal" xml:space="preserve">
+				<source>Please select a preferred language!</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_title_informal" xml:space="preserve">
+				<source>Please enter a title!</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_company_informal" xml:space="preserve">
+				<source>Please enter the name of a company!</source>
+			</trans-unit>
+			<trans-unit id="www_informal" xml:space="preserve">
+				<source>Homepage</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_www_informal" xml:space="preserve">
+				<source>Please enter a homepage address!</source>
+			</trans-unit>
+			<trans-unit id="evalErrors_wwwURL_www_informal" xml:space="preserve">
+				<source>According to our verifications, the homepage address you entered is not valid. Perhaps it was not entered correctly?</source>
+			</trans-unit>
+			<trans-unit id="missing_invitation_image_informal" xml:space="preserve">
+				<source>Please enter a photograph!</source>
+			</trans-unit>
+			<trans-unit id="comments" xml:space="preserve">
+				<source>Any comments?</source>
+			</trans-unit>
+			<trans-unit id="comments_informal" xml:space="preserve">
+				<source>Any comments?</source>
+			</trans-unit>
+			<trans-unit id="tooltip_comments" xml:space="preserve">
+				<source>Enter your comments.</source>
+			</trans-unit>
+			<trans-unit id="tooltip_comments_informal" xml:space="preserve">
+				<source>Enter your comments.</source>
+			</trans-unit>
+			<trans-unit id="missing_comments" xml:space="preserve">
+				<source>Please enter your comments!</source>
+			</trans-unit>
+			<trans-unit id="missing_comments_informal" xml:space="preserve">
+				<source>Please enter your comments!</source>
+			</trans-unit>
+			<trans-unit id="evalErrors_allowed_image_informal" xml:space="preserve">
+				<source>The file extension %s is not allowed.</source>
+			</trans-unit>
+			<trans-unit id="evalErrors_max_size_image_informal" xml:space="preserve">
+				<source>The file size should not exceed %s KB.</source>
+			</trans-unit>
+			<trans-unit id="button_register" xml:space="preserve">
+				<source>Subscribe</source>
+			</trans-unit>
+			<trans-unit id="button_register_informal" xml:space="preserve">
+				<source>Subscribe</source>
+			</trans-unit>
+			<trans-unit id="button_confirm_register" xml:space="preserve">
+				<source>Subscribe now!</source>
+			</trans-unit>
+			<trans-unit id="button_confirm_register_informal" xml:space="preserve">
+				<source>Subscribe now!</source>
+			</trans-unit>
+			<trans-unit id="button_send_invitation" xml:space="preserve">
+				<source>Send invitation</source>
+			</trans-unit>
+			<trans-unit id="button_send_invitation_informal" xml:space="preserve">
+				<source>Send invitation</source>
+			</trans-unit>
+			<trans-unit id="button_send_invitation_now" xml:space="preserve">
+				<source>Send invitation now!</source>
+			</trans-unit>
+			<trans-unit id="button_send_invitation_now_informal" xml:space="preserve">
+				<source>Send invitation now!</source>
+			</trans-unit>
+			<trans-unit id="button_send_link" xml:space="preserve">
+				<source>Send message now!</source>
+			</trans-unit>
+			<trans-unit id="button_send_link_informal" xml:space="preserve">
+				<source>Send message now!</source>
+			</trans-unit>
+			<trans-unit id="button_back_to_form" xml:space="preserve">
+				<source>Back to form</source>
+			</trans-unit>
+			<trans-unit id="button_back_to_form_informal" xml:space="preserve">
+				<source>Back to form</source>
+			</trans-unit>
+			<trans-unit id="button_update" xml:space="preserve">
+				<source>Update profile</source>
+			</trans-unit>
+			<trans-unit id="button_update_informal" xml:space="preserve">
+				<source>Update profile</source>
+			</trans-unit>
+			<trans-unit id="button_confirm_update" xml:space="preserve">
+				<source>Update profile now!</source>
+			</trans-unit>
+			<trans-unit id="button_confirm_update_informal" xml:space="preserve">
+				<source>Update profile now!</source>
+			</trans-unit>
+			<trans-unit id="button_enter" xml:space="preserve">
+				<source>Enter</source>
+			</trans-unit>
+			<trans-unit id="button_enter_informal" xml:space="preserve">
+				<source>Enter</source>
+			</trans-unit>
+			<trans-unit id="button_confirm_delete" xml:space="preserve">
+				<source>Yes, terminate subscription</source>
+			</trans-unit>
+			<trans-unit id="button_confirm_delete_informal" xml:space="preserve">
+				<source>Yes, terminate subscription</source>
+			</trans-unit>
+			<trans-unit id="button_cancel_delete" xml:space="preserve">
+				<source>No, cancel</source>
+			</trans-unit>
+			<trans-unit id="button_cancel_delete_informal" xml:space="preserve">
+				<source>No, cancel</source>
+			</trans-unit>
+			<trans-unit id="v_already_subscribed" xml:space="preserve">
+				<source>You have already subscribed to &lt;b&gt;%1$s&lt;/b&gt; and wish to update or terminate your subscription?</source>
+			</trans-unit>
+			<trans-unit id="click_here_to_edit" xml:space="preserve">
+				<source>Click here!</source>
+			</trans-unit>
+			<trans-unit id="click_here_to_edit_informal" xml:space="preserve">
+				<source>Click here!</source>
+			</trans-unit>
+			<trans-unit id="tooltip_click_here_to_edit" xml:space="preserve">
+				<source>Opens a dialog that will allow you edit or delete your subscription.</source>
+			</trans-unit>
+			<trans-unit id="v_wish_to_update_or_delete" xml:space="preserve">
+				<source>Do you wish to update or terminate your subscription?</source>
+			</trans-unit>
+			<trans-unit id="v_wish_to_update_or_delete_informal" xml:space="preserve">
+				<source>Do you wish to update or terminate your subscription?</source>
+			</trans-unit>
+			<trans-unit id="v_enter_subscribed_email" xml:space="preserve">
+				<source>Enter the email address by which you originally subscribed and we will send to your mailbox links to the update and termination pages of your subscription</source>
+			</trans-unit>
+			<trans-unit id="v_enter_subscribed_email_informal" xml:space="preserve">
+				<source>Enter the email address by which you originally subscribed and we will send to your mailbox links to the update and termination pages of your subscription</source>
+			</trans-unit>
+			<trans-unit id="click_here_to_delete" xml:space="preserve">
+				<source>Click here to terminate your subscription!</source>
+			</trans-unit>
+			<trans-unit id="click_here_to_delete_informal" xml:space="preserve">
+				<source>Click here to terminate your subscription!</source>
+			</trans-unit>
+			<trans-unit id="tooltip_click_here_to_delete" xml:space="preserve">
+				<source>Opens a dialog that will allow you delete your subscription.</source>
+			</trans-unit>
+			<trans-unit id="enter_account_info" xml:space="preserve">
+				<source>Please fill in the information of your subscription.</source>
+			</trans-unit>
+			<trans-unit id="enter_account_info_informal" xml:space="preserve">
+				<source>Please fill in the information of your subscription.</source>
+			</trans-unit>
+			<trans-unit id="enter_invitation_account_info" xml:space="preserve">
+				<source>Please fill in the information of the subscription of the invited person.</source>
+			</trans-unit>
+			<trans-unit id="enter_invitation_account_info_informal" xml:space="preserve">
+				<source>Please fill in the information of the subscription of the invited person.</source>
+			</trans-unit>
+			<trans-unit id="required_info_notice_informal" xml:space="preserve">
+				<source>Notice: Fields with * must be filled in!</source>
+			</trans-unit>
+			<trans-unit id="excuse_us_invitation" xml:space="preserve">
+				<source>Please excuse us. We apologize for any inconvenience we may have caused you.</source>
+			</trans-unit>
+			<trans-unit id="registration_clicked_twice" xml:space="preserve">
+				<source>Perhaps you clicked twice on the link?</source>
+			</trans-unit>
+			<trans-unit id="v_really_wish_to_delete" xml:space="preserve">
+				<source>Do you really wish to terminate your subscription?</source>
+			</trans-unit>
+			<trans-unit id="v_really_wish_to_delete_informal" xml:space="preserve">
+				<source>Do you really wish to terminate your subscription?</source>
+			</trans-unit>
+			<trans-unit id="v_verify_before_create" xml:space="preserve">
+				<source>Please verify that all the information is correct before your subscription is created.</source>
+			</trans-unit>
+			<trans-unit id="v_verify_before_create_informal" xml:space="preserve">
+				<source>Please verify that all the information is correct before your subscription is created.</source>
+			</trans-unit>
+			<trans-unit id="v_verify_invitation_before_create" xml:space="preserve">
+				<source>Please verify that all the data of &lt;b&gt;%4$s&lt;/b&gt; is correct before the subscription is created.</source>
+			</trans-unit>
+			<trans-unit id="v_verify_invitation_before_create_informal" xml:space="preserve">
+				<source>Please verify that all the data of &lt;b&gt;%4$s&lt;/b&gt; is correct before the subscription is created.</source>
+			</trans-unit>
+			<trans-unit id="v_edit_your_account" xml:space="preserve">
+				<source>Edit the information of your subscription.</source>
+			</trans-unit>
+			<trans-unit id="v_edit_your_account_informal" xml:space="preserve">
+				<source>Edit the information of your subscription.</source>
+			</trans-unit>
+			<trans-unit id="v_verify_before_update" xml:space="preserve">
+				<source>Please verify that all the information is correct before your subscription is updated.</source>
+			</trans-unit>
+			<trans-unit id="v_verify_before_update_informal" xml:space="preserve">
+				<source>Please verify that all the information is correct before your subscription is updated.</source>
+			</trans-unit>
+			<trans-unit id="hello" xml:space="preserve">
+				<source>Hi,</source>
+			</trans-unit>
+			<trans-unit id="hello_informal" xml:space="preserve">
+				<source>Hi,</source>
+			</trans-unit>
+			<trans-unit id="v_dear" xml:space="preserve">
+				<source>Dear %3$s,</source>
+			</trans-unit>
+			<trans-unit id="v_dear_informal" xml:space="preserve">
+				<source>Hi %3$s,</source>
+			</trans-unit>
+			<trans-unit id="v_dear_male" xml:space="preserve">
+				<source>Dear Mr. %3$s,</source>
+			</trans-unit>
+			<trans-unit id="v_dear_female" xml:space="preserve">
+				<source>Dear Mrs. %3$s,</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_dear" xml:space="preserve">
+				<source>Dear madam/sir,</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_dear_informal" xml:space="preserve">
+				<source>Dear madam/sir,</source>
+			</trans-unit>
+			<trans-unit id="v_notification" xml:space="preserve">
+				<source>Notification</source>
+			</trans-unit>
+			<trans-unit id="v_registration_created_subject" xml:space="preserve">
+				<source>Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_created_subject_informal" xml:space="preserve">
+				<source>Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_created_message1" xml:space="preserve">
+				<source>Your subscription has been created.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_created_message1_informal" xml:space="preserve">
+				<source>Your subscription has been created.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_created_informal" xml:space="preserve">
+				<source>%2$s subscribed to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_updated_subject" xml:space="preserve">
+				<source>Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been updated.</source>
+			</trans-unit>
+			<trans-unit id="v_invitation_account_was_created" xml:space="preserve">
+				<source>The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%2$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_invitation_account_was_created_informal" xml:space="preserve">
+				<source>The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%2$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_invitation_instructions1" xml:space="preserve">
+				<source>You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. Please follow the instructions given in the confirmation message in order to complete the registration procedure.</source>
+			</trans-unit>
+			<trans-unit id="v_invitation_instructions1_informal" xml:space="preserve">
+				<source>You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. Please follow the instructions given in the confirmation message in order to complete the registration procedure.</source>
+			</trans-unit>
+			<trans-unit id="v_your_account_was_created" xml:space="preserve">
+				<source>Your subscription was created. We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_your_account_was_created_informal" xml:space="preserve">
+				<source>Your subscription was created. We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_follow_instructions1" xml:space="preserve">
+				<source>In order to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt;, the invited person will have to follow the instructions given in the invitation message.</source>
+			</trans-unit>
+			<trans-unit id="v_follow_instructions1_informal" xml:space="preserve">
+				<source>In order to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt;, the invited person will have to follow the instructions given in the invitation message.</source>
+			</trans-unit>
+			<trans-unit id="v_follow_instructions_review1" xml:space="preserve">
+				<source>In order to confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, you will have to follow the instructions given in the invitation message.</source>
+			</trans-unit>
+			<trans-unit id="v_follow_instructions_review1_informal" xml:space="preserve">
+				<source>In order to confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, you will have to follow the instructions given in the invitation message.</source>
+			</trans-unit>
+			<trans-unit id="v_follow_instructions_review2" xml:space="preserve">
+				<source>Please be aware that after you confirm your subscription, it will need to be reviewed by the administrator before you gain access to the section &lt;b&gt;%1$s&lt;/b&gt; of our website.</source>
+			</trans-unit>
+			<trans-unit id="v_follow_instructions_review2_informal" xml:space="preserve">
+				<source>Please be aware that after you confirm your subscription, it will need to be reviewed by the administrator before you gain access to the section &lt;b&gt;%1$s&lt;/b&gt; of our website.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_initiated_subject" xml:space="preserve">
+				<source>Please confirm your susbcription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_initiated_subject_informal" xml:space="preserve">
+				<source>Please confirm your susbcription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_initiated_message1" xml:space="preserve">
+				<source>We are sending you this message to confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. To confirm your subscription, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_initiated_message1_informal" xml:space="preserve">
+				<source>We are sending you this message to confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. To confirm your subscription, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_initiated_message2" xml:space="preserve">
+				<source>You are receiving this message because we wish to ensure that the email address is correct and also that no one may subscribe with an address other than his(her) own. If for some reason you have received this message without having subcribed, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_initiated_message2_informal" xml:space="preserve">
+				<source>You are receiving this message because we wish to ensure that the email address is correct and also that no one may subscribe with an address other than his(her) own. If for some reason you have received this message without having subcribed, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_initiated" xml:space="preserve">
+				<source>%2$s initiated his(her) subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_initiated_informal" xml:space="preserve">
+				<source>%2$s initiated his(her) subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_invited_subject" xml:space="preserve">
+				<source>Invitation to subscribe to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_invited_subject_informal" xml:space="preserve">
+				<source>Invitation to subscribe to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_invited_message1" xml:space="preserve">
+				<source>We thought you might be intered in subscribing to &lt;b&gt;%1$s&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+
+We have created a subscription account for you.&lt;br /&gt;&lt;br /&gt;
+
+We are sending you this message so that you may confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after confirming your subscription. You will also be able to change your subscription profile.&lt;br /&gt;&lt;br /&gt;
+
+If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_invited_message1_informal" xml:space="preserve">
+				<source>We thought you might be intered in subscribing to &lt;b&gt;%1$s&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+
+We have created a subscription account for you.&lt;br /&gt;&lt;br /&gt;
+
+We are sending you this message so that you may confirm that you wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;. You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after confirming your subscription. You will also be able to change your subscription profile.&lt;br /&gt;&lt;br /&gt;
+
+If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_invited_message2" xml:space="preserve">
+				<source>You will not receive this message twice. If you wish to decline our invitation and do not wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link or just ignore this message.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_invited_message2_informal" xml:space="preserve">
+				<source>You will not receive this message twice. If you wish to decline our invitation and do not wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link or just ignore this message.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_invited" xml:space="preserve">
+				<source>An invitation to subscribe to %1$s was sent to %2$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_invited_informal" xml:space="preserve">
+				<source>An invitation to subscribe to %1$s was sent to %2$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_infomail_message1" xml:space="preserve">
+				<source>Your account data is subscribed by the email &lt;b&gt;%4$s&lt;/b&gt; .&lt;br /&gt;&lt;br /&gt;</source>
+			</trans-unit>
+			<trans-unit id="v_registration_infomail_message1_informal" xml:space="preserve">
+				<source>Your account data is subscribed by the email &lt;b&gt;%4$s&lt;/b&gt; .&lt;br /&gt;&lt;br /&gt;</source>
+			</trans-unit>
+			<trans-unit id="v_registration_confirmed_subject" xml:space="preserve">
+				<source>Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_confirmed_subject_informal" xml:space="preserve">
+				<source>Thank you for subscribing to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_confirmed_message1" xml:space="preserve">
+				<source>Your subscription has been confirmed.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_confirmed_message1_informal" xml:space="preserve">
+				<source>Your subscription has been confirmed.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_confirmed" xml:space="preserve">
+				<source>%2$s confirmed his(her) subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_confirmed_informal" xml:space="preserve">
+				<source>%2$s confirmed his(her) subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_cancelled_subject" xml:space="preserve">
+				<source>Your subscription has been cancelled.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_cancelled_subject_informal" xml:space="preserve">
+				<source>Your subscription has been cancelled.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_cancelled_message1" xml:space="preserve">
+				<source>Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_cancelled_message1_informal" xml:space="preserve">
+				<source>Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been cancelled.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_cancelled_message2" xml:space="preserve">
+				<source>Your subscription and address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_cancelled_message2_informal" xml:space="preserve">
+				<source>Your subscription and address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_cancelled" xml:space="preserve">
+				<source>%2$s cancelled his(her) subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_cancelled_informal" xml:space="preserve">
+				<source>%2$s cancelled his(her) subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_sending_infomail" xml:space="preserve">
+				<source>We are sending you an email message at your email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_sending_infomail_informal" xml:space="preserve">
+				<source>We are sending you an email message at your email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_sending_infomail_message1" xml:space="preserve">
+				<source>The email message will contain two links that will allow you to either edit or terminate your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_sending_infomail_message1_informal" xml:space="preserve">
+				<source>The email message will contain two links that will allow you to either edit or terminate your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_sending_infomail_message2" xml:space="preserve">
+				<source>Please follow the instructions given in this email message to edit or to terminate your subscription.</source>
+			</trans-unit>
+			<trans-unit id="v_sending_infomail_message2_informal" xml:space="preserve">
+				<source>Please follow the instructions given in this email message to edit or to terminate your subscription.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_subject" xml:space="preserve">
+				<source>About your subscription to &lt;b&gt;%1$s&lt;/b&gt;</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_subject_informal" xml:space="preserve">
+				<source>About your subscription to &lt;b&gt;%1$s&lt;/b&gt;</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_reason" xml:space="preserve">
+				<source>You are receiving this message because you asked to edit or terminate your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_reason_informal" xml:space="preserve">
+				<source>You are receiving this message because you asked to edit or terminate your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_message1" xml:space="preserve">
+				<source>If you wish to edit your subscription, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_message1_informal" xml:space="preserve">
+				<source>If you wish to edit your subscription, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_message2" xml:space="preserve">
+				<source>If you wish to terminate your subscription, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_message2_informal" xml:space="preserve">
+				<source>If you wish to terminate your subscription, please follow this link.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_norecord_subject" xml:space="preserve">
+				<source>Your email is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_norecord_subject_informal" xml:space="preserve">
+				<source>Your email is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_norecord_message1" xml:space="preserve">
+				<source>It seems that your email address is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_norecord_message1_informal" xml:space="preserve">
+				<source>It seems that your email address is not subscribed to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_norecord_message2" xml:space="preserve">
+				<source>If you are encountering problems with your subscription, please contact us at the following email address and we will be pleased to help you.</source>
+			</trans-unit>
+			<trans-unit id="v_infomail_norecord_message2_informal" xml:space="preserve">
+				<source>If you are encountering problems with your subscription, please contact us at the following email address and we will be pleased to help you.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_deleted_subject" xml:space="preserve">
+				<source>Your user account at &lt;b&gt;%1$s&lt;/b&gt; has been deleted.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_deleted_subject_informal" xml:space="preserve">
+				<source>Your user account at &lt;b&gt;%1$s&lt;/b&gt; has been deleted.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_deleted_message1" xml:space="preserve">
+				<source>You will no longer receive messages from us.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_deleted_message1_informal" xml:space="preserve">
+				<source>You will no longer receive messages from us.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_deleted_message2" xml:space="preserve">
+				<source>Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_deleted_message2_informal" xml:space="preserve">
+				<source>Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_deleted" xml:space="preserve">
+				<source>%2$s terminated his(her) subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_deleted_informal" xml:space="preserve">
+				<source>%2$s terminated his(her) subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="unsupported" xml:space="preserve">
+				<source>unsupported</source>
+			</trans-unit>
+			<trans-unit id="internal_required_extension_missing" xml:space="preserve">
+				<source>Required extension &quot;%1$s&quot; is not available and must be installed</source>
+			</trans-unit>
+			<trans-unit id="internal_check_requirements_frontend" xml:space="preserve">
+				<source>&lt;p&gt;&lt;big&gt;&lt;b&gt;Email Address Subscription (sr_email_subscribe): %1$s.&lt;/b&gt;&lt;/big&gt;&lt;/p&gt;</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
