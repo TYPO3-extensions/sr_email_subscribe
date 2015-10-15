@@ -35,12 +35,12 @@
  * @author	Franz Holzinger <franz@ttproducts.de>
  */
 class tx_sremailsubscribe_pi1_base extends tslib_pibase {
-		// Class name
+	// Class name
 	public $prefixId = 'tx_sremailsubscribe_pi1';
-		// Path to this script relative to the extension dir.
+	// Path to this script relative to the extension dir.
 	public $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php';
-		// The extension key.
-	public $extKey = SR_EMAIL_SUBSCRIBE_EXTkey;
+	// The extension key.
+	public $extKey = 'sr_email_subscribe';
 
 
 	public function main ($content, $conf) {
@@ -113,9 +113,3 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 		return $content;
 	}
 }
-
-if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1_base.php']) {
-	include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/sr_email_subscribe/pi1/class.tx_sremailsubscribe_pi1_base.php']);
-}
-
-?>

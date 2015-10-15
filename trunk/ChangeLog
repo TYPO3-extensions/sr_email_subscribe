@@ -1,5 +1,6 @@
 2015-10-14 Stanislas Rolland  <typo3(arobas)sjbr.ca>
-	* Resolves: #70733 Convert localization files to xliff and move them to Resources directory
+	* Resolves #70733: Convert localization files to xliff and move them to Resources directory
+	* Resolves #70734: Require TYPO3 CMS 6.2 and remove references to previous versions
 
 2014-03-13 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Fix errors in locallang file
