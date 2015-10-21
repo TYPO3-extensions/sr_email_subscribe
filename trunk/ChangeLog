@@ -1,5 +1,6 @@
 2015-10-21 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Resolves #70922: [!!!] Use Extbase localization
+	* Resolves #70926: Namespace plugin controller
 
 2015-10-14 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Resolves #70733: [!!!] Convert localization files to xliff and move them to Resources directory

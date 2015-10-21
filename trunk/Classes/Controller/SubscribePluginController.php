@@ -1,41 +1,41 @@
 <?php
-/***************************************************************
-*  Copyright notice
-*
-*  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
-*  (c) 2004-2015 Stanislas Rolland <typo3(arobas)sjbr.ca>
-*  All rights reserved
-*
-*  This script is part of the Typo3 project. The Typo3 project is
-*  free software; you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License as published by
-*  the Free Software Foundation; either version 2 of the License, or
-*  (at your option) any later version.
-*
-*  The GNU General Public License can be found at
-*  http://www.gnu.org/copyleft/gpl.html.
-*  A copy is found in the textfile GPL.txt and important notices to the license
-*  from the author is found in LICENSE.txt distributed with these scripts.
-*
-*  This script is distributed in the hope that it will be useful,
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*  GNU General Public License for more details.
-*
-*  This copyright notice MUST APPEAR in all copies of the script!
-***************************************************************/
-/**
+namespace SJBR\SrEmailSubscribe\Controller;
+
+/*
+ *  Copyright notice
  *
- * Front End creating/editing/deleting records authenticated by email address, also called subscriptions.
+ *  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
+ *  (c) 2004-2015 Stanislas Rolland <typo3(arobas)sjbr.ca>
+ *  All rights reserved
  *
- * $Id$
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
  *
- * @author	Kasper Skårhøj <kasperYYYY@typo3.com>
- * @author	Stanislas Rolland <typo3(arobas)sjbr.ca>
- * @author	Franz Holzinger <franz@ttproducts.de>
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
  */
-class tx_sremailsubscribe_pi1_base extends tslib_pibase
+
+use SJBR\SrFeuserRegister\Utility\LocalizationUtility;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Frontend\Plugin\AbstractPlugin;
+
+/**
+ * Front End creating/editing/deleting records authenticated by email address, also called subscriptions.
+ */
+class SubscribePluginController extends AbstractPlugin
 {
+
+	public $cObj;
+
 	/**
 	 * @var string Extension name
 	 */
@@ -97,7 +97,7 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase
 			v_sending_infomail,v_sending_infomail_message1,v_sending_infomail_message2,v_infomail_subject,v_infomail_reason,v_infomail_message1,v_infomail_message2,
 			v_infomail_norecord_subject,v_infomail_norecord_message1,v_infomail_norecord_message2';
 
-			$mainObj = t3lib_div::getUserObj('&tx_srfeuserregister_control_main');
+			$mainObj = GeneralUtility::makeInstance('tx_srfeuserregister_control_main');
 			$mainObj->cObj = $this->cObj;
 			$mainObj->extensionName = $this->extensionName;
 			$content =
@@ -125,10 +125,10 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase
 		if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends'])) {
 			$requiredExtensions = array_diff(array_keys($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends']), array('php', 'typo3'));
 			foreach ($requiredExtensions as $requiredExtension) {
-				if (!t3lib_extMgm::isLoaded($requiredExtension)) {
-					$message = sprintf(\SJBR\SrFeuserRegister\Utility\LocalizationUtility::translate('internal_required_extension_missing', $this->extensionName), $requiredExtension);
-					t3lib_div::sysLog($message, $this->extKey, t3lib_div::SYSLOG_SEVERITY_ERROR);
-					$content .= sprintf(\SJBR\SrFeuserRegister\Utility\LocalizationUtility::translate('internal_check_requirements_frontend', $this->extensionName), $message);
+				if (!ExtensionManagementUtility::isLoaded($requiredExtension)) {
+					$message = sprintf(LocalizationUtility::translate('internal_required_extension_missing', $this->extensionName), $requiredExtension);
+					GeneralUtility::sysLog($message, $this->extKey, GeneralUtility::SYSLOG_SEVERITY_ERROR);
+					$content .= sprintf(LocalizationUtility::translate('internal_check_requirements_frontend', $this->extensionName), $message);
 				}
 			}
 		}
