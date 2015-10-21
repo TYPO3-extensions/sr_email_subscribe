@@ -1,6 +1,6 @@
 plugin.tx_sremailsubscribe_pi1 = USER_INT
 plugin.tx_sremailsubscribe_pi1 {
-
+	userFunc = SJBR\SrEmailSubscribe\Controller\SubscribePluginController->main
 	table.name = {$plugin.tx_sremailsubscribe.tableName}
 
 	templateStyle = css-styled
