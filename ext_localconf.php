@@ -23,7 +23,7 @@ if (!defined ('SR_FEUSER_REGISTER_EXTkey')) {
 
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPItoST43(SR_EMAIL_SUBSCRIBE_EXTkey, 'pi1/class.tx_sremailsubscribe_pi1.php', '_pi1', 'list_type', 0);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPItoST43($_EXTKEY, 'pi1/class.tx_sremailsubscribe_pi1.php', '_pi1', 'list_type', 0);
 
 $_EXTCONF = unserialize($_EXTCONF);    // unserializing the configuration so we can use it here:
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['imagefolder'] = $_EXTCONF['imageFolder'] ? $_EXTCONF['imageFolder'] : 'uploads/tx_sremailsubscribe';
@@ -36,25 +36,16 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['version'] = $EM_CONF[$_EXTKEY]
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['constraints'] = $EM_CONF[$_EXTKEY]['constraints'];
 
 // Captcha hooks
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['tx_sremailsubscribe_pi1']['registrationProcess'][] = 'EXT:sr_feuser_register/hooks/captcha/class.tx_srfeuserregister_captcha.php:&tx_srfeuserregister_captcha';
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['tx_sremailsubscribe_pi1']['model'][] = 'EXT:sr_feuser_register/hooks/captcha/class.tx_srfeuserregister_captcha.php:&tx_srfeuserregister_captcha';
-// Freecap hooks
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['tx_sremailsubscribe_pi1']['registrationProcess'][] = 'EXT:sr_feuser_register/hooks/freecap/class.tx_srfeuserregister_freecap.php:&tx_srfeuserregister_freecap';
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['tx_sremailsubscribe_pi1']['model'][] = 'EXT:sr_feuser_register/hooks/freecap/class.tx_srfeuserregister_freecap.php:&tx_srfeuserregister_freecap';
+if (!is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['captcha'])) {
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['captcha'] = array();
+}
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['captcha'][] = 'SJBR\\SrFeuserRegister\\Captcha\\Captcha';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['captcha'][] = 'SJBR\\SrFeuserRegister\\Captcha\\Freecap';
 
 $addressTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['addressTable'];
-
 if (TYPO3_MODE === 'BE') {
-
-	if (
-		!defined($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['fe_users']['MENU'])
-		&& ($addressTable == 'tt_address')
-	) {
-		$tableArray = array($addressTable);
-		foreach ($tableArray as $theTable)	{
-			$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['LLFile'][$theTable] = 'EXT:sr_email_subscribe/Resources/Private/Language/locallang.xlf';
-		}
-
+	if (!defined($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['tt_address']['MENU']) && $addressTable === 'tt_address') {
+		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['LLFile'][$addressTable] = 'EXT:sr_email_subscribe/Resources/Private/Language/locallang_db_layout.xlf';
 		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables'][$addressTable] = array (
 			'default' => array(
 				'MENU' => 'm_default',
