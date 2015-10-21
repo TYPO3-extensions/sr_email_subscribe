@@ -3,35 +3,26 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2015-10-15T03:39:38Z" product-name="sr_email_subscribe">
 		<header/>
 		<body>
-			<trans-unit id="fe_user_register" xml:space="preserve">
-				<source>Subscription by email address</source>
-			</trans-unit>
-			<trans-unit id="m_default" xml:space="preserve">
-				<source>default</source>
-			</trans-unit>
-			<trans-unit id="m_ext" xml:space="preserve">
-				<source>extended</source>
-			</trans-unit>
-			<trans-unit id="m_company" xml:space="preserve">
-				<source>company</source>
-			</trans-unit>
 			<trans-unit id="missing_invitation_name_informal" xml:space="preserve">
 				<source>Please enter a name!</source>
 			</trans-unit>
-			<trans-unit id="first_name_informal" xml:space="preserve">
+			<trans-unit id="first_name" xml:space="preserve">
 				<source>First name</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_first_name_informal" xml:space="preserve">
 				<source>Please enter a first name!</source>
 			</trans-unit>
-			<trans-unit id="middle_name_informal" xml:space="preserve">
+			<trans-unit id="middle_name" xml:space="preserve">
 				<source>Middle name</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_middle_name_informal" xml:space="preserve">
 				<source>Please enter a middle name!</source>
 			</trans-unit>
-			<trans-unit id="last_name_informal" xml:space="preserve">
+			<trans-unit id="last_name" xml:space="preserve">
 				<source>Last name</source>
+			</trans-unit>
+			<trans-unit id="title" xml:space="preserve">
+				<source>Title</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_last_name_informal" xml:space="preserve">
 				<source>Please enter a surname!</source>
@@ -42,19 +33,19 @@
 			<trans-unit id="missing_invitation_date_of_birth_informal" xml:space="preserve">
 				<source>Please enter a date of birth!</source>
 			</trans-unit>
-			<trans-unit id="address_informal" xml:space="preserve">
+			<trans-unit id="address" xml:space="preserve">
 				<source>Address</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_address_informal" xml:space="preserve">
 				<source>Please enter an address!</source>
 			</trans-unit>
-			<trans-unit id="city_informal" xml:space="preserve">
+			<trans-unit id="city" xml:space="preserve">
 				<source>City</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_city_informal" xml:space="preserve">
 				<source>Please enter the name of a city!</source>
 			</trans-unit>
-			<trans-unit id="zone_informal" xml:space="preserve">
+			<trans-unit id="zone" xml:space="preserve">
 				<source>State/province</source>
 			</trans-unit>
 			<trans-unit id="tooltip_zone" xml:space="preserve">
@@ -63,13 +54,13 @@
 			<trans-unit id="missing_invitation_zone_informal" xml:space="preserve">
 				<source>Please select a state or province!</source>
 			</trans-unit>
-			<trans-unit id="zip_informal" xml:space="preserve">
+			<trans-unit id="zip" xml:space="preserve">
 				<source>Postal code</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_zip_informal" xml:space="preserve">
 				<source>Please enter a zip!</source>
 			</trans-unit>
-			<trans-unit id="static_info_country_informal" xml:space="preserve">
+			<trans-unit id="static_info_country" xml:space="preserve">
 				<source>Country</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_static_info_country_informal" xml:space="preserve">
@@ -132,7 +123,7 @@
 			<trans-unit id="missing_invitation_fax_informal" xml:space="preserve">
 				<source>Please enter a fax number!</source>
 			</trans-unit>
-			<trans-unit id="email_informal" xml:space="preserve">
+			<trans-unit id="email" xml:space="preserve">
 				<source>Email</source>
 			</trans-unit>
 			<trans-unit id="missing_email" xml:space="preserve">
@@ -147,8 +138,14 @@
 			<trans-unit id="evalErrors_uniqueLocal_email_informal" xml:space="preserve">
 				<source>This email already existed.</source>
 			</trans-unit>
-			<trans-unit id="module_sys_dmail_html_informal" xml:space="preserve">
+			<trans-unit id="module_sys_dmail_html" xml:space="preserve">
 				<source>Receive HTML emails?</source>
+			</trans-unit>
+			<trans-unit id="missing_captcha_response" xml:space="preserve" approved="yes">
+				<source>Please enter the captcha phrase!</source>
+			</trans-unit>
+			<trans-unit id="missing_captcha_response_informal" xml:space="preserve" approved="yes">
+				<source>Please enter the captcha phrase!</source>
 			</trans-unit>
 			<trans-unit id="yes" xml:space="preserve">
 				<source>Yes</source>
@@ -156,7 +153,7 @@
 			<trans-unit id="no" xml:space="preserve">
 				<source>No</source>
 			</trans-unit>
-			<trans-unit id="language_informal" xml:space="preserve">
+			<trans-unit id="language" xml:space="preserve">
 				<source>Language</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_language_informal" xml:space="preserve">
@@ -168,8 +165,11 @@
 			<trans-unit id="missing_invitation_company_informal" xml:space="preserve">
 				<source>Please enter the name of a company!</source>
 			</trans-unit>
-			<trans-unit id="www_informal" xml:space="preserve">
+			<trans-unit id="www" xml:space="preserve">
 				<source>Homepage</source>
+			</trans-unit>
+			<trans-unit id="image" xml:space="preserve">
+				<source>Image</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_www_informal" xml:space="preserve">
 				<source>Please enter a homepage address!</source>
@@ -203,6 +203,12 @@
 			</trans-unit>
 			<trans-unit id="evalErrors_max_size_image_informal" xml:space="preserve">
 				<source>The file size should not exceed %s KB.</source>
+			</trans-unit>
+			<trans-unit id="evalErrors_captcha" xml:space="preserve">
+				<source>Invalid!</source>
+			</trans-unit>
+			<trans-unit id="evalErrors_freecap" xml:space="preserve">
+				<source>The entered letters did not correspond to the letters in the image.</source>
 			</trans-unit>
 			<trans-unit id="button_register" xml:space="preserve">
 				<source>Subscribe</source>
@@ -412,16 +418,19 @@
 				<source>You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. Please follow the instructions given in the confirmation message in order to complete the registration procedure.</source>
 			</trans-unit>
 			<trans-unit id="v_your_account_was_created" xml:space="preserve">
-				<source>Your subscription was created. We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+				<source>Your subscription was created.</source>
 			</trans-unit>
 			<trans-unit id="v_your_account_was_created_informal" xml:space="preserve">
-				<source>Your subscription was created. We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+				<source>Your subscription was created.</source>
 			</trans-unit>
 			<trans-unit id="v_follow_instructions1" xml:space="preserve">
-				<source>In order to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt;, the invited person will have to follow the instructions given in the invitation message.</source>
+				<source>We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
 			</trans-unit>
 			<trans-unit id="v_follow_instructions1_informal" xml:space="preserve">
-				<source>In order to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt;, the invited person will have to follow the instructions given in the invitation message.</source>
+				<source>We are sending a message to your email address &lt;b&gt;%4$s&lt;/b&gt; so that you can confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;.</source>
+			</trans-unit>
+			<trans-unit id="v_follow_instructions2" xml:space="preserve">
+				<source>Please follow the instructions given in the confirmation message in order to complete the subscription procedure.</source>
 			</trans-unit>
 			<trans-unit id="v_follow_instructions_review1" xml:space="preserve">
 				<source>In order to confirm your subscription to &lt;b&gt;%1$s&lt;/b&gt;, you will have to follow the instructions given in the invitation message.</source>

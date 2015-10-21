@@ -34,17 +34,36 @@
  * @author	Stanislas Rolland <typo3(arobas)sjbr.ca>
  * @author	Franz Holzinger <franz@ttproducts.de>
  */
-class tx_sremailsubscribe_pi1_base extends tslib_pibase {
-	// Class name
+class tx_sremailsubscribe_pi1_base extends tslib_pibase
+{
+	/**
+	 * @var string Extension name
+	 */
+	protected $extensionName = 'SrEmailSubscribe';
+	
+	/**
+	 * Used for CSS classes, variables
+	 *
+	 * @var string
+	 */
 	public $prefixId = 'tx_sremailsubscribe_pi1';
-	// Path to this script relative to the extension dir.
-	public $scriptRelPath = 'pi1/class.tx_sremailsubscribe_pi1.php';
-	// The extension key.
+	
+	/**
+	 * Used only by pi_loadLL
+	 *
+	 * @var string
+	 */
+	public $scriptRelPath = 'Resources/Private/Language/locallang.xlf';
+
+	/**
+	 * Extension key
+	 *
+	 * @var string
+	 */
 	public $extKey = 'sr_email_subscribe';
 
-
-	public function main ($content, $conf) {
-
+	public function main($content, $conf)
+	{
 		$this->conf = $conf;
 		$this->pi_setPiVarDefaults();
 
@@ -52,11 +71,11 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 
 		if (!$content) {
 			$adminFieldList = 'name,hidden';
-				// Honour Address List (tt_address) configuration settings
+			// Honour Address List (tt_address) configuration settings
 			if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'] == 'tt_address') {
 				$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['tt_address']);
 				if ($extConf['disableCombinedNameField'] == '1') {
-						// Remove name from adminFieldList
+					// Remove name from adminFieldList
 					$adminFieldList = 'hidden';
 				}
 			}
@@ -80,12 +99,13 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 
 			$mainObj = t3lib_div::getUserObj('&tx_srfeuserregister_control_main');
 			$mainObj->cObj = $this->cObj;
+			$mainObj->extensionName = $this->extensionName;
 			$content =
 				$mainObj->main(
 					$content,
 					$conf,
 					$this,
-					$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][SR_EMAIL_SUBSCRIBE_EXTkey]['addressTable'],
+					$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'],
 					$adminFieldList,
 					$buttonLabelsList,
 					$otherLabelsList
@@ -94,19 +114,21 @@ class tx_sremailsubscribe_pi1_base extends tslib_pibase {
 		return $content;
 	}
 
-	/* Checks requirements for this plugin
+	/**
+	 * Checks requirements for this plugin
 	 *
 	 * @return string Error message, if error found, empty string otherwise
 	 */
-	protected function checkRequirements() {
+	protected function checkRequirements()
+	{
 		$content = '';
 		if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends'])) {
 			$requiredExtensions = array_diff(array_keys($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends']), array('php', 'typo3'));
 			foreach ($requiredExtensions as $requiredExtension) {
 				if (!t3lib_extMgm::isLoaded($requiredExtension)) {
-					$message = sprintf($GLOBALS['TSFE']->sL('LLL:EXT:' . $this->extKey . '/Resources/Private/Language/locallang.xlf:internal_required_extension_missing'), $requiredExtension);
+					$message = sprintf(\SJBR\SrFeuserRegister\Utility\LocalizationUtility::translate('internal_required_extension_missing', $this->extensionName), $requiredExtension);
 					t3lib_div::sysLog($message, $this->extKey, t3lib_div::SYSLOG_SEVERITY_ERROR);
-					$content .= sprintf($GLOBALS['TSFE']->sL('LLL:EXT:' . $this->extKey . '/Resources/Private/Language/locallang.xlf:internal_check_requirements_frontend'), $message);
+					$content .= sprintf(\SJBR\SrFeuserRegister\Utility\LocalizationUtility::translate('internal_check_requirements_frontend', $this->extensionName), $message);
 				}
 			}
 		}

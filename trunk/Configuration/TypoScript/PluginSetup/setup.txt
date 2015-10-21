@@ -216,4 +216,6 @@ plugin.tx_sremailsubscribe_pi1 {
   }
 
 }
-
+plugin.tx_sremailsubscribe.settings {
+		salutation = {$plugin.tx_sremailsubscribe_pi1.salutation}
+}
