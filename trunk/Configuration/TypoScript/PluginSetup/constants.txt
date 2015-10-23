@@ -1,7 +1,7 @@
 plugin.tx_sremailsubscribe {
 
     # cat=plugin.tx_sremailsubscribe/file; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template file
-  file.templateFile = EXT:sr_email_subscribe/pi1/tx_sremailsubscribe_pi1_css_tmpl.html
+  file.templateFile = EXT:sr_email_subscribe/Resources/Private/Templates/SubscribeHtmlTemplate.html
 
     # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Force file deletion: On record deletion, related images and files will be deleted even if the record is only marked 'deleted'
   forceFileDelete = 1
