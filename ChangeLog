@@ -1,6 +1,7 @@
 2015-10-23 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Update version to 4.0.0
 	* Resolves #70982: [!!!] Move default style sheets to Resources directory and add static template
+	* Follow-up to Resolves #70982: [!!!] Move default style sheets to Resources directory and add static template
 
 2015-10-21 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Resolves #70922: [!!!] Use Extbase localization
