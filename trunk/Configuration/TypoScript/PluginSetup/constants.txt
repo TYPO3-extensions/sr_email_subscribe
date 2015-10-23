@@ -7,7 +7,7 @@ plugin.tx_sremailsubscribe {
   forceFileDelete = 1
 
   # cat=plugin.tx_sremailsubscribe/file; type=file[gif]; label= Icon used for deletion of uploaded files.
-  file.icon_delete = EXT:sr_email_subscribe/pi1/icon_delete.gif
+  file.icon_delete = EXT:sr_email_subscribe/Resources/Public/Images/icon_delete.png
 
     # cat=plugin.tx_sremailsubscribe//; type=string; label= Administration email: Enter the administration email address here. This email address will be the sender email and also receive administration notifications.
   email = MyTYPO3Site@mydomain.org
@@ -139,5 +139,5 @@ plugin.tx_sremailsubscribe_pi1 {
   file.attachmentFile = EXT:sr_email_subscribe/pi1/tx_sremailsubscribe_pi1_sample.txt
 
     # cat=plugin.tx_sremailsubscribe_pi1/file; type=file[css]; label= HTML emails stylesheet: If HTML emails are enabled, this file contains the CSS style sheet to be incorporated in these mails.
-  HTMLMailCSS = EXT:sr_email_subscribe/pi1/tx_sremailsubcribe_htmlmail_xhtml.css
+  HTMLMailCSS = EXT:sr_email_subscribe/Resources/Public/StyleSheets/htmlmail.css
 }

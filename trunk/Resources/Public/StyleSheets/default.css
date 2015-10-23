@@ -1,0 +1,135 @@
+/* Default stylesheet for extension sr_email_subscribe */
+.tx-sremailsubscribe-pi1 p {
+	margin-bottom: 0;
+	margin-top: .5em;
+	padding: 0 .3em;
+	text-indent: 0;
+}
+.tx-sremailsubscribe-pi1 p.tx-sremailsubscribe-pi1-click-to-edit {
+	margin-left: 2em;
+	margin-right: 2em;
+}
+.tx-sremailsubscribe-pi1 h4 {
+	padding-left: .3em;
+	margin-top: 0;
+}
+.tx-sremailsubscribe-pi1 legend {
+	font-weight: bold;
+	padding: 0 .5em;
+}
+.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-notice {
+	font-style: italic;
+	margin-bottom: 1em;
+}
+.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-trash {
+	margin-bottom: 2em;
+}
+.tx-sremailsubscribe-pi1 a {
+	background-image: url("../Images/internal_link.png");
+	background-position: 0% 60%;
+	background-repeat: no-repeat;
+	padding-left: 14px;
+	text-decoration:none;
+}
+.tx-sremailsubscribe-pi1 label {
+	margin: 0;
+	padding: 0;
+}
+.tx-sremailsubscribe-pi1 label span {
+	color: #ff0000;
+}
+.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-error {
+	color: #ff0000;
+}
+.tx-sremailsubscribe-pi1 input {
+	margin: 0;
+	padding: 0 .5em 0 0;
+}
+.tx-sremailsubscribe-pi1 input[type=password] {
+	margin-right: 1em;
+}
+* html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-password {
+	margin-right: 1em;
+}
+.tx-sremailsubscribe-pi1 input[type=radio],
+.tx-sremailsubscribe-pi1 input[type=checkbox] {
+	background-color: transparent;
+}
+* html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-radio,
+* html .tx-sremailsubscribe-pi1 input.tx-sremailsubscribe-pi1-checkbox {
+	background-color: transparent;
+}
+.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-delete-icon {
+	background-color: transparent;
+	margin-left: 1em;
+}
+.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-delete-icon:hover {
+	cursor: pointer;
+}
+.tx-sremailsubscribe-pi1 a.tx-sremailsubscribe-pi1-file-view {
+	background-color: transparent;
+	background-image: url("../Images/internal_link_new_window.png");
+	background-repeat: no-repeat;
+	font-size: .8em;
+	margin-left: 1em; 
+	padding-left: 15px;
+}
+.tx-sremailsubscribe-pi1 ul {
+	list-style-position: inside;
+	margin: 0;
+	padding: 0;
+}
+.tx-sremailsubscribe-pi1 ul.tx-sremailsubscribe-multiple-checkboxes {
+	list-style-type: none;
+}
+.tx-sremailsubscribe-pi1 ul.tx-sremailsubscribe-multiple-checkboxes li {
+	margin: 0 0 .3em 0;
+	padding: 0;
+}
+.tx-sremailsubscribe-pi1 ul.tx-sremailsubscribe-multiple-checkboxes li label {
+	margin: 0;
+	padding: 0 0 0 .5em;
+}
+.tx-sremailsubscribe-pi1 ul.tx-sremailsubscribe-multiple-checked-values li {
+	float: left;
+	padding: 0 2em 0 0;
+	margin: 0;
+}
+.tx-sremailsubscribe-pi1 dl {
+	margin: 0;
+	padding: 1em 0 0 0;
+}
+.tx-sremailsubscribe-pi1 dt,
+.tx-sremailsubscribe-pi1 dd {
+	float: left;
+	margin: 0;
+	padding: 0 0 .5em 0;
+}
+.tx-sremailsubscribe-pi1 dt {
+	clear: both;
+	text-align: right;
+	padding-right: 1em;
+	width: 25%;
+}
+.tx-sremailsubscribe-pi1 dd {
+	text-align: left;
+	width: 50%;
+}
+.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-multiple-checkboxes dt {
+	padding-right: 0;
+	width: auto;
+}
+.tx-sremailsubscribe-pi1 .tx-sremailsubscribe-pi1-multiple-checkboxes dd {
+	width: auto;
+}
+* html .tx-sremailsubscribe-pi1 dd {
+	float: none;
+}
+.tx-sremailsubscribe-pi1 dd p {
+	margin-bottom: .5em;
+	margin-top: 0;
+	padding: 0;
+}
+.tx-sremailsubscribe-pi1 dd label {
+	padding: 0 1em 0 .5em;
+}
