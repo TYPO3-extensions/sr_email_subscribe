@@ -3,6 +3,7 @@
 	* Resolves #70982: [!!!] Move default style sheets to Resources directory and add static template
 	* Follow-up to Resolves #70982: [!!!] Move default style sheets to Resources directory and add static template
 	* Resolves #70985: Move example text files to Resources directory
+	* Resolves #70987: Move template to Resources directory
 
 2015-10-21 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Resolves #70922: [!!!] Use Extbase localization
