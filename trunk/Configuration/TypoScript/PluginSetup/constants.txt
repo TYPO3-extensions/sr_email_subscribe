@@ -136,7 +136,7 @@ plugin.tx_sremailsubscribe {
 plugin.tx_sremailsubscribe_pi1 {
 
     # cat=plugin.tx_sremailsubscribe_pi1/file; type=file[pdf,doc,sxw,txt]; label= Attachment file: File to be attached to the confirmation email.
-  file.attachmentFile = EXT:sr_email_subscribe/pi1/tx_sremailsubscribe_pi1_sample.txt
+  file.attachmentFile = EXT:sr_email_subscribe/Resources/Public/TextFiles/attachment.txt
 
     # cat=plugin.tx_sremailsubscribe_pi1/file; type=file[css]; label= HTML emails stylesheet: If HTML emails are enabled, this file contains the CSS style sheet to be incorporated in these mails.
   HTMLMailCSS = EXT:sr_email_subscribe/Resources/Public/StyleSheets/htmlmail.css

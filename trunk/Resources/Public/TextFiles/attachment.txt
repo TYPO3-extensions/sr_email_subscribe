@@ -2,5 +2,5 @@ Email Address Subscription
 
 Typo3 Extention sr_email_subscribe
 
-This is just a sample attachment file
+This is just a example attachment file
 
