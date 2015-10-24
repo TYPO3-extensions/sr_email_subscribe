@@ -23,7 +23,7 @@ namespace SJBR\SrEmailSubscribe\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  */
 
-use SJBR\SrFeuserRegister\Utility\LocalizationUtility;
+use SJBR\SrFeuserRegister\Utility\ConfigurationCheckUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Plugin\AbstractPlugin;
@@ -64,10 +64,10 @@ class SubscribePluginController extends AbstractPlugin
 
 	public function main($content, $conf)
 	{
-		$this->conf = $conf;
+		$this->conf = &$conf;
 		$this->pi_setPiVarDefaults();
 
-		$content = $this->checkRequirements();
+		$content = ConfigurationCheckUtility::checkRequirements($this->extKey);
 
 		if (!$content) {
 			$adminFieldList = 'name,hidden';
@@ -110,27 +110,6 @@ class SubscribePluginController extends AbstractPlugin
 					$buttonLabelsList,
 					$otherLabelsList
 				);
-		}
-		return $content;
-	}
-
-	/**
-	 * Checks requirements for this plugin
-	 *
-	 * @return string Error message, if error found, empty string otherwise
-	 */
-	protected function checkRequirements()
-	{
-		$content = '';
-		if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends'])) {
-			$requiredExtensions = array_diff(array_keys($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['constraints']['depends']), array('php', 'typo3'));
-			foreach ($requiredExtensions as $requiredExtension) {
-				if (!ExtensionManagementUtility::isLoaded($requiredExtension)) {
-					$message = sprintf(LocalizationUtility::translate('internal_required_extension_missing', $this->extensionName), $requiredExtension);
-					GeneralUtility::sysLog($message, $this->extKey, GeneralUtility::SYSLOG_SEVERITY_ERROR);
-					$content .= sprintf(LocalizationUtility::translate('internal_check_requirements_frontend', $this->extensionName), $message);
-				}
-			}
 		}
 		return $content;
 	}
