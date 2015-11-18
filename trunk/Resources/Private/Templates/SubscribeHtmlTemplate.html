@@ -1355,6 +1355,21 @@ The user is informed that a message has been sent to the email address and that 
 	</dd>
 	<!-- ###SUB_INCLUDED_FIELD_comments### -->
 
+	<!--###SUB_INCLUDED_FIELD_captcha_response###-->
+	<dt>
+		<label for="tx-sremailsubscribe-pi1-captcha-response">###SR_FREECAP_NOTICE###</label>
+		###SR_FREECAP_CANT_READ###
+	</dt>
+	<dd>
+		<!-- ###SUB_ERROR_FIELD_captcha_response### -->
+		<p class="tx-sremailsubscribe-pi1-error">###EVAL_ERROR_FIELD_captcha_response###</p>
+		<!-- ###SUB_ERROR_FIELD_captcha_response### -->
+		<input type="text" size="15" id="tx-sremailsubscribe-pi1-captcha-response" name="###NAME_CAPTCHA_RESPONSE###" title="###SR_FREECAP_NOTICE###" value="">
+		###SR_FREECAP_IMAGE######CAPTCHA_IMAGE###
+		###SR_FREECAP_ACCESSIBLE###
+	</dd>
+	<!--###SUB_INCLUDED_FIELD_captcha_response###-->
+
 	<dt>&nbsp;</dt>
 	<dd>
 		###HIDDENFIELDS###
@@ -1721,9 +1736,7 @@ The user is informed that a message has been sent to the email address and that 
 <p style="margin-top: 20px"><em>This is the template used for the administrator notification email upon creation of an email address subscription and no confirmation is required.</em></p>
 <!-- ###EMAIL_TEMPLATE_CREATE_SAVED_ADMIN### begin -->
 <!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_CREATED###
-###LABEL_V_NOTIFICATION###:
-
-###LABEL_V_REGISTRATION_CREATED###
+###LABEL_V_NOTIFICATION###: ###LABEL_V_REGISTRATION_CREATED###
 
 ###LABEL_FIRST_NAME###: ###FIELD_first_name###
 ###LABEL_MIDDLE_NAME###: ###FIELD_middle_name###
@@ -1787,9 +1800,7 @@ The user is informed that a message has been sent to the email address and that 
 <p style="margin-top: 20px"><em>This is the template used for the administrator notification email upon update of an email address subscription.</em></p>
 <!-- ###EMAIL_TEMPLATE_EDIT_SAVED_ADMIN### begin -->
 <!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_UPDATED###
-###LABEL_V_NOTIFICATION###:
-
-###LABEL_V_REGISTRATION_UPDATED###
+###LABEL_V_NOTIFICATION###: ###LABEL_V_REGISTRATION_UPDATED###
 
 ###LABEL_FIRST_NAME###: ###FIELD_first_name###
 ###LABEL_MIDDLE_NAME###: ###FIELD_middle_name###
@@ -1863,9 +1874,7 @@ The user is informed that a message has been sent to the email address and that 
 <p style="margin-top: 20px"><em>This is the template used for the administrator notification email upon a new user registration, but confirmation is required.</em></p>
 <!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_ADMIN### begin -->
 <!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_INITIATED###
-###LABEL_V_NOTIFICATION###:
-
-###LABEL_V_REGISTRATION_INITIATED###
+###LABEL_V_NOTIFICATION###: ###LABEL_V_REGISTRATION_INITIATED###
 
 ###LABEL_FIRST_NAME###: ###FIELD_first_name###
 ###LABEL_MIDDLE_NAME###: ###FIELD_middle_name###
@@ -2107,9 +2116,7 @@ The user is informed that a message has been sent to the email address and that 
 <p style="margin-top: 20px"><em>This is the template used for the administrator notification email upon user refusal to confirm his email address subscription.</em></p>
 <!-- ###EMAIL_TEMPLATE_SETFIXED_DELETE_ADMIN### begin -->
 <!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_CANCELLED###
-###LABEL_V_NOTIFICATION###:
-
-###LABEL_V_REGISTRATION_CANCELLED###
+###LABEL_V_NOTIFICATION###: ###LABEL_V_REGISTRATION_CANCELLED###
 
 ###LABEL_FIRST_NAME###: ###FIELD_first_name###
 ###LABEL_MIDDLE_NAME###: ###FIELD_middle_name###

@@ -1,3 +1,6 @@
+2015-11-18 Stanislas Rolland  <typo3(arobas)sjbr.ca>
+	* Resolves #71661: [!!!] Refactor, streamline and cleanup all scripts: all API changed
+
 2015-10-24 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Use configuration check utility
 
