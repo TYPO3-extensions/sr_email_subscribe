@@ -114,8 +114,8 @@ plugin.tx_sremailsubscribe {
       # cat=plugin.tx_sremailsubscribe//; type=string; label= PID list for Direct Mail categories: The Direct mail categories used by the plugin will be restricted to those found in these PID's.
   module_sys_dmail_category_PIDLIST =
 
-      # cat=plugin.tx_sremailsubscribe//; type=options[,formal,informal]; label= Salutation mode to use: Possible value are 'formal' or 'informal'.
-  salutation =
+      # cat=plugin.tx_sremailsubscribe//; type=options[formal,informal]; label= Salutation mode to use: Possible value are 'formal' or 'informal'.
+  salutation = formal
 
       # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label=Use short URL's: If set, the use of short URL's in email messages sent to users is enabled.
   useShortUrls = 1
