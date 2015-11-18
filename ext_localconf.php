@@ -1,28 +1,6 @@
 <?php
 defined('TYPO3_MODE') or die();
 
-if (!defined ('SR_EMAIL_SUBSCRIBE_EXTkey')) {
-	define('SR_EMAIL_SUBSCRIBE_EXTkey', $_EXTKEY);
-}
-
-if (!defined ('PATH_BE_sremailsubscribe')) {
-	define('PATH_BE_sremailsubscribe', \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath(SR_EMAIL_SUBSCRIBE_EXTkey));
-}
-
-if (!defined ('PATH_BE_sremailsubscribe_rel')) {
-	define('PATH_BE_sremailsubscribe_rel', \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath(SR_EMAIL_SUBSCRIBE_EXTkey));
-}
-
-if (!defined ('PATH_FE_sremailsubscribe_rel')) {
-	define('PATH_FE_sremailsubscribe_rel', \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath(SR_EMAIL_SUBSCRIBE_EXTkey));
-}
-
-if (!defined ('SR_FEUSER_REGISTER_EXTkey')) {
-	define('SR_FEUSER_REGISTER_EXTkey','sr_feuser_register');
-}
-
-
-
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPItoST43($_EXTKEY, 'Classes/Controller/SubscribePluginController.php', '_pi1', 'list_type', 0);
 
 $_EXTCONF = unserialize($_EXTCONF);    // unserializing the configuration so we can use it here:

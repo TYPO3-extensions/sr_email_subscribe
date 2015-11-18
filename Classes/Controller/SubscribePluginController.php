@@ -23,23 +23,19 @@ namespace SJBR\SrEmailSubscribe\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  */
 
-use SJBR\SrFeuserRegister\Utility\ConfigurationCheckUtility;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Frontend\Plugin\AbstractPlugin;
+use SJBR\SrFeuserRegister\Controller\RegisterPluginController;
 
 /**
  * Front End creating/editing/deleting records authenticated by email address, also called subscriptions.
  */
-class SubscribePluginController extends AbstractPlugin
+class SubscribePluginController extends RegisterPluginController
 {
-
-	public $cObj;
-
 	/**
-	 * @var string Extension name
+	 * Extension key
+	 *
+	 * @var string
 	 */
-	protected $extensionName = 'SrEmailSubscribe';
+	public $extKey = 'sr_email_subscribe';
 	
 	/**
 	 * Used for CSS classes, variables
@@ -47,40 +43,34 @@ class SubscribePluginController extends AbstractPlugin
 	 * @var string
 	 */
 	public $prefixId = 'tx_sremailsubscribe_pi1';
-	
+
 	/**
-	 * Used only by pi_loadLL
+	 * The table in used
 	 *
 	 * @var string
 	 */
-	public $scriptRelPath = 'Resources/Private/Language/locallang.xlf';
+	protected $theTable = 'tt_address';
 
 	/**
-	 * Extension key
+	 * List of fields reserved as administration fields
 	 *
 	 * @var string
 	 */
-	public $extKey = 'sr_email_subscribe';
+	protected $adminFieldList = 'name,hidden';
 
-	public function main($content, $conf)
-	{
-		$this->conf = &$conf;
-		$this->pi_setPiVarDefaults();
+	/**
+	 * A list of button label names
+	 *
+	 * @var string
+	 */
+	protected $buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
 
-		$content = ConfigurationCheckUtility::checkRequirements($this->extKey);
-
-		if (!$content) {
-			$adminFieldList = 'name,hidden';
-			// Honour Address List (tt_address) configuration settings
-			if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'] == 'tt_address') {
-				$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['tt_address']);
-				if ($extConf['disableCombinedNameField'] == '1') {
-					// Remove name from adminFieldList
-					$adminFieldList = 'hidden';
-				}
-			}
-			$buttonLabelsList = 'register,confirm_register,send_invitation,send_invitation_now,send_link,back_to_form,update,confirm_update,enter,confirm_delete,cancel_delete';
-			$otherLabelsList = 'yes,no,click_here_to_register,tooltip_click_here_to_register,v_already_subscribed,click_here_to_edit,tooltip_click_here_to_edit,
+	/**
+	 * A list of other label names
+	 *
+	 * @var string
+	 */
+	protected $otherLabelsList = 'yes,no,click_here_to_register,tooltip_click_here_to_register,v_already_subscribed,click_here_to_edit,tooltip_click_here_to_edit,
 			v_wish_to_update_or_delete,v_enter_subscribed_email,click_here_to_delete,tooltip_click_here_to_delete,
 			copy_paste_link,enter_account_info,enter_invitation_account_info,required_info_notice,excuse_us,excuse_us_invitation,
 			registration_problem,registration_sorry,registration_clicked_twice,registration_help,kind_regards,
@@ -97,20 +87,18 @@ class SubscribePluginController extends AbstractPlugin
 			v_sending_infomail,v_sending_infomail_message1,v_sending_infomail_message2,v_infomail_subject,v_infomail_reason,v_infomail_message1,v_infomail_message2,
 			v_infomail_norecord_subject,v_infomail_norecord_message1,v_infomail_norecord_message2';
 
-			$mainObj = GeneralUtility::makeInstance('tx_srfeuserregister_control_main');
-			$mainObj->cObj = $this->cObj;
-			$mainObj->extensionName = $this->extensionName;
-			$content =
-				$mainObj->main(
-					$content,
-					$conf,
-					$this,
-					$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'],
-					$adminFieldList,
-					$buttonLabelsList,
-					$otherLabelsList
-				);
+	/**
+	 * Plugin entry script
+	 *
+	 * @param string $content: rendered content (not used)
+	 * @param array $conf: the plugin TS configuration
+	 * @return string the rendered content
+	 */
+	public function main($content, $conf)
+	{
+		if (isset($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'])) {
+				$this->theTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'];
 		}
-		return $content;
+		return parent::main($content, $conf);
 	}
 }

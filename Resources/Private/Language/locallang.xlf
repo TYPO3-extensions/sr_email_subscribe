@@ -399,11 +399,20 @@
 			<trans-unit id="v_registration_created_message1_informal" xml:space="preserve">
 				<source>Your subscription has been created.</source>
 			</trans-unit>
+			<trans-unit id="v_registration_created" xml:space="preserve">
+				<source>%2$s subscribed to %1$s.</source>
+			</trans-unit>
 			<trans-unit id="v_registration_created_informal" xml:space="preserve">
 				<source>%2$s subscribed to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_updated_subject" xml:space="preserve">
 				<source>Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been updated.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_updated" xml:space="preserve">
+				<source>%2$s updated its subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_updated_informal" xml:space="preserve">
+				<source>%2$s updated its subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_invitation_account_was_created" xml:space="preserve">
 				<source>The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%2$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
@@ -644,6 +653,18 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			</trans-unit>
 			<trans-unit id="internal_check_requirements_frontend" xml:space="preserve">
 				<source>&lt;p&gt;&lt;big&gt;&lt;b&gt;Email Address Subscription (sr_email_subscribe): %1$s.&lt;/b&gt;&lt;/big&gt;&lt;/p&gt;</source>
+			</trans-unit>
+			<trans-unit id="internal_infomail_option" xml:space="preserve">
+				<source>The infomail option is not correctly configured</source>
+			</trans-unit>
+			<trans-unit id="table_not_defined_in_TCA" xml:space="preserve">
+				<source>The table "%s" is not defined in TCA.</source>
+			</trans-unit>
+			<trans-unit id="invalidToken" xml:space="preserve">
+				<source>Apparently, this link has expired.</source>
+			</trans-unit>
+			<trans-unit id="internal_no_subtemplate" xml:space="preserve">
+				<source>The subpart %s was not found in the template file.</source>
 			</trans-unit>
 		</body>
 	</file>
