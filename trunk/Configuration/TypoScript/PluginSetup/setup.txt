@@ -183,3 +183,5 @@ plugin.tx_sremailsubscribe_pi1 {
 plugin.tx_sremailsubscribe.settings {
 	salutation = {$plugin.tx_sremailsubscribe.salutation}
 }
+
+tt_content.list.20.sr_email_subscribe_pi1 = < plugin.tx_sremailsubscribe_pi1
