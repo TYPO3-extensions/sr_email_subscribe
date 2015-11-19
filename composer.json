@@ -1,6 +1,6 @@
 {
   "name": "sjbr/sr_email_subscribe",
-  "description": "An email newsletter and address subscription variant of the Front End User Registration.",
+  "description": "An email address subscription variant of the Front End User Registration.",
   "version": "4.0.0",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0+",
@@ -15,8 +15,7 @@
   },
   "require": {
   	  "typo3/cms-core": "6.2.4 - 7.99.99",
-  	  "sr_feuser_register" => "~4.0.0',
-  	  "tt_address" => "3.0.0-",
+  	  "sjbr/sr_feuser_register": "~4.0.0",
   	  "sjbr/static_info_tables": "~6.3.1"
   },
   "autoload": {
