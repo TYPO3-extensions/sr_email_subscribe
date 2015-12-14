@@ -1,3 +1,6 @@
+2015-12-13 Stanislas Rolland  <typo3(arobas)sjbr.ca>
+	* Fix for submission of country change
+
 2015-11-18 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Resolves #71661: [!!!] Refactor, streamline and cleanup all scripts: all API changed
 	* Fix error regarding salutation in static TS template
