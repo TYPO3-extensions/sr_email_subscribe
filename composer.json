@@ -1,7 +1,6 @@
 {
   "name": "sjbr/sr_email_subscribe",
   "description": "An email address subscription variant of the Front End User Registration.",
-  "version": "4.0.0",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0+",
   "authors": [
@@ -10,13 +9,23 @@
       "role": "Developer"
     }
   ],
+  "homepage": "https://forge.typo3.org/projects/extension-sr_email_subscribe",
+  "support": {
+	"issues": "https://forge.typo3.org/projects/extension-sr_email_subscribe/issues"
+  },
   "replace": {
-    "sr_email_subscribe": "*"
+    "sr_email_subscribe": "self.version",
+	"typo3-ter/sr_email_subscribe": "self.version"
   },
   "require": {
-  	  "typo3/cms-core": "6.2.4 - 7.99.99",
-  	  "sjbr/sr_feuser_register": "~4.0.0",
-  	  "sjbr/static_info_tables": "~6.3.1"
+  	  "typo3/cms-core": ">=6.2.4,<8.0",
+  	  "sjbr/sr_feuser_register": ">=4.0.0,<4.1",
+  	  "sjbr/static_info_tables": ">=6.3.6,<6.4",
+  	  "friendsoftypo3/tt-address": ">=3.0.0,<3.1"
+  },
+  "suggest": {
+  	 "sjbr/sr_freecap": "Allows to add a captcha to the subscription form.",
+  	 "directmailteam/direct-mail" : "Allows to send newsletters to subscribers."
   },
   "autoload": {
     "psr-4": {
