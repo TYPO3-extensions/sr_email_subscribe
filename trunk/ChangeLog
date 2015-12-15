@@ -1,3 +1,6 @@
+2015-12-15 Stanislas Rolland  <typo3(arobas)sjbr.ca>
+	* Change to onclick attribute of doNotSave button on ###TEMPLATE_DELETE_PREVIEW###
+
 2015-12-14 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Update to composer.json
 	
