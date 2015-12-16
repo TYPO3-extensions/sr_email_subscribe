@@ -6,7 +6,7 @@
 CREATE TABLE tt_address (
 	static_info_country char(3) DEFAULT '' NOT NULL,
 	zone varchar(45) DEFAULT '' NOT NULL,
-	language char(2) DEFAULT '' NOT NULL,
+	language char(5) DEFAULT '' NOT NULL,
 	date_of_birth int(11) DEFAULT '0' NOT NULL,
 	comments text NOT NULL,
 	module_sys_dmail_html tinyint(3) unsigned DEFAULT '0' NOT NULL
