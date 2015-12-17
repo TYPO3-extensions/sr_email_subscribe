@@ -1,3 +1,6 @@
+2015-12-17 Stanislas Rolland  <typo3(arobas)sjbr.ca>
+	* Add ###TEMPLATE_INVALID_TOKEN### subpart
+
 2015-12-16 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Fix for the length of the language field on tt_adress table
 
