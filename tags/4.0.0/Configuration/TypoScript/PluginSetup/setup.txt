@@ -1,0 +1,187 @@
+plugin.tx_sremailsubscribe_pi1 = USER_INT
+plugin.tx_sremailsubscribe_pi1 {
+	userFunc = SJBR\SrEmailSubscribe\Controller\SubscribePluginController->main
+	table.name = {$plugin.tx_sremailsubscribe.tableName}
+
+	templateStyle = css-styled
+	templateFile = {$plugin.tx_sremailsubscribe.file.templateFile}
+
+	fe_userOwnSelf = 1
+	fe_userEditSelf = 1
+	delete = 1
+
+	icon_delete = {$plugin.tx_sremailsubscribe.file.icon_delete}
+
+	pid = {$plugin.tx_sremailsubscribe.pid}
+	pidTitleOverride = {$plugin.tx_sremailsubscribe.pidTitleOverride}
+	registerPID = {$plugin.tx_sremailsubscribe.registerPID}
+	editPID = {$plugin.tx_sremailsubscribe.editPID}
+	infomailPID = {$plugin.tx_sremailsubscribe.infomailPID}
+	confirmPID = {$plugin.tx_sremailsubscribe.confirmPID}
+	confirmInvitationPID = {$plugin.tx_sremailsubscribe.confirmInvitationPID}
+	confirmType = {$plugin.tx_sremailsubscribe.confirmType}
+	module_sys_dmail_category_PIDLIST = {$plugin.tx_sremailsubscribe.module_sys_dmail_category_PIDLIST}
+	defaultCODE = {$plugin.tx_sremailsubscribe.defaultCODE}
+
+	useShortUrls = {$plugin.tx_sremailsubscribe.useShortUrls}
+	shortUrlLife = {$plugin.tx_sremailsubscribe.shortUrlLife}
+	useLocalization = {$plugin.tx_sremailsubscribe.useLocalization}
+	dateFormat = {$plugin.tx_sremailsubscribe.dateFormat}
+	dateSplit = {$plugin.tx_sremailsubscribe.dateSplit}
+
+	formName = {$plugin.tx_sremailsubscribe.formName}
+	onChangeCountryAttribute = {$plugin.tx_sremailsubscribe.onChangeCountryAttribute}
+
+	salutation = {$plugin.tx_sremailsubscribe.salutation}
+
+	# you may modify here the conditions under which an attachment file will be added to the email
+	addAttachment =  {$plugin.tx_sremailsubscribe.enableEmailAttachment}
+	addAttachment.cmd = setfixed
+	addAttachment.sFK = APPROVE
+	addAttachment.file = {$plugin.tx_sremailsubscribe_pi1.file.attachmentFile}
+
+	displayRequired = TEXT
+	displayRequired {
+		value = *
+		wrap = <span>|</span>
+	}
+
+	create = 1
+	create {
+		preview = {$plugin.tx_sremailsubscribe.enablePreviewRegister}
+		fields = {$plugin.tx_sremailsubscribe.formFields}
+		required = {$plugin.tx_sremailsubscribe.requiredFields}
+		defaultValues {
+			module_sys_dmail_html = 1
+			hidden = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+		}
+		overrideValues {
+			hidden = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+		}
+		evalValues {
+			email = email,atMost[255],uniqueLocal
+			name = atMost[{$plugin.tx_sremailsubscribe.nameAtMost}]
+			first_name = atMost[50]
+			middle_name = atMost[50]
+			last_name = atMost[50]
+			date_of_birth = date
+			company = atMost[50]
+			city = atMost[40]
+			zip = atMost[20]
+			mobile = atMost[25]
+			phone = atMost[25]
+			fax = atMost[25]
+			image = upload
+			title =
+			address =
+			www = wwwURL
+			comments =
+			module_sys_dmail_html =
+			module_sys_dmail_category =
+			captcha_response = freecap
+		}
+	}
+
+	setfixed = 1
+	setfixed.APPROVE {
+		_FIELDLIST = uid,pid
+		hidden = 0
+	}
+	setfixed.DELETE {
+		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
+	}
+	setfixed.EDIT {
+		_FIELDLIST = {$plugin.tx_sremailsubscribe.authcodeFields}
+	}
+
+	enableEmailConfirmation = {$plugin.tx_sremailsubscribe.enableEmailConfirmation}
+	enableAdminReview = 0
+
+	authcodeFields.codeLength = {$plugin.tx_sremailsubscribe.codeLength}
+
+	invite < .create
+
+	edit < .create
+	edit {
+		preview = {$plugin.tx_sremailsubscribe.enablePreviewEdit}
+		defaultValues {
+			hidden = 0
+			module_sys_dmail_html >
+			module_sys_dmail_category >
+		}
+		overrideValues {
+			hidden = 0
+		}
+	}
+
+	infomail = 1
+	infomail {
+		fields = email
+		evalValues {
+			email = email,atMost[255],required
+			captcha_response = freecap
+		}
+	}
+
+	forceFileDelete = {$plugin.tx_sremailsubscribe.forceFileDelete}
+
+	parseValues {
+		email = trim
+		name = trim
+		first_name = trim
+		middle_name = trim
+		last_name = trim
+		date_of_birth = date
+		title = trim
+		company = trim
+		city = trim
+		zip = trim
+		image = files
+			## setEmptyIfAbsent is required for any checkbox
+		module_sys_dmail_html = setEmptyIfAbsent
+		module_sys_dmail_category = multiple
+		www = wwwURL
+	}
+
+	parseFromDBValues {
+		date_of_birth = date
+	}
+	parseToDBValues {
+		date_of_birth = date
+		image = deleteUnreferencedFiles
+	}
+
+	email.from = {$plugin.tx_sremailsubscribe.email}
+	email.fromName = {$plugin.tx_sremailsubscribe.siteName}
+	email.admin = {$plugin.tx_sremailsubscribe.email}
+		## replyTo email for messages sent to user
+	email.replyToAdmin = {$plugin.tx_sremailsubscribe.email}
+	email.field = email
+	email.HTMLMail =  {$plugin.tx_sremailsubscribe.enableHTMLMail}
+	email.HTMLMailCSS =  {$plugin.tx_sremailsubscribe_pi1.HTMLMailCSS}
+
+	email.CREATE_SAVED = {$plugin.tx_sremailsubscribe.enableEmailOnRegister}
+	email.EDIT_SAVED = {$plugin.tx_sremailsubscribe.enableEmailOnUpdate}
+	email.DELETE_SAVED =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
+	email.INFOMAIL < plugin.tx_sremailsubscribe_pi1.infomail
+	email.INFOMAIL_NORECORD < plugin.tx_sremailsubscribe_pi1.infomail
+	email.SETFIXED_APPROVE =  {$plugin.tx_sremailsubscribe.enableEmailOnApprove}
+	email.SETFIXED_DELETE =  {$plugin.tx_sremailsubscribe.enableEmailOnDelete}
+	email.SETFIXED_REFUSE = {$plugin.tx_sremailsubscribe.enableEmailOnAdminRefuse}
+
+	notify.CREATE_SAVED = {$plugin.tx_sremailsubscribe.enableAdminNotifyOnRegister}
+	notify.EDIT_SAVED = {$plugin.tx_sremailsubscribe.enableAdminNotifyOnUpdate}
+	notify.DELETE_SAVED =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnDelete}
+	notify.SETFIXED_CREATE = {$plugin.tx_sremailsubscribe.enableAdminNotifyConfirmation}
+	notify.SETFIXED_INVITE = {$plugin.tx_sremailsubscribe.enableAdminNotifyConfirmation}
+	notify.SETFIXED_APPROVE =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnApprove}
+	notify.SETFIXED_DELETE =  {$plugin.tx_sremailsubscribe.enableAdminNotifyOnDelete}
+
+	_DEFAULT_PI_VARS {
+    }
+}
+plugin.tx_sremailsubscribe.settings {
+	salutation = {$plugin.tx_sremailsubscribe.salutation}
+}
+
+tt_content.list.20.sr_email_subscribe_pi1 = < plugin.tx_sremailsubscribe_pi1

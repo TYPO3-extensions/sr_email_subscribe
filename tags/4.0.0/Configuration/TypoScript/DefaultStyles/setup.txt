@@ -1,0 +1,3 @@
+# Include default styles for SrEmailSubscribe
+
+page.includeCSS.tx_sremailsubscribe = EXT:sr_email_subscribe/Resources/Public/StyleSheets/default.css
