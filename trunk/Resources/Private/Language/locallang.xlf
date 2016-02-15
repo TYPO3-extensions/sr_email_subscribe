@@ -400,25 +400,25 @@
 				<source>Your subscription has been created.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_created" xml:space="preserve">
-				<source>%2$s subscribed to %1$s.</source>
+				<source>%3$s subscribed to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_created_informal" xml:space="preserve">
-				<source>%2$s subscribed to %1$s.</source>
+				<source>%3$s subscribed to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_updated_subject" xml:space="preserve">
 				<source>Your subscription to &lt;b&gt;%1$s&lt;/b&gt; has been updated.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_updated" xml:space="preserve">
-				<source>%2$s updated its subscription to %1$s.</source>
+				<source>%3$s updated its subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_updated_informal" xml:space="preserve">
-				<source>%2$s updated its subscription to %1$s.</source>
+				<source>%3$s updated its subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_invitation_account_was_created" xml:space="preserve">
-				<source>The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%2$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
+				<source>The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%3$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
 			</trans-unit>
 			<trans-unit id="v_invitation_account_was_created_informal" xml:space="preserve">
-				<source>The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%2$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
+				<source>The subscription was created. An invitation to confirm his subscription to &lt;b&gt;%1$s&lt;/b&gt; was sent to &lt;b&gt;%3$s&lt;/b&gt; at the email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
 			</trans-unit>
 			<trans-unit id="v_invitation_instructions1" xml:space="preserve">
 				<source>You will start receiving our newsletter &lt;b&gt;%1$s&lt;/b&gt; only after you will have confirmed your subscription. Please follow the instructions given in the confirmation message in order to complete the registration procedure.</source>
@@ -472,10 +472,10 @@
 				<source>You are receiving this message because we wish to ensure that the email address is correct and also that no one may subscribe with an address other than his(her) own. If for some reason you have received this message without having subcribed, please follow this link.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_initiated" xml:space="preserve">
-				<source>%2$s initiated his(her) subscription to %1$s.</source>
+				<source>%3$s initiated his(her) subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_initiated_informal" xml:space="preserve">
-				<source>%2$s initiated his(her) subscription to %1$s.</source>
+				<source>%3$s initiated his(her) subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_invited_subject" xml:space="preserve">
 				<source>Invitation to subscribe to &lt;b&gt;%1$s&lt;/b&gt;.</source>
@@ -508,10 +508,10 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 				<source>You will not receive this message twice. If you wish to decline our invitation and do not wish to subscribe to &lt;b&gt;%1$s&lt;/b&gt;, please follow this link or just ignore this message.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_invited" xml:space="preserve">
-				<source>An invitation to subscribe to %1$s was sent to %2$s.</source>
+				<source>An invitation to subscribe to %1$s was sent to %3$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_invited_informal" xml:space="preserve">
-				<source>An invitation to subscribe to %1$s was sent to %2$s.</source>
+				<source>An invitation to subscribe to %1$s was sent to %3$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_infomail_message1" xml:space="preserve">
 				<source>Your account data is subscribed by the email &lt;b&gt;%4$s&lt;/b&gt; .&lt;br /&gt;&lt;br /&gt;</source>
@@ -531,11 +531,17 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			<trans-unit id="v_registration_confirmed_message1_informal" xml:space="preserve">
 				<source>Your subscription has been confirmed.</source>
 			</trans-unit>
+			<trans-unit id="v_registration_confirmed_message2" xml:space="preserve">
+				<source>Tu suscripción fue confirmada. Tu dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt; ha sido agregada a nuestras listas.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_confirmed_message2_informal" xml:space="preserve">
+				<source>Tu suscripción fue confirmada. Tu dirección de correo electrónico &lt;b&gt;%4$s&lt;/b&gt; ha sido agregada a nuestras listas.</source>
+			</trans-unit>
 			<trans-unit id="v_registration_confirmed" xml:space="preserve">
-				<source>%2$s confirmed his(her) subscription to %1$s.</source>
+				<source>%3$s confirmed his(her) subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_confirmed_informal" xml:space="preserve">
-				<source>%2$s confirmed his(her) subscription to %1$s.</source>
+				<source>%3$s confirmed his(her) subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_cancelled_subject" xml:space="preserve">
 				<source>Your subscription has been cancelled.</source>
@@ -556,10 +562,10 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 				<source>Your subscription and address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_cancelled" xml:space="preserve">
-				<source>%2$s cancelled his(her) subscription to %1$s.</source>
+				<source>%3$s cancelled his(her) subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_cancelled_informal" xml:space="preserve">
-				<source>%2$s cancelled his(her) subscription to %1$s.</source>
+				<source>%3$s cancelled his(her) subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_sending_infomail" xml:space="preserve">
 				<source>We are sending you an email message at your email address &lt;b&gt;%4$s&lt;/b&gt;.</source>
@@ -640,10 +646,10 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 				<source>Your subscription and your address &lt;b&gt;%4$s&lt;/b&gt; have been deleted from our list.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_deleted" xml:space="preserve">
-				<source>%2$s terminated his(her) subscription to %1$s.</source>
+				<source>%3$s terminated his(her) subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="v_registration_deleted_informal" xml:space="preserve">
-				<source>%2$s terminated his(her) subscription to %1$s.</source>
+				<source>%3$s terminated his(her) subscription to %1$s.</source>
 			</trans-unit>
 			<trans-unit id="unsupported" xml:space="preserve">
 				<source>unsupported</source>
@@ -665,6 +671,21 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			</trans-unit>
 			<trans-unit id="internal_no_subtemplate" xml:space="preserve">
 				<source>The subpart %s was not found in the template file.</source>
+			</trans-unit>
+			<trans-unit id="v_please_confirm" xml:space="preserve">
+				<source>Please confirm your subscription.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_updated_message1" xml:space="preserve">
+				<source>Thank you for keeping your subcription up-to-date.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_updated_message1_informal" xml:space="preserve">
+				<source>Thank you for keeping your subcription up-to-date.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_updated" xml:space="preserve">
+				<source>%3$s updated its subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="v_registration_updated_informal" xml:space="preserve">
+				<source>%3$s updated its subscription to %1$s.</source>
 			</trans-unit>
 		</body>
 	</file>
