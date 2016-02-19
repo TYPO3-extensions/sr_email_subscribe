@@ -2,7 +2,7 @@
   "name": "sjbr/sr-email-subscribe",
   "description": "An email address subscription variant of the Front End User Registration.",
   "type": "typo3-cms-extension",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "license": "GPL-2.0+",
   "authors": [
     {
@@ -15,13 +15,14 @@
 	"issues": "https://forge.typo3.org/projects/extension-sr_email_subscribe/issues"
   },
   "replace": {
-    "sr_email_subscribe": "self.version",
+    "sr_email_subscribe": "*",
+    "sjbr/sr_email_subscribe": "*",
 	"typo3-ter/sr-email-subscribe": "self.version"
   },
   "require": {
   	  "typo3/cms-core": ">=6.2.4,<8.0",
-  	  "sjbr/sr_feuser_register": ">=4.0.0,<4.1",
-  	  "sjbr/static-info-tables": ">=6.3.6,<6.4",
+  	  "sjbr/sr-feuser-register": ">=4.0.2,<4.1",
+  	  "sjbr/static-info-tables": ">=6.3.9,<6.4",
   	  "friendsoftypo3/tt-address": ">=3.0.0,<3.1"
   },
   "suggest": {
