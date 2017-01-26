@@ -68,29 +68,21 @@ if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['addressTable']
 	$GLOBALS['TCA']['tt_address']['interface']['showRecordFieldList'] = preg_replace('/(^|,)\s*country\s*(,|$)/', '$1zone,static_info_country,country,language$2', $GLOBALS['TCA']['tt_address']['interface']['showRecordFieldList']);
 	$GLOBALS['TCA']['tt_address']['interface']['showRecordFieldList'] = preg_replace('/(^|,)\s*title\s*(,|$)/', '$1date_of_birth,title$2', $GLOBALS['TCA']['tt_address']['interface']['showRecordFieldList']);
 	$GLOBALS['TCA']['tt_address']['interface']['showRecordFieldList'] = preg_replace('/(^|,)\s*www\s*(,|$)/', '$1www,comments$2', $GLOBALS['TCA']['tt_address']['interface']['showRecordFieldList']);
-	
-	$GLOBALS['TCA']['tt_address']['feInterface']['fe_admin_fieldList'] = preg_replace('/(^|,)\s*country\s*(,|$)/', '$1zone,static_info_country,country,language,comments$2', $GLOBALS['TCA']['tt_address']['feInterface']['fe_admin_fieldList']);
-	$GLOBALS['TCA']['tt_address']['feInterface']['fe_admin_fieldList'] .= ',date_of_birth';
-
-	if (strstr($GLOBALS['TCA']['tt_address']['feInterface']['fe_admin_fieldList'], 'image') === false) {
-		$GLOBALS['TCA']['tt_address']['feInterface']['fe_admin_fieldList'] .= ',image';
-	}
 
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_address', 'comments');
-	$GLOBALS['TCA']['tt_address']['palettes']['3']['showitem'] = preg_replace('/(^|,)\s*country\s*(,|$)/', '$1zone,static_info_country,country,language$2', $GLOBALS['TCA']['tt_address']['palettes']['3']['showitem']);
+	$GLOBALS['TCA']['tt_address']['palettes']['address']['showitem'] = preg_replace('/(^|,)\s*country\s*(,|$)/', '$1zone,static_info_country,country,language$2', $GLOBALS['TCA']['tt_address']['palettes']['address']['showitem']);
 
 	// tt_address modified
 	if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('direct_mail')) {
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_address', array(
 			'module_sys_dmail_html' => array(
 				'label'=>'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.module_sys_dmail_html',
-				'exclude' => '1',
+				'exclude' => '0',
 				'config'=> array(
 					'type'=>'check'
 					)
 				)
 		));
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCATypes('tt_address', '--div--;Direct mail,module_sys_dmail_html;;;;1-1-1');
-		$GLOBALS['TCA']['tt_address']['feInterface']['fe_admin_fieldList'] .= ',module_sys_dmail_html';
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCATypes('tt_address', '--div--;Direct mail,module_sys_dmail_html');
 	}
 }
