@@ -1,5 +1,8 @@
 2017-01-26 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Update and cleanup extension configuration
+	* Require TYPO3 CMS 7.6
+	* Enable in TYPO3 CMS 8.x
+	* Update version to 5.0.0
 
 2016-02-19 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Update version to 4.0.2
