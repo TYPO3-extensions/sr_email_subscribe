@@ -1,43 +1,30 @@
 <?php
 defined('TYPO3_MODE') or die();
 
-$_EXTCONF = unserialize($_EXTCONF);    // unserializing the configuration so we can use it here:
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['imagefolder'] = $_EXTCONF['imageFolder'] ? $_EXTCONF['imageFolder'] : 'uploads/tx_sremailsubscribe';
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['useImageFolder'] = !empty($_EXTCONF['useImageFolder']) ? $_EXTCONF['useImageFolder'] : '0';
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['addressTable'] = $_EXTCONF['addressTable'] ?: 'tt_address';
+// Get the extensions's configuration
+$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['sr_email_subscribe']);
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['imagefolder'] = $extConf['imageFolder'] ? $extConf['imageFolder'] : '2:/tx_sremailsubscribe/';
+if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(\TYPO3\CMS\Core\Utility\VersionNumberUtility::getNumericTypo3Version()) < 8000000) {
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['imagefolder'] = $extConf['imagefolder'] ? $extConf['imagefolder'] : 'uploads/tx_sremailsubscribe';
+}
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['useImageFolder'] = !empty($extConf['useImageFolder']) ? $extConf['useImageFolder'] : '0';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['addressTable'] = $extConf['addressTable'] ?: 'tt_address';
 
 // Save extension version and constraints
-require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'ext_emconf.php');
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['version'] = $EM_CONF[$_EXTKEY]['version'];
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['constraints'] = $EM_CONF[$_EXTKEY]['constraints'];
+$emConfUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extensionmanager\Utility\EmConfUtility::class);
+$emConf = $emConfUtility->includeEmConf(['key' => 'sr_email_subscribe', 'siteRelPath' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('sr_email_subscribe')]);
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['version'] = $emConf['sr_email_subscribe']['version'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['constraints'] = $emConf['sr_email_subscribe']['constraints'];
 
 // Captcha hooks
-if (!is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['captcha'])) {
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['captcha'] = array();
+if (!is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['captcha'])) {
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['captcha'] = [];
 }
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['captcha'][] = 'SJBR\\SrFeuserRegister\\Captcha\\Captcha';
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['captcha'][] = 'SJBR\\SrFeuserRegister\\Captcha\\Freecap';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['captcha'][] = \SJBR\SrFeuserRegister\Captcha\Captcha::class;
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['captcha'][] = \SJBR\SrFeuserRegister\Captcha\Freecap::class;
 
-$addressTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['addressTable'];
-if (TYPO3_MODE === 'BE') {
-	if (!defined($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['tt_address']['MENU']) && $addressTable === 'tt_address') {
-		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['LLFile'][$addressTable] = 'EXT:sr_email_subscribe/Resources/Private/Language/locallang_db_layout.xlf';
-		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables'][$addressTable] = array (
-			'default' => array(
-				'MENU' => 'm_default',
-				'fList' =>  'first_name,middle_name,last_name,title,address,zip,city,country,gender,image,uid',
-				'icon' => true
-			),
-			'ext' => array (
-				'MENU' => 'm_ext',
-				'fList' =>  'name,description,email,phone,mobile,fax,www,birthday',
-				'icon' => true
-			),
-			'company' => array (
-				'MENU' => 'm_company',
-				'fList' =>  'name,city,company,building,room,addressgroup',
-				'icon' => true
-			)
-		);
-	}
-}
+$addressTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['addressTable'];
+
+unset($extConf);
+unset($emConfUtility);
+unset($emConf);
