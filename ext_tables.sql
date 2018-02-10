@@ -8,6 +8,6 @@ CREATE TABLE tt_address (
 	zone varchar(45) DEFAULT '' NOT NULL,
 	language varchar(5) DEFAULT '' NOT NULL,
 	date_of_birth int(11) DEFAULT '0' NOT NULL,
-	comments text NOT NULL,
+	comments varchar(1024) DEFAULT '' NOT NULL,
 	module_sys_dmail_html tinyint(3) DEFAULT '0' NOT NULL
 );

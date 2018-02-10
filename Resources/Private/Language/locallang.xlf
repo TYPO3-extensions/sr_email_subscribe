@@ -28,7 +28,7 @@
 				<source>Please enter a surname!</source>
 			</trans-unit>
 			<trans-unit id="date_of_birth_informal" xml:space="preserve">
-				<source>Date of birth (dd-mm-yyyy)</source>
+				<source>Date of birth</source>
 			</trans-unit>
 			<trans-unit id="missing_invitation_date_of_birth_informal" xml:space="preserve">
 				<source>Please enter a date of birth!</source>
@@ -686,6 +686,9 @@ If you wish to accept our invitation and confirm your subscription to &lt;b&gt;%
 			</trans-unit>
 			<trans-unit id="v_registration_updated_informal" xml:space="preserve">
 				<source>%3$s updated its subscription to %1$s.</source>
+			</trans-unit>
+			<trans-unit id="dateFormat" xml:space="preserve">
+				<source>%B %e, %Y</source>
 			</trans-unit>
 		</body>
 	</file>

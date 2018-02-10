@@ -125,12 +125,6 @@ plugin.tx_sremailsubscribe {
 
     # cat=plugin.tx_sremailsubscribe/enable; type=boolean; label= Enable localization: If set, only localized records are shown.
   useLocalization = 0
-
-    # cat=plugin.tx_sremailsubscribe//; type=string; label= Date Format (d-m-y)
-  dateFormat = d-m-Y
-
-    # cat=plugin.tx_sremailsubscribe//; type=string; label= Split char for Date Format (-)
-  dateSplit = -
 }
 
 plugin.tx_sremailsubscribe_pi1 {

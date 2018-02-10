@@ -26,8 +26,6 @@ plugin.tx_sremailsubscribe_pi1 {
 	useShortUrls = {$plugin.tx_sremailsubscribe.useShortUrls}
 	shortUrlLife = {$plugin.tx_sremailsubscribe.shortUrlLife}
 	useLocalization = {$plugin.tx_sremailsubscribe.useLocalization}
-	dateFormat = {$plugin.tx_sremailsubscribe.dateFormat}
-	dateSplit = {$plugin.tx_sremailsubscribe.dateSplit}
 
 	formName = {$plugin.tx_sremailsubscribe.formName}
 	onChangeCountryAttribute = {$plugin.tx_sremailsubscribe.onChangeCountryAttribute}
