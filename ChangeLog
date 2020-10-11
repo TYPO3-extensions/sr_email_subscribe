@@ -1,3 +1,11 @@
+2020-10-11 J.Kummer
+	* Resolves #92534: Make sr_email_subscribe compatible with TYPO3v10.4
+	* - Move extension icon
+	* - Adjust TCA and flexform configurations for compatibility
+	* - Retrieve extconf from new API TYPO3v9.0
+	* - Adjust versions for dependencies
+	* Update version to 6.0.0
+
 2018-02-10 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Resolves #83843: Enable HTML5 input types
 	* Update version to 5.1.0
