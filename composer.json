@@ -2,9 +2,14 @@
   "name": "sjbr/sr-email-subscribe",
   "description": "An email address subscription variant of the Front End User Registration.",
   "type": "typo3-cms-extension",
-  "version": "5.1.0",
+  "version": "6.0.0",
   "license": "GPL-2.0+",
-  "keywords": "email,address,subscription",
+  "keywords": [
+    "TYPO3",
+    "email",
+    "address",
+    "subscription"
+  ],
   "authors": [
     {
       "name": "Stanislas Rolland",
@@ -13,22 +18,22 @@
     }
   ],
   "homepage": "https://forge.typo3.org/projects/extension-sr_email_subscribe",
-  "support": {
-	"issues": "https://forge.typo3.org/projects/extension-sr_email_subscribe/issues"
+    "support": {
+    "issues": "https://forge.typo3.org/projects/extension-sr_email_subscribe/issues"
   },
   "replace": {
     "sr_email_subscribe": "self.version",
-	"typo3-ter/sr-email-subscribe": "self.version"
+    "typo3-ter/sr-email-subscribe": "self.version"
   },
   "require": {
-  	  "typo3/cms-core": ">=7.6.0,<9.0",
-  	  "sjbr/sr-feuser-register": ">=5.1.0,<5.2",
-  	  "sjbr/static-info-tables": ">=6.4.2,<6.6",
-  	  "friendsoftypo3/tt-address": ">=3.2.1,<3.3"
+    "typo3/cms-core": "^9.5 || ^10.4",
+    "sjbr/sr-feuser-register": "@dev",
+    "sjbr/static-info-tables": "^6.4 || ^6.9",
+    "friendsoftypo3/tt-address": "^3.2 || ^5.0"
   },
   "suggest": {
-  	 "sjbr/sr-freecap": "Allows to add a captcha to the subscription form.",
-  	 "directmailteam/direct-mail" : "Allows to send newsletters to subscribers."
+    "sjbr/sr-freecap": "Allows to add a captcha to the subscription form.",
+    "directmailteam/direct-mail" : "Allows to send newsletters to subscribers."
   },
   "autoload": {
     "psr-4": {

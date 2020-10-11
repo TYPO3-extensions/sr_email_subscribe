@@ -47,11 +47,9 @@ if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['addressTable']
 			'label' => 'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.date_of_birth',
 			'config' => array(
 				'type' => 'input',
-				'size' => '10',
-				'max' => '20',
+				'renderType' => 'inputDateTime',
 				'eval' => 'date',
-				'checkbox' => '0',
-				'default' => ''
+				'default' => 0
 			)
 		),
 		'comments' => array(
