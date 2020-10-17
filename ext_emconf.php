@@ -3,11 +3,11 @@
  * Extension Manager configuration file for ext "sr_email_subscribe".
  *
  */
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
 	'title' => 'Email Address Subscription',
-	'description' => 'An email newsletter and address subscription variant of the Front End User Registration.',
+	'description' => 'Email address subscription for TYPO3.',
 	'category' => 'plugin',
-	'version' => '5.1.0',
+	'version' => '7.0.0',
 	'state' => 'stable',
 	'uploadfolder' => 1,
 	'createDirs' => '',
@@ -16,22 +16,18 @@ $EM_CONF[$_EXTKEY] = array(
 	'author' => 'Stanislas Rolland',
 	'author_email' => 'typo3@sjbr.ca',
 	'author_company' => 'SJBR',
-	'constraints' => 
-	array(
-		'depends' => array(
-			'typo3' => '7.6.0-8.99.99',
-			'sr_feuser_register' => '5.1.0-5.1.99',
-			'tt_address' => '3.2.1-3.2.99',
-			'static_info_tables' => '6.4.2-6.5.99'
-		),
-		'conflicts' => array(
-			'germandates' => '0.0.0-99.99.99',
-			'rlmp_language_detection' => '0.0.0-99.99.99',
-			'patch1822' => '0.0.0-99.99.99'
-		),
-		'suggests' => array(
-			'sr_freecap' => '2.4.0-2.4.99',
-			'direct_mail' => '5.1.0-5.9.99'
-		)
-	)
-);
+	'constraints' => [
+		'depends' => [
+			'typo3' => '9.5.0-10.4.99',
+			'sr_feuser_register' => '7.0.0-7.0.99',
+			'tt_address' => '5.1.2-5.2.99',
+			'static_info_tables' => '6.9.0-6.9.99'
+		],
+		'conflicts' => [
+		],
+		'suggests' => [
+			'sr_freecap' => '2.5.3-2.6.99',
+			'direct_mail' => '6.0.0-6.0.99'
+		]
+	]
+];

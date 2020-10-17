@@ -1,6 +1,4 @@
-  # cat=basic/enable; type=string; label=Image upload folder: This is the place where the images are stored. Default is 2:/tx_sremailsubscribe/ in TYPO3 CMS 8 LTS and uploads/tx_sremailsubscribe in TYPO3 CMS 7 LTS.
-imageFolder = 
-  # cat=basic/enable; type=boolean; label=Use image folder: Enable the usage of imageFolder for the upload of images.
-useImageFolder = 0
+  # cat=basic/enable; type=string; label=Image upload folder: This is the place where the images are stored.
+imageFolder = 2:/tx_sremailsubscribe/
   # cat=basic/enable; type=string; label=Address table: Name of the address table to be used
 addressTable = tt_address

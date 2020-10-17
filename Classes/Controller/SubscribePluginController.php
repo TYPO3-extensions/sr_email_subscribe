@@ -5,7 +5,7 @@ namespace SJBR\SrEmailSubscribe\Controller;
  *  Copyright notice
  *
  *  (c) 1999-2003 Kasper Skårhøj <kasperYYYY@typo3.com>
- *  (c) 2004-2015 Stanislas Rolland <typo3(arobas)sjbr.ca>
+ *  (c) 2004-2020 Stanislas Rolland <typo32020(arobas)sjbr.ca>
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -96,8 +96,8 @@ class SubscribePluginController extends RegisterPluginController
 	 */
 	public function main($content, $conf)
 	{
-		if (isset($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'])) {
-				$this->theTable = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$this->extKey]['addressTable'];
+		if (isset($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][$this->extKey]['addressTable'])) {
+				$this->theTable = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][$this->extKey]['addressTable'];
 		}
 		return parent::main($content, $conf);
 	}

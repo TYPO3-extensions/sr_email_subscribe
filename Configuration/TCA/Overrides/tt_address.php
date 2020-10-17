@@ -1,11 +1,11 @@
 <?php
 defined('TYPO3_MODE') or die();
 
-if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['addressTable'] === 'tt_address') {
+if ($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['sr_email_subscribe']['addressTable'] === 'tt_address') {
 	//Setting up country, country subdivision, preferred language in tt_address table
 	//Adjusting some maximum lengths to the values as corresponding fields in fe_users as set by extension sr_feuser_registe
-	if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['useImageFolder'] && $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['imageFolder'] != '') {
-		$GLOBALS['TCA']['tt_address']['columns']['image']['config']['uploadfolder'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['imageFolder'];
+	if ($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['sr_email_subscribe']['imageFolder'] != '') {
+		$GLOBALS['TCA']['tt_address']['columns']['image']['config']['uploadfolder'] = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['sr_email_subscribe']['imageFolder'];
 	}
 
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_address', array(
@@ -47,11 +47,9 @@ if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sr_email_subscribe']['addressTable']
 			'label' => 'LLL:EXT:sr_email_subscribe/Resources/Private/Language/locallang_db.xlf:tt_address.date_of_birth',
 			'config' => array(
 				'type' => 'input',
-				'size' => '10',
-				'max' => '20',
+				'renderType' => 'inputDateTime',
 				'eval' => 'date',
-				'checkbox' => '0',
-				'default' => ''
+				'default' => 0
 			)
 		),
 		'comments' => array(
