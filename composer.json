@@ -3,7 +3,13 @@
   "description": "Email address subscription for TYPO3.",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0-or-later",
-  "keywords": "email,address,subscription",
+  "keywords": [
+    "TYPO3",
+    "email",
+    "address",
+    "frontend",
+    "subscription"
+  ],
   "authors": [
     {
       "name": "Stanislas Rolland",

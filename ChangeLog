@@ -1,4 +1,7 @@
 2020-10-17 Stanislas Rolland  <typo3(arobas)sjbr.ca>
+	* Update composer.json
+
+2020-10-17 Stanislas Rolland  <typo3(arobas)sjbr.ca>
 	* Resolves #92534: TYPO3 10.4 Support
 	* Update version to 7.0.0
 
